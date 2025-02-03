@@ -2,12 +2,12 @@
 #include "smartphone.h"
 #include "phone.h"
 #include "camera.h"
-
 using namespace std;
 
 int main()
 {
-    camera c1(1,"cliq");
+    smartphone s1(11,1,2.2,10,"kannada",123654789,"black");
+    /*camera c1(1,"cliq");
     c1.takepic();
     smartphone obj;
     obj.camera::display();
@@ -15,5 +15,5 @@ int main()
     obj.takepic();
     obj.makecall();
     cout << "Hello World!" << endl;
-    return 0;
+    return 0;*/
 }
