@@ -1,0 +1,6 @@
+# ninja log v6
+1	1300	7601056605403115	CMakeFiles/multilevel_inheritance1.dir/main.cpp.obj	13acadcc33b0fec5
+10	1313	7601056605448545	CMakeFiles/multilevel_inheritance1.dir/mobilephone.cpp.obj	7c007f288e0b9a36
+14	1367	7601056605448545	CMakeFiles/multilevel_inheritance1.dir/smartphone.cpp.obj	fd43ed8bad63e2a2
+5	1370	7601056605418468	CMakeFiles/multilevel_inheritance1.dir/gamingphone.cpp.obj	e8d7a2f663aebb3b
+1371	1467	7601056619088464	multilevel_inheritance1.exe	923fe024d2b9bcdd

@@ -1,0 +1,19 @@
+# ninja log v6
+7	1486	7602091857137919	CMakeFiles/single_inheritance.dir/person.cpp.obj	4976912740a9ba8c
+14	1203	7602102023540048	CMakeFiles/single_inheritance.dir/main.cpp.obj	24577670b7982873
+27	992	7602102466045334	CMakeFiles/single_inheritance.dir/person.cpp.obj	4976912740a9ba8c
+27	1327	7602105400721198	CMakeFiles/single_inheritance.dir/main.cpp.obj	24577670b7982873
+36	1374	7602105400768330	CMakeFiles/single_inheritance.dir/employe.cpp.obj	9a1c57090f421e2a
+100	1389	7602105401419196	CMakeFiles/single_inheritance.dir/senioremploye.cpp.obj	a575afe4094cc89b
+1389	1639	7602105414348033	single_inheritance.exe	18fc69339ccff8a5
+15	1472	7602106382950337	CMakeFiles/single_inheritance.dir/main.cpp.obj	24577670b7982873
+20	1492	7602106382979080	CMakeFiles/single_inheritance.dir/person.cpp.obj	4976912740a9ba8c
+25	1512	7602106383042052	CMakeFiles/single_inheritance.dir/employe.cpp.obj	9a1c57090f421e2a
+28	1528	7602106383042052	CMakeFiles/single_inheritance.dir/senioremploye.cpp.obj	a575afe4094cc89b
+1528	1635	7602106398081083	single_inheritance.exe	18fc69339ccff8a5
+29	1163	7602107022632047	CMakeFiles/single_inheritance.dir/main.cpp.obj	24577670b7982873
+34	1227	7602107022683220	CMakeFiles/single_inheritance.dir/employe.cpp.obj	9a1c57090f421e2a
+1227	1329	7602107034576780	single_inheritance.exe	18fc69339ccff8a5
+15	1170	7602111663559354	CMakeFiles/single_inheritance.dir/senioremploye.cpp.obj	a575afe4094cc89b
+29	1047	7602111811955262	CMakeFiles/single_inheritance.dir/main.cpp.obj	24577670b7982873
+1048	1158	7602111822249588	single_inheritance.exe	18fc69339ccff8a5

@@ -7,4 +7,4 @@ public:
     student();
 };
 
-#endif // STUDENT_H
+#endif

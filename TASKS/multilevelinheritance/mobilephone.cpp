@@ -2,8 +2,6 @@
 #include <iostream>
 using namespace std;
 
-
-
 mobilephone::~mobilephone()
 {
     cout<<"mobilephone destructor called"<<endl;

@@ -9,15 +9,21 @@ private:
     string name;
     int id;
     int age;
-    string contactnumber;
+    int contactnumber;
 public:
     person();
     ~person();
+
     string getname();
     void setname(string name);
+
     int getid();
     void setid(int id);
-    int getage();
-};
 
-#endif // PERSON_H
+    int getage();
+    void setage(int age);
+
+    int getcontactnumber();
+    int setcontactnumber(int contactnumber);
+};
+#endif

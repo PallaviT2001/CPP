@@ -6,15 +6,16 @@ using namespace std;
 class camera
 {
 private:
-    int m_cameraid;
-    string m_cameraname;
+    int cameraid;
+    string cameraname;
+protected:
+    float display_size;
 public:
-    camera(int cameraid,string cameraname);
+    camera(int cameraid,string cameraname,float display_size);
     ~camera();
     camera();
     void takepic();
     void display();
-
 };
 
-#endif // CAMERA_H
+#endif

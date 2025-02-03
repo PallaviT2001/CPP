@@ -1,12 +1,13 @@
 #include "camera.h"
 #include <iostream>
 using namespace std;
+#include <string>
 
-camera::camera(int cameraid,string cameraname)
+camera::camera(int cameraid,string cameraname,float displaysize)
 {
-    m_cameraid=cameraid;
-    m_cameraname=cameraname;
-    cout<<m_cameraid<<" "<<m_cameraname<<endl;
+    this->cameraid=cameraid;
+    this->displaysize=displaysize;
+    cout<<cameraid<<" "<<displaysize<<endl;
 }
 
 camera::camera()
@@ -27,7 +28,5 @@ void camera::display()
 
 void camera::takepic()
 {
-    cout<<m_cameraid<<" "<<m_cameraname<<endl;
-
-    cout<<"camera takepic function called"<<endl;
+   cout<<"camera takepic function called"<<endl;
 }

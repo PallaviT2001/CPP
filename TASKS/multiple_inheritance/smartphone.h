@@ -6,9 +6,12 @@
 
 class smartphone:public phone,public camera,public music
 {
+private:
+    int smartphone_id;
 public:
     smartphone();
     ~smartphone();
+    smartphone(int smartphoneid,int cameraid,float displaysize,int musicid, string musicname,int phonenumber,string color);
 };
 
-#endif // SMARTPHONE_H
+#endif
