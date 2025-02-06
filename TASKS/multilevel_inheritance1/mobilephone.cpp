@@ -14,3 +14,4 @@ mobilephone::mobilephone(string color,float price)
     this->price=price;
     cout<<color<<" "<<price<<endl;
 }
+

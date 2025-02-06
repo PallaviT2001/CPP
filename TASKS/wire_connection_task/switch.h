@@ -14,10 +14,13 @@ public:
     string brand;
     string color;
     wire* m_wire;
+
     void printswitch();
-    void displayswitch();
+    void display();
+
     Switch();
     Switch(int switchnumber1,int length1,int breadth1, string brand1,string color1,wire* wire);
+
 };
 
 #endif

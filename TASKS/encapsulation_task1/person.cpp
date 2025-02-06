@@ -12,7 +12,8 @@ person::~person()
 
 }
 
-person::person(string name,int id,int age,int contactnumber){
+person::person(string name,int id,int age,int contactnumber)
+{
     this->name=name;
     this->id=id;
     this->age=age;

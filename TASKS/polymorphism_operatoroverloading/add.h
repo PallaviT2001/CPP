@@ -9,6 +9,7 @@ public:
     add();
     ~add();
     add(int num);
+    add func(const add &obj);
 
     add operator +(const add &obj);
     void printadd();

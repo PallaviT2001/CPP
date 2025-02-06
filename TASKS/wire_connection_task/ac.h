@@ -16,7 +16,7 @@ public:
     string color;
     wire* m_wire;
     void printAC();
-    void displayac();
+    void display();
     ac(int acnumber1,int length1,int breadth1, string brand1,string color1,wire* wire);
 
 };

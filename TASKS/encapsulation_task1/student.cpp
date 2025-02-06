@@ -1,4 +1,5 @@
 #include "student.h"
+#include "person.h"
 #include <iostream>
 using namespace std;
 
@@ -12,12 +13,13 @@ student::~student()
     cout<<"student class destructor called"<<endl;
 }
 
-student::student(float fees,string address):person()
+student::student(float fees,string address,string name,int id,int age,int contactnumber):person(name,id,age,contactnumber)
 {
     this->fees=fees;
     this->address=address;
     cout<<fees<<" "<<address<<endl;
 }
+
 
 void student::setfees(float a)
 {
