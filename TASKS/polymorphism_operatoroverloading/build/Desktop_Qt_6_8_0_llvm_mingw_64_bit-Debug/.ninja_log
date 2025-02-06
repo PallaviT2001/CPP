@@ -1,17 +1,12 @@
 # ninja log v6
 11	18	7602834560429977	clean	577b940aee94fbd7
-29	1071	7602873315459191	CMakeFiles/polymorphism_operatoroverloading.dir/main.cpp.obj	32e385cb39ff2652
-1176	1266	7602869297128291	polymorphism_operatoroverloading.exe	38e1580c30ffdcf2
+25	1007	7604590912183301	CMakeFiles/polymorphism_operatoroverloading.dir/main.cpp.obj	32e385cb39ff2652
+1130	1241	7603755828007767	polymorphism_operatoroverloading.exe	38e1580c30ffdcf2
 36	1005	7602757047447010	CMakeFiles/polymorphism_operatoroverloading.dir/complex.cpp.obj	1ff6c7675e396b23
-30	1176	7602869285667417	CMakeFiles/polymorphism_operatoroverloading.dir/add.cpp.obj	ebb789e9df0b38e7
-40	1072	7602874019237009	CMakeFiles/polymorphism_operatoroverloading.dir/main.cpp.obj	32e385cb39ff2652
-12	927	7602875110710500	CMakeFiles/polymorphism_operatoroverloading.dir/add.cpp.obj	ebb789e9df0b38e7
-30	862	7602875415016016	CMakeFiles/polymorphism_operatoroverloading.dir/add.cpp.obj	ebb789e9df0b38e7
-27	957	7602875991630875	CMakeFiles/polymorphism_operatoroverloading.dir/main.cpp.obj	32e385cb39ff2652
-957	1037	7602876000938894	polymorphism_operatoroverloading.exe	38e1580c30ffdcf2
-12	1088	7602878181193202	CMakeFiles/polymorphism_operatoroverloading.dir/main.cpp.obj	32e385cb39ff2652
-17	1151	7602878181252977	CMakeFiles/polymorphism_operatoroverloading.dir/add.cpp.obj	ebb789e9df0b38e7
-1151	1241	7602878192584964	polymorphism_operatoroverloading.exe	38e1580c30ffdcf2
-40	1119	7602879190724492	CMakeFiles/polymorphism_operatoroverloading.dir/add.cpp.obj	ebb789e9df0b38e7
-35	1146	7602879190678900	CMakeFiles/polymorphism_operatoroverloading.dir/main.cpp.obj	32e385cb39ff2652
-1147	1236	7602879201795465	polymorphism_operatoroverloading.exe	38e1580c30ffdcf2
+29	1062	7604590912216804	CMakeFiles/polymorphism_operatoroverloading.dir/add.cpp.obj	ebb789e9df0b38e7
+30	318	7604591238334938	polymorphism_operatoroverloading.exe	38e1580c30ffdcf2
+88	1550	7604748190206787	CMakeFiles/polymorphism_operatoroverloading.dir/add.cpp.obj	ebb789e9df0b38e7
+84	1557	7604748190166894	CMakeFiles/polymorphism_operatoroverloading.dir/main.cpp.obj	32e385cb39ff2652
+1558	1771	7604748204910332	polymorphism_operatoroverloading.exe	38e1580c30ffdcf2
+28	1049	7604748492369322	CMakeFiles/polymorphism_operatoroverloading.dir/add.cpp.obj	ebb789e9df0b38e7
+1049	1151	7604748502668327	polymorphism_operatoroverloading.exe	38e1580c30ffdcf2

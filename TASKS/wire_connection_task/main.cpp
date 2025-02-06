@@ -10,10 +10,8 @@ int main()
     ac a1(4,10,20,"voltas","white",&wireobj1);
     Switch s1(1,5,10,"Havells","white",&wireobj1);
 
-    s1.displayswitch();
-    a1.displayac();
+    s1.display();
+    a1.display();
 
     return 0;
-
-
 }

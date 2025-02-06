@@ -27,7 +27,6 @@ int main()
     s.setaddress("banglore");
     cout<<s.getaddress()<<endl;
 
-    student s("vidya",26,25,123654,50000.00,"mandya");
-
+    student s1(50000.00,"banglore","pallavi",23,56,123654);
     return 0;
 }

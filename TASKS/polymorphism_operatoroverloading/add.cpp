@@ -4,7 +4,7 @@ using namespace std;
 
 add::add()
 {
-
+    //cout<<"add class default constructor called"<<endl;
 }
 
 add::~add()

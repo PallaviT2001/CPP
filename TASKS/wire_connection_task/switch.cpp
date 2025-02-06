@@ -4,7 +4,7 @@
 
 Switch::Switch()
 {
-
+    cout<<"switch constructor called"<<endl;
 }
 
 void Switch::printswitch()
@@ -23,7 +23,7 @@ Switch::Switch(int switchnumber1,int length1,int breadth1, string brand1,string 
 
 }
 
-void Switch::displayswitch()
+void Switch::display()
 {
     if(m_wire)
     {

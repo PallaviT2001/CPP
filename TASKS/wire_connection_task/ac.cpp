@@ -15,7 +15,7 @@ ac::ac()
 {
 
 }
-void ac::displayac()
+void ac::display()
 {
     if(m_wire)
     {

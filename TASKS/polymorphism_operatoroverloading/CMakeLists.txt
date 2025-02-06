@@ -7,7 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(polymorphism_operatoroverloading main.cpp
 
-    add.h add.cpp)
+    add.h add.cpp
+)
 
 include(GNUInstallDirs)
 install(TARGETS polymorphism_operatoroverloading

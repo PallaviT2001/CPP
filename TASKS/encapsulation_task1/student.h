@@ -12,7 +12,7 @@ protected:
 public:
     student();
     ~student();
-    student(float fees,string address);
+    student(float fees,string address,string name,int id,int age,int contactnumber);
 
     void setfees(float fees);
     float getfees();
