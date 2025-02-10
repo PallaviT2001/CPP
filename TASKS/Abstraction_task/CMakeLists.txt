@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(Abstraction_task main.cpp
     car.h car.cpp
     engine.h engine.cpp
+    key.h key.cpp
 )
 
 include(GNUInstallDirs)

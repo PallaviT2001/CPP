@@ -7,7 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(polymorphism_withoutoperatoroverloading main.cpp
     distance.h distance.cpp
-    base.h base.cpp)
+    base.h base.cpp
+    student.h student.cpp
+    a.h a.cpp
+    b.h b.cpp)
 
 include(GNUInstallDirs)
 install(TARGETS polymorphism_withoutoperatoroverloading

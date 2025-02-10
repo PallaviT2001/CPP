@@ -1,34 +1,41 @@
 #include "switch.h"
-#include "wire.h"
-#include "AC.h"// Ensure this exists for Wire class
+
+
+Switch::Switch(string colour,string state,string brand,string name,int price,Wire* wire)
+{
+    cout<<"Parametrized Constructor of Switch called"<<endl;
+
+    m_colour = colour;
+    m_state = state;
+    m_brand = brand;
+    m_name = name;
+    m_price = price;
+    m_wire = wire;
+}
 
 Switch::Switch()
 {
-    cout<<"switch constructor called"<<endl;
+    cout<<"Default Constructor of Switch called"<<endl;
+
 }
 
-void Switch::printswitch()
+Switch::~Switch()
 {
-    cout<<switchnumber<<" "<<length<<" "<<breadth<<" "<<brand<<" "<<color<<endl;
+    cout<<"Destructor of Switch called"<<endl;
 }
 
-Switch::Switch(int switchnumber1,int length1,int breadth1, string brand1,string color1,wire* wire)
+void Switch::SwitchOn()
 {
-    switchnumber=switchnumber1;
-    length=length1;
-    breadth=breadth1;
-    brand=brand1;
-    color=color1;
-    m_wire = wire;
+
+    cout << "Switch is turned ON.\n";
+    m_wire->powerOnAc();
 
 }
 
-void Switch::display()
+void Switch::SwitchOff()
 {
-    if(m_wire)
-    {
-        m_wire->printwire();
-        printswitch();
-    }
-}
 
+    cout << "Switch is turned OFF.\n";
+    m_wire->powerOffAc();
+
+}

@@ -1,7 +1,10 @@
 #include <iostream>
-#include "distance.h"
+//#include "distance.h"
 using namespace std;
 #include "base.h"
+//#include "a.h"
+//#include "b.h"
+#include "student.h"
 
 /*int main()
 {
@@ -29,28 +32,72 @@ using namespace std;
 
 int main()
 {
-    // base b1(10);
-    // base b2(20);
-    // base b3=b1.getnum()+b2.getnum();
-    // cout<<"b3 result"<<b3.a<<endl;
-    base b1(0);
-    base b2(0);
+    cout<<"without operator overloading adding values"<<endl;
+    base b1(10);
+    base b2(20);
+    base b3;
     b1.getnum();
     b2.getnum();
     cout<<b1.getnum()<<endl;
     cout<<b2.getnum()<<endl;
-    b1.setnum(10);
-    b2.setnum(20);
+
+    b3=b1.getnum()+b2.getnum();
+    cout<<"value "<<b3.getnum()<<endl;
+
+    b1.setnum(30);
+    b2.setnum(40);
     cout<<b1.getnum()<<endl;
     cout<<b2.getnum()<<endl;
-    base b3=b1.getnum()+b2.getnum();
-    base b4=b1.getnum()-b2.getnum();
-    base b5=b1.getnum()*b2.getnum();
-    base b6=b1.getnum()/b2.getnum();
-    base b7=b1.getnum();
-    cout<<b3.getnum()<<endl;
-    cout<<b4.getnum()<<endl;
-    cout<<b5.getnum()<<endl;
-    cout<<b6.getnum()<<endl;
-    cout<<b7.getnum()<<endl;
+    b3=b1.getnum()+b2.getnum();
+    cout<<"value "<<b3.getnum()<<endl;
+
+
+    base b4("pallavi");
+    b4.getname();
+    cout<<b4.getname()<<endl;
+
 }
+
+/*int main()
+{
+    A *a;
+    B b;
+    a = &b;
+    a->display();
+}*/
+
+/*int main()
+{
+    student s(1,"Pallavi",123456987);
+    s.display();
+    s.setid(2);
+    s.getid();
+    cout<<s.getid()<<endl;
+    s.display();
+    student s1(3,"likitha",123654789);
+    s.display();
+    s1.setname("darshini");
+    s1.getname();
+    s1.display();
+    return 0;
+}*/
+
+/*int main()
+{
+    student s1;
+    s1.a=new int;
+    *s1.a=25;
+    student s2=s1;
+    delete s1.a;
+    cout<<*s2.a<<endl;
+    //delete s1.a;
+    //cout<<*s1.a<<endl;
+    cout<<"before returning"<<endl;
+    return 0;
+}*/
+
+
+
+
+
+

@@ -14,7 +14,7 @@ base::~base()
 
 base::base(int a)
 {
-    this->m_a=a;
+    m_a=a;
     cout<<"Parameter constructor called"<<endl;
 }
 
@@ -25,5 +25,21 @@ int base::getnum()
 
 void base::setnum(int b)
 {
-    this->m_a = b;
+    m_a = b;
+}
+
+base::base(string name)
+{
+    m_name=name;
+    cout<<"parameter constructor called"<<endl;
+}
+
+string base::getname()
+{
+    return m_name;
+}
+
+void base::setname(string name)
+{
+    m_name=name;
 }
