@@ -1,35 +1,35 @@
 #include "ac.h"
-#include "wire.h"
 
-ac::ac(int acnumber1, int length1, int breadth1, string brand1, string color1,wire* wire)
+
+AC::AC(string brand,string colour, float price,Wire* wire)
 {
-    acnumber=acnumber1;
-    length=length1;
-    breadth=breadth1;
-    brand=brand1;
+    cout<<"Parametrized Constructor of AC called"<<endl;
+
+    m_brand = brand;
+    m_colour = colour;
+    m_price = price;
     m_wire = wire;
-    color=color1;
+    m_wire->setAC(this);
+
 
 }
-ac::ac()
+AC::AC()
 {
+    cout<<"Default Constructor of AC called"<<endl;
 
 }
-void ac::display()
+
+void AC::AcOn()
 {
-    if(m_wire)
-    {
-        m_wire->printwire();
-        printAC();
-    }
+    cout << "AC is turned ON.\n";
 }
 
-void ac::printAC()
+void AC::AcOff()
 {
-    cout<<acnumber<<" "<<length<<" "<<breadth<<" "<<brand<<" "<<color<<endl;
-
+    cout << "AC is turned OFF.\n";
 }
 
-
-
-
+AC::~AC()
+{
+    cout << "Destructor of AC called"<<endl;
+}

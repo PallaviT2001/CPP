@@ -67,6 +67,24 @@ build CMakeFiles/polymorphism_withoutoperatoroverloading.dir/base.cpp.obj: CXX_C
   OBJECT_DIR = CMakeFiles\polymorphism_withoutoperatoroverloading.dir
   OBJECT_FILE_DIR = CMakeFiles\polymorphism_withoutoperatoroverloading.dir
 
+build CMakeFiles/polymorphism_withoutoperatoroverloading.dir/student.cpp.obj: CXX_COMPILER__polymorphism_withoutoperatoroverloading_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/polymorphism_withoutoperatoroverloading/student.cpp || cmake_object_order_depends_target_polymorphism_withoutoperatoroverloading
+  DEP_FILE = CMakeFiles\polymorphism_withoutoperatoroverloading.dir\student.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\polymorphism_withoutoperatoroverloading.dir
+  OBJECT_FILE_DIR = CMakeFiles\polymorphism_withoutoperatoroverloading.dir
+
+build CMakeFiles/polymorphism_withoutoperatoroverloading.dir/a.cpp.obj: CXX_COMPILER__polymorphism_withoutoperatoroverloading_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/polymorphism_withoutoperatoroverloading/a.cpp || cmake_object_order_depends_target_polymorphism_withoutoperatoroverloading
+  DEP_FILE = CMakeFiles\polymorphism_withoutoperatoroverloading.dir\a.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\polymorphism_withoutoperatoroverloading.dir
+  OBJECT_FILE_DIR = CMakeFiles\polymorphism_withoutoperatoroverloading.dir
+
+build CMakeFiles/polymorphism_withoutoperatoroverloading.dir/b.cpp.obj: CXX_COMPILER__polymorphism_withoutoperatoroverloading_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/polymorphism_withoutoperatoroverloading/b.cpp || cmake_object_order_depends_target_polymorphism_withoutoperatoroverloading
+  DEP_FILE = CMakeFiles\polymorphism_withoutoperatoroverloading.dir\b.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\polymorphism_withoutoperatoroverloading.dir
+  OBJECT_FILE_DIR = CMakeFiles\polymorphism_withoutoperatoroverloading.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target polymorphism_withoutoperatoroverloading
@@ -75,7 +93,7 @@ build CMakeFiles/polymorphism_withoutoperatoroverloading.dir/base.cpp.obj: CXX_C
 #############################################
 # Link the executable polymorphism_withoutoperatoroverloading.exe
 
-build polymorphism_withoutoperatoroverloading.exe: CXX_EXECUTABLE_LINKER__polymorphism_withoutoperatoroverloading_Debug CMakeFiles/polymorphism_withoutoperatoroverloading.dir/main.cpp.obj CMakeFiles/polymorphism_withoutoperatoroverloading.dir/distance.cpp.obj CMakeFiles/polymorphism_withoutoperatoroverloading.dir/base.cpp.obj
+build polymorphism_withoutoperatoroverloading.exe: CXX_EXECUTABLE_LINKER__polymorphism_withoutoperatoroverloading_Debug CMakeFiles/polymorphism_withoutoperatoroverloading.dir/main.cpp.obj CMakeFiles/polymorphism_withoutoperatoroverloading.dir/distance.cpp.obj CMakeFiles/polymorphism_withoutoperatoroverloading.dir/base.cpp.obj CMakeFiles/polymorphism_withoutoperatoroverloading.dir/student.cpp.obj CMakeFiles/polymorphism_withoutoperatoroverloading.dir/a.cpp.obj CMakeFiles/polymorphism_withoutoperatoroverloading.dir/b.cpp.obj
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\polymorphism_withoutoperatoroverloading.dir

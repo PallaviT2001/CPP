@@ -1,22 +1,27 @@
 #ifndef WIRE_H
 #define WIRE_H
-#include <string>
 #include <iostream>
 using namespace std;
 
-class wire
-{
-public:
-    wire();
-    int length;
-    float thickness;
-    string brand;
-    string color;
-    float price;
-    void printwire();
+class AC;
 
-    wire(int length1,float thickness1,string brand1, string color1,float price);
+class Wire {
+    float m_thickness;
+    float m_length;
+    string m_colour;
+    string m_brand;
+    float m_price;
+
+    AC* acptr;
+
+public:
+    Wire();
+    ~Wire();
+    Wire(float thickness, float length, string colour, string brand, float price);
+    void display();
+    void setAC(AC* ac);
+    void powerOnAc();
+    void powerOffAc();
 };
 
-#endif
-
+#endif // WIRE_H
