@@ -8,7 +8,6 @@ class vehicle
 {
 private:
     int vehiclenumber;
-
 public:
     string fuel;
     vehicle();

@@ -3,7 +3,6 @@
 using namespace std;
 #include <string>
 
-
 car::car()
 {
     cout<<"car class constructor called"<<endl;

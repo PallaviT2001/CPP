@@ -1,4 +1,6 @@
-#include "circle.h"
+#include "Circle.h"
+#include <iostream>
+using namespace std;
 
 Circle::Circle()
 {
@@ -15,10 +17,10 @@ Circle::Circle(int radious)
     m_radious=radious;
 }
 
-void Circle::area()
-{
-    cout<<"area of the circle is"<<(3.14*m_radious*m_radious);
-}
+// void Circle::area()
+// {
+//     cout<<"area of the circle is"<<(3.14*m_radious*m_radious);
+// }
 
 void Circle::display()
 {

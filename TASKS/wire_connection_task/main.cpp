@@ -12,8 +12,6 @@ int main()
     Switch switchobj1("white","on","xyz","AC1",2000,&wireobj1);
 
     switchobj1.SwitchOn();
-    // switchobj1.SwitchOff();
 
-    cout << "Hello World!" << endl;
     return 0;
 }

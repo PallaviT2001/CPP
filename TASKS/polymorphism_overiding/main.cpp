@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    vehicle *ptr;
+    /*vehicle *ptr;
 
     Bike b;
     ptr=&b;
@@ -14,14 +14,14 @@ int main()
 
     car c;
     ptr=&c;
-    ptr->fuelfun("petrol");
+    ptr->fuelfun("petrol");*/
 
-    /*vehicle v;
+    vehicle v;
     Bike b;
     car c;
     v.fuelfun("diesel");
     b.Bike::fuelfun("diesel");
-    c.car::fuelfun("diesel");*/
+    c.car::fuelfun("diesel");
 
     return 0;
 }

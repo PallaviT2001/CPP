@@ -1,6 +1,8 @@
-#include "shape.h"
 #include <iostream>
 using namespace std;
+#include "Shape.h"
+#include "Circle.h"
+#include "Rectangle.h"
 
 Shape::Shape()
 {
