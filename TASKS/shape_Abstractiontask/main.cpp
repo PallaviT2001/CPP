@@ -1,5 +1,7 @@
 #include <iostream>
-#include "shape.h"
+#include "Shape.h"
+#include "Rectangle.h"
+#include "Circle.h"
 using namespace std;
 
 int main()
@@ -8,9 +10,12 @@ int main()
     r.area();
     r.display();
 
-    Circle c(2);
-    c.area();
-    c.display();
 
-    return 0;
+    /*Circle *ptr;
+    ptr->display();*/
+
+   Circle c;
+   c.area();
+   c.display();
+   return 0;
 }

@@ -1,0 +1,13 @@
+# ninja log v6
+895	984	7608838954425060	friend_function.exe	995e6f6b4abbac52
+30	895	7608838945764937	CMakeFiles/friend_function.dir/person.cpp.obj	1ea8d9f575cdacbd
+60	1151	7608838360706748	CMakeFiles/friend_function.dir/likitha.cpp.obj	6b6873655a6089b1
+51	1119	7608838360631345	CMakeFiles/friend_function.dir/main.cpp.obj	9035fdd6b3d9b4b0
+32	1257	7608912975025961	CMakeFiles/friend_function.dir/likitha.cpp.obj	6b6873655a6089b1
+9	1050	7608920175254424	CMakeFiles/friend_function.dir/main.cpp.obj	9035fdd6b3d9b4b0
+14	1148	7608920175410679	CMakeFiles/friend_function.dir/animal.cpp.obj	5ad571044fe53c08
+28	1097	7608920267074008	CMakeFiles/friend_function.dir/main.cpp.obj	9035fdd6b3d9b4b0
+31	1108	7608920267252224	CMakeFiles/friend_function.dir/animal.cpp.obj	5ad571044fe53c08
+36	1051	7608920468251219	CMakeFiles/friend_function.dir/main.cpp.obj	9035fdd6b3d9b4b0
+9	851	7608921630050479	CMakeFiles/friend_function.dir/main.cpp.obj	9035fdd6b3d9b4b0
+12	874	7608921630090351	CMakeFiles/friend_function.dir/animal.cpp.obj	5ad571044fe53c08

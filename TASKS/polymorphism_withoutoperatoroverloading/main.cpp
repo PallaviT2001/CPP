@@ -32,7 +32,7 @@ using namespace std;
 
 int main()
 {
-    cout<<"without operator overloading adding values"<<endl;
+    cout<<"without using operator overloading adding values"<<endl;
     base b1(10);
     base b2(20);
     base b3;

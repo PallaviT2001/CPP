@@ -1,6 +1,6 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
-
+#include "shape.h"
 
 class Circle:public Shape
 {
@@ -11,8 +11,8 @@ public:
     ~Circle();
     Circle(int radius);
 
-    void area();
+    virtual void area()=0;
     void display();
 };
 
-#endif // CIRCLE_H
+#endif

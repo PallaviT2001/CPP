@@ -15,7 +15,7 @@ Bike::~Bike()
 
 void Bike::fuelfun(string fuel)
 {
-    cout<<"derived class fuel function called"<<endl;
+    cout<<"bike class fuel function called"<<endl;
     cout<<"fuel name="<<fuel<<endl;
 
 }
