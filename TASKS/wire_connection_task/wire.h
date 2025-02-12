@@ -11,17 +11,16 @@ class Wire {
     string m_colour;
     string m_brand;
     float m_price;
-
     AC* acptr;
 
 public:
     Wire();
     ~Wire();
     Wire(float thickness, float length, string colour, string brand, float price);
-    void display();
-    void setAC(AC* ac);
-    void powerOnAc();
-    void powerOffAc();
+
+    void setMe(AC* ac);
+    void wireOn();
+
 };
 
-#endif // WIRE_H
+#endif

@@ -1,11 +1,11 @@
 #ifndef AC_H
 #define AC_H
-
-#include "wire.h"
 #include <iostream>
 using namespace std;
+#include "wire.h"
 
-class AC {
+class AC
+{
     string m_brand;
     string m_colour;
     float m_price;
@@ -13,11 +13,11 @@ class AC {
 
 public:
     AC();
-    AC(string brand, string colour, float price, Wire* wire);
     ~AC();
+    AC(string brand, string colour, float price, Wire* wire);
 
-    void AcOn();
-    void AcOff();
+    void setWire(Wire *wire);
+    void acOn();
 };
 
-#endif // AC_H
+#endif

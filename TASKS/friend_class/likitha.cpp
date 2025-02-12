@@ -1,4 +1,4 @@
-#include "likitha.h"
+/*#include "likitha.h"
 #include <iostream>
 
 Likitha::Likitha()
@@ -13,12 +13,12 @@ Likitha::~Likitha()
 
 void Likitha::display()
 {
-    /*p->m_age =25;
+    p->m_age =25;
     p->m_name="pallavi";
-    p->m_cno="123654";*/
+    p->m_cno="123654";
     cout<<p->m_age<<" "<<p->m_name<<" "<<p->m_cno<<endl;
 
-}
+}*/
 
 
 

@@ -1,41 +1,27 @@
 #include "switch.h"
 
-
-Switch::Switch(string colour,string state,string brand,string name,int price,Wire* wire)
-{
-    cout<<"Parametrized Constructor of Switch called"<<endl;
-
-    m_colour = colour;
-    m_state = state;
-    m_brand = brand;
-    m_name = name;
-    m_price = price;
-    m_wire = wire;
-}
-
 Switch::Switch()
 {
-    cout<<"Default Constructor of Switch called"<<endl;
-
+    cout<<"Switch Default Construtor Called"<<endl;
 }
 
 Switch::~Switch()
 {
-    cout<<"Destructor of Switch called"<<endl;
+    cout<<"Switch Destrutor Called"<<endl;
 }
 
-void Switch::SwitchOn()
+Switch::Switch(string colour, string state, string brand, string name, int price, Wire *wire)
 {
-
-    cout << "Switch is turned ON.\n";
-    m_wire->powerOnAc();
-
+    cout<<"Switch Parameterized Construtor Called"<<endl;
 }
 
-void Switch::SwitchOff()
+void Switch::init(Wire *wire)
 {
+    m_wire = wire;
+}
 
-    cout << "Switch is turned OFF.\n";
-    m_wire->powerOffAc();
-
+void Switch::switchOn()
+{
+    cout<<"Switch Turned On"<<endl;
+    m_wire->wireOn();
 }

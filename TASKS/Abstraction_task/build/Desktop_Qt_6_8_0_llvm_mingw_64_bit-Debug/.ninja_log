@@ -1,11 +1,19 @@
 # ninja log v6
 59	1198	7605257088951533	CMakeFiles/Abstraction_task.dir/engine.cpp.obj	aa7b3ced0b0978a9
-1219	1319	7605257100565208	Abstraction_task.exe	7e9a3367b19766bd
-52	1133	7605257088881726	CMakeFiles/Abstraction_task.dir/main.cpp.obj	cc0c5aff08092bf5
-56	1219	7605257088921611	CMakeFiles/Abstraction_task.dir/car.cpp.obj	2b7856d84e08d1d1
-30	983	7607880579577617	CMakeFiles/Abstraction_task.dir/main.cpp.obj	cc0c5aff08092bf5
-37	1019	7607880579636575	CMakeFiles/Abstraction_task.dir/car.cpp.obj	2b7856d84e08d1d1
-10	1086	7607880879458069	CMakeFiles/Abstraction_task.dir/key.cpp.obj	ed9b877cb4b06e79
-1087	1299	7607880890300970	Abstraction_task.exe	7a3f4c31b5c61a2d
-10	1056	7607881559037937	CMakeFiles/Abstraction_task.dir/car.cpp.obj	2b7856d84e08d1d1
 1057	1155	7607881569502158	Abstraction_task.exe	7a3f4c31b5c61a2d
+30	983	7607880579577617	CMakeFiles/Abstraction_task.dir/main.cpp.obj	cc0c5aff08092bf5
+10	1056	7607881559037937	CMakeFiles/Abstraction_task.dir/car.cpp.obj	2b7856d84e08d1d1
+10	1086	7607880879458069	CMakeFiles/Abstraction_task.dir/key.cpp.obj	ed9b877cb4b06e79
+23	819	7609773732070584	CMakeFiles/Abstraction_task.dir/main.cpp.obj	cc0c5aff08092bf5
+27	841	7609773732226797	CMakeFiles/Abstraction_task.dir/car.cpp.obj	2b7856d84e08d1d1
+13	882	7609774862130484	CMakeFiles/Abstraction_task.dir/break.cpp.obj	98df5f51c74acfe1
+32	948	7609775088038451	CMakeFiles/Abstraction_task.dir/accelerator.cpp.obj	9a821951182e5fc4
+949	1150	7609775097342349	Abstraction_task.exe	49a0162d6392dcd1
+27	1279	7609776260020298	CMakeFiles/Abstraction_task.dir/main.cpp.obj	cc0c5aff08092bf5
+35	1317	7609776260222716	CMakeFiles/Abstraction_task.dir/accelerator.cpp.obj	9a821951182e5fc4
+32	1337	7609776260188346	CMakeFiles/Abstraction_task.dir/car.cpp.obj	2b7856d84e08d1d1
+1337	1441	7609776273243369	Abstraction_task.exe	49a0162d6392dcd1
+35	968	7609776940318961	CMakeFiles/Abstraction_task.dir/car.cpp.obj	2b7856d84e08d1d1
+968	1054	7609776949676239	Abstraction_task.exe	49a0162d6392dcd1
+17	1106	7609780311795989	CMakeFiles/Abstraction_task.dir/car.cpp.obj	2b7856d84e08d1d1
+1107	1213	7609780322706904	Abstraction_task.exe	49a0162d6392dcd1

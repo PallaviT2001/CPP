@@ -9,6 +9,8 @@ add_executable(Abstraction_task main.cpp
     car.h car.cpp
     engine.h engine.cpp
     key.h key.cpp
+    accelerator.h accelerator.cpp
+    break.h break.cpp
 )
 
 include(GNUInstallDirs)

@@ -9,7 +9,9 @@ add_executable(friend_class main.cpp
     likitha.h likitha.cpp
     person.h person.cpp
     animal.h animal.cpp
-    elephant.h elephant.cpp)
+    elephant.h elephant.cpp
+
+)
 
 include(GNUInstallDirs)
 install(TARGETS friend_class
