@@ -1,4 +1,4 @@
-#ifndef LIKITHA_H
+/*#ifndef LIKITHA_H
 #define LIKITHA_H
 #include "person.h"
 #include <iostream>
@@ -17,4 +17,4 @@ public:
     string c=p->m_cno="123654";
 };
 
-#endif
+#endif*/

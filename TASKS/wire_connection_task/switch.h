@@ -1,13 +1,13 @@
 #ifndef SWITCH_H
 #define SWITCH_H
-
-#include "wire.h"
 #include <iostream>
 using namespace std;
+#include "wire.h"
+#include "ac.h"
 
 class Switch {
     string m_colour;
-    string m_state; // on or off
+    string m_state;
     string m_brand;
     string m_name;
     int m_price;
@@ -15,11 +15,11 @@ class Switch {
 
 public:
     Switch();
-    Switch(string colour, string state, string brand, string name, int price, Wire* wire);
     ~Switch();
+    Switch(string colour, string state, string brand, string name, int price, Wire* wire);
 
-    void SwitchOn();
-    void SwitchOff();
+    void init(Wire *wire);
+    void switchOn();
 };
 
-#endif // SWITCH_H
+#endif

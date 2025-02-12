@@ -8,10 +8,13 @@ AC::AC(string brand,string colour, float price,Wire* wire)
     m_brand = brand;
     m_colour = colour;
     m_price = price;
-    m_wire = wire;
-    m_wire->setAC(this);
+    m_wire = NULL;
+}
 
-
+void AC::setWire(Wire *wire)
+{
+    m_wire=wire;
+    m_wire->setMe(this);
 }
 AC::AC()
 {
@@ -19,15 +22,11 @@ AC::AC()
 
 }
 
-void AC::AcOn()
+void AC::acOn()
 {
     cout << "AC is turned ON.\n";
 }
 
-void AC::AcOff()
-{
-    cout << "AC is turned OFF.\n";
-}
 
 AC::~AC()
 {

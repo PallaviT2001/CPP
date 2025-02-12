@@ -5,6 +5,7 @@
 class Elephant:public Animal
 {
 public:
+    Elephant();
     Elephant(int age,string colour,float height);
     ~Elephant();
 

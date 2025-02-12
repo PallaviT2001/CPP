@@ -1,20 +1,25 @@
-#include "animal.h"
+#include "elephant.h"
 #include <iostream>
 using namespace std;
 
-Animal::Animal()
+Elephant::Elephant()
 {
     cout<<"animal class default constructor called"<<endl;
 }
 
-Animal::~Animal()
+Elephant::~Elephant()
 {
     cout<<"animal class destructor called"<<endl;
 }
 
-Animal::Animal(int age,string colour,float height)
+Elephant::Elephant(int age,string colour,float height)
 {
     m_age=age;
     m_colour=colour;
     m_height=height;
+}
+
+void Elephant::display()
+{
+    cout<<m_age<<" "<<m_colour<<" "<<m_height<<endl;
 }

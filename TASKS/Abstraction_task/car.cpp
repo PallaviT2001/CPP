@@ -1,6 +1,7 @@
 #include "car.h"
 #include "engine.h"
 #include "key.h"
+#include "accelerator.h"
 #include <iostream>
 using namespace std;
 
@@ -19,12 +20,11 @@ void Car::startcar()
     key1.keyinsert();
     cout<<"car startred"<<endl;
     eng1.startengine();
+    ac1.speedup();
+    br1.applybreak();
 }
 
 void Car::stopcar()
 {
-    key1.keyremove();
     cout<<"car stopped"<<endl;
-    eng1.stopengine();
-
 }
