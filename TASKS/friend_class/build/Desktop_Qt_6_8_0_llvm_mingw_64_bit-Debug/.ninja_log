@@ -1,12 +1,16 @@
 # ninja log v6
-18	1414	7609638683969914	CMakeFiles/friend_class.dir/main.cpp.obj	9bcaf5f0f6003f7d
+28	1136	7609791211903886	CMakeFiles/friend_class.dir/main.cpp.obj	9bcaf5f0f6003f7d
 27	1452	7609638684119981	CMakeFiles/friend_class.dir/person.cpp.obj	16e9d23cb32043eb
 8	43	7609639129602442	CMakeFiles/friend_class.dir/likitha.cpp.obj	a65fa79bdc9f88e0
 42	212	7609638684276255	CMakeFiles/friend_class.dir/parrot.cpp.obj	c128d2570d911521
 18	1315	7609639722691688	CMakeFiles/friend_class.dir/elephant.cpp.obj	d3b88e6deea97045
-1316	1439	7609639735669444	friend_class.exe	a32d43e97725f93f
+1137	1246	7609791222992828	friend_class.exe	4d5a76fa10a2aa5a
 2	10	7609569542837008	clean	577b940aee94fbd7
 30	1513	7609638684119981	CMakeFiles/friend_class.dir/animal.cpp.obj	f9ec0e4f2206c9e5
 37	203	7609638684119981	CMakeFiles/friend_class.dir/bird.cpp.obj	c3544f62baa2da07
-28	1136	7609791211903886	CMakeFiles/friend_class.dir/main.cpp.obj	9bcaf5f0f6003f7d
-1137	1246	7609791222992828	friend_class.exe	4d5a76fa10a2aa5a
+13	79	7610452772462688	CMakeFiles/friend_class.dir/animal.cpp.obj	f9ec0e4f2206c9e5
+16	87	7610452772488058	CMakeFiles/friend_class.dir/elephant.cpp.obj	d3b88e6deea97045
+21	898	7610452772536448	CMakeFiles/friend_class.dir/bird.cpp.obj	c3544f62baa2da07
+26	994	7610453057088527	CMakeFiles/friend_class.dir/main.cpp.obj	9bcaf5f0f6003f7d
+29	1013	7610453057248679	CMakeFiles/friend_class.dir/parrot.cpp.obj	c128d2570d911521
+1014	1236	7610453067098221	friend_class.exe	a32d43e97725f93f

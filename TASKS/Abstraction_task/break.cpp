@@ -14,5 +14,5 @@ Break::~Break()
 
 void Break::applybreak()
 {
-    cout<<"break applied car stopped"<<endl;
+    cout<<"break applied"<<endl;
 }

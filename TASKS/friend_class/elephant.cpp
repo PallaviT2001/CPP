@@ -1,4 +1,4 @@
-#include "elephant.h"
+/*#include "elephant.h"
 #include <iostream>
 using namespace std;
 
@@ -22,4 +22,4 @@ Elephant::Elephant(int age,string colour,float height)
 void Elephant::display()
 {
     cout<<m_age<<" "<<m_colour<<" "<<m_height<<endl;
-}
+}*/

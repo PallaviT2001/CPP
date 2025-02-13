@@ -1,4 +1,4 @@
-#ifndef ELEPHANT_H
+/*#ifndef ELEPHANT_H
 #define ELEPHANT_H
 #include "animal.h"
 
@@ -12,4 +12,4 @@ public:
     void display();
 };
 
-#endif
+#endif*/

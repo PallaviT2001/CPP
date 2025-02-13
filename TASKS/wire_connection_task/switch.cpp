@@ -15,7 +15,7 @@ Switch::Switch(string colour, string state, string brand, string name, int price
     cout<<"Switch Parameterized Construtor Called"<<endl;
 }
 
-void Switch::init(Wire *wire)
+void Switch::initializewire(Wire *wire)
 {
     m_wire = wire;
 }

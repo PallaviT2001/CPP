@@ -79,6 +79,18 @@ build CMakeFiles/friend_function.dir/elephant.cpp.obj: CXX_COMPILER__friend_func
   OBJECT_DIR = CMakeFiles\friend_function.dir
   OBJECT_FILE_DIR = CMakeFiles\friend_function.dir
 
+build CMakeFiles/friend_function.dir/bird.cpp.obj: CXX_COMPILER__friend_function_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/friend_function/bird.cpp || cmake_object_order_depends_target_friend_function
+  DEP_FILE = CMakeFiles\friend_function.dir\bird.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\friend_function.dir
+  OBJECT_FILE_DIR = CMakeFiles\friend_function.dir
+
+build CMakeFiles/friend_function.dir/parrot.cpp.obj: CXX_COMPILER__friend_function_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/friend_function/parrot.cpp || cmake_object_order_depends_target_friend_function
+  DEP_FILE = CMakeFiles\friend_function.dir\parrot.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\friend_function.dir
+  OBJECT_FILE_DIR = CMakeFiles\friend_function.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target friend_function
@@ -87,7 +99,7 @@ build CMakeFiles/friend_function.dir/elephant.cpp.obj: CXX_COMPILER__friend_func
 #############################################
 # Link the executable friend_function.exe
 
-build friend_function.exe: CXX_EXECUTABLE_LINKER__friend_function_Debug CMakeFiles/friend_function.dir/main.cpp.obj CMakeFiles/friend_function.dir/person.cpp.obj CMakeFiles/friend_function.dir/likitha.cpp.obj CMakeFiles/friend_function.dir/animal.cpp.obj CMakeFiles/friend_function.dir/elephant.cpp.obj
+build friend_function.exe: CXX_EXECUTABLE_LINKER__friend_function_Debug CMakeFiles/friend_function.dir/main.cpp.obj CMakeFiles/friend_function.dir/person.cpp.obj CMakeFiles/friend_function.dir/likitha.cpp.obj CMakeFiles/friend_function.dir/animal.cpp.obj CMakeFiles/friend_function.dir/elephant.cpp.obj CMakeFiles/friend_function.dir/bird.cpp.obj CMakeFiles/friend_function.dir/parrot.cpp.obj
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\friend_function.dir

@@ -10,8 +10,8 @@ int main()
     Wire w;
     Switch s;
     AC a;
-    s.init(&w);
-    a.setWire(&w);
+    s.initializewire(&w);
+    a.initializewiretoac(&w);
     s.switchOn();
     return 0;
 }
