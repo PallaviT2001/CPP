@@ -2,7 +2,6 @@
 #define ELEPHANT_H
 #include <iostream>
 using namespace std;
-
 #include"animal.h"
 
 class Animal;

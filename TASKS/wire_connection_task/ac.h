@@ -16,7 +16,7 @@ public:
     ~AC();
     AC(string brand, string colour, float price, Wire* wire);
 
-    void setWire(Wire *wire);
+    void initializewiretoac(Wire *wire);
     void acOn();
 };
 

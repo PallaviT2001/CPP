@@ -1,4 +1,4 @@
-#ifndef ANIMAL_H
+/*#ifndef ANIMAL_H
 #define ANIMAL_H
 #include <iostream>
 using namespace std;
@@ -16,4 +16,4 @@ public:
     friend class Elephant;
 };
 
-#endif
+#endif*/

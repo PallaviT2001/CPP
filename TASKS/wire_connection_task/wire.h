@@ -2,6 +2,7 @@
 #define WIRE_H
 #include <iostream>
 using namespace std;
+//#include "ac.h"
 
 class AC;
 
@@ -18,7 +19,7 @@ public:
     ~Wire();
     Wire(float thickness, float length, string colour, string brand, float price);
 
-    void setMe(AC* ac);
+    void setac(AC* ac);
     void wireOn();
 
 };

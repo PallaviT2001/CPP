@@ -1,5 +1,20 @@
 #include "ac.h"
 
+AC::AC()
+{
+    cout<<"Default Constructor of AC called"<<endl;
+
+}
+
+AC::~AC()
+{
+    cout << "Destructor of AC called"<<endl;
+}
+
+void AC::acOn()
+{
+    cout << "AC is turned ON.\n";
+}
 
 AC::AC(string brand,string colour, float price,Wire* wire)
 {
@@ -11,24 +26,10 @@ AC::AC(string brand,string colour, float price,Wire* wire)
     m_wire = NULL;
 }
 
-void AC::setWire(Wire *wire)
+void AC::initializewiretoac(Wire *wire)
 {
     m_wire=wire;
-    m_wire->setMe(this);
-}
-AC::AC()
-{
-    cout<<"Default Constructor of AC called"<<endl;
-
-}
-
-void AC::acOn()
-{
-    cout << "AC is turned ON.\n";
+    m_wire->setac(this);
 }
 
 
-AC::~AC()
-{
-    cout << "Destructor of AC called"<<endl;
-}

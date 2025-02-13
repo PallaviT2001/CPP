@@ -1,4 +1,4 @@
-#include "animal.h"
+/*#include "animal.h"
 #include <iostream>
 using namespace std;
 
@@ -17,4 +17,4 @@ Animal::Animal(int age,string colour,float height)
     m_age=age;
     m_colour=colour;
     m_height=height;
-}
+}*/

@@ -10,6 +10,8 @@ add_executable(friend_class main.cpp
     person.h person.cpp
     animal.h animal.cpp
     elephant.h elephant.cpp
+    bird.h bird.cpp
+    parrot.h parrot.cpp
 
 )
 

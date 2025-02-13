@@ -18,7 +18,7 @@ public:
     ~Switch();
     Switch(string colour, string state, string brand, string name, int price, Wire* wire);
 
-    void init(Wire *wire);
+    void initializewire(Wire *wire);
     void switchOn();
 };
 

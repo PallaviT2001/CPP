@@ -52,26 +52,47 @@ using namespace std;
     return 0;
 }*/
 
-#include <map>
-
+/*#include <map>
 int main()
 {
     string input;
     cout << "Enter a string: ";
     cin >> input;
 
-    map<char,int> frequency;
+    map<char,int>count;
+
+    for(char ch:input)
+    {
+        count[ch]++;
+    }
 
     for (char ch : input)
     {
-        frequency[ch]++;
-    }
-    for (char ch : input) {
-        if (frequency[ch] != 0) {
-            cout << ch << "-" << frequency[ch] << " ";
-            frequency[ch] = 0;
+        if (count[ch] != 0)
+        {
+            cout << ch << "-" <<count[ch] << " ";
+            count[ch] = 0;
+
         }
     }
 
+    return 0;
+}*/
+
+
+#include <algorithm>
+int arraysize=4;
+
+int main()
+{
+    int array[]={10,200,5,300};
+    int size = sizeof(array)/sizeof(array[0]);
+    sort(array,array+arraysize);
+
+    cout<<"output array:"<<endl;
+    for(int i=0;i<4;i++)
+    {
+        cout<<array[i]<<" "<<endl;
+    }
     return 0;
 }
