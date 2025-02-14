@@ -1,0 +1,15 @@
+# ninja log v6
+42	1217	7611479725595614	CMakeFiles/template_task.dir/temp.cpp.obj	944d12c0e8c8024e
+35	1099	7611483449237480	CMakeFiles/template_task.dir/main.cpp.obj	d900984858c08fee
+1100	1200	7611483459885555	template_task.exe	4c6ea90938db6683
+75	90	7611444536600140	clean	577b940aee94fbd7
+12	1139	7611483058446492	CMakeFiles/template_task.dir/tempclass.cpp.obj	88621bc432d3f8fe
+22	1006	7611508489622645	CMakeFiles/template_task.dir/tempclass.cpp.obj	88621bc432d3f8fe
+14	955	7611508917431541	CMakeFiles/template_task.dir/tempcar.cpp.obj	6c7a5b0a064369e4
+29	887	7611509095636437	CMakeFiles/template_task.dir/main.cpp.obj	d900984858c08fee
+888	1036	7611509104268222	template_task.exe	bf5acb5ff28868a6
+14	919	7611509196644045	CMakeFiles/template_task.dir/main.cpp.obj	d900984858c08fee
+920	1008	7611509205783918	template_task.exe	bf5acb5ff28868a6
+12	933	7611511988482744	CMakeFiles/template_task.dir/tempcar.cpp.obj	6c7a5b0a064369e4
+26	886	7611512176354054	CMakeFiles/template_task.dir/main.cpp.obj	d900984858c08fee
+887	978	7611512185057039	template_task.exe	bf5acb5ff28868a6

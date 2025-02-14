@@ -1,0 +1,61 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-b104eab1106322f27119.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "shallowcopy_deepcopy",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "shallowcopy_deepcopy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-shallowcopy_deepcopy-Debug-fda7bd281914b2478df2.json",
+					"name" : "shallowcopy_deepcopy",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/QT PROGRAMS/C++/TASKS/shallowcopy_deepcopy/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug",
+		"source" : "D:/QT PROGRAMS/C++/TASKS/shallowcopy_deepcopy"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
