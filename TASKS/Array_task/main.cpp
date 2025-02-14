@@ -79,8 +79,7 @@ int main()
     return 0;
 }*/
 
-
-#include <algorithm>
+/*#include <algorithm>
 int arraysize=4;
 
 int main()
@@ -95,4 +94,48 @@ int main()
         cout<<array[i]<<" "<<endl;
     }
     return 0;
+}*/
+
+/*template<typename T>
+
+T add(T a,T b);
+int main()
+{
+  auto a=10.5,b=12.5;
+  //add<int>(15,10);
+  auto sum=add<double>(a,b);
+  cout<<"sum value"<<sum<<endl;
+  return 0;
 }
+
+template<typename T>
+T add(T a,T b)
+{
+    T sum=a+b;
+    return sum;
+}*/
+
+int main() {
+    int array[] = {10, 200, 5, 300};
+    int arraysize = sizeof(array) / sizeof(array[0]);
+
+    for (int i = 0; i < arraysize - 1; i++)
+    {
+        for (int j = 0; j < arraysize - i - 1; j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+                swap(array[j], array[j + 1]);
+            }
+        }
+    }
+
+    cout << "Output array:" << endl;
+    for (int i = 0; i < arraysize; i++) {
+        cout << array[i] << endl;
+    }
+
+    return 0;
+}
+
+

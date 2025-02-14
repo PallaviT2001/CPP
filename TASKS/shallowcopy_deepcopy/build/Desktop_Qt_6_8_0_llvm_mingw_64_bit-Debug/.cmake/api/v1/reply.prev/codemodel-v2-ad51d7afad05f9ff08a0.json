@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-db3066cffae0ed3df63e.json",
+					"jsonFile" : "directory-.-Debug-c731a5f9ae69c0d4041d.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -28,7 +28,7 @@
 					[
 						0
 					],
-					"name" : "Array_task",
+					"name" : "shallowcopy_deepcopy",
 					"targetIndexes" : 
 					[
 						0
@@ -39,9 +39,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Array_task::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Array_task-Debug-70fd7f5e1577f99f185c.json",
-					"name" : "Array_task",
+					"id" : "shallowcopy_deepcopy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-shallowcopy_deepcopy-Debug-e811879d0c775a1c365e.json",
+					"name" : "shallowcopy_deepcopy",
 					"projectIndex" : 0
 				}
 			]
@@ -50,8 +50,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/QT PROGRAMS/C++/TASKS/Array_task/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug",
-		"source" : "D:/QT PROGRAMS/C++/TASKS/Array_task"
+		"build" : "D:/QT PROGRAMS/C++/TASKS/shallowcopy_deepcopy/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug",
+		"source" : "D:/QT PROGRAMS/C++/TASKS/shallowcopy_deepcopy"
 	},
 	"version" : 
 	{

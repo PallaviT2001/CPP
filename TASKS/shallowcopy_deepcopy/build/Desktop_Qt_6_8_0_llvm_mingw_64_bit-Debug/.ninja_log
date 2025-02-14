@@ -1,0 +1,22 @@
+# ninja log v6
+2	841	7611294028191704	CMakeFiles/shallowcopy_deepcopy.dir/main.cpp.obj	4d0dca49749fa537
+15	1155	7611295712672022	CMakeFiles/shallowcopy_deepcopy.dir/shallowcopy.cpp.obj	9386c99183e08f9c
+1155	1280	7611295724068995	shallowcopy_deepcopy.exe	bf3531e99e71520d
+10	912	7611314371778543	CMakeFiles/shallowcopy_deepcopy.dir/main.cpp.obj	4d0dca49749fa537
+10	1219	7611315148118640	CMakeFiles/shallowcopy_deepcopy.dir/main.cpp.obj	4d0dca49749fa537
+14	1229	7611315148118640	CMakeFiles/shallowcopy_deepcopy.dir/shallowcopy.cpp.obj	9386c99183e08f9c
+16	64	7611316645252925	CMakeFiles/shallowcopy_deepcopy.dir/shallowcopy.cpp.obj	9386c99183e08f9c
+22	74	7611317384410646	CMakeFiles/shallowcopy_deepcopy.dir/deepcopy.cpp.obj	88744668353a6724
+17	1122	7611317384367986	CMakeFiles/shallowcopy_deepcopy.dir/shallowcopy.cpp.obj	9386c99183e08f9c
+16	1100	7611317883055949	CMakeFiles/shallowcopy_deepcopy.dir/main.cpp.obj	4d0dca49749fa537
+1100	1210	7611317893889098	shallowcopy_deepcopy.exe	242ffb11dae57f3
+11	1055	7611319130150481	CMakeFiles/shallowcopy_deepcopy.dir/main.cpp.obj	4d0dca49749fa537
+1055	1160	7611319140670995	shallowcopy_deepcopy.exe	242ffb11dae57f3
+18	1091	7611319924157573	CMakeFiles/shallowcopy_deepcopy.dir/shallowcopy.cpp.obj	9386c99183e08f9c
+1091	1194	7611319934892555	shallowcopy_deepcopy.exe	242ffb11dae57f3
+60	1033	7611515245425980	CMakeFiles/shallowcopy_deepcopy.dir/main.cpp.obj	4d0dca49749fa537
+29	778	7611515792043404	CMakeFiles/shallowcopy_deepcopy.dir/main.cpp.obj	4d0dca49749fa537
+33	803	7611515792128965	CMakeFiles/shallowcopy_deepcopy.dir/deepcopy.cpp.obj	88744668353a6724
+803	888	7611515799839559	shallowcopy_deepcopy.exe	242ffb11dae57f3
+34	927	7611516177867245	CMakeFiles/shallowcopy_deepcopy.dir/main.cpp.obj	4d0dca49749fa537
+928	1010	7611516186877432	shallowcopy_deepcopy.exe	242ffb11dae57f3
