@@ -23,3 +23,11 @@
 1479	3481	7610514820977314	Abstraction_task.exe	49a0162d6392dcd1
 51	1606	7610516413032838	CMakeFiles/Abstraction_task.dir/break.cpp.obj	98df5f51c74acfe1
 1606	1700	7610516428602373	Abstraction_task.exe	49a0162d6392dcd1
+3	12	7612185334415502	clean	577b940aee94fbd7
+34	1317	7612185347501216	CMakeFiles/Abstraction_task.dir/main.cpp.obj	cc0c5aff08092bf5
+53	1370	7612185347763871	CMakeFiles/Abstraction_task.dir/key.cpp.obj	ed9b877cb4b06e79
+48	1372	7612185347684931	CMakeFiles/Abstraction_task.dir/engine.cpp.obj	aa7b3ced0b0978a9
+58	1379	7612185347814966	CMakeFiles/Abstraction_task.dir/accelerator.cpp.obj	9a821951182e5fc4
+41	1393	7612185347657430	CMakeFiles/Abstraction_task.dir/car.cpp.obj	2b7856d84e08d1d1
+63	1395	7612185347863471	CMakeFiles/Abstraction_task.dir/break.cpp.obj	98df5f51c74acfe1
+1395	1493	7612185361188503	Abstraction_task.exe	49a0162d6392dcd1

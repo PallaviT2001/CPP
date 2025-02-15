@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-fa2f57794a0f6356beec.json",
+					"jsonFile" : "directory-.-Debug-541d4a129ce18d107608.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -40,7 +40,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "template_task::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-template_task-Debug-99c4ffd419c327e33782.json",
+					"jsonFile" : "target-template_task-Debug-8341172927378d03d79a.json",
 					"name" : "template_task",
 					"projectIndex" : 0
 				}

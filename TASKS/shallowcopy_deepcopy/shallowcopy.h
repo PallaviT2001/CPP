@@ -11,6 +11,7 @@ public:
     Shallowcopy(int val);
     Shallowcopy(const Shallowcopy &obj);
     void show();
+    void display();
 };
 
 #endif

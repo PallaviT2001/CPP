@@ -115,7 +115,7 @@ T add(T a,T b)
     return sum;
 }*/
 
-int main() {
+/*int main() {
     int array[] = {10, 200, 5, 300};
     int arraysize = sizeof(array) / sizeof(array[0]);
 
@@ -135,6 +135,18 @@ int main() {
         cout << array[i] << endl;
     }
 
+    return 0;
+}*/
+
+int add (int &a)
+{
+    cout<<a<<endl;
+}
+
+int main()
+{
+    int b=5;
+    add(b);
     return 0;
 }
 

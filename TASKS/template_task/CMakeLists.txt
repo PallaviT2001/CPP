@@ -8,7 +8,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(template_task main.cpp
     temp.h temp.cpp
     tempclass.h tempclass.cpp
-    tempcar.h tempcar.cpp)
+    tempcar.h tempcar.cpp
+    cartemplate.h cartemplate.cpp
+    mobiletemplate.h mobiletemplate.cpp
+    bottletemplate.h bottletemplate.cpp
+    laptoptemplate.h laptoptemplate.cpp)
 
 include(GNUInstallDirs)
 install(TARGETS template_task

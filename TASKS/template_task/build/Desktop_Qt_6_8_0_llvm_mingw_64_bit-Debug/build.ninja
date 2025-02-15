@@ -73,6 +73,30 @@ build CMakeFiles/template_task.dir/tempcar.cpp.obj: CXX_COMPILER__template_task_
   OBJECT_DIR = CMakeFiles\template_task.dir
   OBJECT_FILE_DIR = CMakeFiles\template_task.dir
 
+build CMakeFiles/template_task.dir/cartemplate.cpp.obj: CXX_COMPILER__template_task_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/template_task/cartemplate.cpp || cmake_object_order_depends_target_template_task
+  DEP_FILE = CMakeFiles\template_task.dir\cartemplate.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\template_task.dir
+  OBJECT_FILE_DIR = CMakeFiles\template_task.dir
+
+build CMakeFiles/template_task.dir/mobiletemplate.cpp.obj: CXX_COMPILER__template_task_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/template_task/mobiletemplate.cpp || cmake_object_order_depends_target_template_task
+  DEP_FILE = CMakeFiles\template_task.dir\mobiletemplate.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\template_task.dir
+  OBJECT_FILE_DIR = CMakeFiles\template_task.dir
+
+build CMakeFiles/template_task.dir/bottletemplate.cpp.obj: CXX_COMPILER__template_task_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/template_task/bottletemplate.cpp || cmake_object_order_depends_target_template_task
+  DEP_FILE = CMakeFiles\template_task.dir\bottletemplate.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\template_task.dir
+  OBJECT_FILE_DIR = CMakeFiles\template_task.dir
+
+build CMakeFiles/template_task.dir/laptoptemplate.cpp.obj: CXX_COMPILER__template_task_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/template_task/laptoptemplate.cpp || cmake_object_order_depends_target_template_task
+  DEP_FILE = CMakeFiles\template_task.dir\laptoptemplate.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\template_task.dir
+  OBJECT_FILE_DIR = CMakeFiles\template_task.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target template_task
@@ -81,7 +105,7 @@ build CMakeFiles/template_task.dir/tempcar.cpp.obj: CXX_COMPILER__template_task_
 #############################################
 # Link the executable template_task.exe
 
-build template_task.exe: CXX_EXECUTABLE_LINKER__template_task_Debug CMakeFiles/template_task.dir/main.cpp.obj CMakeFiles/template_task.dir/temp.cpp.obj CMakeFiles/template_task.dir/tempclass.cpp.obj CMakeFiles/template_task.dir/tempcar.cpp.obj
+build template_task.exe: CXX_EXECUTABLE_LINKER__template_task_Debug CMakeFiles/template_task.dir/main.cpp.obj CMakeFiles/template_task.dir/temp.cpp.obj CMakeFiles/template_task.dir/tempclass.cpp.obj CMakeFiles/template_task.dir/tempcar.cpp.obj CMakeFiles/template_task.dir/cartemplate.cpp.obj CMakeFiles/template_task.dir/mobiletemplate.cpp.obj CMakeFiles/template_task.dir/bottletemplate.cpp.obj CMakeFiles/template_task.dir/laptoptemplate.cpp.obj
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\template_task.dir
