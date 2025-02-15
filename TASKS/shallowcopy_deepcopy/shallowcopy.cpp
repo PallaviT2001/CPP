@@ -9,7 +9,7 @@ Shallowcopy::Shallowcopy()
 
 Shallowcopy::~Shallowcopy()
 {
-    delete data;
+    cout<<"shallow copy class destructor called"<<endl;
 }
 
 Shallowcopy::Shallowcopy(int val)
@@ -17,14 +17,20 @@ Shallowcopy::Shallowcopy(int val)
     data=new int(val);
 }
 
-Shallowcopy::Shallowcopy(const Shallowcopy&obj)
+Shallowcopy::Shallowcopy(const Shallowcopy &obj)
 {
     data=obj.data;
 }
 
 void Shallowcopy::show()
+
 {
     cout<<"value is "<<*data<<endl;
+    delete data;
 }
 
+void Shallowcopy::display()
+{
+    cout<<"value is"<<*data<<endl;
+}
 

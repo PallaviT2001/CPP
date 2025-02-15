@@ -17,7 +17,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 14,
+				"line" : 11,
 				"parent" : 0
 			}
 		]
@@ -30,9 +30,9 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"template_task.exe"
+				"vector_list.exe"
 			],
-			"targetId" : "template_task::@6890427a1f51a3e7e1df",
+			"targetId" : "vector_list::@6890427a1f51a3e7e1df",
 			"targetIndex" : 0,
 			"type" : "target"
 		}
