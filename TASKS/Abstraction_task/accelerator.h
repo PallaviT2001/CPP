@@ -3,8 +3,6 @@
 
 class Accelerator
 {
-private:
-    int speed;
 public:
     Accelerator();
     ~Accelerator();

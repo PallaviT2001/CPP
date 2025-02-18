@@ -67,12 +67,6 @@ build CMakeFiles/Abstraction_task.dir/engine.cpp.obj: CXX_COMPILER__Abstraction_
   OBJECT_DIR = CMakeFiles\Abstraction_task.dir
   OBJECT_FILE_DIR = CMakeFiles\Abstraction_task.dir
 
-build CMakeFiles/Abstraction_task.dir/key.cpp.obj: CXX_COMPILER__Abstraction_task_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Abstraction_task/key.cpp || cmake_object_order_depends_target_Abstraction_task
-  DEP_FILE = CMakeFiles\Abstraction_task.dir\key.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles\Abstraction_task.dir
-  OBJECT_FILE_DIR = CMakeFiles\Abstraction_task.dir
-
 build CMakeFiles/Abstraction_task.dir/accelerator.cpp.obj: CXX_COMPILER__Abstraction_task_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Abstraction_task/accelerator.cpp || cmake_object_order_depends_target_Abstraction_task
   DEP_FILE = CMakeFiles\Abstraction_task.dir\accelerator.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
@@ -93,7 +87,7 @@ build CMakeFiles/Abstraction_task.dir/break.cpp.obj: CXX_COMPILER__Abstraction_t
 #############################################
 # Link the executable Abstraction_task.exe
 
-build Abstraction_task.exe: CXX_EXECUTABLE_LINKER__Abstraction_task_Debug CMakeFiles/Abstraction_task.dir/main.cpp.obj CMakeFiles/Abstraction_task.dir/car.cpp.obj CMakeFiles/Abstraction_task.dir/engine.cpp.obj CMakeFiles/Abstraction_task.dir/key.cpp.obj CMakeFiles/Abstraction_task.dir/accelerator.cpp.obj CMakeFiles/Abstraction_task.dir/break.cpp.obj
+build Abstraction_task.exe: CXX_EXECUTABLE_LINKER__Abstraction_task_Debug CMakeFiles/Abstraction_task.dir/main.cpp.obj CMakeFiles/Abstraction_task.dir/car.cpp.obj CMakeFiles/Abstraction_task.dir/engine.cpp.obj CMakeFiles/Abstraction_task.dir/accelerator.cpp.obj CMakeFiles/Abstraction_task.dir/break.cpp.obj
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Abstraction_task.dir

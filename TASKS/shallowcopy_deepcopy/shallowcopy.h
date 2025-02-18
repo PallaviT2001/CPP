@@ -8,7 +8,7 @@ private:
 public:
     Shallowcopy();
     ~Shallowcopy();
-    Shallowcopy(int val);
+    Shallowcopy(int a);
     Shallowcopy(const Shallowcopy &obj);
     void show();
     void display();
