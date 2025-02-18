@@ -1,0 +1,12 @@
+# ninja log v6
+2	1210	7613028713401305	CMakeFiles/inlinefunction.dir/main.cpp.obj	aca8e32d5a343779
+7	1252	7613028713401305	CMakeFiles/inlinefunction.dir/operations.cpp.obj	57b03d52153ba84c
+15	1066	7613030753381247	CMakeFiles/inlinefunction.dir/main.cpp.obj	aca8e32d5a343779
+46	1112	7613031080095864	CMakeFiles/inlinefunction.dir/main.cpp.obj	aca8e32d5a343779
+28	44	7613031159773023	clean	577b940aee94fbd7
+41	959	7613031166989495	CMakeFiles/inlinefunction.dir/main.cpp.obj	aca8e32d5a343779
+47	989	7613031166989495	CMakeFiles/inlinefunction.dir/operations.cpp.obj	57b03d52153ba84c
+39	940	7613035051915873	CMakeFiles/inlinefunction.dir/main.cpp.obj	aca8e32d5a343779
+43	985	7613035051951303	CMakeFiles/inlinefunction.dir/operations.cpp.obj	57b03d52153ba84c
+15	1176	7613035809927920	CMakeFiles/inlinefunction.dir/main.cpp.obj	aca8e32d5a343779
+20	1217	7613035809970507	CMakeFiles/inlinefunction.dir/operations.cpp.obj	57b03d52153ba84c

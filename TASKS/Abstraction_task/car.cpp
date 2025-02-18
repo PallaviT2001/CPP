@@ -1,6 +1,5 @@
 #include "car.h"
 #include "engine.h"
-#include "key.h"
 #include "accelerator.h"
 #include <iostream>
 using namespace std;
@@ -15,16 +14,18 @@ Car::~Car()
     cout<<"car class destructor called"<<endl;
 }
 
-void Car::startcar()
+void Car::startcar(Engine *eng, Accelerator *ac)
 {
-    key1.keyinsert();
+
     cout<<"car startred"<<endl;
-    eng1.startengine();
-    ac1.speedup();
-    br1.applybreak();
+    this->eng = eng;
+    eng->startengine(ac);
 }
 
-void Car::stopcar()
+
+void Car::stopcar(Engine *eng)
 {
     cout<<"car stopped"<<endl;
+
+
 }

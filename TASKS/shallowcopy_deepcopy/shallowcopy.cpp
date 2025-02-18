@@ -23,14 +23,10 @@ Shallowcopy::Shallowcopy(const Shallowcopy &obj)
 }
 
 void Shallowcopy::show()
-
 {
     cout<<"value is "<<*data<<endl;
-    delete data;
+    cout<<"value is "<<data<<endl;
+
 }
 
-void Shallowcopy::display()
-{
-    cout<<"value is"<<*data<<endl;
-}
 

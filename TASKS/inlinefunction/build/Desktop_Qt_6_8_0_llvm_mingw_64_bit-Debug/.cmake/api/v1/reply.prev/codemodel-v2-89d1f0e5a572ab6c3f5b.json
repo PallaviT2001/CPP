@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-51ff2bb341a404306b78.json",
+					"jsonFile" : "directory-.-Debug-820a18d28e61ebdbfb5a.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -28,7 +28,7 @@
 					[
 						0
 					],
-					"name" : "Abstraction_task",
+					"name" : "inlinefunction",
 					"targetIndexes" : 
 					[
 						0
@@ -39,9 +39,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Abstraction_task::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Abstraction_task-Debug-15d1124bff02305950e4.json",
-					"name" : "Abstraction_task",
+					"id" : "inlinefunction::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inlinefunction-Debug-d2f6e89e9f2f867f8048.json",
+					"name" : "inlinefunction",
 					"projectIndex" : 0
 				}
 			]
@@ -50,8 +50,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/QT PROGRAMS/C++/TASKS/Abstraction_task/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug",
-		"source" : "D:/QT PROGRAMS/C++/TASKS/Abstraction_task"
+		"build" : "D:/QT PROGRAMS/C++/TASKS/inlinefunction/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug",
+		"source" : "D:/QT PROGRAMS/C++/TASKS/inlinefunction"
 	},
 	"version" : 
 	{
