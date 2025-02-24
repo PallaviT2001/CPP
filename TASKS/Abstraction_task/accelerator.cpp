@@ -4,7 +4,7 @@ using namespace std;
 
 Accelerator::Accelerator()
 {
-    cout<<"accelerator default constructor called"<<endl;
+    cout<<"accelerator constructor called"<<endl;
 }
 
 Accelerator::~Accelerator()
@@ -17,7 +17,7 @@ void Accelerator::speedup()
     cout<<"Acceletrator speed incresed and car moved"<<endl;
 }
 
-void Accelerator::speeddown()
-{
-    cout<<"Accelerator speed decreased"<<endl;
-}
+// void Accelerator::speeddown()
+// {
+//     cout<<"Accelerator speed decreased"<<endl;
+// }

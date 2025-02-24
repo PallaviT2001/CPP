@@ -1,26 +1,25 @@
 #include "engine.h"
 #include <iostream>
-#include "accelerator.h"
+
 using namespace std;
 
 Engine::Engine()
 {
-    cout<<"Engine default constructor called"<<endl;
+    cout<<"Engine constructor called"<<endl;
 }
 
 Engine::~Engine()
 {
-    cout<<"engine class destructor called"<<endl;
+    cout<<"engine destructor called"<<endl;
 }
 
-void Engine::startengine(Accelerator *ac)
+void Engine::startengine()
 {
     cout<<"engine started"<<endl;
-    this->ac=ac;
-    ac->speedup();
-}
 
-void Engine::stopengine()
+}
+void Engine::stopengine(Car *car)
 {
-    cout<<"engine stopped"<<endl;
+    car->stopcar();
+    cout<<"engine off"<<endl;
 }

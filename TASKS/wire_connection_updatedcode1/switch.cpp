@@ -1,0 +1,28 @@
+#include "switch.h"
+
+Switch::Switch()
+{
+    cout<<"Switch Default Construtor Called"<<endl;
+}
+
+Switch::~Switch()
+{
+    cout<<"Switch Destrutor Called"<<endl;
+}
+
+Switch::Switch(string colour, string state, string brand, string name, int price, Wire *wire)
+{
+    cout<<"Switch Parameterized Construtor Called"<<endl;
+}
+
+void Switch::initializewire(Wire *wire)
+{
+    m_wire = wire;
+    //cout<<"address of wire used in switch "<<&wire<<endl;
+}
+
+void Switch::switchOn()
+{
+    cout<<"Switch Turned On"<<endl;
+    m_wire->wireOn();
+}

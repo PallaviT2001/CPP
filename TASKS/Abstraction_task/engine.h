@@ -1,7 +1,9 @@
 #ifndef ENGINE_H
 #define ENGINE_H
+#include "car.h"
+#include "accelerator.h"
 
-class Accelerator;
+class Car;
 class Engine
 {
 private:
@@ -9,9 +11,8 @@ Accelerator *ac;
 public:
     Engine();
     ~Engine();
-    void startengine(Accelerator *ac);
-    void stopengine();
-
+    void startengine();
+    void stopengine(Car *car);
 };
 
 #endif
