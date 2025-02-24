@@ -7,7 +7,7 @@ public:
     Accelerator();
     ~Accelerator();
     void speedup();
-    void speeddown();
+    //void speeddown();
 };
 
 #endif

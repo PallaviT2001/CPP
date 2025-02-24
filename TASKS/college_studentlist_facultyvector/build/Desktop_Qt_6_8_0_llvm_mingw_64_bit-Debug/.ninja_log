@@ -1,0 +1,24 @@
+# ninja log v6
+2	1903	7620344867620623	CMakeFiles/college_studentlist_facultyvector.dir/main.cpp.obj	fe00050cce6d8a41
+16	1912	7620344867804307	CMakeFiles/college_studentlist_facultyvector.dir/student.cpp.obj	3ed2cf2b8ef106c2
+12	2000	7620344867705664	CMakeFiles/college_studentlist_facultyvector.dir/faculty.cpp.obj	74d4b9ba8b0feba6
+24	1780	7620347979517915	CMakeFiles/college_studentlist_facultyvector.dir/college.cpp.obj	99d3812b502d1bcf
+33	1857	7620347979618754	CMakeFiles/college_studentlist_facultyvector.dir/student.cpp.obj	3ed2cf2b8ef106c2
+29	1970	7620347979555647	CMakeFiles/college_studentlist_facultyvector.dir/faculty.cpp.obj	74d4b9ba8b0feba6
+25	1318	7620348313465389	CMakeFiles/college_studentlist_facultyvector.dir/main.cpp.obj	fe00050cce6d8a41
+1319	1445	7620348326430379	college_studentlist_facultyvector.exe	cfd53f5f88fcf507
+23	1811	7620356933551451	CMakeFiles/college_studentlist_facultyvector.dir/college.cpp.obj	99d3812b502d1bcf
+18	1960	7620356933551451	CMakeFiles/college_studentlist_facultyvector.dir/main.cpp.obj	fe00050cce6d8a41
+32	1980	7620356933707706	CMakeFiles/college_studentlist_facultyvector.dir/student.cpp.obj	3ed2cf2b8ef106c2
+28	2075	7620356933707706	CMakeFiles/college_studentlist_facultyvector.dir/faculty.cpp.obj	74d4b9ba8b0feba6
+2075	2181	7620356954193718	college_studentlist_facultyvector.exe	cfd53f5f88fcf507
+35	1396	7620363520524194	CMakeFiles/college_studentlist_facultyvector.dir/college.cpp.obj	99d3812b502d1bcf
+31	1428	7620363520484331	CMakeFiles/college_studentlist_facultyvector.dir/main.cpp.obj	fe00050cce6d8a41
+39	1590	7620363520570844	CMakeFiles/college_studentlist_facultyvector.dir/faculty.cpp.obj	74d4b9ba8b0feba6
+43	1613	7620363520602808	CMakeFiles/college_studentlist_facultyvector.dir/student.cpp.obj	3ed2cf2b8ef106c2
+1613	1783	7620363536277761	college_studentlist_facultyvector.exe	cfd53f5f88fcf507
+35	1639	7620367774896909	CMakeFiles/college_studentlist_facultyvector.dir/main.cpp.obj	fe00050cce6d8a41
+48	1657	7620367775035396	CMakeFiles/college_studentlist_facultyvector.dir/student.cpp.obj	3ed2cf2b8ef106c2
+40	1660	7620367774946808	CMakeFiles/college_studentlist_facultyvector.dir/college.cpp.obj	99d3812b502d1bcf
+43	1745	7620367774987753	CMakeFiles/college_studentlist_facultyvector.dir/faculty.cpp.obj	74d4b9ba8b0feba6
+1745	1842	7620367791993324	college_studentlist_facultyvector.exe	cfd53f5f88fcf507

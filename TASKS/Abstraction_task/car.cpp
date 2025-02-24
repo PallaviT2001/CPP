@@ -1,12 +1,11 @@
 #include "car.h"
 #include "engine.h"
-#include "accelerator.h"
 #include <iostream>
 using namespace std;
 
 Car::Car()
 {
-    cout<<"Car default constructor called"<<endl;
+    cout<<"Car constructor called"<<endl;
 }
 
 Car::~Car()
@@ -14,18 +13,15 @@ Car::~Car()
     cout<<"car class destructor called"<<endl;
 }
 
-void Car::startcar(Engine *eng, Accelerator *ac)
+void Car::startcar(Engine *eng)
 {
 
     cout<<"car startred"<<endl;
     this->eng = eng;
-    eng->startengine(ac);
+    eng->startengine();
 }
 
-
-void Car::stopcar(Engine *eng)
+void Car::stopcar()
 {
     cout<<"car stopped"<<endl;
-
-
 }
