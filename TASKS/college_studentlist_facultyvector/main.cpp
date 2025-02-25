@@ -1,4 +1,6 @@
 #include "college.h"
+#include "student.h"
+#include "faculty.h"
 using namespace std;
 
 int main() {
@@ -10,8 +12,9 @@ int main() {
         cout << "\n===== College Management System =====\n";
         cout << "1. Add Faculty\n2. Delete Faculty\n3. Update Faculty\n4. Display Faculties\n";
         cout << "5. Add Student\n6. Delete Student\n7. Update Student\n8. Display Students\n";
-        cout << "9. Exit\n";
-        cout << "Enter your choice: ";
+        cout << "9. find student\n10. find faculty\n11. exit\n";
+
+        cout << "Enter your choice:";
         cin >> choice;
 
         switch (choice) {
@@ -28,9 +31,9 @@ int main() {
             break;
 
         case 3:
-            cout << "Enter Faculty ID, New Name, New Department: ";
-            cin >> id >> name >> dept;
-            college.updateFaculty(id, name, dept);
+            cout << "Enter Faculty ID to update fields";
+            cin >> id;
+            college.updateFaculty(id);
             break;
 
         case 4:
@@ -50,9 +53,9 @@ int main() {
             break;
 
         case 7:
-            cout << "Enter Student ID, New Name, New Branch: ";
-            cin >> id >> name >> branch;
-            college.updateStudent(id, name, branch);
+            cout << "Enter Student ID to update fields ";
+            cin >> id;
+            college.updateStudent(id);
             break;
 
         case 8:
@@ -60,6 +63,18 @@ int main() {
             break;
 
         case 9:
+            cout<<"enter student id to find details"<<endl;
+            cin>>id;
+            college.findstudent(id);
+            break;
+
+        case 10:
+            cout<<"enter faculty id to find details"<<endl;
+            cin>>id;
+            college.findfaculty(id);
+            break;
+
+        case 11:
             cout << "Exiting...\n";
             return 0;
 
