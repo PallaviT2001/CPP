@@ -5,7 +5,6 @@
 AC::AC()
 {
     cout<<"Default Constructor of AC called"<<endl;
-
 }
 
 AC::~AC()
@@ -26,18 +25,24 @@ AC::AC(string brand,string colour, float price)
 void AC::initializewiretoac(Polycab *wire)
 {
     m_pwire=wire;
+    m_fwire=0;
+    m_hwire=0;
     m_pwire->setac(this);
 }
 
 void AC::initializewiretoac(Finolex *wire)
 {
     m_fwire=wire;
+    m_pwire=0;
+    m_hwire=0;
     m_fwire->setac(this);
 }
 
 void AC::initializewiretoac(Havels *wire)
 {
     m_hwire=wire;
+    m_pwire=0;
+    m_fwire=0;
     m_hwire->setac(this);
 }
 
