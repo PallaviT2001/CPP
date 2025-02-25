@@ -19,13 +19,13 @@ public:
     void deleteFaculty(int id);
     void updateFaculty(int id);
     void displayFaculties() const;
-     void findstudent(int id)const;
+    void findfaculty(int id) const;
 
     void addStudent(int id,string name,string branch);
     void deleteStudent(int id);
     void updateStudent(int id);
     void displayStudents() const;
-    void findfaculty(int id) const;
+    void findstudent(int id)const;
 };
 
 #endif
