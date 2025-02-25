@@ -1,0 +1,11 @@
+# ninja log v6
+15	1622	7621728514696176	CMakeFiles/college_project.dir/main.cpp.obj	5113f1387e8e73b8
+21	1362	7621755078007328	CMakeFiles/college_project.dir/student.cpp.obj	f1d2f40a3703612c
+18	1607	7621728514726086	CMakeFiles/college_project.dir/college.cpp.obj	7e26eb4513be97c7
+1363	1444	7621755091497517	college_project.exe	794d4014165474d5
+31	1453	7621768270066128	CMakeFiles/college_project.dir/college.cpp.obj	7e26eb4513be97c7
+27	1483	7621768270029249	CMakeFiles/college_project.dir/main.cpp.obj	5113f1387e8e73b8
+34	1548	7621768270096390	CMakeFiles/college_project.dir/student.cpp.obj	f1d2f40a3703612c
+15	1317	7621772397988174	CMakeFiles/college_project.dir/main.cpp.obj	5113f1387e8e73b8
+32	961	7621772888798297	CMakeFiles/college_project.dir/faculty.cpp.obj	6c237a4b183b28fe
+962	1046	7621772898140174	college_project.exe	745c0a6efc9909e9

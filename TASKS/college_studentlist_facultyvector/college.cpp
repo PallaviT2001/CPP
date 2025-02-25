@@ -86,7 +86,7 @@ void College::updateFaculty(int id)
             cin>>name;
             cout<<"enter new branch"<<endl;
             cin>>dept;
-            //faculty.setDetails(name, dept);
+            faculty.setDetails(name, dept);
             cout << "Faculty details updated.\n";
             return;
         }
