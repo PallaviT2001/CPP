@@ -12,12 +12,10 @@ int main()
     s1.insert(50);
     s1.insert(70);
 
-
     for (auto i = s1.begin(); i!= s1.end(); ++i)
     {
         cout << *i<< endl;
     }
-
     return 0;
 }*/
 
@@ -73,7 +71,6 @@ int main()
 
     cout<<*s2.lower_bound(40)<<endl;
     cout<<*s2.upper_bound(70)<<endl;
-
 
     return 0;
 }

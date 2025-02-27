@@ -18,7 +18,7 @@ int main()
     delete h;
     return 0;*/
 
-    Wire *p;
+    Wire *p;//I have assigned derived class reference to base class pointers in the below case(virtual function).
 
     p=new Polycab;
     delete p;

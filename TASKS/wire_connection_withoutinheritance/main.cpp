@@ -3,8 +3,14 @@ using namespace std;
 #include "switch.h"
 #include "ac.h"
 #include "polycab.h"
-//#include "finolex.h"
-//#include "havels.h"
+
+enum MainMenuChoice
+{
+    POLYCAB_OPERATIONS = 1,
+    FINOLEX_OPERATIONS,
+    HAVELS_OPERATIONS,
+    EXIT_PROGRAM
+};
 
 int main()
 {
@@ -18,10 +24,9 @@ int main()
     cout<<"enter the wire brand"<<endl;
     cout<<"1.Polycab 2.Finolex 3.Havels"<<endl;
     cin>>choice;
-
     switch(choice)
     {
-    case 1:
+    case POLYCAB_OPERATIONS:
     {
         p=new Polycab;
         acobj1.initializewiretoac(p);
@@ -29,8 +34,7 @@ int main()
         switchobj1.switchOn();
         break;
     }
-
-    case 2:
+    case FINOLEX_OPERATIONS:
     {
         f=new Finolex;
         acobj1.initializewiretoac(f);
@@ -39,8 +43,7 @@ int main()
         break;
 
     }
-
-    case 3:
+    case HAVELS_OPERATIONS:
     {
         h=new Havels;
         acobj1.initializewiretoac(h);
@@ -48,6 +51,10 @@ int main()
         switchobj1.switchOn();
         break;
 
+    }
+    case EXIT_PROGRAM:
+    {
+        exit(0);
     }
     }
     return 0;

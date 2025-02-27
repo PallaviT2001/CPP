@@ -1,4 +1,28 @@
-#include <iostream>
+#include<iostream>
+using namespace std;
+#include<map>
+
+/*int main()
+{
+    map <int,string> mymap {{1,"geeks"},{2,"for"},{3,"geeks"}};
+    for(auto &mapvalues:mymap)
+    {
+        cout<<mapvalues.first<<" "<<mapvalues.second<<endl;
+    }
+    return 0;
+}*/
+
+int main()
+{
+    map<int,float>mymap {{1,1.1},{2,2.2},{3,4.4}};
+    for(auto &mapvalues:mymap)
+    {
+        cout<<mapvalues.first<<" "<<mapvalues.second<<endl;
+    }
+    return 0;
+}
+
+/*#include <iostream>
 using namespace std;
 #include "student.h"
 
@@ -9,7 +33,7 @@ int main()
     cout<<s.getname()<<endl;
     cout<<s.getage()<<endl;
     return 0;
-}
+}*/
 
 /*UNORDERED MAP*/
 
