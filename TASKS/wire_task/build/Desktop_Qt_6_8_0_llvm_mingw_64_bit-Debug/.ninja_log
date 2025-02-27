@@ -37,3 +37,9 @@
 903	1000	7621875996685296	wire_task.exe	78c4d4d83658aed1
 16	1065	7621880706937135	CMakeFiles/wire_task.dir/main.cpp.obj	26e3677e0d166ec7
 1066	1180	7621880717441604	wire_task.exe	78c4d4d83658aed1
+20	1640	7622509910774717	CMakeFiles/wire_task.dir/main.cpp.obj	26e3677e0d166ec7
+28	1677	7622509910950797	CMakeFiles/wire_task.dir/wire.cpp.obj	aad5610af8e3c5be
+35	1681	7622509911051157	CMakeFiles/wire_task.dir/finolex.cpp.obj	ec31ee735e66048
+50	1696	7622509911091206	CMakeFiles/wire_task.dir/havels.cpp.obj	64c48bb6e39a8b23
+42	1748	7622509911091206	CMakeFiles/wire_task.dir/polycab.cpp.obj	65f34b8d14664afd
+1748	1967	7622509928199783	wire_task.exe	78c4d4d83658aed1
