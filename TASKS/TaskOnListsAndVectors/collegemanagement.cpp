@@ -1,17 +1,15 @@
-#include "college_management.h"
+#include "collegemanagement.h"
 enum choice{UpdateStudentName =1,UpdateStudentAge,UpdateStudentFee};
-
 enum option{ UpdateName=1,UpdateAge,UpdateSalary,UpdateContactNumber,UpdateExperience};
-
-enum select
+enum moption
 {
     STUDENT=1,STAFF
 };
-
-enum choose
+enum mchoice
 {
-    INSERT=1,DELETE,UPDATION,SEARCH,DISPLAY,EXIT
+    ADD=1,DELETE,UPDATE,FIND,DISPLAY,EXIT
 };
+
 
 CollegeManagement::CollegeManagement()
 {
@@ -309,30 +307,30 @@ void CollegeManagement::initStaff(vector<Staff> *m_stafflist)
 void CollegeManagement::operations()
 {
 
-    cout<<"1.Student operations"<<endl;
-    cout<<"2.Staff operations"<<endl;
+    cout<<"      1.Student"<<endl<<"      2.Staff"<<endl;
     cout<<"Enter Option"<<endl;
-    int select;
-    cin>>select;
-    switch(select)
+    int moption;
+    cin>>moption;
+    switch(moption)
     {
     case STUDENT:
         while(true)
         {
-            cout<<"1.Insert student"<<endl;
-            cout<<"2.Delete Student"<<endl;
-            cout<<"3.Update Student details"<<endl;
-            cout<<"4.Find particular Student"<<endl;
-            cout<<"5.Display Student Data"<<endl;
-            cout<<"6.Exit"<<endl;
+            cout<<"       1.Add Student"<<endl;
+            cout<<"       2.Delete Student"<<endl;
+            cout<<"       3.Update Student"<<endl;
+            cout<<"       4.Find Student"<<endl;
+            cout<<"       5.Display Student Data"<<endl;
+            cout<<"       6.Exit"<<endl;
+
 
 
             cout<<"Enter choice"<<endl;
-            int choose;
-            cin>>choose;
-            switch(choose)
+            int mchoice;
+            cin>>mchoice;
+            switch(mchoice)
             {
-            case INSERT:
+            case ADD:
             {
                 int id,age;
                 string name;
@@ -359,7 +357,7 @@ void CollegeManagement::operations()
                 deleteStudent(id);
                 break;
             }
-            case UPDATION:
+            case UPDATE:
 
                 {
                     int id;
@@ -368,7 +366,7 @@ void CollegeManagement::operations()
                     updateStudent(id);
                     break;
                 }
-            case SEARCH:
+            case FIND:
             {
                 int id;
                 cout<<"enter Student Id to Find"<<endl;
@@ -396,18 +394,18 @@ void CollegeManagement::operations()
 
         while(true)
         {
-            cout<<"1.Insert Staff"<<endl;
-            cout<<"2.Delete Staff"<<endl;
-            cout<<"3.Update Staff details"<<endl;
-            cout<<"4.Find particular Staff"<<endl;
-            cout<<"5.Display Staff Data"<<endl;
+            cout<<"       1.Add Staff"<<endl;
+            cout<<"       2.Delete Staff"<<endl;
+            cout<<"       3.Update Staff"<<endl;
+            cout<<"       4.Find Staff"<<endl;
+            cout<<"       5.Display Staff Data"<<endl;
 
             cout<<"Enter choice"<<endl;
             int choice;
             cin>>choice;
             switch(choice)
             {
-            case INSERT:
+            case ADD:
             {
                 int id,age,contactNumber,experience;
                 float salary;
@@ -436,7 +434,7 @@ void CollegeManagement::operations()
                 deleteStaff(id);
                 break;
             }
-            case UPDATION:
+            case UPDATE:
 
                 {
                     int id;
@@ -445,7 +443,7 @@ void CollegeManagement::operations()
                     updateStaff(id);
                     break;
                 }
-            case SEARCH:
+            case FIND:
             {
                 int id;
                 cout<<"enter Staff Id to Find"<<endl;

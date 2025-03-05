@@ -73,8 +73,8 @@ build CMakeFiles/College_project1.dir/student.cpp.obj: CXX_COMPILER__College_pro
   OBJECT_DIR = CMakeFiles\College_project1.dir
   OBJECT_FILE_DIR = CMakeFiles\College_project1.dir
 
-build CMakeFiles/College_project1.dir/faculty.cpp.obj: CXX_COMPILER__College_project1_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/College_project1/faculty.cpp || cmake_object_order_depends_target_College_project1
-  DEP_FILE = CMakeFiles\College_project1.dir\faculty.cpp.obj.d
+build CMakeFiles/College_project1.dir/Staff.cpp.obj: CXX_COMPILER__College_project1_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/College_project1/Staff.cpp || cmake_object_order_depends_target_College_project1
+  DEP_FILE = CMakeFiles\College_project1.dir\Staff.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\College_project1.dir
   OBJECT_FILE_DIR = CMakeFiles\College_project1.dir
@@ -93,7 +93,7 @@ build CMakeFiles/College_project1.dir/personaldetails.cpp.obj: CXX_COMPILER__Col
 #############################################
 # Link the executable College_project1.exe
 
-build College_project1.exe: CXX_EXECUTABLE_LINKER__College_project1_Debug CMakeFiles/College_project1.dir/main.cpp.obj CMakeFiles/College_project1.dir/college.cpp.obj CMakeFiles/College_project1.dir/college_management.cpp.obj CMakeFiles/College_project1.dir/student.cpp.obj CMakeFiles/College_project1.dir/faculty.cpp.obj CMakeFiles/College_project1.dir/personaldetails.cpp.obj
+build College_project1.exe: CXX_EXECUTABLE_LINKER__College_project1_Debug CMakeFiles/College_project1.dir/main.cpp.obj CMakeFiles/College_project1.dir/college.cpp.obj CMakeFiles/College_project1.dir/college_management.cpp.obj CMakeFiles/College_project1.dir/student.cpp.obj CMakeFiles/College_project1.dir/Staff.cpp.obj CMakeFiles/College_project1.dir/personaldetails.cpp.obj
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\College_project1.dir

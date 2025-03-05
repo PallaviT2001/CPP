@@ -8,7 +8,12 @@ public:
     Faculty();
     ~Faculty();
     Faculty(int id, string name, int age);
-    void display() const;
+
+    int getId() const;
+    string getName() const;
+    int getAge() const;
+    void setDetails(string name, int age);
+
 };
 
 #endif
