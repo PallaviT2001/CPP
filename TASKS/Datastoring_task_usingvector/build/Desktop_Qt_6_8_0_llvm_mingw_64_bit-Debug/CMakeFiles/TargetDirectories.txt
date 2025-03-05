@@ -1,0 +1,7 @@
+D:/QT PROGRAMS/C++/TASKS/Datastoring_task_usingvector/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug/CMakeFiles/Datastoring_task_usingvector.dir
+D:/QT PROGRAMS/C++/TASKS/Datastoring_task_usingvector/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug/CMakeFiles/edit_cache.dir
+D:/QT PROGRAMS/C++/TASKS/Datastoring_task_usingvector/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+D:/QT PROGRAMS/C++/TASKS/Datastoring_task_usingvector/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug/CMakeFiles/list_install_components.dir
+D:/QT PROGRAMS/C++/TASKS/Datastoring_task_usingvector/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug/CMakeFiles/install.dir
+D:/QT PROGRAMS/C++/TASKS/Datastoring_task_usingvector/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug/CMakeFiles/install/local.dir
+D:/QT PROGRAMS/C++/TASKS/Datastoring_task_usingvector/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug/CMakeFiles/install/strip.dir

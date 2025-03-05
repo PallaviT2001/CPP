@@ -1,27 +1,45 @@
-#include "college.h"
-using namespace std;
-#include <iostream>
+#include "faculty.h"
+#include "personaldetails.h"
 
-
-Faculty::Faculty(int id, string name, string dept) : m_id(id), m_name(name), m_dept(dept)
+Faculty::Faculty()
 {
-
+    cout<<"faculty constructor called"<<endl;
 }
 
-int Faculty::getId() const
+Faculty::~Faculty()
+{
+    cout<<"faculty destructor called"<<endl;
+}
+
+Faculty::Faculty(int id, string name, int age)
+{
+    m_id= id;
+    m_name = name;
+    m_age = age;
+    cout<<"faculty parameterized constructor called"<<endl;
+}
+
+void Faculty::display()
+{
+    cout<<"display function called"<<endl;
+}
+
+int Faculty:: getId()
 {
     return m_id;
 }
 
-
-void Faculty::setDetails(string name, string dept)
+string Faculty::getname()
 {
-    m_name = name;
-    m_dept = dept;
+    return m_name;
 }
 
-
-void Faculty::display() const
+int Faculty::getage()
 {
-    cout << "ID: " << m_id << ", Name: " << m_name << ", Dept: " << m_dept << endl;
+    return m_age;
+}
+
+void Faculty::setDetails(string name, int age)
+{
+    m_name = name; m_age = age;
 }

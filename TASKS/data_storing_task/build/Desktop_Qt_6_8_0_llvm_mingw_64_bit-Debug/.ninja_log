@@ -1,0 +1,25 @@
+# ninja log v6
+51	1350	7624442832223783	CMakeFiles/data_storing_task.dir/student.cpp.obj	d6e0353c0e0c335d
+32	2146	7624434582097062	CMakeFiles/data_storing_task.dir/json.cpp.obj	53bee4ac0060012a
+29	2097	7624434582097062	CMakeFiles/data_storing_task.dir/xml.cpp.obj	5a49e98de95b5429
+42	2114	7624434582097062	CMakeFiles/data_storing_task.dir/fileoperation.cpp.obj	b0f2d596df58e07b
+38	1351	7624438851555604	CMakeFiles/data_storing_task.dir/csv.cpp.obj	43b5b6780a08d119
+46	1554	7624442832177402	CMakeFiles/data_storing_task.dir/main.cpp.obj	9dad5d70985bb23f
+1329	1439	7624439365441644	data_storing_task.exe	1fdc330cde70888e
+38	1316	7624443213401049	CMakeFiles/data_storing_task.dir/csv.cpp.obj	43b5b6780a08d119
+1317	1414	7624443226216185	data_storing_task.exe	1fdc330cde70888e
+22	1941	7624446649578773	CMakeFiles/data_storing_task.dir/student.cpp.obj	d6e0353c0e0c335d
+34	2125	7624446649698914	CMakeFiles/data_storing_task.dir/xml.cpp.obj	5a49e98de95b5429
+42	2141	7624446649783624	CMakeFiles/data_storing_task.dir/fileoperation.cpp.obj	b0f2d596df58e07b
+17	2169	7624446649411142	CMakeFiles/data_storing_task.dir/main.cpp.obj	9dad5d70985bb23f
+38	2230	7624446649739927	CMakeFiles/data_storing_task.dir/json.cpp.obj	53bee4ac0060012a
+30	2285	7624446649654283	CMakeFiles/data_storing_task.dir/csv.cpp.obj	43b5b6780a08d119
+2285	2390	7624446672210488	data_storing_task.exe	1fdc330cde70888e
+34	1329	7624446809208847	CMakeFiles/data_storing_task.dir/main.cpp.obj	9dad5d70985bb23f
+1329	1434	7624446822174002	data_storing_task.exe	1fdc330cde70888e
+12	1381	7624447887144311	CMakeFiles/data_storing_task.dir/csv.cpp.obj	43b5b6780a08d119
+1381	1488	7624447900832051	data_storing_task.exe	1fdc330cde70888e
+12	1315	7624448241654716	CMakeFiles/data_storing_task.dir/csv.cpp.obj	43b5b6780a08d119
+1315	1422	7624448254713232	data_storing_task.exe	1fdc330cde70888e
+17	1275	7624449690788000	CMakeFiles/data_storing_task.dir/main.cpp.obj	9dad5d70985bb23f
+1276	1380	7624449703469872	data_storing_task.exe	1fdc330cde70888e

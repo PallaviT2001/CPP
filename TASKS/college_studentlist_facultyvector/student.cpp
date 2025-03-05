@@ -1,25 +1,40 @@
-#include "college.h"
-using namespace std;
+#include "student.h"
+#include "faculty.h"
 
-
-Student::Student(int id, string name, string branch) : m_id(id), m_name(name), m_branch(branch)
+Student::Student()
 {
-    cout<<"student parameterized constructor called"<<endl;
+    cout<<"student constructor called"<<endl;
 }
 
-int Student::getId() const
+Student::~Student()
+{
+    cout<<"student destructor called"<<endl;
+}
+
+Student::Student(int id, string name, int age)
+{
+    cout<<"student parameterized constructor called"<<endl;
+    m_id = id;
+    m_name = name;
+    m_age = age;
+}
+
+int Student::getId()
 {
     return m_id;
 }
 
-void Student::setDetails(string name, string branch)
+string Student::getname()
 {
-    m_name = name;
-    m_branch = branch;
+    return m_name;
 }
 
-void Student::display() const
+int Student::getage()
 {
-    cout << "ID: " << m_id << ", Name: " << m_name << ", Branch: " << m_branch << endl;
+    return m_age;
 }
-
+void Student::setDetails(string name, int age)
+{
+    m_name=name;
+    m_age=age;
+}

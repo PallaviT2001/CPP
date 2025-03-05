@@ -1,83 +1,71 @@
 #include "college.h"
 #include "student.h"
 #include "faculty.h"
+#include "college_management.h"
 using namespace std;
 
 int main() {
-    College college;
-    int choice, id;
-    string name, dept, branch;
+    College *c1;
+    College_management *cm;
+    Student *s1;
+    Faculty *f1;
+    int choice,id,age;
+    string name;
 
     while (true) {
         cout << "\n===== College Management System =====\n";
-        cout << "1. Add Faculty\n2. Delete Faculty\n3. Update Faculty\n4. Display Faculties\n";
-        cout << "5. Add Student\n6. Delete Student\n7. Update Student\n8. Display Students\n";
-        cout << "9. find student\n10. find faculty\n11. exit\n";
+        cout << "1. Add Student\n2. Delete Student\n3. Update Student\n4. Display Students\n";
+        cout << "5. Add Faculty\n6. Delete Faculty\n7. Update Faculty\n8. Display Faculties\n";
 
         cout << "Enter your choice:";
         cin >> choice;
 
         switch (choice) {
+
         case 1:
-            cout << "Enter Faculty ID, Name, Department: ";
-            cin >> id >> name >> dept;
-            college.addFaculty(id, name, dept);
+            cout << "Enter Student ID, Name, age: ";
+            cin >> id >> name >> age;
+            cm->addStudent(id, name, age);
             break;
 
         case 2:
-            cout << "Enter Faculty ID to Delete: ";
+            cout << "Enter Student ID to Delete: ";
             cin >> id;
-            college.deleteFaculty(id);
+            cm->deleteStudent(id);
             break;
 
         case 3:
-            cout << "Enter Faculty ID to update fields";
+            cout << "Enter Student ID to update fields ";
             cin >> id;
-            college.updateFaculty(id);
+            cm->updateStudent(id);
             break;
 
         case 4:
-            college.displayFaculties();
+            cm->displayStudents();
             break;
 
+
         case 5:
-            cout << "Enter Student ID, Name, Branch: ";
-            cin >> id >> name >> branch;
-            college.addStudent(id, name, branch);
+            cout << "Enter Faculty ID, Name,age: ";
+            cin >> id >> name >> age;
+            c1->addFaculty(id, name,age);
             break;
 
         case 6:
-            cout << "Enter Student ID to Delete: ";
+            cout << "Enter Faculty ID to Delete: ";
             cin >> id;
-            college.deleteStudent(id);
+            cm->deleteFaculty(id);
             break;
 
         case 7:
-            cout << "Enter Student ID to update fields ";
+            cout << "Enter Faculty ID to update fields";
             cin >> id;
-            college.updateStudent(id);
+            c1->updateFaculty(id);
             break;
 
         case 8:
-            college.displayStudents();
+            cm->displayFaculties();
             break;
-
-        case 9:
-            cout<<"enter student id to find details"<<endl;
-            cin>>id;
-            college.findstudent(id);
-            break;
-
-        case 10:
-            cout<<"enter faculty id to find details"<<endl;
-            cin>>id;
-            college.findfaculty(id);
-            break;
-
-        case 11:
-            cout << "Exiting...\n";
-            return 0;
-
         default:
             cout << "Invalid choice! Try again.\n";
         }

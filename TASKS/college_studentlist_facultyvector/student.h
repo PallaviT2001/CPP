@@ -1,20 +1,19 @@
 #ifndef STUDENT_H
 #define STUDENT_H
+#include "personaldetails.h"
 #include <list>
 
-class Student
+class Student:public Personaldetails
 {
-private:
-    int m_id;
-    string m_name;
-    string m_branch;
-
 public:
-    list<Student> m_students;
-    Student(int id, string name,string branch);
-    int getId() const;
-    void setDetails(string name,string branch);
-    void display() const;
+    Student();
+    ~Student();
+    Student(int id, string name,int age);
+    int getId();
+    string getname();
+    int getage();
+    void setDetails(string name,int age);
+    void display();
 };
 
 #endif

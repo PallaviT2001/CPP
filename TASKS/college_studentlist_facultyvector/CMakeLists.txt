@@ -9,7 +9,9 @@ add_executable(college_studentlist_facultyvector main.cpp
     college.h college.cpp
 
     faculty.h faculty.cpp
-    student.h student.cpp)
+    student.h student.cpp
+    college_management.h college_management.cpp
+    personaldetails.h personaldetails.cpp)
 
 include(GNUInstallDirs)
 install(TARGETS college_studentlist_facultyvector

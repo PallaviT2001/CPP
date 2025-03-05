@@ -1,19 +1,18 @@
 #ifndef FACULTY_H
 #define FACULTY_H
+#include "personaldetails.h"
 #include <vector>
 
-class Faculty
+class Faculty:public Personaldetails
 {
-private:
-    int m_id;
-    string m_name;
-    string m_dept;
-
 public:
-    vector<Faculty> m_faculties;
-    Faculty(int id,string name,string dept);
-    int getId() const;
-    void setDetails(string name,string dept);
-    void display() const;
+    Faculty();
+    ~Faculty();
+    Faculty(int id,string name,int age);
+    int getId();
+    string getname();
+    int getage();
+    void setDetails(string name,int age);
+    void display();
 };
 #endif
