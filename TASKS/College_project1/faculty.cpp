@@ -15,7 +15,24 @@ Faculty::Faculty(int id, string name, int age) : Personaldetails(id, name, age)
     cout<<"faculty parameterized constructor called"<<endl;
 }
 
-void Faculty::display() const
+int Faculty::getId() const
 {
-    cout << "Faculty: " << m_name << ", Age: " << m_age << endl;
+    return m_id;
 }
+
+string Faculty::getName() const
+{
+    return m_name;
+}
+
+int Faculty::getAge() const
+{
+    return m_age;
+}
+
+void Faculty::setDetails(string name, int age)
+{
+    m_name = name;
+    m_age = age;
+}
+

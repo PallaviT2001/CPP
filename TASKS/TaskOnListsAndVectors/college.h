@@ -1,11 +1,11 @@
 #ifndef COLLEGE_H
 #define COLLEGE_H
 #include "student.h"
-#include "Staff.h"
+#include "staff.h"
 #include <vector>
 #include <list>
 #include <iostream>
-#include "college_management.h"
+#include "collegemanagement.h"
 using namespace std;
 
 class College

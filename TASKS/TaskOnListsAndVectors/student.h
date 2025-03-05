@@ -11,6 +11,8 @@ class Student:public PersonalDetails
 {
 private:
     float m_fee;
+
+
 public:
     Student();
     Student(int id, string name,int age,float fee);
