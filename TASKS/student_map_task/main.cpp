@@ -2,6 +2,22 @@
 using namespace std;
 #include<map>
 
+int main()
+{
+    string state;
+    map<string,string> indiamap;
+    indiamap.emplace("karnataka","Bangalur");
+    indiamap.emplace("tamilnaadu","chennai");
+    indiamap.emplace("andrapradesh", "Amaravathi");
+    indiamap.emplace("telangana","hyderabad");
+
+    for (auto i=indiamap.begin();i!=indiamap.end();i++)
+    {
+        cout<<"state and capital "<<i->first<<" "<<i->second<<endl;
+    }
+    return 0;
+}
+
 /*int main()
 {
     map <int,string> mymap {{1,"geeks"},{2,"for"},{3,"geeks"}};
@@ -12,7 +28,7 @@ using namespace std;
     return 0;
 }*/
 
-int main()
+/*int main()
 {
     map<int,float>mymap {{1,1.1},{2,2.2},{3,4.4}};
     for(auto &mapvalues:mymap)
@@ -20,7 +36,7 @@ int main()
         cout<<mapvalues.first<<" "<<mapvalues.second<<endl;
     }
     return 0;
-}
+}*/
 
 /*#include <iostream>
 using namespace std;
@@ -61,15 +77,15 @@ public:
         }
         return os;
     }
-};
+};*/
 
-int main() {
-    MyUnorderedMap<int,string> intStringMap;
-    intStringMap.add(1, "one");
-    intStringMap.add(2, "two");
-    intStringMap.add(3, "three");
+/*int main() {
+    map<string,string> indiamap;
+    indiamap.emplace("1", "one");
+    indiamap.emplace("2", "two");
+    indiamap.emplace("3", "three");
 
-    MyUnorderedMap<float,string> floatStringMap;
+    /*MyUnorderedMap<float,string> floatStringMap;
     floatStringMap.add(1.1f, "one point one");
     floatStringMap.add(2.2f, "two point two");
     floatStringMap.add(3.3f, "three point three");
@@ -80,10 +96,10 @@ int main() {
 
     cout << "Int-String Map: " << intStringMap<<endl;
     cout << "Float-String Map: " << floatStringMap<<endl;
-    cout << "String-Int Map: " << stringIntMap<<endl;
+    cout << "String-Int Map: " << stringIntMap<<endl;*/
 
-    return 0;
-}*/
+    //return 0;
+//}*/
 
 /*SET*/
 

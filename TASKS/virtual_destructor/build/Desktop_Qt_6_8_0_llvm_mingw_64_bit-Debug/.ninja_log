@@ -1,0 +1,7 @@
+# ninja log v6
+8	1304	7623378841530369	CMakeFiles/virtual_destructor.dir/wire.cpp.obj	ced15245bf05f06e
+19	961	7623379186910191	CMakeFiles/virtual_destructor.dir/polycab.cpp.obj	cd8824cdfb59c565
+12	1013	7623393767891973	CMakeFiles/virtual_destructor.dir/main.cpp.obj	96c62974a84164cd
+1014	1235	7623393777932633	virtual_destructor.exe	dd437dd9376a98aa
+30	1071	7623394234496495	CMakeFiles/virtual_destructor.dir/main.cpp.obj	96c62974a84164cd
+1071	1171	7623394245016384	virtual_destructor.exe	dd437dd9376a98aa

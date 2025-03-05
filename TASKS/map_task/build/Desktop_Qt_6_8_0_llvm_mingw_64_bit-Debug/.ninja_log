@@ -1,0 +1,18 @@
+# ninja log v6
+37	911	7628594038137580	CMakeFiles/map_task.dir/capital.cpp.obj	b30da0b439cf2a20
+15	1314	7628593792918616	CMakeFiles/map_task.dir/main.cpp.obj	cc8dc64b466d8f0d
+911	1005	7628594046896209	map_task.exe	4a6eeeadd6d387e4
+22	1248	7628603780073497	CMakeFiles/map_task.dir/state.cpp.obj	b4fe0a3a72fdb2d1
+22	1284	7628604723760387	CMakeFiles/map_task.dir/capital.cpp.obj	b30da0b439cf2a20
+26	1297	7628604723916644	CMakeFiles/map_task.dir/state.cpp.obj	b4fe0a3a72fdb2d1
+23	1245	7628607810898970	CMakeFiles/map_task.dir/state.cpp.obj	b4fe0a3a72fdb2d1
+20	1291	7628607810792413	CMakeFiles/map_task.dir/capital.cpp.obj	b30da0b439cf2a20
+16	1615	7628607810792413	CMakeFiles/map_task.dir/main.cpp.obj	cc8dc64b466d8f0d
+1615	1720	7628607826827226	map_task.exe	ee2c57d210d62418
+16	941	7628608132222724	CMakeFiles/map_task.dir/capital.cpp.obj	b30da0b439cf2a20
+12	1235	7628608132184678	CMakeFiles/map_task.dir/main.cpp.obj	cc8dc64b466d8f0d
+1235	1333	7628608144434257	map_task.exe	ee2c57d210d62418
+29	1103	7628608340079744	CMakeFiles/map_task.dir/main.cpp.obj	cc8dc64b466d8f0d
+1104	1197	7628608350941272	map_task.exe	ee2c57d210d62418
+31	1019	7628608465327833	CMakeFiles/map_task.dir/state.cpp.obj	b4fe0a3a72fdb2d1
+1020	1128	7628608475263106	map_task.exe	ee2c57d210d62418
