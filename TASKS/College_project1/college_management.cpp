@@ -124,7 +124,6 @@ void CollegeManagement::findStudent(int id)
         }
 
     }
-
     cout << "Student Not Found!" << endl;
 }
 
@@ -293,7 +292,6 @@ void CollegeManagement::displayStaffData()
     }
 
 }
-
 
 void CollegeManagement::initStudent(list<Student> *m_studentlist)
 {

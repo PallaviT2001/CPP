@@ -11,8 +11,6 @@ class CollegeManagement
 private:
     list<Student>*m_student;
     vector<Staff>*m_staff;
-
-
 public:
     CollegeManagement();
     ~CollegeManagement();
