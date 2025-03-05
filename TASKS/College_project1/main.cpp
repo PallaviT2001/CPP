@@ -1,7 +1,8 @@
 #include "college.h"
+#include "College_management.h"
 
 int main() {
-    College college;
+    College_management cm;
     int choice, id, age;
     string name;
 
@@ -16,45 +17,45 @@ int main() {
         case 1:
             cout << "Enter Student ID, Name, Age: ";
             cin >> id >> name >> age;
-            college.addStudent(id, name, age);
+            cm.addStudent(id, name, age);
             break;
 
         case 2:
             cout << "Enter Student ID to Delete: ";
             cin >> id;
-            college.deleteStudent(id);
+            cm.deleteStudent(id);
             break;
 
         case 3:
             cout << "Enter Student ID to Update: ";
             cin >> id;
-            college.updateStudent(id);
+            cm.updateStudent(id);
             break;
 
         case 4:
-            college.displayStudents();
+            cm.displayStudents();
             break;
 
         case 5:
             cout << "Enter Faculty ID, Name, Age: ";
             cin >> id >> name >> age;
-            college.addFaculty(id, name, age);
+            cm.addFaculty(id, name, age);
             break;
 
         case 6:
             cout << "Enter Faculty ID to Delete: ";
             cin >> id;
-            college.deleteFaculty(id);
+            cm.deleteFaculty(id);
             break;
 
         case 7:
             cout << "Enter Faculty ID to Update: ";
             cin >> id;
-            college.updateFaculty(id);
+            cm.updateFaculty(id);
             break;
 
         case 8:
-            college.displayFaculties();
+            cm.displayFaculties();
             break;
 
         case 9:

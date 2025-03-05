@@ -15,10 +15,6 @@ int main()
     {
         cout<<"state and capital "<<i->first<<" "<<i->second<<endl;
     }
-
-    cout<<"enter state"<<endl;
-    cin >>state;
-
     return 0;
 }
 
@@ -85,7 +81,7 @@ public:
 
 /*int main() {
     map<string,string> indiamap;
-    indiamap.emplace("andrapradesh", "Amaravathi");
+    indiamap.emplace("1", "one");
     indiamap.emplace("2", "two");
     indiamap.emplace("3", "three");
 

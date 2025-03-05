@@ -1,10 +1,10 @@
 #ifndef PERSONALDETAILS_H
 #define PERSONALDETAILS_H
-
 #include <iostream>
 using namespace std;
 
-class Personaldetails {
+class Personaldetails
+{
 protected:
     int m_id;
     string m_name;
@@ -12,6 +12,7 @@ protected:
 
 public:
     Personaldetails();
+    ~Personaldetails();
     Personaldetails(int id, string name, int age);
 
     int getId() const;
