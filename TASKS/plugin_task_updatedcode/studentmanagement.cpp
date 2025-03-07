@@ -1,10 +1,16 @@
 #include "studentmanagement.h"
 
-StudentManagement::StudentManagement() : fileHandler(nullptr) {}
+StudentManagement::StudentManagement() : fileHandler(nullptr)
+{}
 
-StudentManagement::~StudentManagement() { delete fileHandler; }
+StudentManagement::~StudentManagement()
+{
+    cout<<"student management destructor called"<<endl;
+    delete fileHandler;
+}
 
-void StudentManagement::addStudent() {
+void StudentManagement::addStudent()
+{
     string name, mobile;
     int age, usn;
 
@@ -25,29 +31,36 @@ void StudentManagement::saveData(int choice) {
     if(choice==1)
     {
         fileHandler=new TXT;
+
     }
     else
     {
         fileHandler=new CSV;
+
     }
     fileHandler->writeData(students);
+
 }
 
 void StudentManagement::loadData(int choice) {
     delete fileHandler;
     if(choice==1)
     {
-        new TXT;
+        fileHandler = new TXT;
+
     }
     else
     {
-        new CSV();
+        fileHandler = new CSV();
+
     }
     students = fileHandler->readData();
 }
 
-void StudentManagement::display() {
-    for (const auto& student : students) {
+void StudentManagement::display()
+{
+    for (const auto& student : students)
+    {
         student.display();
     }
 }

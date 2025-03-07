@@ -10,5 +10,4 @@ public:
     virtual void deposit(double amount)=0;
     virtual void checkbalance()=0;
 };
-
 #endif

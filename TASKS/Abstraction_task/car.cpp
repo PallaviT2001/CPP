@@ -15,7 +15,6 @@ Car::~Car()
 
 void Car::startcar(Engine *eng)
 {
-
     cout<<"car startred"<<endl;
     this->eng = eng;
     eng->startengine();
