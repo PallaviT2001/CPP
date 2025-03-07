@@ -1,0 +1,2 @@
+Good morning
+example code to check how c++ write operation will work
