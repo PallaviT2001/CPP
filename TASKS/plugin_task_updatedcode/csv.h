@@ -1,10 +1,13 @@
 #ifndef CSV_H
 #define CSV_H
 
-class CSV
-{
+#include "fileoperations.h"
+#include <fstream>
+
+class CSV : public FileOperations {
 public:
-    CSV();
+    void writeData(const list<Student>& students) override;
+    list<Student> readData() override;
 };
 
 #endif // CSV_H

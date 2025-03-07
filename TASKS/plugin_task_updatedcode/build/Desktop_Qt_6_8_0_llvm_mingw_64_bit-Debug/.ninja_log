@@ -1,0 +1,10 @@
+# ninja log v6
+9	1254	7630285869838518	CMakeFiles/plugin_task_updatedcode.dir/student.cpp.obj	f4d005d9aa4f5f08
+6	1436	7630285869789154	CMakeFiles/plugin_task_updatedcode.dir/fileoperations.cpp.obj	77f781a311a8ec5e
+3	1637	7630285869789154	CMakeFiles/plugin_task_updatedcode.dir/main.cpp.obj	cae6356536cb217e
+12	1690	7630285869888852	CMakeFiles/plugin_task_updatedcode.dir/studentmanagement.cpp.obj	682a35ca3a9c5c2
+19	1811	7630285869952681	CMakeFiles/plugin_task_updatedcode.dir/txt.cpp.obj	ce19d73a79d66882
+15	1818	7630285869924921	CMakeFiles/plugin_task_updatedcode.dir/csv.cpp.obj	311e8ee1742b0bca
+1818	1902	7630285887946436	plugin_task_updatedcode.exe	4f62778c748e8b71
+16	1302	7630287180029526	CMakeFiles/plugin_task_updatedcode.dir/studentmanagement.cpp.obj	682a35ca3a9c5c2
+1303	1393	7630287192887051	plugin_task_updatedcode.exe	4f62778c748e8b71
