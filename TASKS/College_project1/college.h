@@ -23,6 +23,6 @@ public:
     void operations();
 };
 
-#endif // COLLEGE_H
+#endif
 
 

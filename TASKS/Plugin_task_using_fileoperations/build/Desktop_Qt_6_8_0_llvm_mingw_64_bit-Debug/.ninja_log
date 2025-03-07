@@ -1,0 +1,16 @@
+# ninja log v6
+42	2369	7629638395359984	CMakeFiles/Plugin_task_using_fileoperations.dir/student.cpp.obj	14d762e8b8b6a6c9
+33	2227	7629636544425768	CMakeFiles/Plugin_task_using_fileoperations.dir/csv.cpp.obj	9ef8128eee924606
+45	2320	7629636544521672	CMakeFiles/Plugin_task_using_fileoperations.dir/txt.cpp.obj	490eee2093a1c4fd
+30	2062	7629638395110258	CMakeFiles/Plugin_task_using_fileoperations.dir/main.cpp.obj	e0bc5a34e43670d9
+1146	1234	7629592935967726	Plugin_task_using_fileoperations.exe	f97c8e532291eba
+10	1266	7629640929577851	CMakeFiles/Plugin_task_using_fileoperations.dir/csv.cpp.obj	9ef8128eee924606
+15	1298	7629640929621716	CMakeFiles/Plugin_task_using_fileoperations.dir/txt.cpp.obj	490eee2093a1c4fd
+1298	1429	7629640942460020	Plugin_task_using_fileoperations.exe	bcddfd0afddfc498
+12	1179	7629644879290415	CMakeFiles/Plugin_task_using_fileoperations.dir/main.cpp.obj	e0bc5a34e43670d9
+1180	1283	7629644891002806	Plugin_task_using_fileoperations.exe	bcddfd0afddfc498
+14	1288	7629646886206897	CMakeFiles/Plugin_task_using_fileoperations.dir/main.cpp.obj	e0bc5a34e43670d9
+22	1424	7629646886297833	CMakeFiles/Plugin_task_using_fileoperations.dir/student.cpp.obj	14d762e8b8b6a6c9
+18	1499	7629646886267005	CMakeFiles/Plugin_task_using_fileoperations.dir/csv.cpp.obj	9ef8128eee924606
+25	1511	7629646886325400	CMakeFiles/Plugin_task_using_fileoperations.dir/txt.cpp.obj	490eee2093a1c4fd
+1511	1604	7629646901159516	Plugin_task_using_fileoperations.exe	bcddfd0afddfc498

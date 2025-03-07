@@ -24,9 +24,6 @@ public:
     void setStudentAge(int age);
     void setStudentFee(float fee);
 
-
-
-
 };
 
 #endif // STUDENT_H

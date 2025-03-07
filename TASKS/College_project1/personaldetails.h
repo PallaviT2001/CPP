@@ -14,4 +14,4 @@ public:
 
 };
 
-#endif // PERSONALDETAILS_H
+#endif

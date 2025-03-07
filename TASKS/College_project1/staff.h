@@ -29,11 +29,6 @@ public:
     void setStaffSalary(float salary);
     void setStaffContactNumber(int number);
     void setStaffExperience( int experience);
-
-
-
-
-
 };
 
 #endif // STAFF_H

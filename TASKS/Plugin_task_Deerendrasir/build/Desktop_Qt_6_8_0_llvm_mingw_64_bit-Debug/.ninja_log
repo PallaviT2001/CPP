@@ -39,3 +39,11 @@
 1440	1540	7628619791528975	Plugin_task_Deerendrasir.exe	7f6acbb9902d9e9c
 13	1328	7628622953727278	CMakeFiles/Plugin_task_Deerendrasir.dir/studentmanagement.cpp.obj	6398bb437ed8ce8f
 1329	1442	7628622966881031	Plugin_task_Deerendrasir.exe	7f6acbb9902d9e9c
+124	1352	7629504519759988	CMakeFiles/Plugin_task_Deerendrasir.dir/student.cpp.obj	d123e9b337858c66
+118	1532	7629504519759988	CMakeFiles/Plugin_task_Deerendrasir.dir/main.cpp.obj	d38de6d27dec31a2
+135	1595	7629504519971050	CMakeFiles/Plugin_task_Deerendrasir.dir/fileoperations.cpp.obj	d0dc58de33d42bca
+128	1649	7629504519885083	CMakeFiles/Plugin_task_Deerendrasir.dir/studentmanagement.cpp.obj	6398bb437ed8ce8f
+147	1659	7629504520086816	CMakeFiles/Plugin_task_Deerendrasir.dir/json.cpp.obj	2cc0b2473929b978
+140	1673	7629504520017663	CMakeFiles/Plugin_task_Deerendrasir.dir/csv.cpp.obj	7362450c3e9a66ff
+144	1683	7629504520052472	CMakeFiles/Plugin_task_Deerendrasir.dir/xml.cpp.obj	e4a1b64f9bfa2920
+1683	1769	7629504535451719	Plugin_task_Deerendrasir.exe	7f6acbb9902d9e9c
