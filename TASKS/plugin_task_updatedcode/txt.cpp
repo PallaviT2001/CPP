@@ -1,7 +1,7 @@
 #include "txt.h"
 
 void TXT::writeData(const list<Student>& students) {
-    ofstream file("students.txt");
+    ofstream file("students.txt",ios::app);
     if (!file) {
         cout << "Error opening TXT file for writing!" << endl;
         return;
@@ -12,6 +12,7 @@ void TXT::writeData(const list<Student>& students) {
              << student.getUSN() << " " << student.getMobileNumber() << endl;
     }
     file.close();
+    cout<<endl;
     cout << "Data written to TXT successfully." << endl;
 }
 

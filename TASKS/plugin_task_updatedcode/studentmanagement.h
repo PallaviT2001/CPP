@@ -1,6 +1,5 @@
 #ifndef STUDENTMANAGEMENT_H
 #define STUDENTMANAGEMENT_H
-
 #include <iostream>
 #include "student.h"
 #include "fileoperations.h"
@@ -8,11 +7,11 @@
 #include "csv.h"
 #include <list>
 
-class StudentManagement {
+class StudentManagement
+{
 private:
     list<Student> students;
     FileOperations* fileHandler;
-
 public:
     StudentManagement();
     ~StudentManagement();
@@ -22,4 +21,4 @@ public:
     void display();
 };
 
-#endif // STUDENTMANAGEMENT_H
+#endif
