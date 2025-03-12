@@ -1,0 +1,6 @@
+# ninja log v6
+57	1129	7634809080474063	CMakeFiles/Wifi_task.dir/wifi.cpp.obj	2a356c2bbd3f3417
+14	1344	7634831104794247	CMakeFiles/Wifi_task.dir/main.cpp.obj	54c55ba3f4418473
+33	1310	7634837088596728	CMakeFiles/Wifi_task.dir/wifimanager.cpp.obj	3c7086cceaaffec1
+15	1628	7634813487212277	CMakeFiles/Wifi_task.dir/fileoperation.cpp.obj	88b9bac573552729
+1310	1395	7634837101372836	Wifi_task.exe	9fae3eb7f475bd08

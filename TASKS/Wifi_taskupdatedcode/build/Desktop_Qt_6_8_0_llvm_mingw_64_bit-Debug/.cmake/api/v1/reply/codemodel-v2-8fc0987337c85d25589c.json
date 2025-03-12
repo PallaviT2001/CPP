@@ -1,0 +1,61 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-31b729fd5e76b0dec50a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Wifi_taskupdatedcode",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Wifi_taskupdatedcode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Wifi_taskupdatedcode-Debug-e47a6c31056a67bae86b.json",
+					"name" : "Wifi_taskupdatedcode",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/QT PROGRAMS/C++/TASKS/Wifi_taskupdatedcode/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug",
+		"source" : "D:/QT PROGRAMS/C++/TASKS/Wifi_taskupdatedcode"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
