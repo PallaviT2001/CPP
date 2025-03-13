@@ -1,5 +1,6 @@
 #include "wifi.h"
 
+
 Wifi::Wifi()
 {
     cout<<"wifi constructor called"<<endl;
@@ -25,11 +26,13 @@ string Wifi::getwifiname()
 
 int Wifi::getsignalstrength()
 {
+    cout<<"get strength fun called"<<endl;
     return m_signalstrength;
 }
 
 string Wifi::getstatus()
 {
+    cout<<"get status fun called"<<endl;
     return m_status;
 }
 

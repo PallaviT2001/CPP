@@ -64,28 +64,26 @@ void Wifimanager::display()
     for (auto i:Wifilist)
     {
         cout<<"Wifi name:  "<<i->getwifiname()<<","<<" wifi signalstrength:  "<<i->getsignalstrength()
-             <<","<<" wifi status:  "<<i->getstatus()<<","<<" wifi password:  "<<i->getpassword()<<endl;
+        <<","<<" wifi status:  "<<i->getstatus()<<","<<" wifi password:  "<<i->getpassword()<<endl;
     }
 }
 
-
 void Wifimanager::sortwifi()
 {
+    cout<<"sort function"<<endl;
     for(auto i:Wifilist)
     {
-
         for(auto j:Wifilist)
         {
-
-            if(i->getstatus()!="connected" && j->getstatus()=="connected")
+            if(j->getstatus()!="connected" && i->getstatus()=="connected")
             {
                 iter_swap(i,j);
             }
-            if(i->getstatus()=="active" && j->getstatus()=="saved")
+            if(j->getstatus()=="active" && i->getstatus()=="saved")
             {
                 iter_swap(i,j);
             }
-            if(i->getstatus()==j->getstatus() && i->getsignalstrength() < j->getsignalstrength())
+            if(i->getstatus()==j->getstatus() && j->getsignalstrength() < i->getsignalstrength())
             {
                 iter_swap(i,j);
             }
@@ -107,21 +105,21 @@ void Wifimanager::connection()
         }
         if(i->getstatus()=="connected")
         {
-            cout<<endl<<" disconnecting from "<<i->getwifiname()<<" and saving it "<<endl;
+            cout<<endl<<"disconnecting from "<<i->getwifiname()<<" and saving it "<<endl;
             i->setstatus("saved");
         }
         if(i->getwifiname()==wifiname)
         {
             if(i->getstatus()=="saved")
             {
-                cout<<endl<<" connecting to "<<wifiname<<endl;
+                cout<<endl<<"connecting to "<<wifiname<<endl;
                 i->setstatus("connected");
                 return;
             }
             else if(i->getstatus()=="active")
             {
                 int password;
-                cout<<endl<<" enter password for  "<<wifiname<<endl;
+                cout<<endl<<"enter password for  "<<wifiname<<endl;
                 cin>>password;
                 if(password == i->getpassword())
                 {
