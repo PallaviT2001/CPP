@@ -11,17 +11,18 @@ int main()
 {
     int choice;
 
-   // Fileoperation fobj;
+    /*Wifilist .push_back(Wifi("Oppo",60,"connected",1234));
+    Wifilist .push_back(Wifi("Vivo",70,"active",5678));
+    Wifilist .push_back(Wifi("Samsung",80,"active",9101));
+    Wifilist .push_back(Wifi("Moto",50,"saved",3695));
+    Wifilist .push_back(Wifi("Redme",56,"saved",8965));
+    Wifilist .push_back(Wifi("Realme",63,"active",7896));
+    Wifilist .push_back(Wifi("Vivo25",65,"active",1896));*/
+
+    // Fileoperation fobj;
     Wifimanager wifimanobj;
-
-    /*wifilist.push_back(Wifi("Oppo",60,"connected",1234));
-    wifilist.push_back(Wifi("Vivo",70,"active",5678));
-    wifilist.push_back(Wifi("Samsung",80,"active",9101));
-    wifilist.push_back(Wifi("Moto",50,"saved",3695));
-    wifilist.push_back(Wifi("Redme",56,"saved",8965));
-    wifilist.push_back(Wifi("Realme",63,"active",7896));
-    wifilist.push_back(Wifi("Vivo25",65,"active",1896));*/
-
+    while(true)
+    {
     cout<<"enter the choice"<<endl;
     cout<<"1.Display available networks"<<endl;
     cout<<"2.Sorting"<<endl;
@@ -31,7 +32,7 @@ int main()
     {
     case display:
     {
-        wifimanobj.writeData();
+        // wifimanobj.writeData();
         wifimanobj.display();
         break;
     }
@@ -45,12 +46,13 @@ int main()
     }
     case connection:
     {
-       // wifilist=wifimanobj.readData();
+        // wifilist=wifimanobj.readData();
         wifimanobj.connection();
         wifimanobj.sortwifi();
         wifimanobj.display();
-
-
+    }
+    default:
+        cout<<"invalid choice"<<endl;
     }
 
     }
