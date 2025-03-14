@@ -18,7 +18,7 @@ Wifimanager::~Wifimanager()
     }
 }
 
-void Wifimanager::writeData()
+/*void Wifimanager::writeData()
 {
     ofstream file("wifi.csv",ios::app);
     if (!file)
@@ -34,7 +34,7 @@ void Wifimanager::writeData()
 
     file.close();
     cout << "Data written to CSV successfully." << endl;
-}
+}*/
 
 list<Wifi*> Wifimanager::readData()
 {
@@ -70,7 +70,6 @@ void Wifimanager::display()
 
 void Wifimanager::sortwifi()
 {
-    cout<<"sort function"<<endl;
     for(auto i:Wifilist)
     {
         for(auto j:Wifilist)

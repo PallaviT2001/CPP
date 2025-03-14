@@ -11,21 +11,13 @@ int main()
 {
     int choice;
 
-    /*Wifilist .push_back(Wifi("Oppo",60,"connected",1234));
-    Wifilist .push_back(Wifi("Vivo",70,"active",5678));
-    Wifilist .push_back(Wifi("Samsung",80,"active",9101));
-    Wifilist .push_back(Wifi("Moto",50,"saved",3695));
-    Wifilist .push_back(Wifi("Redme",56,"saved",8965));
-    Wifilist .push_back(Wifi("Realme",63,"active",7896));
-    Wifilist .push_back(Wifi("Vivo25",65,"active",1896));*/
-
     // Fileoperation fobj;
     Wifimanager wifimanobj;
     while(true)
     {
     cout<<"enter the choice"<<endl;
-    cout<<"1.Display available networks"<<endl;
-    cout<<"2.Sorting"<<endl;
+    cout<<"1.Available Networks"<<endl;
+    cout<<"2.Sorting the networks"<<endl;
     cout<<"3.Connection"<<endl;
     cin>>choice;
     switch(choice)
