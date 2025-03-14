@@ -31,12 +31,10 @@ void StudentManagement::saveData(int choice) {
     if(choice==1)
     {
         fileHandler=new TXT;
-
     }
     else
     {
         fileHandler=new CSV;
-
     }
     fileHandler->writeData(students);
 

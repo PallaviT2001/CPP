@@ -10,7 +10,7 @@ public:
     Wifimanager();
     ~Wifimanager();
 
-    void writeData();
+    //void writeData();
     list<Wifi*> readData();
 
     void display();
