@@ -79,8 +79,8 @@ build CMakeFiles/vehicle_rental_managementtask.dir/car.cpp.obj: CXX_COMPILER__ve
   OBJECT_DIR = CMakeFiles\vehicle_rental_managementtask.dir
   OBJECT_FILE_DIR = CMakeFiles\vehicle_rental_managementtask.dir
 
-build CMakeFiles/vehicle_rental_managementtask.dir/customer.cpp.obj: CXX_COMPILER__vehicle_rental_managementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/vehicle_rental_managementtask/customer.cpp || cmake_object_order_depends_target_vehicle_rental_managementtask
-  DEP_FILE = CMakeFiles\vehicle_rental_managementtask.dir\customer.cpp.obj.d
+build CMakeFiles/vehicle_rental_managementtask.dir/fileoperation.cpp.obj: CXX_COMPILER__vehicle_rental_managementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/vehicle_rental_managementtask/fileoperation.cpp || cmake_object_order_depends_target_vehicle_rental_managementtask
+  DEP_FILE = CMakeFiles\vehicle_rental_managementtask.dir\fileoperation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\vehicle_rental_managementtask.dir
   OBJECT_FILE_DIR = CMakeFiles\vehicle_rental_managementtask.dir
@@ -93,7 +93,7 @@ build CMakeFiles/vehicle_rental_managementtask.dir/customer.cpp.obj: CXX_COMPILE
 #############################################
 # Link the executable vehicle_rental_managementtask.exe
 
-build vehicle_rental_managementtask.exe: CXX_EXECUTABLE_LINKER__vehicle_rental_managementtask_Debug CMakeFiles/vehicle_rental_managementtask.dir/main.cpp.obj CMakeFiles/vehicle_rental_managementtask.dir/vehicle.cpp.obj CMakeFiles/vehicle_rental_managementtask.dir/vehiclemanager.cpp.obj CMakeFiles/vehicle_rental_managementtask.dir/bike.cpp.obj CMakeFiles/vehicle_rental_managementtask.dir/car.cpp.obj CMakeFiles/vehicle_rental_managementtask.dir/customer.cpp.obj
+build vehicle_rental_managementtask.exe: CXX_EXECUTABLE_LINKER__vehicle_rental_managementtask_Debug CMakeFiles/vehicle_rental_managementtask.dir/main.cpp.obj CMakeFiles/vehicle_rental_managementtask.dir/vehicle.cpp.obj CMakeFiles/vehicle_rental_managementtask.dir/vehiclemanager.cpp.obj CMakeFiles/vehicle_rental_managementtask.dir/bike.cpp.obj CMakeFiles/vehicle_rental_managementtask.dir/car.cpp.obj CMakeFiles/vehicle_rental_managementtask.dir/fileoperation.cpp.obj
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\vehicle_rental_managementtask.dir

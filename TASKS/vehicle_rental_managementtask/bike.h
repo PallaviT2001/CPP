@@ -1,15 +1,13 @@
 #ifndef BIKE_H
 #define BIKE_H
-#include "vehicle.h"
 
+#include "vehicle.h"
 class Bike:public Vehicle
 {
 public:
-     Bike();
+    Bike();
     ~Bike();
-
-     void setstatus();
-     void setcost();
+    Bike(std::string brand,std::string model,std::string vehicleNumber,float rentPrice,std::string status);
 };
 
-#endif
+#endif // BIKE_H

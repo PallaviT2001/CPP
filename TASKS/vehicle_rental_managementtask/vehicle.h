@@ -1,25 +1,33 @@
 #ifndef VEHICLE_H
 #define VEHICLE_H
-#include <iostream>
-using namespace std;
+
+#include <string>
 
 class Vehicle
 {
-protected:
-    string m_vehiclename;
-    float m_cost;
-    string m_status;
-    int m_duration;
 public:
     Vehicle();
     ~Vehicle();
-    Vehicle(string vehiclename,float cost,string status,int duration);
+    Vehicle(std::string brand, std::string model, std::string vehicleNumber, float rentPrice,std::string status);
 
-    int getvehiclename();
-    float getcost();
-    string getstatus();
-    int getduration();
+    std::string getBrand();
+    std::string getModel();
+    std::string getVehicleNumber();
+    float getRentPrice();
+    std::string getStatus();
 
+    void setBrand(std::string brand);
+    void setModel(std::string model);
+    void setVehicleNumber(std::string vehicleNumber);
+    void setRentPrice(float rentPrice);
+    void setStatus(std::string status);
+
+protected:
+    std::string m_brand;
+    std::string m_model;
+    std::string m_vehicleNumber;
+    float m_rentPrice;
+    std::string m_status;
 };
 
-#endif
+#endif // VEHICLE_H

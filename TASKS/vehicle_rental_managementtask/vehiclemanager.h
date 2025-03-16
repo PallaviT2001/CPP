@@ -1,23 +1,28 @@
 #ifndef VEHICLEMANAGER_H
 #define VEHICLEMANAGER_H
-#include <list>
+
 #include "bike.h"
-
-class Vehiclemanager
+#include "car.h"
+#include "fileoperation.h"
+#include <list>
+class VehicleManager
 {
-private:
-    list<bike>bikelist;
-    list<car>carlist;
-    list<customer>customerlist;
 public:
-    Vehiclemanager();
-    ~Vehiclemanager();
-    void addbike();
-    void addcar();
-    void updatebike();
-    void updatecar();
-    void returnbike();
-    void returncar();
+    VehicleManager();
+    ~VehicleManager();
 
+    void addBike();
+    void addCar();
+    void displayListOfBikes();
+    void displayListOfCars();
+
+    void updateBikePrice();
+    void updateCarPrice();
+
+private:
+    std::list<Bike>m_bikeList;
+    std::list<Car>m_carList;
+    FileOperation fileoperation;
 };
-#endif
+
+#endif // VEHICLEMANAGER_H
