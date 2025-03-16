@@ -2,50 +2,61 @@
 
 Vehicle::Vehicle()
 {
-    cout<<"vehicle constructor called"<<endl;
+
 }
 
 Vehicle::~Vehicle()
 {
-    cout<<"vehicle destructor called"<<endl;
+
 }
 
-Vehicle::Vehicle(string vehiclename, float cost, string status, int duration)
+
+std::string Vehicle::getBrand()
 {
-    m_vehiclename=vehiclename;
-    m_cost=cost;
-    m_status=status;
-    m_duration=duration;
+    return m_brand;
 }
 
-int Vehicle::getvehiclename()
+std::string Vehicle::getModel()
 {
-    return m_vehiclename;
+    return m_model;
 }
 
-float Vehicle::getcost()
+std::string Vehicle::getVehicleNumber()
 {
-    return m_cost;
+    return m_vehicleNumber;
 }
 
-string Vehicle::getstatus()
+float Vehicle::getRentPrice()
+{
+    return m_rentPrice;
+}
+
+std::string Vehicle::getStatus()
 {
     return m_status;
 }
 
-int Vehicle::getduration()
+void Vehicle::setBrand(std::string brand)
 {
-    return m_duration;
+    m_brand=brand;
 }
 
-void Vehicle::setstatus(string status)
+void Vehicle::setModel(std::string model)
+{
+    m_model=model;
+}
+
+void Vehicle::setVehicleNumber(std::string vehicleNumber)
+{
+    m_vehicleNumber=vehicleNumber;
+}
+
+void Vehicle::setRentPrice(float rentPrice)
+{
+    m_rentPrice=rentPrice;
+}
+
+void Vehicle::setStatus(std::string status)
 {
     m_status=status;
 }
-
-void Vehicle::setcost(float cost)
-{
-    m_cost=cost;
-}
-
-

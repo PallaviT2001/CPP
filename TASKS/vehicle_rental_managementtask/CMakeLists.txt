@@ -10,7 +10,10 @@ add_executable(vehicle_rental_managementtask main.cpp
     vehiclemanager.h vehiclemanager.cpp
     bike.h bike.cpp
     car.h car.cpp
-    customer.h customer.cpp)
+
+    fileoperation.h fileoperation.cpp
+
+)
 
 include(GNUInstallDirs)
 install(TARGETS vehicle_rental_managementtask

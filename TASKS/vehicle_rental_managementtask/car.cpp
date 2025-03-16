@@ -1,23 +1,21 @@
 #include "car.h"
-#include<iostream>
-using namespace std;
+
+Car::Car(std::string brand, std::string model, std::string vehicleNumber, float rentPrice, std::string status)
+{
+    m_brand=brand;
+    m_model=model;
+    m_vehicleNumber=vehicleNumber;
+    m_rentPrice=rentPrice;
+    m_status=status;
+}
 
 Car::Car()
 {
-    cout<<"car constructor called"<<endl;
+
 }
 
 Car::~Car()
 {
-    cout<<"car destructor called"<<endl;
+
 }
 
-void Car::setcost(float cost)
-{
-    m_cost=cost;
-}
-
-void Car::setstatus()
-{
-    m_status=status;
-}
