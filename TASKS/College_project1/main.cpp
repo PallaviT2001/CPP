@@ -8,3 +8,4 @@ int main()
     college.operations();
     return 0;
 }
+

@@ -79,3 +79,36 @@ std::list<Bike> FileOperation::readBikeData()
     csvBikeFile.close();
     return bikeList;
 }
+
+void FileOperation::writecustomerdata(std::list<Customerdetails> Customerlist)
+{
+    std::cout<<"CSV Customer WriteData Function Called"<<std::endl;
+    std::ofstream csvCustomerFile("CustomerListData.csv");
+    for(auto i= Customerlist.begin();i!=Customerlist.end();i++)
+    {
+        csvCustomerFile<<i->getname()<< ","
+                   <<i->getdlno()<< ","
+                   <<i->getaddress()<<endl;
+
+    }
+    csvCustomerFile.close();
+}
+
+std::list<Customerdetails> FileOperation::readcustomerdata()
+{
+    std::cout<<"customer data read function called"<<endl;
+
+    std::list<Customerdetails>Customerlist;
+    std::ifstream csvCustomerFile("CustomerListData.csv");
+    string customername;
+    string dlno;
+    string address;
+
+    while(std::getline(csvCustomerFile,customername,',') && std::getline(csvCustomerFile,dlno,',') && std::getline(csvCustomerFile,address,','))
+    {
+        Customerlist.push_back(Customerdetails(customername,dlno,address));
+    }
+    csvCustomerFile.close();
+    return Customerlist;
+
+}
