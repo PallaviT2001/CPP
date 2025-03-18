@@ -19,10 +19,16 @@ public:
     void updateBikePrice();
     void updateCarPrice();
 
+    void Bookbike();
+    void Bookcar();
+
+    void returnbike();
+    void returncar();
+
 private:
     std::list<Bike>m_bikeList;
     std::list<Car>m_carList;
     FileOperation fileoperation;
 };
 
-#endif // VEHICLEMANAGER_H
+#endif

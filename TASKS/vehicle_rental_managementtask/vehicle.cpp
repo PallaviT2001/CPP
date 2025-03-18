@@ -10,6 +10,15 @@ Vehicle::~Vehicle()
 
 }
 
+Vehicle::Vehicle(std::string brand, std::string model, std::string vehicleNumber, float rentPrice, std::string status)
+{
+    m_brand=brand;
+    m_model=model;
+    m_vehicleNumber=vehicleNumber;
+    m_rentPrice=rentPrice;
+    m_status=status;
+}
+
 
 std::string Vehicle::getBrand()
 {
