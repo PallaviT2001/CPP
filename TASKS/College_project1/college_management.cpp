@@ -25,7 +25,6 @@ CollegeManagement::~CollegeManagement()
 
     delete m_student;
     delete m_staff;
-
 }
 
 void CollegeManagement::addStudent(int id, string name,int age,float fee)
@@ -45,12 +44,8 @@ void CollegeManagement::deleteStudent(int id)
             cout<<"Deleted Student"<<endl;
             return;
         }
-
     }
-
     cout << "Student Not Found!" << endl;
-
-
 }
 
 void CollegeManagement::updateStudent(int id)

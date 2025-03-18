@@ -2,6 +2,7 @@
 #define FILEOPERATION_H
 #include "bike.h"
 #include "car.h"
+#include "customerdetails.h"
 #include <list>
 #include <fstream>
 
@@ -17,9 +18,8 @@ public:
     std::list<Car> readCarData();
     std::list<Bike> readBikeData();
 
-
-    /*void writeBikeData();
-    std::list<Bike> readBikeData();*/
+    void writecustomerdata(std::list<Customerdetails> Customerlist);
+    std::list<Customerdetails> readcustomerdata();
 
 };
 

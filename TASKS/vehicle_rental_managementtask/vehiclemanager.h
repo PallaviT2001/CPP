@@ -3,6 +3,7 @@
 
 #include "bike.h"
 #include "car.h"
+#include "customerdetails.h"
 #include "fileoperation.h"
 #include <list>
 class VehicleManager
@@ -13,6 +14,7 @@ public:
 
     void addBike();
     void addCar();
+
     void displayListOfBikes();
     void displayListOfCars();
 
@@ -25,9 +27,17 @@ public:
     void returnbike();
     void returncar();
 
+    void functionalities();
+
+    void deletebike();
+    void deletecar();
+
+    void displaycustomerdetails();
+
 private:
     std::list<Bike>m_bikeList;
     std::list<Car>m_carList;
+    std::list<Customerdetails>m_Customerlist;
     FileOperation fileoperation;
 };
 
