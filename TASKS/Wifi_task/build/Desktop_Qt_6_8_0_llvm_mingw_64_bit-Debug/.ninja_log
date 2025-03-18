@@ -86,3 +86,6 @@
 1657	1754	7635511418450902	Wifi_task.exe	9fae3eb7f475bd08
 215	2077	7636394323266744	CMakeFiles/Wifi_task.dir/wifimanager.cpp.obj	3c7086cceaaffec1
 2077	2204	7636394342016615	Wifi_task.exe	9fae3eb7f475bd08
+85	1342	7639080257117233	CMakeFiles/Wifi_task.dir/main.cpp.obj	54c55ba3f4418473
+89	1644	7639080257117233	CMakeFiles/Wifi_task.dir/wifimanager.cpp.obj	3c7086cceaaffec1
+1644	1861	7639080272709096	Wifi_task.exe	9fae3eb7f475bd08

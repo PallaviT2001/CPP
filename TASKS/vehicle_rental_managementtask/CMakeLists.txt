@@ -12,6 +12,7 @@ add_executable(vehicle_rental_managementtask main.cpp
     car.h car.cpp
 
     fileoperation.h fileoperation.cpp
+    customerdetails.h customerdetails.cpp
 
 )
 
