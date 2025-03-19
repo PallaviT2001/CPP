@@ -4,12 +4,12 @@ using namespace std;
 
 Vehicle::Vehicle()
 {
-    //cout<<"vehicle constructor called"<<endl;
+
 }
 
 Vehicle::~Vehicle()
 {
-    //cout<<"vehicle destructor called"<<endl;
+
 }
 
 Vehicle::Vehicle(std::string brand, std::string model, std::string vehicleNumber, float rentPrice, std::string status)
@@ -71,3 +71,4 @@ void Vehicle::setStatus(std::string status)
 {
     m_status=status;
 }
+
