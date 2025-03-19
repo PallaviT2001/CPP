@@ -87,8 +87,10 @@ void FileOperation::writecustomerdata(std::list<Customerdetails> Customerlist)
     for(auto i= Customerlist.begin();i!=Customerlist.end();i++)
     {
         csvCustomerFile<<i->getname()<< ","
-                   <<i->getdlno()<< ","
-                   <<i->getaddress()<<endl;
+                        <<i->getdlno()<< ","
+                        <<i->getaddress()<<","
+                        <<i->getbookingid()<<endl;
+                        //<<i->getVehicleNumber()<<endl;
 
     }
     csvCustomerFile.close();
@@ -97,19 +99,61 @@ void FileOperation::writecustomerdata(std::list<Customerdetails> Customerlist)
 std::list<Customerdetails> FileOperation::readcustomerdata()
 {
     std::cout<<"customer data read function called"<<endl;
-
     std::list<Customerdetails>Customerlist;
+
     std::ifstream csvCustomerFile("CustomerListData.csv");
     string customername;
     string dlno;
     string address;
+    string bookingid;
+    string VehicleNumber;
 
-    while(std::getline(csvCustomerFile,customername,',') && std::getline(csvCustomerFile,dlno,',') && std::getline(csvCustomerFile,address,','))
+    while(std::getline(csvCustomerFile,customername,',') && std::getline(csvCustomerFile,dlno,',')
+           && std::getline(csvCustomerFile,address,',') && std::getline(csvCustomerFile,bookingid))
+           //&& std::getline(csvCustomerFile,VehicleNumber))
     {
-        Customerlist.push_back(Customerdetails(customername,dlno,address));
+        Customerlist.push_back(Customerdetails(customername,dlno,address,bookingid));
     }
     csvCustomerFile.close();
     return Customerlist;
 
 }
+
+void FileOperation::writecustomerdatacar(std::list<Customerdetails> Customerlist)
+{
+    std::cout<<"CSV Customer WriteData Function Called"<<std::endl;
+    std::ofstream csvCustomerFile("CustomerListDatacar.csv");
+    for(auto i= Customerlist.begin();i!=Customerlist.end();i++)
+    {
+        csvCustomerFile<<i->getname()<< ","
+                        <<i->getdlno()<< ","
+                        <<i->getaddress()<<","
+                        <<i->getbookingid()<<endl;
+
+    }
+    csvCustomerFile.close();
+}
+
+std::list<Customerdetails> FileOperation::readcustomerdatacar()
+{
+    std::cout<<"customer data read function called"<<endl;
+    std::list<Customerdetails>Customerlist;
+
+    std::ifstream csvCustomerFile("CustomerListDatacar.csv");
+    string customername;
+    string dlno;
+    string address;
+    string bookingid;
+
+    while(std::getline(csvCustomerFile,customername,',') && std::getline(csvCustomerFile,dlno,',')
+           && std::getline(csvCustomerFile,address,',') && std::getline(csvCustomerFile,bookingid))
+    {
+        Customerlist.push_back(Customerdetails(customername,dlno,address,bookingid));
+    }
+    csvCustomerFile.close();
+    return Customerlist;
+
+}
+
+
 

@@ -141,65 +141,7 @@ void VehicleManager::updateCarPrice()
     std::cout << "Car with number " << vehicleNumber << " not found" << std::endl;
 }
 
-/*void VehicleManager::Bookbike()
-{
-    m_bikeList=fileoperation.readBikeData();
-    cout<<"Bike book function called"<<endl;
 
-    string vehicleNumber;
-    string newstatus;
-
-    cout<<"enter bike number to book"<<endl;
-    cin>>vehicleNumber;
-
-    for (auto i = m_bikeList.begin(); i != m_bikeList.end(); i++)
-    {
-        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
-        {
-            i->setStatus("booked");
-            fileoperation.writeBikeData(m_bikeList);
-            cout<<"Bike booked successfully refno: "<<vehicleNumber<<endl;
-            return;
-        }
-    }
-    std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
-
-}*/
-
-/*void VehicleManager::Bookbike()
-{
-    m_bikeList=fileoperation.readBikeData();
-    cout<<"Bike book function called"<<endl;
-
-    string vehicleNumber;
-    string newstatus;
-
-    string customername;
-    string dlno;
-    string address;
-
-    cout<<"enter bike number to book"<<endl;
-    cin>>vehicleNumber;
-    cout<<"enter customer details to book a bike"<<endl;
-    cout<<"Customer name"<<endl;
-    cin>>customername;
-    cout<<"customer dlno"<<endl;
-    cin>>dlno;
-    cout<<"Customer address"<<endl;
-    cin>>address;
-
-    for (auto i = m_bikeList.begin(); i != m_bikeList.end(); i++)
-    {
-        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
-        {
-            i->setStatus("booked");
-            fileoperation.writeBikeData(m_bikeList);
-            cout<<"Bike booked successfully refno: "<<vehicleNumber<<endl;
-            return;
-        }
-    }
-    std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
-}*/
 
 void VehicleManager::returnbike()
 {
@@ -416,95 +358,6 @@ void VehicleManager::sortcarbyPrice()
     fileoperation.writeCarData(m_carList);
     displayListOfCars();
 }
-void VehicleManager::Bookcar()
-{
-    m_carList=fileoperation.readCarData();
-    cout<<"car book function called"<<endl;
-
-    string vehicleNumber;
-    string newstatus;
-    string customername;
-    string dlno;
-    string address;
-
-    cout<<"enter car number to book"<<endl;
-    cin>>vehicleNumber;
-
-    cout<<"enter customer name"<<endl;
-    cin>>customername;
-
-    cout<<"enter customer dlno"<<endl;
-    cin>>dlno;
-
-    cout<<"enter customer address"<<endl;
-    cin>>address;
-
-    for(auto i=m_carList.begin();i!=m_carList.end();i++)
-    {
-        if(i->getVehicleNumber()==vehicleNumber && i->getStatus()=="available")
-        {
-            i->setStatus("booked");
-            m_Customerlist.push_back(Customerdetails(customername,dlno,address));
-            fileoperation.writecustomerdata(m_Customerlist);
-            fileoperation.writeCarData(m_carList);
-            cout<<"car booked successfully car no: "<<vehicleNumber<<endl;
-            return;
-        }
-    }
-    std::cout << "car with number " << vehicleNumber << " not found" << std::endl;
-}
-
-void VehicleManager::Bookbike()
-{
-    m_bikeList=fileoperation.readBikeData();
-    cout<<"Bike book function called"<<endl;
-
-    string vehicleNumber;
-    string newstatus;
-    string customername;
-    string dlno;
-    string address;
-
-    cout<<"enter bike number to book"<<endl;
-    cin>>vehicleNumber;
-
-    cout<<"enter customer name"<<endl;
-    cin>>customername;
-
-    cout<<"enter customer dlno"<<endl;
-    cin>>dlno;
-
-    cout<<"enter customer address"<<endl;
-    cin>>address;
-
-    for (auto i = m_bikeList.begin(); i != m_bikeList.end(); i++)
-    {
-        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
-        {
-            i->setStatus("booked");
-            m_Customerlist.push_back(Customerdetails(customername,dlno,address));
-            fileoperation.writecustomerdata(m_Customerlist);
-            fileoperation.writeBikeData(m_bikeList);
-            cout<<"Bike booked successfully Bike no: "<<vehicleNumber<<endl;
-            return;
-        }
-    }
-    std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
-
-}
-
-void VehicleManager::displaycustomerdetails()
-{
-    m_Customerlist = fileoperation.readcustomerdata();
-    std::cout<<"\nCustomer details Display Function Called"<<std::endl;
-
-    for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
-    {
-        std::cout << "\nCustomername " << i->getname() <<" | ";
-        std::cout << "customer dlno "<<i->getdlno()<<" | ";
-        std::cout << "customer address "<<i->getaddress()<<endl;
-    }
-}
 
 void VehicleManager::functionalities()
 {
@@ -570,7 +423,22 @@ void VehicleManager::functionalities()
             }
             break;
         case customerDetails:
-            manager.displaycustomerdetails();
+            cout<<"1. Bike"<<endl;
+            cout<<"2. Car"<<endl;
+            cout<<"enter choice"<<endl;
+            cin>>choice;
+            switch(choice)
+            {
+            case 1:
+                manager.displaycustomerdetailsbike();
+                break;
+            case 2:
+                manager.displaycustomerdetailscar();
+                break;
+            default:
+                std::cout <<"Invalid Choice"<< std::endl;
+                break;
+            }
             break;
         case Update_vehicles_dailyrentprice:
             cout<<"1. Bike"<<endl;
@@ -705,3 +573,133 @@ void VehicleManager::functionalities()
         }
     }
 }
+
+void VehicleManager::Bookbike()
+{
+    m_bikeList=fileoperation.readBikeData();
+    cout<<"Bike book function called"<<endl;
+
+    string vehicleNumber;
+    string newstatus;
+    string customername;
+    string dlno;
+    string address;
+    string bookingid;
+
+    cout<<"enter bike number to book"<<endl;
+    cin>>vehicleNumber;
+
+    cout<<"enter customer name"<<endl;
+    cin>>customername;
+
+    cout<<"enter customer dlno"<<endl;
+    cin>>dlno;
+
+    cout<<"enter customer address"<<endl;
+    cin>>address;
+
+    cout<<"enter booking id"<<endl;
+    cin>>bookingid;
+
+    for (auto i = m_bikeList.begin(); i != m_bikeList.end(); i++)
+    {
+        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
+        {
+            i->setStatus("booked");
+            fileoperation.writeBikeData(m_bikeList);
+            m_Customerlist.push_back(Customerdetails(customername,dlno,address,bookingid));
+            fileoperation.writecustomerdata(m_Customerlist);
+            cout<<"Bike booked successfully Bike no: "<<vehicleNumber<<endl;
+            return;
+        }
+    }
+    std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
+
+}
+
+void VehicleManager::Bookcar()
+{
+    m_carList=fileoperation.readCarData();
+    cout<<"car book function called"<<endl;
+
+    string vehicleNumber;
+    string newstatus;
+    string customername;
+    string dlno;
+    string address;
+    string bookingid;
+
+    cout<<"enter car number to book"<<endl;
+    cin>>vehicleNumber;
+
+    cout<<"enter customer name"<<endl;
+    cin>>customername;
+
+    cout<<"enter customer dlno"<<endl;
+    cin>>dlno;
+
+    cout<<"enter customer address"<<endl;
+    cin>>address;
+
+    cout<<"enter booking id"<<endl;
+    cin>>bookingid;
+
+    for(auto i=m_carList.begin();i!=m_carList.end();i++)
+    {
+        if(i->getVehicleNumber()==vehicleNumber && i->getStatus()=="available")
+        {
+            i->setStatus("booked");
+            fileoperation.writeCarData(m_carList);
+            m_Customerlist.push_back(Customerdetails(customername,dlno,address,bookingid));
+            fileoperation.writecustomerdatacar(m_Customerlist);
+            cout<<"car booked successfully car no: "<<vehicleNumber<<endl;
+            return;
+        }
+    }
+    std::cout << "car with number " << vehicleNumber << " not found" << std::endl;
+}
+
+void VehicleManager::displaycustomerdetailsbike()
+{
+    m_Customerlist = fileoperation.readcustomerdata();
+    std::cout<<"\nCustomer details Display Function Called"<<std::endl;
+
+    for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
+    {
+        std::cout << "\nCustomername " << i->getname()<<endl;
+        std::cout << "customer dlno "<<i->getdlno()<<endl;
+        std::cout << "customer address "<<i->getaddress()<<endl;
+        std::cout << "customer booking id "<<i->getbookingid()<<endl;
+    }
+}
+
+void VehicleManager::displaycustomerdetailscar()
+{
+    m_Customerlist = fileoperation.readcustomerdatacar();
+    std::cout<<"\nCustomer details Display Function Called"<<std::endl;
+
+    for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
+    {
+        std::cout << "\nCustomername " << i->getname()<<endl;
+        std::cout << "customer dlno "<<i->getdlno()<<endl;
+        std::cout << "customer address "<<i->getaddress()<<endl;
+        std::cout << "customer bookingid "<<i->getbookingid()<<endl;
+    }
+}
+
+/*void VehicleManager::displaycustomerdetailsbike()
+{
+    m_Customerlist = fileoperation.readcustomerdata();
+    std::cout<<"\nCustomer details Display Function Called"<<std::endl;
+
+    for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
+    {
+        cout.width(20);
+        std::cout << "\nCustomername " << i->getname()<<endl;
+        std::cout << "customer dlno "<<i->getdlno()<<endl;
+        std::cout << "customer address "<<i->getaddress()<<endl;
+        std::cout << "customer booking id "<<i->getbookingid()<<endl;
+    }
+}*/
+
+

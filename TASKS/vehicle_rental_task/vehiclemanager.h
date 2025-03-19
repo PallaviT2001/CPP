@@ -32,7 +32,8 @@ public:
     void deletebike();
     void deletecar();
 
-    void displaycustomerdetails();
+    void displaycustomerdetailsbike();
+    void displaycustomerdetailscar();
 
     void searchbike();
     void searchcar();
@@ -51,3 +52,6 @@ private:
 };
 
 #endif
+
+
+
