@@ -4,12 +4,12 @@ using namespace std;
 
 Vehicle::Vehicle()
 {
-
+    cout<<"vehicle class constructor called"<<endl;
 }
 
 Vehicle::~Vehicle()
 {
-
+    cout<<"vehicle class destructor called"<<endl;
 }
 
 Vehicle::Vehicle(std::string brand, std::string model, std::string vehicleNumber, float rentPrice, std::string status)

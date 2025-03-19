@@ -1,4 +1,16 @@
 #include "car.h"
+#include <iostream>
+using namespace std;
+
+Car::Car()
+{
+    cout<<"car class constructor called"<<endl;
+}
+
+Car::~Car()
+{
+    cout<<"car class destructor called"<<endl;
+}
 
 Car::Car(std::string brand, std::string model, std::string vehicleNumber, float rentPrice, std::string status)
 {
@@ -9,12 +21,3 @@ Car::Car(std::string brand, std::string model, std::string vehicleNumber, float 
     m_status=status;
 }
 
-Car::Car()
-{
-
-}
-
-Car::~Car()
-{
-
-}

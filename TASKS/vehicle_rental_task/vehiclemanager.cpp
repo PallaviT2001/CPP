@@ -574,7 +574,7 @@ void VehicleManager::functionalities()
     }
 }
 
-void VehicleManager::Bookbike()
+/*void VehicleManager::Bookbike()
 {
     m_bikeList=fileoperation.readBikeData();
     cout<<"Bike book function called"<<endl;
@@ -614,8 +614,7 @@ void VehicleManager::Bookbike()
         }
     }
     std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
-
-}
+}*/
 
 void VehicleManager::Bookcar()
 {
@@ -659,34 +658,6 @@ void VehicleManager::Bookcar()
     std::cout << "car with number " << vehicleNumber << " not found" << std::endl;
 }
 
-void VehicleManager::displaycustomerdetailsbike()
-{
-    m_Customerlist = fileoperation.readcustomerdata();
-    std::cout<<"\nCustomer details Display Function Called"<<std::endl;
-
-    for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
-    {
-        std::cout << "\nCustomername " << i->getname()<<endl;
-        std::cout << "customer dlno "<<i->getdlno()<<endl;
-        std::cout << "customer address "<<i->getaddress()<<endl;
-        std::cout << "customer booking id "<<i->getbookingid()<<endl;
-    }
-}
-
-void VehicleManager::displaycustomerdetailscar()
-{
-    m_Customerlist = fileoperation.readcustomerdatacar();
-    std::cout<<"\nCustomer details Display Function Called"<<std::endl;
-
-    for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
-    {
-        std::cout << "\nCustomername " << i->getname()<<endl;
-        std::cout << "customer dlno "<<i->getdlno()<<endl;
-        std::cout << "customer address "<<i->getaddress()<<endl;
-        std::cout << "customer bookingid "<<i->getbookingid()<<endl;
-    }
-}
-
 /*void VehicleManager::displaycustomerdetailsbike()
 {
     m_Customerlist = fileoperation.readcustomerdata();
@@ -694,12 +665,139 @@ void VehicleManager::displaycustomerdetailscar()
 
     for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
     {
-        cout.width(20);
         std::cout << "\nCustomername " << i->getname()<<endl;
         std::cout << "customer dlno "<<i->getdlno()<<endl;
         std::cout << "customer address "<<i->getaddress()<<endl;
         std::cout << "customer booking id "<<i->getbookingid()<<endl;
     }
 }*/
+void VehicleManager::Bookbike()
+{
+    m_bikeList=fileoperation.readBikeData();
+    cout<<"Bike book function called"<<endl;
+
+    string vehicleNumber;
+    string newstatus;
+    string customername;
+    string dlno;
+    string address;
+    string bookingid;
+
+    cout<<"enter bike number to book"<<endl;
+    cin>>vehicleNumber;
+
+    cout<<"enter customer name"<<endl;
+    cin>>customername;
+
+    cout<<"enter customer dlno"<<endl;
+    cin>>dlno;
+
+    cout<<"enter customer address"<<endl;
+    cin>>address;
+
+    cout<<"enter booking id"<<endl;
+    cin>>bookingid;
+
+    for (auto i = m_bikeList.begin(); i != m_bikeList.end(); i++)
+    {
+        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
+        {
+            i->setStatus("booked");
+            fileoperation.writeBikeData(m_bikeList);
+            m_Customerlist.push_back(Customerdetails(customername,dlno,address,bookingid));
+            fileoperation.writecustomerdata(m_Customerlist);
+            cout<<"Bike booked successfully Bike no: "<<vehicleNumber<<endl;
+            return;
+        }
+    }
+    std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
+}
+
+/*void VehicleManager::paymentdetails()
+{
+    int choice;
+    float dailyrentamount;
+    string upiid;
+    string creditcardnumber;
+    string debitcardnumber;
+
+    cout<<"enter the dailyrent amount for the vehicle"<<endl;
+    cin>>dailyrentamount;
+
+    cout<<"Select the payment method"<<endl;
+    cout<<"1.cash payment"<<endl;
+    cout<<"phonepay"<<endl;
+    cout<<"googlepay"<<endl;
+    cout<<"Credit card payment"<<endl;
+    cout<<"debit card payment"<<endl;
+    switch(choice)
+    {
+    case 1:
+        cout<<"Cash collected from the customer"<<endl;
+        break;
+    case 2:
+        cout<<"enter the upiid"<<endl;
+        cin>>upiid;
+        cout<<"amount received by phonepay Reference upiid is "<<upiid<<endl;
+        break;
+    case 3:
+        cout<<"enter the upiid to proceed"<<endl;
+        cin>>upiid;
+        cout<<"amount received by googlepay reference upiid is "<<upiid<<endl;
+        break;
+    case 4:
+        cout<<"enter creditcard number to process payment"<<endl;
+        cin>>creditcardnumber;
+        cout<<"amount received by creditcard,credit card number "<<creditcardnumber<<endl;
+        break;
+    case 5:
+        cout<<"enter debitcard number to process payment"<<endl;
+        cin>>debitcardnumber;
+        cout<<"amount received by debit card, debit card number "<<debitcardnumber<<endl;
+        break;
+    default:
+        cout<<"enter the valid payment method"<<endl;
+        break;
+    }
+}*/
+
+void VehicleManager::displaycustomerdetailsbike()
+{
+    m_Customerlist = fileoperation.readcustomerdata();
+    std::cout<<"\nBike Customer details Display Function Called"<<std::endl;
+    cout<<"customername     customerdlno  customeraddress   customerbookingid"<<endl;
+
+    for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
+    {
+        cout.width(10);
+        std::cout <<i->getname();
+        cout.width(15);
+        std::cout <<i->getdlno();
+        cout.width(15);
+        std::cout <<i->getaddress();
+        cout.width(15);
+        std::cout <<i->getbookingid()<<endl;
+    }
+}
+
+void VehicleManager::displaycustomerdetailscar()
+{
+    m_Customerlist = fileoperation.readcustomerdatacar();
+    std::cout<<"\nCar Customer details Display Function Called"<<std::endl;
+    cout<<"customername     customerdlno  customeraddress   customerbookingid"<<endl;
+    for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
+    {
+        cout.width(10);
+        std::cout <<i->getname();
+        cout.width(15);
+        std::cout <<i->getdlno();
+        cout.width(15);
+        std::cout <<i->getaddress();
+        cout.width(15);
+        std::cout <<i->getbookingid()<<endl;
+    }
+}
+
+
 
 

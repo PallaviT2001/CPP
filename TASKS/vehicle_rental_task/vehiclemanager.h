@@ -44,6 +44,8 @@ public:
     void sortbikebyPrice();
     void sortcarbyPrice();
 
+    //void paymentdetails();
+
 private:
     std::list<Bike>m_bikeList;
     std::list<Car>m_carList;
