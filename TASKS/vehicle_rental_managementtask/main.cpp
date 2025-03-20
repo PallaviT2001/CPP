@@ -7,3 +7,4 @@ int main()
     VehicleManager manager;
     manager.functionalities();
 }
+

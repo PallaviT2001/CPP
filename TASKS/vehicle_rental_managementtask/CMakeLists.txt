@@ -6,13 +6,18 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(vehicle_rental_managementtask main.cpp
-    vehicle.h vehicle.cpp
-    vehiclemanager.h vehiclemanager.cpp
-    bike.h bike.cpp
-    car.h car.cpp
 
+    vehiclemanager.h vehiclemanager.cpp
+    customer.h customer.cpp
     fileoperation.h fileoperation.cpp
-    customerdetails.h customerdetails.cpp
+    rentalbike.h rentalbike.cpp
+    rentalcar.h rentalcar.cpp
+    rentalvehicledetails.h rentalvehicledetails.cpp
+
+
+
+
+
 
 )
 

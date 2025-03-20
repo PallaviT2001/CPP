@@ -1,3 +1,12 @@
-#include "vehicle.h"
+#include "vehical.h"
 
-Vehicle::Vehicle() {}
+Vehical::Vehical()
+{
+    cout<<"Vehical Constructor called"<<endl;
+}
+
+Vehical::~Vehical()
+{
+    cout<<"Vehical Destructor called"<<endl;
+
+}

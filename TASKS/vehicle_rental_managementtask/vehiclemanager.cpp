@@ -1,5 +1,5 @@
 #include "vehiclemanager.h"
-#include "customerdetails.h"
+#include "customer.h"
 #include <iostream>
 #include <fstream>
 
@@ -7,12 +7,12 @@ using namespace std;
 
 VehicleManager::VehicleManager()
 {
-    std::cout<<"VehicalManager Constructor Called"<<std::endl;
+    //std::cout<<"VehicalManager Constructor Called"<<std::endl;
 }
 
 VehicleManager::~VehicleManager()
 {
-    std::cout<<"VehicalManager Destructor Called"<<std::endl;
+    //std::cout<<"VehicalManager Destructor Called"<<std::endl;
 }
 
 void VehicleManager::addBike()
@@ -33,7 +33,7 @@ void VehicleManager::addBike()
     std::cout<<"Enter Bike Status: ";
     std::cin>>status;
 
-    m_bikeList.push_back(Bike(brand,model,vehicleNumber,rentPrice,status));
+    m_bikeList.push_back(Rentalbike(brand,model,vehicleNumber,rentPrice,status));
     fileoperation.writeBikeData(m_bikeList);
 }
 
@@ -55,7 +55,7 @@ void VehicleManager::addCar()
     std::cout<<"Enter Car Status: ";
     std::cin>>status;
 
-    m_carList.push_back(Car(brand,model,vehicleNumber,rentPrice,status));
+    m_carList.push_back(Rentalcar(brand,model,vehicleNumber,rentPrice,status));
     fileoperation.writeCarData(m_carList);
 }
 
@@ -141,65 +141,7 @@ void VehicleManager::updateCarPrice()
     std::cout << "Car with number " << vehicleNumber << " not found" << std::endl;
 }
 
-/*void VehicleManager::Bookbike()
-{
-    m_bikeList=fileoperation.readBikeData();
-    cout<<"Bike book function called"<<endl;
 
-    string vehicleNumber;
-    string newstatus;
-
-    cout<<"enter bike number to book"<<endl;
-    cin>>vehicleNumber;
-
-    for (auto i = m_bikeList.begin(); i != m_bikeList.end(); i++)
-    {
-        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
-        {
-            i->setStatus("booked");
-            fileoperation.writeBikeData(m_bikeList);
-            cout<<"Bike booked successfully refno: "<<vehicleNumber<<endl;
-            return;
-        }
-    }
-    std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
-
-}*/
-
-/*void VehicleManager::Bookbike()
-{
-    m_bikeList=fileoperation.readBikeData();
-    cout<<"Bike book function called"<<endl;
-
-    string vehicleNumber;
-    string newstatus;
-
-    string customername;
-    string dlno;
-    string address;
-
-    cout<<"enter bike number to book"<<endl;
-    cin>>vehicleNumber;
-    cout<<"enter customer details to book a bike"<<endl;
-    cout<<"Customer name"<<endl;
-    cin>>customername;
-    cout<<"customer dlno"<<endl;
-    cin>>dlno;
-    cout<<"Customer address"<<endl;
-    cin>>address;
-
-    for (auto i = m_bikeList.begin(); i != m_bikeList.end(); i++)
-    {
-        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
-        {
-            i->setStatus("booked");
-            fileoperation.writeBikeData(m_bikeList);
-            cout<<"Bike booked successfully refno: "<<vehicleNumber<<endl;
-            return;
-        }
-    }
-    std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
-}*/
 
 void VehicleManager::returnbike()
 {
@@ -416,95 +358,6 @@ void VehicleManager::sortcarbyPrice()
     fileoperation.writeCarData(m_carList);
     displayListOfCars();
 }
-void VehicleManager::Bookcar()
-{
-    m_carList=fileoperation.readCarData();
-    cout<<"car book function called"<<endl;
-
-    string vehicleNumber;
-    string newstatus;
-    string customername;
-    string dlno;
-    string address;
-
-    cout<<"enter car number to book"<<endl;
-    cin>>vehicleNumber;
-
-    cout<<"enter customer name"<<endl;
-    cin>>customername;
-
-    cout<<"enter customer dlno"<<endl;
-    cin>>dlno;
-
-    cout<<"enter customer address"<<endl;
-    cin>>address;
-
-    for(auto i=m_carList.begin();i!=m_carList.end();i++)
-    {
-        if(i->getVehicleNumber()==vehicleNumber && i->getStatus()=="available")
-        {
-            i->setStatus("booked");
-            m_Customerlist.push_back(Customerdetails(customername,dlno,address));
-            fileoperation.writecustomerdata(m_Customerlist);
-            fileoperation.writeCarData(m_carList);
-            cout<<"car booked successfully car no: "<<vehicleNumber<<endl;
-            return;
-        }
-    }
-    std::cout << "car with number " << vehicleNumber << " not found" << std::endl;
-}
-
-void VehicleManager::Bookbike()
-{
-    m_bikeList=fileoperation.readBikeData();
-    cout<<"Bike book function called"<<endl;
-
-    string vehicleNumber;
-    string newstatus;
-    string customername;
-    string dlno;
-    string address;
-
-    cout<<"enter bike number to book"<<endl;
-    cin>>vehicleNumber;
-
-    cout<<"enter customer name"<<endl;
-    cin>>customername;
-
-    cout<<"enter customer dlno"<<endl;
-    cin>>dlno;
-
-    cout<<"enter customer address"<<endl;
-    cin>>address;
-
-    for (auto i = m_bikeList.begin(); i != m_bikeList.end(); i++)
-    {
-        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
-        {
-            i->setStatus("booked");
-            m_Customerlist.push_back(Customerdetails(customername,dlno,address));
-            fileoperation.writecustomerdata(m_Customerlist);
-            fileoperation.writeBikeData(m_bikeList);
-            cout<<"Bike booked successfully Bike no: "<<vehicleNumber<<endl;
-            return;
-        }
-    }
-    std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
-
-}
-
-void VehicleManager::displaycustomerdetails()
-{
-    m_Customerlist = fileoperation.readcustomerdata();
-    std::cout<<"\nCustomer details Display Function Called"<<std::endl;
-
-    for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
-    {
-        std::cout << "\nCustomername " << i->getname() <<" | ";
-        std::cout << "customer dlno "<<i->getdlno()<<" | ";
-        std::cout << "customer address "<<i->getaddress()<<endl;
-    }
-}
 
 void VehicleManager::functionalities()
 {
@@ -570,7 +423,22 @@ void VehicleManager::functionalities()
             }
             break;
         case customerDetails:
-            manager.displaycustomerdetails();
+            cout<<"1. Bike"<<endl;
+            cout<<"2. Car"<<endl;
+            cout<<"enter choice"<<endl;
+            cin>>choice;
+            switch(choice)
+            {
+            case 1:
+                manager.displaycustomerdetailsbike();
+                break;
+            case 2:
+                manager.displaycustomerdetailscar();
+                break;
+            default:
+                std::cout <<"Invalid Choice"<< std::endl;
+                break;
+            }
             break;
         case Update_vehicles_dailyrentprice:
             cout<<"1. Bike"<<endl;
@@ -705,3 +573,247 @@ void VehicleManager::functionalities()
         }
     }
 }
+
+
+
+
+
+
+
+void VehicleManager::displaycustomerdetailsbike()
+{
+    m_Customerlist = fileoperation.readcustomerdata();
+    std::cout<<"\nBike Customer details Display Function Called"<<std::endl;
+    cout<<"customername     customerdlno  customeraddress   customerbookingid"<<endl;
+
+    for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
+    {
+        cout.width(10);
+        std::cout <<i->getname();
+        cout.width(15);
+        std::cout <<i->getdlno();
+        cout.width(15);
+        std::cout <<i->getaddress();
+        cout.width(15);
+        std::cout <<i->getbookingid()<<endl;
+    }
+}
+
+void VehicleManager::displaycustomerdetailscar()
+{
+    m_Customerlist = fileoperation.readcustomerdatacar();
+    std::cout<<"\nCar Customer details Display Function Called"<<std::endl;
+    cout<<"customername     customerdlno  customeraddress   customerbookingid"<<endl;
+    for(auto i = m_Customerlist.begin(); i != m_Customerlist.end(); i++)
+    {
+        cout.width(10);
+        std::cout <<i->getname();
+        cout.width(15);
+        std::cout <<i->getdlno();
+        cout.width(15);
+        std::cout <<i->getaddress();
+        cout.width(15);
+        std::cout <<i->getbookingid()<<endl;
+    }
+}
+
+void VehicleManager::Bookbike()
+{
+    m_bikeList=fileoperation.readBikeData();
+    cout<<"Bike book function called"<<endl;
+
+    string vehicleNumber;
+    string newstatus;
+    string customername;
+    string dlno;
+    string address;
+    string bookingid;
+    int choice;
+
+    cout<<"enter bike number to book"<<endl;
+    cin>>vehicleNumber;
+
+    cout<<"enter customer name"<<endl;
+    cin>>customername;
+
+    cout<<"enter customer dlno"<<endl;
+    cin>>dlno;
+
+    cout<<"enter customer address"<<endl;
+    cin>>address;
+
+    cout<<"enter booking id"<<endl;
+    cin>>bookingid;
+
+    for (auto i = m_bikeList.begin(); i != m_bikeList.end(); i++)
+    {
+        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
+        {
+            string upiid;
+            int transactionid;
+            int transactioncount=1;
+            string creditcardnumber;
+            string debitcardnumber;
+            cout<<"enter payment mode to process further"<<endl;
+            cout<<"The rent cost of the vehicle is "<<i->getRentPrice()<<endl;
+            cout<<"select the payment mode"<<endl;
+            cout<<"1.cash payment"<<endl;
+            cout<<"2.phonepay"<<endl;
+            cout<<"3.googlepay"<<endl;
+            cout<<"4.Credit card payment"<<endl;
+            cout<<"5.debit card payment"<<endl;
+            cout<<"enter the choice"<<endl;
+            cin>>choice;
+            switch(choice)
+            {
+            case 1:
+                cout<<"cash collected from the customer"<<endl;
+                cout<<"press NULL for upiid status"<<endl;
+                cout<<"enter upi id"<<endl;
+                cin>>upiid;
+                transactionid=0;
+                break;
+            case 2:
+                cout<<"enter the upiid"<<endl;
+                cin>>upiid;
+                cout<<"amount received by phonepay Reference upiid is "<<upiid<<endl;
+                transactionid=transactioncount+5000;
+                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
+                break;
+            case 3:
+                cout<<"enter the upiid to proceed"<<endl;
+                cin>>upiid;
+                cout<<"amount received by googlepay reference upiid is "<<upiid<<endl;
+                transactionid=transactioncount+5000;
+                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
+                break;
+            case 4:
+                cout<<"enter creditcard number to process payment"<<endl;
+                cin>>creditcardnumber;
+                cout<<"amount received by creditcard,credit card number "<<creditcardnumber<<endl;
+                transactionid=transactioncount+5000;
+                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
+                break;
+            case 5:
+                cout<<"enter debitcard number to process payment"<<endl;
+                cin>>debitcardnumber;
+                cout<<"amount received by debit card, debit card number "<<debitcardnumber<<endl;
+                transactionid=transactioncount+5000;
+                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
+                break;
+            default:
+                cout<<"enter the valid payment method"<<endl;
+                break;
+            }
+            i->setStatus("booked");
+            fileoperation.writeBikeData(m_bikeList);
+            m_Customerlist.push_back(Customer(customername,dlno,address,bookingid));
+            fileoperation.writecustomerdata(m_Customerlist);
+            cout<<"Bike booked successfully Bike no: "<<vehicleNumber<<endl;
+            return;
+        }
+    }
+    std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
+}
+
+void VehicleManager::Bookcar()
+{
+    m_carList=fileoperation.readCarData();
+    cout<<"car book function called"<<endl;
+
+    string vehicleNumber;
+    string newstatus;
+    string customername;
+    string dlno;
+    string address;
+    string bookingid;
+    int choice;
+
+    cout<<"enter bike number to book"<<endl;
+    cin>>vehicleNumber;
+
+    cout<<"enter customer name"<<endl;
+    cin>>customername;
+
+    cout<<"enter customer dlno"<<endl;
+    cin>>dlno;
+
+    cout<<"enter customer address"<<endl;
+    cin>>address;
+
+    cout<<"enter booking id"<<endl;
+    cin>>bookingid;
+
+    for (auto i = m_carList.begin(); i != m_carList.end(); i++)
+    {
+        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
+        {
+            string upiid;
+            int transactionid;
+            int transactioncount;
+            string creditcardnumber;
+            string debitcardnumber;
+            cout<<"enter payment mode to process further"<<endl;
+            cout<<"The rent cost of the vehicle is "<<i->getRentPrice()<<endl;
+            cout<<"select the payment mode"<<endl;
+            cout<<"1.cash payment"<<endl;
+            cout<<"2.phonepay"<<endl;
+            cout<<"3.googlepay"<<endl;
+            cout<<"4.Credit card payment"<<endl;
+            cout<<"5.debit card payment"<<endl;
+            cout<<"enter the choice"<<endl;
+            cin>>choice;
+            switch(choice)
+            {
+            case 1:
+                cout<<"cash collected from the customer"<<endl;
+                cout<<"press NULL for upiid status"<<endl;
+                cout<<"enter upi id"<<endl;
+                cin>>upiid;
+                transactionid=0;
+                break;
+            case 2:
+                cout<<"enter the upiid"<<endl;
+                cin>>upiid;
+                cout<<"amount received by phonepay Reference upiid is "<<upiid<<endl;
+                transactionid=transactioncount+5000;
+                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
+                break;
+            case 3:
+                cout<<"enter the upiid to proceed"<<endl;
+                cin>>upiid;
+                cout<<"amount received by googlepay reference upiid is "<<upiid<<endl;
+                transactionid=transactioncount+5000;
+                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
+                break;
+            case 4:
+                cout<<"enter creditcard number to process payment"<<endl;
+                cin>>creditcardnumber;
+                cout<<"amount received by creditcard,credit card number "<<creditcardnumber<<endl;
+                transactionid=transactioncount+5000;
+                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
+                break;
+            case 5:
+                cout<<"enter debitcard number to process payment"<<endl;
+                cin>>debitcardnumber;
+                cout<<"amount received by debit card, debit card number "<<debitcardnumber<<endl;
+                transactionid=transactioncount+5000;
+                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
+                break;
+            default:
+                cout<<"enter the valid payment method"<<endl;
+                break;
+            }
+            i->setStatus("booked");
+            fileoperation.writeCarData(m_carList);
+            m_Customerlist.push_back(Customer(customername,dlno,address,bookingid));
+            fileoperation.writecustomerdata(m_Customerlist);
+            cout<<"Bike booked successfully Bike no: "<<vehicleNumber<<endl;
+            return;
+        }
+    }
+    std::cout << "car with number " << vehicleNumber << " not found" << std::endl;
+}
+
+
+

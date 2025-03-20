@@ -1,9 +1,58 @@
 #include <iostream>
-
+#include "vehicalmanagement.h"
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    VehicalManagement vehicalManagement;
+    vehicalManagement.menu();
+
+
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
