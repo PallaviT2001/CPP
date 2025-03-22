@@ -13,8 +13,6 @@ private:
     list<Bike*>m_bikeList;
     list<Car*>m_carList;
     list<RentalDetails*>m_rentalList;
-
-
 public:
     VehicalManagement();
     ~VehicalManagement();
