@@ -1,0 +1,23 @@
+# ninja log v6
+13	1316	7642448746271368	CMakeFiles/Vehicle_task.dir/customer.cpp.obj	954c582626f6e8dc
+18	1318	7642448746416421	CMakeFiles/Vehicle_task.dir/rentalbike.cpp.obj	8096682ada2efa3a
+9	1538	7642448746271368	CMakeFiles/Vehicle_task.dir/main.cpp.obj	814add90673248b5
+22	1277	7642448746457415	CMakeFiles/Vehicle_task.dir/rentalcar.cpp.obj	ad63ebdf3fa2e1e8
+25	1305	7642448746500772	CMakeFiles/Vehicle_task.dir/rentalvehicledetails.cpp.obj	4b29715ce50f8dd
+15	1826	7642448746416421	CMakeFiles/Vehicle_task.dir/fileoperation.cpp.obj	81f4f7ec929b5a54
+27	1305	7642458219347771	CMakeFiles/Vehicle_task.dir/vehiclemanager.cpp.obj	c4ca49ede02dd08
+1305	1384	7642458232132725	Vehicle_task.exe	6f3bb469c0309e71
+18	1002	7642498828860284	CMakeFiles/Vehicle_task.dir/users.cpp.obj	e0a6ba2d8cb86845
+27	920	7642498981110909	CMakeFiles/Vehicle_task.dir/admins.cpp.obj	e9422606172daf4e
+920	1240	7642498990153392	Vehicle_task.exe	9b2015e0546327fe
+33	1621	7642504645324381	CMakeFiles/Vehicle_task.dir/fileoperation.cpp.obj	81f4f7ec929b5a54
+1622	1745	7642504661206598	Vehicle_task.exe	9b2015e0546327fe
+15	1726	7642528898975366	CMakeFiles/Vehicle_task.dir/fileoperation.cpp.obj	81f4f7ec929b5a54
+1726	1855	7642528916102492	Vehicle_task.exe	9b2015e0546327fe
+17	1558	7642536882690705	CMakeFiles/Vehicle_task.dir/main.cpp.obj	814add90673248b5
+16	1896	7642538341349603	CMakeFiles/Vehicle_task.dir/vehiclemanager.cpp.obj	c4ca49ede02dd08
+1896	2001	7642538360157477	Vehicle_task.exe	9b2015e0546327fe
+50	1450	7642552345235759	CMakeFiles/Vehicle_task.dir/vehiclemanager.cpp.obj	c4ca49ede02dd08
+1451	1582	7642552359241308	Vehicle_task.exe	9b2015e0546327fe
+31	1556	7642555430803607	CMakeFiles/Vehicle_task.dir/fileoperation.cpp.obj	81f4f7ec929b5a54
+1556	1652	7642555446059235	Vehicle_task.exe	9b2015e0546327fe

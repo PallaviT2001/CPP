@@ -31,9 +31,6 @@ public:
     string getStatus();
     int getDuration();
 
-
-
-
 private:
     string m_name;
     string m_mobile;
