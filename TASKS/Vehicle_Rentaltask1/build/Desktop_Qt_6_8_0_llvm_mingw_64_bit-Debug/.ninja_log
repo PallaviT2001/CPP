@@ -1,0 +1,22 @@
+# ninja log v6
+15	1443	7644440700490907	CMakeFiles/Vehicle_Rentaltask1.dir/rentalbike.cpp.obj	c946e8252475341
+8	1471	7644440700366342	CMakeFiles/Vehicle_Rentaltask1.dir/customer.cpp.obj	f58c7268feea04c7
+23	1522	7644440700524831	CMakeFiles/Vehicle_Rentaltask1.dir/rentalvehicledetails.cpp.obj	5d514411f7077534
+19	1524	7644440700524831	CMakeFiles/Vehicle_Rentaltask1.dir/rentalcar.cpp.obj	38bc69bb550d9e3a
+4	1859	7644440700366342	CMakeFiles/Vehicle_Rentaltask1.dir/main.cpp.obj	723b65fc4699b43e
+11	2130	7644440700447515	CMakeFiles/Vehicle_Rentaltask1.dir/fileoperation.cpp.obj	1fc8be528628033d
+27	2290	7644440700524831	CMakeFiles/Vehicle_Rentaltask1.dir/vehiclemanager.cpp.obj	bfa467d8be21285b
+2290	2411	7644440723161210	Vehicle_Rentaltask1.exe	50ef685b1feea970
+38	946	7644443752648495	CMakeFiles/Vehicle_Rentaltask1.dir/customer.cpp.obj	f58c7268feea04c7
+947	1051	7644443761746113	Vehicle_Rentaltask1.exe	50ef685b1feea970
+33	1287	7644444914696260	CMakeFiles/Vehicle_Rentaltask1.dir/customer.cpp.obj	f58c7268feea04c7
+29	1643	7644444914656356	CMakeFiles/Vehicle_Rentaltask1.dir/main.cpp.obj	723b65fc4699b43e
+37	1916	7644444914727238	CMakeFiles/Vehicle_Rentaltask1.dir/fileoperation.cpp.obj	1fc8be528628033d
+41	1971	7644444914774285	CMakeFiles/Vehicle_Rentaltask1.dir/vehiclemanager.cpp.obj	bfa467d8be21285b
+1971	2066	7644444934068951	Vehicle_Rentaltask1.exe	50ef685b1feea970
+34	1914	7644449003882834	CMakeFiles/Vehicle_Rentaltask1.dir/vehiclemanager.cpp.obj	bfa467d8be21285b
+1915	2033	7644449022694641	Vehicle_Rentaltask1.exe	50ef685b1feea970
+34	1826	7644450454473731	CMakeFiles/Vehicle_Rentaltask1.dir/vehiclemanager.cpp.obj	bfa467d8be21285b
+1827	1930	7644450472404762	Vehicle_Rentaltask1.exe	50ef685b1feea970
+39	1782	7644452727559859	CMakeFiles/Vehicle_Rentaltask1.dir/vehiclemanager.cpp.obj	bfa467d8be21285b
+1782	1883	7644452744987257	Vehicle_Rentaltask1.exe	50ef685b1feea970
