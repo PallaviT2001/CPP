@@ -1,58 +1,8 @@
-#include <iostream>
-#include "vehicalmanagement.h"
+#include "Vehicle_Manager.h"
 using namespace std;
 
 int main()
 {
-    VehicalManagement vehicalManagement;
-    vehicalManagement.menu();
-
-
-    return 0;
+    Vehicle_Manager vehicleManager;
+    vehicleManager.main_menu();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

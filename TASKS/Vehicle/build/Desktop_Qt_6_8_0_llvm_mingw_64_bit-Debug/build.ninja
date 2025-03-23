@@ -55,38 +55,92 @@ build CMakeFiles/Vehicle.dir/main.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug
   OBJECT_DIR = CMakeFiles\Vehicle.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
 
-build CMakeFiles/Vehicle.dir/bike.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/bike.cpp || cmake_object_order_depends_target_Vehicle
-  DEP_FILE = CMakeFiles\Vehicle.dir\bike.cpp.obj.d
+build CMakeFiles/Vehicle.dir/bike_fileoperation.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/bike_fileoperation.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\bike_fileoperation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
 
-build CMakeFiles/Vehicle.dir/car.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/car.cpp || cmake_object_order_depends_target_Vehicle
-  DEP_FILE = CMakeFiles\Vehicle.dir\car.cpp.obj.d
+build CMakeFiles/Vehicle.dir/car_fileoperation.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/car_fileoperation.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\car_fileoperation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
 
-build CMakeFiles/Vehicle.dir/fileoperation.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/fileoperation.cpp || cmake_object_order_depends_target_Vehicle
-  DEP_FILE = CMakeFiles\Vehicle.dir\fileoperation.cpp.obj.d
+build CMakeFiles/Vehicle.dir/cash.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/cash.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\cash.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
 
-build CMakeFiles/Vehicle.dir/vehicle.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/vehicle.cpp || cmake_object_order_depends_target_Vehicle
-  DEP_FILE = CMakeFiles\Vehicle.dir\vehicle.cpp.obj.d
+build CMakeFiles/Vehicle.dir/customer_fileoperation.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/customer_fileoperation.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\customer_fileoperation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
 
-build CMakeFiles/Vehicle.dir/vehiclemanagement.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/vehiclemanagement.cpp || cmake_object_order_depends_target_Vehicle
-  DEP_FILE = CMakeFiles\Vehicle.dir\vehiclemanagement.cpp.obj.d
+build CMakeFiles/Vehicle.dir/file_operations.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/file_operations.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\file_operations.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
 
-build CMakeFiles/Vehicle.dir/rentaldetails.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/rentaldetails.cpp || cmake_object_order_depends_target_Vehicle
-  DEP_FILE = CMakeFiles\Vehicle.dir\rentaldetails.cpp.obj.d
+build CMakeFiles/Vehicle.dir/loginmanagement.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/loginmanagement.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\loginmanagement.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
+
+build CMakeFiles/Vehicle.dir/paymentmode.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/paymentmode.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\paymentmode.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
+
+build CMakeFiles/Vehicle.dir/rental_bike_details.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/rental_bike_details.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\rental_bike_details.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
+
+build CMakeFiles/Vehicle.dir/rental_car_details.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/rental_car_details.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\rental_car_details.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
+
+build CMakeFiles/Vehicle.dir/rental_customer_details.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/rental_customer_details.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\rental_customer_details.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
+
+build CMakeFiles/Vehicle.dir/rental_vehicle_details.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/rental_vehicle_details.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\rental_vehicle_details.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
+
+build CMakeFiles/Vehicle.dir/upi.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/upi.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\upi.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
+
+build CMakeFiles/Vehicle.dir/user.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/user.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\user.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
+
+build CMakeFiles/Vehicle.dir/user_fileoperation.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/user_fileoperation.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\user_fileoperation.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
+
+build CMakeFiles/Vehicle.dir/vehicle_manager.cpp.obj: CXX_COMPILER__Vehicle_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle/vehicle_manager.cpp || cmake_object_order_depends_target_Vehicle
+  DEP_FILE = CMakeFiles\Vehicle.dir\vehicle_manager.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle.dir
@@ -99,7 +153,7 @@ build CMakeFiles/Vehicle.dir/rentaldetails.cpp.obj: CXX_COMPILER__Vehicle_unscan
 #############################################
 # Link the executable Vehicle.exe
 
-build Vehicle.exe: CXX_EXECUTABLE_LINKER__Vehicle_Debug CMakeFiles/Vehicle.dir/main.cpp.obj CMakeFiles/Vehicle.dir/bike.cpp.obj CMakeFiles/Vehicle.dir/car.cpp.obj CMakeFiles/Vehicle.dir/fileoperation.cpp.obj CMakeFiles/Vehicle.dir/vehicle.cpp.obj CMakeFiles/Vehicle.dir/vehiclemanagement.cpp.obj CMakeFiles/Vehicle.dir/rentaldetails.cpp.obj
+build Vehicle.exe: CXX_EXECUTABLE_LINKER__Vehicle_Debug CMakeFiles/Vehicle.dir/main.cpp.obj CMakeFiles/Vehicle.dir/bike_fileoperation.cpp.obj CMakeFiles/Vehicle.dir/car_fileoperation.cpp.obj CMakeFiles/Vehicle.dir/cash.cpp.obj CMakeFiles/Vehicle.dir/customer_fileoperation.cpp.obj CMakeFiles/Vehicle.dir/file_operations.cpp.obj CMakeFiles/Vehicle.dir/loginmanagement.cpp.obj CMakeFiles/Vehicle.dir/paymentmode.cpp.obj CMakeFiles/Vehicle.dir/rental_bike_details.cpp.obj CMakeFiles/Vehicle.dir/rental_car_details.cpp.obj CMakeFiles/Vehicle.dir/rental_customer_details.cpp.obj CMakeFiles/Vehicle.dir/rental_vehicle_details.cpp.obj CMakeFiles/Vehicle.dir/upi.cpp.obj CMakeFiles/Vehicle.dir/user.cpp.obj CMakeFiles/Vehicle.dir/user_fileoperation.cpp.obj CMakeFiles/Vehicle.dir/vehicle_manager.cpp.obj
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Vehicle.dir
