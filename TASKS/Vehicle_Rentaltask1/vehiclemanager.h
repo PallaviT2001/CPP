@@ -5,6 +5,8 @@
 #include "customer.h"
 #include "fileoperation.h"
 #include <list>
+#include "loginmanagement.h"
+
 class VehicleManager
 {
 public:
@@ -43,13 +45,12 @@ public:
     void sortbikebyPrice();
     void sortcarbyPrice();
 private:
-    std::list<Rentalbike>m_bikeList;
-    std::list<Rentalcar>m_carList;
-    std::list<Customer>m_Customerlist;
-    FileOperation fileoperation;
+    std::list<Rentalbike*>m_bikeList;
+    std::list<Rentalcar*>m_carList;
+    std::list<Customer*>m_Customerlist;
+    FileOperation* fileoperation;
 };
 
 #endif
-
 
 

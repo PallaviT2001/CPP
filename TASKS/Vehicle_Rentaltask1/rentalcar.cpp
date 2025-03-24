@@ -21,3 +21,29 @@ Rentalcar::Rentalcar(std::string brand, std::string model, std::string vehicleNu
     m_status=status;
 }
 
+std::string Rentalcar::getBrand()
+{
+    return m_brand;
+}
+
+std::string Rentalcar::getModel()
+{
+    return m_model;
+}
+
+std::string Rentalcar::getVehicleNumber()
+{
+    return m_vehicleNumber;
+}
+
+float Rentalcar::getRentPrice()
+{
+    return m_rentPrice;
+}
+
+std::string Rentalcar::getStatus()
+{
+    return m_status;
+}
+
+

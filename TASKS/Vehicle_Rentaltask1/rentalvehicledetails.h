@@ -10,11 +10,11 @@ public:
     ~Rentalvehicledetails();
     Rentalvehicledetails(std::string brand, std::string model, std::string vehicleNumber, float rentPrice,std::string status);
 
-    std::string getBrand();
-    std::string getModel();
-    std::string getVehicleNumber();
-    float getRentPrice();
-    std::string getStatus();
+    virtual std::string getBrand();
+    virtual std::string getModel();
+    virtual std::string getVehicleNumber();
+    virtual float getRentPrice();
+   virtual  std::string getStatus();
 
     void setBrand(std::string brand);
     void setModel(std::string model);
