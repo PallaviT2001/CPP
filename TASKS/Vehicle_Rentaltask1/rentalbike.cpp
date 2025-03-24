@@ -20,6 +20,28 @@ Rentalbike::Rentalbike(std::string brand, std::string model, std::string vehicle
     m_rentPrice=rentPrice;
     m_status=status;
 }
+std::string Rentalbike::getBrand()
+{
+    return m_brand;
+}
 
+std::string Rentalbike::getModel()
+{
+    return m_model;
+}
 
+std::string Rentalbike::getVehicleNumber()
+{
+    return m_vehicleNumber;
+}
+
+float Rentalbike::getRentPrice()
+{
+    return m_rentPrice;
+}
+
+std::string Rentalbike::getStatus()
+{
+    return m_status;
+}
 

@@ -11,7 +11,10 @@ add_executable(Vehicle_Rentaltask1 main.cpp
     rentalbike.h rentalbike.cpp
     rentalcar.h rentalcar.cpp
     rentalvehicledetails.h rentalvehicledetails.cpp
-    vehiclemanager.h vehiclemanager.cpp)
+    vehiclemanager.h vehiclemanager.cpp
+    loginmanagement.h loginmanagement.cpp
+    user.h user.cpp
+    userfileoperation.h userfileoperation.cpp)
 
 include(GNUInstallDirs)
 install(TARGETS Vehicle_Rentaltask1

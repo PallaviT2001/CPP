@@ -25,11 +25,11 @@ void LoginManagement::setUserCount(int userCount)
 User* LoginManagement::addAdmin()
 {
 
-    m_userList.push_back(new User("Dharshini","1234","ADMIN"));
+    m_userList.push_back(new User("pallavi","2001","ADMIN"));
     m_userCount++;
     for(auto* i:m_userList)
     {
-        if(i->getUserName() == "Dharshini" && i->getPassWord() == "1234")
+        if(i->getUserName() == "pallavi" && i->getPassWord() == "2001")
         {
             return i;
         }
