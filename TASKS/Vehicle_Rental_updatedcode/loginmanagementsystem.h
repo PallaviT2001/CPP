@@ -60,7 +60,6 @@ public:
 private:
     FileOperation* m_fileoperation;
     VehicleManager* vehicle;
-
     std::list<Admins*> m_adminList;
     std::list<Users*> m_userList;
 };

@@ -5,9 +5,6 @@ using namespace std;
 
 int main()
 {
-    //VehicleManager manager;
-    // manager.applicationManager();
-    //manager.functionalities();
     LoginManagementSystem* loginmanagementsystem = new LoginManagementSystem;
     loginmanagementsystem->applicationManager();
     delete loginmanagementsystem;

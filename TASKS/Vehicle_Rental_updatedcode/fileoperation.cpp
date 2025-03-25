@@ -194,10 +194,6 @@ std::list<Admins*> FileOperation::readAdminData()
            std::getline(csvAdminFile,password,',') &&
            std::getline(csvAdminFile,name))
     {
-        // for(auto& admin : adminlist)
-        // {
-        // std::cout<<admin->getName();
-        // }
         adminlist.push_back(new Admins(Id,password,name));
     }
     csvAdminFile.close();

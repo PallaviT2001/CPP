@@ -40,13 +40,3 @@ string Customer::getbookingid()
     return m_bookingid;
 }
 
-// void Customerdetails::setupiid(string upiid)
-// {
-//     m_upiid=upiid;
-// }
-
-// void Customerdetails::settranscationid(string transactionid)
-// {
-//     this->transactionid=transactionid;
-// }
-
