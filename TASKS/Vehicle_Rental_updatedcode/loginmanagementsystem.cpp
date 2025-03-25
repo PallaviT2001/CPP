@@ -9,6 +9,7 @@ LoginManagementSystem::LoginManagementSystem()
 
     m_adminList = m_fileoperation->readAdminData();
     m_userList = m_fileoperation->readUserData();
+
     for(auto& i : m_userList)
     {
         std::cout<<i->getEmailId()<<" "<<i->getPassword()<<std::endl;;
@@ -66,7 +67,7 @@ void LoginManagementSystem::userLoginMenu()
         std::cout<<"\nLogin Menu"<<std::endl;
         std::cout<<" 1.User SignIn"<<std::endl;
         std::cout<<" 2.User SignUp"<<std::endl;
-        std::cout<<" 3.Exit Login Menu"<<std::endl;
+        std::cout<<" 3.Save to file and Exit\n"<<std::endl;
         std::cout<<" Enter Your Choice:";
         std::cin>>choice;
 
@@ -134,10 +135,10 @@ void LoginManagementSystem::userMenu()
         std::cout<<"\nUser Menu"<<std::endl;
         std::cout<<" 1.Display Bikes"<<std::endl;
         std::cout<<" 2.Display Cars"<<std::endl;
-        std::cout<<" 3.Bookbike"<<std::endl;
-        std::cout<<" 4.Bookcar"<<std::endl;
-        std::cout<<" 5.Search bike"<<std::endl;
-        std::cout<<" 6.Search car"<<endl;
+        std::cout<<" 3.Search bike"<<std::endl;
+        std::cout<<" 4.Search car"<<endl;
+        std::cout<<" 5.Logout from user\n"<<endl;
+
         std::cout<<" Enter Your Choice:";
         std::cin>>choice;
 
@@ -150,18 +151,12 @@ void LoginManagementSystem::userMenu()
             vehicle->displayListOfCars();
             break;
         case 3:
-            vehicle->Bookbike();
-            break;
-        case 4:
-            vehicle->Bookcar();
-            break;
-        case 5:
             vehicle->searchbike();
             break;
-        case 6:
+        case 4:
             vehicle->searchcar();
             break;
-        case 7:
+        case 5:
             std::cout<<"Logout From User"<<std::endl;
             return;
         default:
@@ -207,7 +202,7 @@ void LoginManagementSystem::adminLoginMenu()
         std::cout<<"\nLogin Menu"<<std::endl;
         std::cout<<" 1.Admin SignIn"<<std::endl;
         std::cout<<" 2.Admin SignUp"<<std::endl;
-        std::cout<<" 3.Exit Login Menu"<<std::endl;
+        std::cout<<" 3.Save to file and exit\n"<<std::endl;
         std::cout<<" Enter Your Choice:";
         std::cin>>choice;
 
@@ -237,10 +232,11 @@ void LoginManagementSystem::applicationManager()
     int choice;
     while (true)
     {
-        std::cout<<"\nWellcome to Rental Application"<<std::endl;
-        std::cout<<" 1.Admin"<<std::endl;
-        std::cout<<" 2.User"<<std::endl;
-        std::cout<<" 3.Exit Application"<<std::endl;
+        std::cout<<"Vehicle Rental Management system\n"<<std::endl;
+        std::cout<<" 1.Admin functions"<<std::endl;
+        std::cout<<" 2.User functions"<<std::endl;
+        std::cout<<" 3.Exit from the Application"<<std::endl;
+
         std::cout<<" Enter Your Choice: ";
         std::cin>>choice;
 

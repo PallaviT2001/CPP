@@ -1,7 +1,7 @@
 #ifndef ADMINS_H
 #define ADMINS_H
-
 #include <string>
+
 class Admins
 {
 public:
@@ -23,4 +23,4 @@ private:
     std::string m_adminName;
 };
 
-#endif // ADMINS_H
+#endif
