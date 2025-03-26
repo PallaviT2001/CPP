@@ -14,7 +14,7 @@ private:
 public:
     Customer();
     ~Customer();
-    Customer(string customername,string dlno,string address,string bookingid/*string upiid,string transactionid*/);
+    Customer(string customername,string dlno,string address,string bookingid);
 
     string getname();
     string getdlno();

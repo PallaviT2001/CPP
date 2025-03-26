@@ -88,9 +88,6 @@ std::list<Rentalcar*> FileOperation::readCarData()
     return carlist;
 }
 
-
-
-
 void FileOperation::writecustomerdata(std::list<Customer*> Customerlist)
 {
 
@@ -129,7 +126,7 @@ std::list<Customer*> FileOperation::readcustomerdata()
 
 }
 
-void FileOperation::writecustomerdatacar(std::list<Customer*> Customerlist)
+/*void FileOperation::writecustomerdatacar(std::list<Customer*> Customerlist)
 {
     std::ofstream csvCustomerFile("CustomerListDatacar.csv");
     for (auto i:Customerlist)
@@ -142,9 +139,9 @@ void FileOperation::writecustomerdatacar(std::list<Customer*> Customerlist)
 
     }
     csvCustomerFile.close();
-}
+}*/
 
-std::list<Customer*> FileOperation::readcustomerdatacar()
+/*std::list<Customer*> FileOperation::readcustomerdatacar()
 {
     std::cout<<"customer data read function called"<<endl;
     std::list<Customer*>Customerlist;
@@ -163,7 +160,7 @@ std::list<Customer*> FileOperation::readcustomerdatacar()
     csvCustomerFile.close();
     return Customerlist;
 
-}
+}*/
 
 void FileOperation::writeAdminData(std::list<Admins*> adminList)
 {

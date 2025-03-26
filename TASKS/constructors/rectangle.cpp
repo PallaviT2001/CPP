@@ -14,8 +14,6 @@ void Rectangle ::area()
 }
 void Rectangle :: perimeter(int x, int y)
 {
-
     p=2*(length+breadth);
     cout<< "perimeter="<<p<<endl;
-
 }

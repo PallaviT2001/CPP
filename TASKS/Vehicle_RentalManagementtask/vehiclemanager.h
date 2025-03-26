@@ -5,6 +5,7 @@
 #include "customer.h"
 #include "fileoperation.h"
 #include <list>
+
 class VehicleManager
 {
 public:

@@ -2,8 +2,8 @@
 #define ENGINE_H
 #include "car.h"
 #include "accelerator.h"
-
 class Car;
+
 class Engine
 {
 private:

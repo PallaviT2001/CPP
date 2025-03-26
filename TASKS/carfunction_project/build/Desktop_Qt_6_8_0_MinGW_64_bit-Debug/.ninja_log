@@ -44,3 +44,10 @@
 6	558	7613454020547624	CMakeFiles/carfunction_project.dir/main.cpp.obj	cf3d97981e99011a
 13	561	7613454020642728	CMakeFiles/carfunction_project.dir/car.cpp.obj	a69ed4351f03e18e
 561	663	7613454026169191	carfunction_project.exe	8954c907118d252c
+88	793	7646829320902825	CMakeFiles/carfunction_project.dir/main.cpp.obj	cf3d97981e99011a
+94	795	7646829320937923	CMakeFiles/carfunction_project.dir/engine.cpp.obj	762b7be76c8b73e7
+101	799	7646829320937923	CMakeFiles/carfunction_project.dir/brake.cpp.obj	f079c8dc21406c2f
+91	821	7646829320937923	CMakeFiles/carfunction_project.dir/key.cpp.obj	a04c5cc9cb8cc5ef
+104	822	7646829321044668	CMakeFiles/carfunction_project.dir/car.cpp.obj	a69ed4351f03e18e
+98	825	7646829320937923	CMakeFiles/carfunction_project.dir/accelerator.cpp.obj	792d49a28c95470
+825	1141	7646829328282130	carfunction_project.exe	8954c907118d252c

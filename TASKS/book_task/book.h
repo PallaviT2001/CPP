@@ -6,8 +6,9 @@ using namespace std;
 
 class Book
 {
+    private:
     float m_length;
-     void display();
+    void display();
 
     public:
     float m_width;

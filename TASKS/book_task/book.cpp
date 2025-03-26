@@ -4,8 +4,8 @@ using namespace std;
 #include "string"
 #include "book.h"
 
-
-Book::Book() {
+Book::Book()
+{
     cout<<"Default constructor\n";
     m_length=10;
     m_width=20;
@@ -29,8 +29,7 @@ void Book::display()
     cout<<"length"<<m_length<<endl;
     cout<<"width:"<<m_width<<endl;
     cout<<"name:"<<m_name<<endl;
-    cout<<"noofpages:"<<m_numofpages<<endl;
+    cout<<"no of pages:"<<m_numofpages<<endl;
     cout<<"colour:"<<m_color<<endl;
     cout<<"c++"<<endl;
-
 }
