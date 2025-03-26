@@ -13,7 +13,7 @@ Admins::~Admins()
 
 Admins::Admins(std::string Id, std::string password, std::string name)
 {
-    std::cout<<"Admin Parameter Constructor Called"<<std::endl;
+    std::cout<<"Admin Parameterized Constructor Called"<<std::endl;
     this->m_Id = Id;
     this->m_Password = password;
     this->m_adminName = name;

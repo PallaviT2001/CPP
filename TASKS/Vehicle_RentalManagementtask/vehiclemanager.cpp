@@ -834,8 +834,6 @@ void VehicleManager::Bookbike()
         if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
         {
             string upiid;
-            int transactionid;
-            int transactioncount=1;
             string creditcardnumber;
             string debitcardnumber;
             cout<<"enter payment mode to process further"<<endl;
@@ -848,48 +846,38 @@ void VehicleManager::Bookbike()
             cout<<"5.debit card payment"<<endl;
             cout<<"enter the choice"<<endl;
             cin>>choice;
+            int transactionid=rand();
             switch(choice)
             {
             case 1:
                 cout<<"cash collected from the customer"<<endl;
-                cout<<"press NULL for upiid status"<<endl;
-                cout<<"enter upi id"<<endl;
-                cin>>upiid;
-                transactionid=0;
                 break;
             case 2:
                 cout<<"enter the upiid"<<endl;
                 cin>>upiid;
                 cout<<"amount received by phonepay Reference upiid is "<<upiid<<endl;
-                transactionid=transactioncount+5000;
-                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
                 break;
             case 3:
                 cout<<"enter the upiid to proceed"<<endl;
                 cin>>upiid;
                 cout<<"amount received by googlepay reference upiid is "<<upiid<<endl;
-                transactionid=transactioncount+5000;
-                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
                 break;
             case 4:
                 cout<<"enter creditcard number to process payment"<<endl;
                 cin>>creditcardnumber;
                 cout<<"amount received by creditcard,credit card number "<<creditcardnumber<<endl;
-                transactionid=transactioncount+5000;
-                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
                 break;
             case 5:
                 cout<<"enter debitcard number to process payment"<<endl;
                 cin>>debitcardnumber;
                 cout<<"amount received by debit card, debit card number "<<debitcardnumber<<endl;
-                transactionid=transactioncount+5000;
-                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
                 break;
             default:
                 cout<<"enter the valid payment method"<<endl;
                 break;
             }
             i->setStatus("booked");
+            cout<<"transaction id of the given payment is "<<transactionid<<endl;
             fileoperation.writeBikeData(m_bikeList);
             m_Customerlist.push_back(Customer(customername,dlno,address,bookingid));
             fileoperation.writecustomerdata(m_Customerlist);
@@ -933,8 +921,6 @@ void VehicleManager::Bookcar()
         if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
         {
             string upiid;
-            int transactionid;
-            int transactioncount;
             string creditcardnumber;
             string debitcardnumber;
             cout<<"enter payment mode to process further"<<endl;
@@ -947,48 +933,38 @@ void VehicleManager::Bookcar()
             cout<<"5.debit card payment"<<endl;
             cout<<"enter the choice"<<endl;
             cin>>choice;
+            int transactionid=rand();
             switch(choice)
             {
             case 1:
                 cout<<"cash collected from the customer"<<endl;
-                cout<<"press NULL for upiid status"<<endl;
-                cout<<"enter upi id"<<endl;
-                cin>>upiid;
-                transactionid=0;
                 break;
             case 2:
                 cout<<"enter the upiid"<<endl;
                 cin>>upiid;
                 cout<<"amount received by phonepay Reference upiid is "<<upiid<<endl;
-                transactionid=transactioncount+5000;
-                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
                 break;
             case 3:
                 cout<<"enter the upiid to proceed"<<endl;
                 cin>>upiid;
                 cout<<"amount received by googlepay reference upiid is "<<upiid<<endl;
-                transactionid=transactioncount+5000;
-                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
                 break;
             case 4:
                 cout<<"enter creditcard number to process payment"<<endl;
                 cin>>creditcardnumber;
                 cout<<"amount received by creditcard,credit card number "<<creditcardnumber<<endl;
-                transactionid=transactioncount+5000;
-                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
                 break;
             case 5:
                 cout<<"enter debitcard number to process payment"<<endl;
                 cin>>debitcardnumber;
                 cout<<"amount received by debit card, debit card number "<<debitcardnumber<<endl;
-                transactionid=transactioncount+5000;
-                cout<<"Transaction id of the given payment: "<<transactionid<<endl;
                 break;
             default:
                 cout<<"enter the valid payment method"<<endl;
                 break;
             }
             i->setStatus("booked");
+            cout<<"transaction id of the given payment is "<<transactionid<<endl;
             fileoperation.writeCarData(m_carList);
             m_Customerlist.push_back(Customer(customername,dlno,address,bookingid));
             fileoperation.writecustomerdata(m_Customerlist);

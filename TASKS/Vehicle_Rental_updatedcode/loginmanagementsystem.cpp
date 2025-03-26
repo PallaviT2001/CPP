@@ -37,26 +37,111 @@ LoginManagementSystem::~LoginManagementSystem()
     delete vehicle;
 }
 
-void LoginManagementSystem::userLogin() {
-    std::string Id, password;
-    std::cout << "Enter Email ID: ";
-    std::cin >> Id;
-    std::cout << "Enter Password: ";
-    std::cin >> password;
+void LoginManagementSystem::applicationManager()
+{
+    std::cout<<"Rental Application Function Called"<<std::endl;
 
-    for (auto& user : m_userList)
+    int choice;
+    while (true)
     {
-        if (user->getEmailId() == Id && user->getPassword() == password)
+        std::cout<<"Vehicle Rental Management system\n"<<std::endl;
+        std::cout<<" 1.Admin functions"<<std::endl;
+        std::cout<<" 2.User functions"<<std::endl;
+        std::cout<<" 3.Exit from the Application"<<std::endl;
+
+        std::cout<<" Enter Your Choice: ";
+        std::cin>>choice;
+
+        switch (choice)
         {
-            std::cout << "User Login Successful" << std::endl;
-            userMenu();
+        case 1:
+            adminLoginMenu();
+            break;
+        case 2:
+            userLoginMenu();
+            break;
+        case 3:
+            std::cout<<"Application Closed"<<std::endl;
+            return;
+        default:
+            std::cout<<"Invalid Choice"<<std::endl;
+            break;
+        }
+    }
+}
+
+void LoginManagementSystem::adminLoginMenu()
+{
+    std::cout<<"Admin Login Menu Function Called"<<std::endl;
+
+    int choice;
+    while(true)
+    {
+        std::cout<<"\nLogin Menu"<<std::endl;
+        std::cout<<" 1.Admin SignIn"<<std::endl;
+        std::cout<<" 2.Admin SignUp"<<std::endl;
+        std::cout<<" 3.Save to file and exit\n"<<std::endl;
+        std::cout<<" Enter Your Choice:";
+        std::cin>>choice;
+
+        switch (choice)
+        {
+        case 1:
+            addAdmins();
+            break;
+        case 2:
+            adminLogin();
+            break;
+        case 3:
+            std::cout<<"Exit From Admin Login Menu"<<std::endl;
+            return;
+        default:
+            std::cout<<"Invalid Choice"<<std::endl;
+            break;
+        }
+    }
+}
+
+void LoginManagementSystem::addAdmins()
+{
+    std::cout<<"Add Admin Function Called"<<std::endl;
+
+    std::string Id,password,adminName;
+
+    std::cout<<"Enter Name: ";
+    std::cin>>adminName;
+    std::cout<<"Enter ID: ";
+    std::cin>>Id;
+    std::cout<<"Enter Password: ";
+    std::cin>>password;
+
+    m_adminList.push_back(new Admins(Id, password, adminName));
+}
+
+void LoginManagementSystem::adminLogin()
+{
+    std::cout<<"Admin Login Function Called"<<std::endl;
+
+    std::string Id,password;
+
+    std::cout<<"Enter Admin ID: ";
+    std::cin>>Id;
+    std::cout<<"Enter Admin Password: ";
+    std::cin>>password;
+    for(auto& admin : m_adminList)
+    {
+        if(admin->getId() == Id && admin->getPassword() == password)
+        {
+            vehicle->functionalities();
+            std::cout<<"Admin Login SuccessFull"<<std::endl;
+        }
+        else
+        {
+            std::cout<<"Invalid ID or Password"<<std::endl;
             return;
         }
     }
-    std::cout << "Invalid ID or Password" << std::endl;
 }
-
-
 void LoginManagementSystem::userLoginMenu()
 {
     std::cout<<"User Login Menu Function Called"<<std::endl;
@@ -107,23 +192,26 @@ void LoginManagementSystem::addUsers()
     m_userList.push_back(new Users(name,password,contactNumber,emailId));
 }
 
-void LoginManagementSystem::addAdmins()
-{
-    std::cout<<"Add Admin Function Called"<<std::endl;
 
-    std::string Id,password,adminName;
 
-    std::cout<<"Enter Name: ";
-    std::cin>>adminName;
-    std::cout<<"Enter ID: ";
-    std::cin>>Id;
-    std::cout<<"Enter Password: ";
-    std::cin>>password;
+void LoginManagementSystem::userLogin() {
+    std::string Id, password;
+    std::cout << "Enter Email ID: ";
+    std::cin >> Id;
+    std::cout << "Enter Password: ";
+    std::cin >> password;
 
-    m_adminList.push_back(new Admins(Id, password, adminName));
+    for (auto& user : m_userList)
+    {
+        if (user->getEmailId() == Id && user->getPassword() == password)
+        {
+            std::cout << "User Login Successful" << std::endl;
+            userMenu();
+            return;
+        }
+    }
+    std::cout << "Invalid ID or Password" << std::endl;
 }
-
-
 
 void LoginManagementSystem::userMenu()
 {
@@ -166,97 +254,11 @@ void LoginManagementSystem::userMenu()
     }
 }
 
-void LoginManagementSystem::adminLogin()
-{
-    std::cout<<"Admin Login Function Called"<<std::endl;
-
-    std::string Id,password;
-
-    std::cout<<"Enter Admin ID: ";
-    std::cin>>Id;
-    std::cout<<"Enter Admin Password: ";
-    std::cin>>password;
-    for(auto& admin : m_adminList)
-    {
-        if(admin->getId() == Id && admin->getPassword() == password)
-        {
-            vehicle->functionalities();
-            std::cout<<"Admin Login SuccessFull"<<std::endl;
-        }
-        else
-        {
-            std::cout<<"Invalid ID or Password"<<std::endl;
-            return;
-        }
-    }
-}
 
 
-void LoginManagementSystem::adminLoginMenu()
-{
-    std::cout<<"Admin Login Menu Function Called"<<std::endl;
-
-    int choice;
-    while(true)
-    {
-        std::cout<<"\nLogin Menu"<<std::endl;
-        std::cout<<" 1.Admin SignIn"<<std::endl;
-        std::cout<<" 2.Admin SignUp"<<std::endl;
-        std::cout<<" 3.Save to file and exit\n"<<std::endl;
-        std::cout<<" Enter Your Choice:";
-        std::cin>>choice;
-
-        switch (choice)
-        {
-        case 1:
-            addAdmins();
-            break;
-        case 2:
-            adminLogin();
-            break;
-        case 3:
-            std::cout<<"Exit From Admin Login Menu"<<std::endl;
-            return;
-        default:
-            std::cout<<"Invalid Choice"<<std::endl;
-            break;
-        }
-    }
-}
 
 
-void LoginManagementSystem::applicationManager()
-{
-    std::cout<<"Rental Application Function Called"<<std::endl;
 
-    int choice;
-    while (true)
-    {
-        std::cout<<"Vehicle Rental Management system\n"<<std::endl;
-        std::cout<<" 1.Admin functions"<<std::endl;
-        std::cout<<" 2.User functions"<<std::endl;
-        std::cout<<" 3.Exit from the Application"<<std::endl;
-
-        std::cout<<" Enter Your Choice: ";
-        std::cin>>choice;
-
-        switch (choice)
-        {
-        case 1:
-            adminLoginMenu();
-            break;
-        case 2:
-            userLoginMenu();
-            break;
-        case 3:
-            std::cout<<"Application Closed"<<std::endl;
-            return;
-        default:
-            std::cout<<"Invalid Choice"<<std::endl;
-            break;
-        }
-    }
-}
 
 
 

@@ -34,3 +34,10 @@
 1070	1160	7622562709443633	wire_connection_withoutinheritance.exe	ffe9feec89bcdbf1
 30	1016	7622563857619170	CMakeFiles/wire_connection_withoutinheritance.dir/main.cpp.obj	ba79cf56a5032c6b
 1017	1113	7622563867489759	wire_connection_withoutinheritance.exe	ffe9feec89bcdbf1
+64	1715	7645978098691112	CMakeFiles/wire_connection_withoutinheritance.dir/main.cpp.obj	ba79cf56a5032c6b
+73	1717	7645978098817757	CMakeFiles/wire_connection_withoutinheritance.dir/switch.cpp.obj	29670733c0bf8180
+82	1739	7645978098897550	CMakeFiles/wire_connection_withoutinheritance.dir/finolex.cpp.obj	cbd574671907f0ea
+78	1741	7645978098828742	CMakeFiles/wire_connection_withoutinheritance.dir/polycab.cpp.obj	252b691643c8e19d
+69	1747	7645978098691112	CMakeFiles/wire_connection_withoutinheritance.dir/ac.cpp.obj	ebea1c7049560679
+86	1752	7645978098947119	CMakeFiles/wire_connection_withoutinheritance.dir/havels.cpp.obj	b74dcfc5f6476653
+1752	1850	7645978115606215	wire_connection_withoutinheritance.exe	ffe9feec89bcdbf1

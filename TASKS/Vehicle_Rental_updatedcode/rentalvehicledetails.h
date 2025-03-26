@@ -1,6 +1,5 @@
 #ifndef RENTALVEHICLEVEHICLE_H
 #define RENTALVEHICLEVEHICLE_H
-
 #include <string>
 
 class Rentalvehicledetails

@@ -3,9 +3,7 @@
 #include "personaldetails.h"
 #include <iostream>
 #include <list>
-
 using namespace std;
-
 
 class Student:public PersonalDetails
 {

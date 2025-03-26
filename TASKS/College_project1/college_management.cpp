@@ -291,7 +291,6 @@ void CollegeManagement::displayStaffData()
 void CollegeManagement::initStudent(list<Student> *m_studentlist)
 {
     m_student = m_studentlist;
-
 }
 
 void CollegeManagement::initStaff(vector<Staff> *m_stafflist)
