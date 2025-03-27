@@ -1,8 +1,8 @@
 #ifndef USERS_H
 #define USERS_H
-
 #include <string>
-    class Users
+
+class Users
 {
 public:
     Users();

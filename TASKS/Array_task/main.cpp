@@ -1,141 +1,155 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <sstream>
-#include <algorithm>
-using namespace std;
+//#include <iostream>
+//using namespace std;
 
-class EmployeeManager
+/*int main()
 {
-private:
-    struct Employee {
-        int id;
-        string name;
-        int age;
-        double salary;
-    };
-
-    vector<Employee> employees;
-    string filename = "employees.csv";
-
-public:
-    void generateCSV(int count) {
-        ofstream file(filename);
-        if (!file)
-        {
-            cerr << "Error creating file!" << endl;
-            return;
-        }
-        file << "ID,Name,Age,Salary\n";
-
-        string names[] = {"pallavi", "darshini", "vidya", "likitha", "varshini"};
-        for (int i = 1; i <= count; i++)
-        {
-            int age = rand() % 50 + 20;
-            double salary = (rand() % 90000) + 20000;
-            file << i << "," << names[i % 5] << "," << age << "," << salary << "\n";
-        }
-
-        file.close();
-        cout << "Generated " << count << " records in " << filename << endl;
-    }
-
-
-    void loadCSV() {
-        employees.clear();
-        ifstream file(filename);
-        if (!file)
-        {
-            cerr << "Error opening file!" << endl;
-            return;
-        }
-        string line;
-        getline(file, line);
-
-        while (getline(file, line))
-        {
-            stringstream ss(line);
-            Employee emp;
-            string temp;
-            getline(ss, temp, ',');
-            emp.id = stoi(temp);
-            getline(ss, emp.name, ',');
-            getline(ss, temp, ',');
-            emp.age = stoi(temp);
-            getline(ss, temp, ',');
-            emp.salary = stod(temp);
-            employees.push_back(emp);
-        }
-        file.close();
-        cout << "Loaded " << employees.size() << " records.\n";
-    }
-
-    void searchByID(int searchID)
+    int i=0;
+    int numbers[4]={10,20,90,5};
+    int large=numbers[0];
+    int small=numbers[0];
+    for(i=0;i<=3;i++)
     {
-        for (const auto &emp : employees)
+        if(numbers[i]>large)
         {
-            if (emp.id == searchID)
-            {
-                cout << "Found: " << emp.id << ", " << emp.name << ", " << emp.age << ", " << emp.salary << endl;
-                return;
-            }
+            large=numbers[i];
         }
-        cout << "Employee with ID " << searchID << " not found.\n";
+        if(numbers[i]<small)
+        {
+            small=numbers[i];
+        }
     }
+    cout<<"largest number "<<large<<endl;
+    cout<<"smallest number "<<small<<endl;
+}*/
 
+/*int main()
+{
+    int num;
+    cout<<"enter the number"<<endl;
+    cin>>num;
+    int lastdigit=0;
+    int result=0;
+    int largernumber=0;
+    int smallernumber=9;
 
-    void sortEmployees(const string &criteria)
+    while(num!=0)
     {
-        if (criteria == "id")
+        lastdigit=num%10;
+        result=lastdigit+(result*10);
+        num=num/10;
+        if(lastdigit>largernumber)
         {
-            sort(employees.begin(), employees.end(), [](Employee a, Employee b) { return a.id < b.id; });
+            largernumber=lastdigit;
         }
-        else if (criteria == "name")
+        if(lastdigit<smallernumber)
         {
-            sort(employees.begin(), employees.end(), [](Employee a, Employee b) { return a.name < b.name; });
+            smallernumber=lastdigit;
         }
-        else if (criteria == "age")
-        {
-            sort(employees.begin(), employees.end(), [](Employee a, Employee b) { return a.age < b.age; });
-        }
-        else if (criteria == "salary")
-        {
-            sort(employees.begin(), employees.end(), [](Employee a, Employee b) { return a.salary < b.salary; });
-        }
-        else
-        {
-            cout << "Invalid sorting criteria!\n";
-            return;
-        }
-        cout << "Data sorted by " << criteria << ".\n";
     }
+    cout<<"Reversed number is "<<result<<endl;
+    cout<<"larger number "<<largernumber<<endl;
+    cout<<"smaller number "<<smallernumber<<endl;
+    return 0;
+}*/
 
+/*#include <map>
+int main()
+{
+    string input;
+    cout << "Enter a string: ";
+    cin >> input;
 
-    void displayEmployees(int count = 10)
+    map<char,int>count;
+
+    for(char ch:input)
     {
-        cout << "ID\tName\tAge\tSalary\n";
-        for (int i = 0; i < min(count, (int)employees.size()); i++)
+        count[ch]++;
+    }
+
+    for (char ch : input)
+    {
+        if (count[ch] != 0)
         {
-            cout << employees[i].id << "\t" << employees[i].name << "\t" << employees[i].age << "\t" << employees[i].salary << endl;
+            cout << ch << "-" <<count[ch] << " ";
+            count[ch] = 0;
+
         }
     }
-};
-
-int main() {
-    EmployeeManager manager;
-    manager.generateCSV(200000);
-    manager.loadCSV();
-    int searchID;
-    cout << "Enter Employee ID to search: ";
-    cin >> searchID;
-    manager.searchByID(searchID);
-
-    string sortCriteria;
-    cout << "Enter sorting criteria (id/name/age/salary): ";
-    cin >> sortCriteria;
-    manager.sortEmployees(sortCriteria);
-
-    manager.displayEmployees(10);
 
     return 0;
+}*/
+
+/*#include <algorithm>
+int arraysize=4;
+
+int main()
+{
+    int array[]={10,200,5,300};
+    int size = sizeof(array)/sizeof(array[0]);
+    sort(array,array+arraysize);
+
+    cout<<"output array:"<<endl;
+    for(int i=0;i<4;i++)
+    {
+        cout<<array[i]<<" "<<endl;
+    }
+    return 0;
+}*/
+
+/*template<typename T>
+
+T add(T a,T b);
+int main()
+{
+  auto a=10.5,b=12.5;
+  //add<int>(15,10);
+  auto sum=add<double>(a,b);
+  cout<<"sum value"<<sum<<endl;
+  return 0;
 }
+
+template<typename T>
+T add(T a,T b)
+{
+    T sum=a+b;
+    return sum;
+}*/
+
+/*int main() {
+    int array[] = {10, 200, 5, 300};
+    int arraysize = sizeof(array) / sizeof(array[0]);
+
+    for (int i = 0; i < arraysize - 1; i++)
+    {
+        for (int j = 0; j < arraysize - i - 1; j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+                swap(array[j], array[j + 1]);
+            }
+        }
+    }
+
+    cout << "Output array:" << endl;
+    for (int i = 0; i < arraysize; i++) {
+        cout << array[i] << endl;
+    }
+
+    return 0;
+}*/
+
+/*int add (int &a)
+{
+    cout<<a<<endl;
+}
+
+int main()
+{
+    int b=5;
+    add(b);
+    return 0;
+}*/
+
+
+
+
