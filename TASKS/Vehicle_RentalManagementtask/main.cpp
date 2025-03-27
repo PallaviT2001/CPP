@@ -1,10 +1,19 @@
-#include "vehiclemanager.h"
+#include "RentalVehicalManagement.h"
+#include "loginmanagementsystem.h"
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    VehicleManager manager;
-    manager.functionalities();
+    LoginManagementSystem* loginmanagementsystem = new LoginManagementSystem;
+    loginmanagementsystem->applicationManager();
+    delete loginmanagementsystem;
+    return 0;
 }
+
+
+
+
+
+
 

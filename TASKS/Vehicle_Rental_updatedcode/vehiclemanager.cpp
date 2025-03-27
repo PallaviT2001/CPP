@@ -2,7 +2,6 @@
 #include "customer.h"
 #include <iostream>
 #include <fstream>
-
 using namespace std;
 
 VehicleManager::VehicleManager()
@@ -265,87 +264,6 @@ void VehicleManager::searchcar()
         }
     }
     cout<<"car not found, car number is: "<<vehicleNumber<<endl;
-}
-
-void VehicleManager::sortbikeStatus()
-{
-
-    cout<<"\nAvailable Bike List"<<endl;
-    for(auto& i:m_bikeList)
-    {
-        if(i->getStatus()=="available")
-        {
-            cout<<i->getBrand()<<" "<<i->getModel()<<" "<<i->getVehicleNumber()<<" "<<i->getRentPrice()<<" "<<i->getStatus()<<endl;
-        }
-    }
-
-    cout<<"\nBooked Bike List"<<endl;
-    for(auto& i:m_bikeList)
-    {
-        if(i->getStatus()=="booked")
-        {
-            cout<<i->getBrand()<<" "<<i->getModel()<<" "<<i->getVehicleNumber()<<" "<<i->getRentPrice()<<" "<<i->getStatus()<<endl;
-        }
-    }
-}
-
-void VehicleManager::sortcarbyStatus()
-{
-
-    cout<<"\nAvailable car list"<<endl;
-    for(auto &i:m_carList)
-    {
-        if(i->getStatus()=="available")
-        {
-            cout<<i->getBrand()<<" "<<i->getModel()<<" "<<i->getVehicleNumber()<<" "<<i->getRentPrice()<<" "<<i->getStatus()<<endl;
-        }
-    }
-
-    cout<<"\nBooked car list"<<endl;
-    for(auto &i:m_carList)
-    {
-        if(i->getStatus()=="booked")
-        {
-            cout<<i->getBrand()<<" "<<i->getModel()<<" "<<i->getVehicleNumber()<<" "<<i->getRentPrice()<<" "<<i->getStatus()<<endl;
-        }
-    }
-}
-
-void VehicleManager::sortbikebyPrice()
-{
-
-    cout<<"Bike price sorted function called"<<endl;
-
-    for(auto &i:m_bikeList)
-    {
-        for(auto &j:m_bikeList)
-        {
-            if(i->getRentPrice() < j->getRentPrice())
-            {
-                iter_swap(&i,&j);
-            }
-        }
-    }
-    displayListOfBikes();
-}
-
-void VehicleManager::sortcarbyPrice()
-{
-
-    cout<<"Car price sorted function called"<<endl;
-
-    for(auto &i:m_carList)
-    {
-        for(auto &j:m_carList)
-        {
-            if(i->getRentPrice() < j->getRentPrice())
-            {
-                iter_swap(&i,&j);
-            }
-        }
-    }
-
-    displayListOfCars();
 }
 
 void VehicleManager::displaycustomerdetailsbike()
@@ -627,93 +545,6 @@ void VehicleManager::functionalities()
     }
 }
 
-void VehicleManager::Bookbike()
-{
-
-    cout<<"Bike book function called"<<endl;
-
-    string vehicleNumber;
-    string newstatus;
-    string customername;
-    string dlno;
-    string address;
-    string bookingid;
-    int choice;
-
-    cout<<"enter bike number to book"<<endl;
-    cin>>vehicleNumber;
-
-    cout<<"enter customer name"<<endl;
-    cin>>customername;
-
-    cout<<"enter customer dlno"<<endl;
-    cin>>dlno;
-
-    cout<<"enter customer address"<<endl;
-    cin>>address;
-
-    cout<<"enter booking id"<<endl;
-    cin>>bookingid;
-    for(auto i: m_bikeList)
-
-    {
-        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
-        {
-            string upiid;
-            string creditcardnumber;
-            string debitcardnumber;
-            int transactionid=rand();
-            cout<<"enter payment mode to process further"<<endl;
-            cout<<"The rent cost of the vehicle is "<<i->getRentPrice()<<endl;
-            cout<<"select the payment mode"<<endl;
-            cout<<"1.cash payment"<<endl;
-            cout<<"2.phonepay"<<endl;
-            cout<<"3.googlepay"<<endl;
-            cout<<"4.Credit card payment"<<endl;
-            cout<<"5.debit card payment"<<endl;
-            cout<<"enter the choice"<<endl;
-            cin>>choice;
-            switch(choice)
-            {
-            case 1:
-                cout<<"cash collected from the customer"<<endl;
-                break;
-            case 2:
-                cout<<"enter the upiid"<<endl;
-                cin>>upiid;
-                cout<<"amount received by phonepay Reference upiid is "<<upiid<<endl;
-                break;
-            case 3:
-                cout<<"enter the upiid to proceed"<<endl;
-                cin>>upiid;
-                cout<<"amount received by googlepay reference upiid is "<<upiid<<endl;
-                break;
-            case 4:
-                cout<<"enter creditcard number to process payment"<<endl;
-                cin>>creditcardnumber;
-                cout<<"amount received by creditcard,credit card number "<<creditcardnumber<<endl;
-                break;
-            case 5:
-                cout<<"enter debitcard number to process payment"<<endl;
-                cin>>debitcardnumber;
-                cout<<"amount received by debit card, debit card number "<<debitcardnumber<<endl;
-                break;
-            default:
-                cout<<"enter the valid payment method"<<endl;
-                break;
-            }
-            i->setStatus("booked");
-            cout<<"Transaction id of the given payment is"<<transactionid<<endl;
-
-            m_Customerlist.push_back(new Customer(customername,dlno,address,bookingid));
-
-            cout<<"Bike booked successfully Bike no: "<<vehicleNumber<<endl;
-            return;
-        }
-    }
-    std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
-}
-
 void VehicleManager::Bookcar()
 {
 
@@ -799,219 +630,173 @@ void VehicleManager::Bookcar()
     std::cout << "car with number " << vehicleNumber << " not found" << std::endl;
 }
 
-
-
-//******************************************************************************************************//
-
-/*#include <iostream>
-#include <vector>
-#include <ctime>
-#include <cstdlib>
-#include <regex>
-
-
-
-bool validateString(const string &input, int maxLength) {
-    return !input.empty() && input.length() <= maxLength;
-}
-
-bool validateNumber(const string &input, int maxLength) {
-    return regex_match(input, regex("^[0-9]+$")) && input.length() <= maxLength;
-}
-
-string generateTransactionId() {
-    srand(time(0));
-    return "TXN" + to_string(rand() % 100000 + 10000);
-}
-
 void VehicleManager::Bookbike()
 {
-    cout<<"Bike book function called"<< endl;
-    string vehicleNumber, customername, dlno, address, bookingid;
 
-    cout << "Enter bike number to book: ";
-    cin >> vehicleNumber;
+    cout<<"Bike book function called"<<endl;
 
-    cout << "Enter customer name (max 10 characters): ";
-    cin >> customername;
-    if (!validateString(customername, 10))
+    string vehicleNumber;
+    string newstatus;
+    string customername;
+    string dlno;
+    string address;
+    string bookingid;
+    int choice;
+
+    cout<<"enter bike number to book"<<endl;
+    cin>>vehicleNumber;
+
+    cout<<"enter customer name"<<endl;
+    cin>>customername;
+
+    cout<<"enter customer dlno"<<endl;
+    cin>>dlno;
+
+    cout<<"enter customer address"<<endl;
+    cin>>address;
+
+    cout<<"enter booking id"<<endl;
+    cin>>bookingid;
+    for(auto i: m_bikeList)
+
     {
-        cout << "Invalid customer name. Must not exceed 10 characters.\n";
-        return;
-    }
-
-    cout << "Enter customer DL number: ";
-    cin >> dlno;
-
-    if (!validateString(dlno, 15))
-    {
-        cout << "Invalid DL number.\n";
-        return;
-    }
-
-    cout << "Enter customer address: ";
-    cin.ignore();
-    getline(cin, address);
-    if (address.empty()) {
-        cout << "Address cannot be empty.\n";
-        return;
-    }
-
-    cout << "Enter booking ID: ";
-    cin >> bookingid;
-    if (!validateString(bookingid, 12)) { // Assuming booking ID max length is 12
-        cout << "Invalid booking ID.\n";
-        return;
-    }
-
-    for (auto i : m_bikeList) {
-        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available") {
-            int choice;
-            string upiid, creditcardnumber, debitcardnumber;
-            string transactionid = generateTransactionId();
-
-            cout << "The rent cost of the vehicle is " << i->getRentPrice() << endl;
-            cout << "Select the payment mode:\n";
-            cout << "1. Cash payment\n2. PhonePe\n3. Google Pay\n4. Credit card\n5. Debit card\n";
-            cout << "Enter your choice: ";
-            cin >> choice;
-
-            switch (choice) {
-                case 1:
-                    cout << "Cash collected from the customer.\n";
-                    break;
-                case 2:
-                case 3:
-                    cout << "Enter the UPI ID: ";
-                    cin >> upiid;
-                    cout << "Amount received via " << (choice == 2 ? "PhonePe" : "Google Pay")
-                         << ". Reference UPI ID: " << upiid << endl;
-                    break;
-                case 4:
-                    cout << "Enter credit card number (max 10 digits): ";
-                    cin >> creditcardnumber;
-                    if (!validateNumber(creditcardnumber, 10)) {
-                        cout << "Invalid credit card number.\n";
-                        return;
-                    }
-                    cout << "Amount received via Credit Card: " << creditcardnumber << endl;
-                    break;
-                case 5:
-                    cout << "Enter debit card number (max 10 digits): ";
-                    cin >> debitcardnumber;
-                    if (!validateNumber(debitcardnumber, 10)) {
-                        cout << "Invalid debit card number.\n";
-                        return;
-                    }
-                    cout << "Amount received via Debit Card: " << debitcardnumber << endl;
-                    break;
-                default:
-                    cout << "Invalid payment method.\n";
-                    return;
+        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available")
+        {
+            string upiid;
+            string creditcardnumber;
+            string debitcardnumber;
+            int transactionid=rand();
+            cout<<"enter payment mode to process further"<<endl;
+            cout<<"The rent cost of the vehicle is "<<i->getRentPrice()<<endl;
+            cout<<"select the payment mode"<<endl;
+            cout<<"1.cash payment"<<endl;
+            cout<<"2.phonepay"<<endl;
+            cout<<"3.googlepay"<<endl;
+            cout<<"4.Credit card payment"<<endl;
+            cout<<"5.debit card payment"<<endl;
+            cout<<"enter the choice"<<endl;
+            cin>>choice;
+            switch(choice)
+            {
+            case 1:
+                cout<<"cash collected from the customer"<<endl;
+                break;
+            case 2:
+                cout<<"enter the upiid"<<endl;
+                cin>>upiid;
+                cout<<"amount received by phonepay Reference upiid is "<<upiid<<endl;
+                break;
+            case 3:
+                cout<<"enter the upiid to proceed"<<endl;
+                cin>>upiid;
+                cout<<"amount received by googlepay reference upiid is "<<upiid<<endl;
+                break;
+            case 4:
+                cout<<"enter creditcard number to process payment"<<endl;
+                cin>>creditcardnumber;
+                cout<<"amount received by creditcard,credit card number "<<creditcardnumber<<endl;
+                break;
+            case 5:
+                cout<<"enter debitcard number to process payment"<<endl;
+                cin>>debitcardnumber;
+                cout<<"amount received by debit card, debit card number "<<debitcardnumber<<endl;
+                break;
+            default:
+                cout<<"enter the valid payment method"<<endl;
+                break;
             }
-
             i->setStatus("booked");
-            cout << "Transaction ID: " << transactionid << endl;
-            m_Customerlist.push_back(new Customer(customername, dlno, address, bookingid));
-            cout << "Bike booked successfully. Bike no: " << vehicleNumber << endl;
+            cout<<"Transaction id of the given payment is"<<transactionid<<endl;
+
+            m_Customerlist.push_back(new Customer(customername,dlno,address,bookingid));
+
+            cout<<"Bike booked successfully Bike no: "<<vehicleNumber<<endl;
             return;
         }
     }
+    std::cout << "Bike with number " << vehicleNumber << " not found" << std::endl;
 
-    cout << "Bike with number " << vehicleNumber << " not found.\n";
 }
 
-void VehicleManager::Bookcar() {
-    cout << "Car book function called" << endl;
-    string vehicleNumber, customername, dlno, address, bookingid;
+void VehicleManager::sortbikeStatus()
+{
 
-    cout << "Enter car number to book: ";
-    cin >> vehicleNumber;
-
-    cout << "Enter customer name (max 10 characters): ";
-    cin >> customername;
-    if (!validateString(customername, 10)) {
-        cout << "Invalid customer name. Must not exceed 10 characters.\n";
-        return;
-    }
-
-    cout << "Enter customer DL number: ";
-    cin >> dlno;
-    if (!validateString(dlno, 15)) {
-        cout << "Invalid DL number.\n";
-        return;
-    }
-
-    cout << "Enter customer address: ";
-    cin.ignore();
-    getline(cin, address);
-    if (address.empty()) {
-        cout << "Address cannot be empty.\n";
-        return;
-    }
-
-    cout << "Enter booking ID: ";
-    cin >> bookingid;
-    if (!validateString(bookingid, 12)) {
-        cout << "Invalid booking ID.\n";
-        return;
-    }
-
-    for (auto i : m_carList) {
-        if (i->getVehicleNumber() == vehicleNumber && i->getStatus() == "available") {
-            int choice;
-            string upiid, creditcardnumber, debitcardnumber;
-            string transactionid = generateTransactionId();
-
-            cout << "The rent cost of the vehicle is " << i->getRentPrice() << endl;
-            cout << "Select the payment mode:\n";
-            cout << "1. Cash payment\n2. PhonePe\n3. Google Pay\n4. Credit card\n5. Debit card\n";
-            cout << "Enter your choice: ";
-            cin >> choice;
-
-            switch (choice) {
-                case 1:
-                    cout << "Cash collected from the customer.\n";
-                    break;
-                case 2:
-                case 3:
-                    cout << "Enter the UPI ID: ";
-                    cin >> upiid;
-                    cout << "Amount received via " << (choice == 2 ? "PhonePe" : "Google Pay")
-                         << ". Reference UPI ID: " << upiid << endl;
-                    break;
-                case 4:
-                    cout << "Enter credit card number (max 10 digits): ";
-                    cin >> creditcardnumber;
-                    if (!validateNumber(creditcardnumber, 10)) {
-                        cout << "Invalid credit card number.\n";
-                        return;
-                    }
-                    cout << "Amount received via Credit Card: " << creditcardnumber << endl;
-                    break;
-                case 5:
-                    cout << "Enter debit card number (max 10 digits): ";
-                    cin >> debitcardnumber;
-                    if (!validateNumber(debitcardnumber, 10)) {
-                        cout << "Invalid debit card number.\n";
-                        return;
-                    }
-                    cout << "Amount received via Debit Card: " << debitcardnumber << endl;
-                    break;
-                default:
-                    cout << "Invalid payment method.\n";
-                    return;
-            }
-
-            i->setStatus("booked");
-            cout << "Transaction ID: " << transactionid << endl;
-            m_Customerlist.push_back(new Customer(customername, dlno, address, bookingid));
-            cout << "Car booked successfully. Car no: " << vehicleNumber << endl;
-            return;
+    cout<<"\nAvailable Bike List"<<endl;
+    for(auto& i:m_bikeList)
+    {
+        if(i->getStatus()=="available")
+        {
+            cout<<i->getBrand()<<" "<<i->getModel()<<" "<<i->getVehicleNumber()<<" "<<i->getRentPrice()<<" "<<i->getStatus()<<endl;
         }
     }
 
-    cout << "Car with number " << vehicleNumber << " not found.\n";
-}*/
+    cout<<"\nBooked Bike List"<<endl;
+    for(auto& i:m_bikeList)
+    {
+        if(i->getStatus()=="booked")
+        {
+            cout<<i->getBrand()<<" "<<i->getModel()<<" "<<i->getVehicleNumber()<<" "<<i->getRentPrice()<<" "<<i->getStatus()<<endl;
+        }
+    }
+}
+
+void VehicleManager::sortcarbyStatus()
+{
+
+    cout<<"\nAvailable car list"<<endl;
+    for(auto &i:m_carList)
+    {
+        if(i->getStatus()=="available")
+        {
+            cout<<i->getBrand()<<" "<<i->getModel()<<" "<<i->getVehicleNumber()<<" "<<i->getRentPrice()<<" "<<i->getStatus()<<endl;
+        }
+    }
+
+    cout<<"\nBooked car list"<<endl;
+    for(auto &i:m_carList)
+    {
+        if(i->getStatus()=="booked")
+        {
+            cout<<i->getBrand()<<" "<<i->getModel()<<" "<<i->getVehicleNumber()<<" "<<i->getRentPrice()<<" "<<i->getStatus()<<endl;
+        }
+    }
+}
+
+void VehicleManager::sortbikebyPrice()
+{
+
+    cout<<"Bike price sorted function called"<<endl;
+
+    for(auto &i:m_bikeList)
+    {
+        for(auto &j:m_bikeList)
+        {
+            if(i->getRentPrice() < j->getRentPrice())
+            {
+                iter_swap(&i,&j);
+            }
+        }
+    }
+    displayListOfBikes();
+}
+
+void VehicleManager::sortcarbyPrice()
+{
+
+    cout<<"Car price sorted function called"<<endl;
+
+    for(auto &i:m_carList)
+    {
+        for(auto &j:m_carList)
+        {
+            if(i->getRentPrice() < j->getRentPrice())
+            {
+                iter_swap(&i,&j);
+            }
+        }
+    }
+
+    displayListOfCars();
+}
 
 

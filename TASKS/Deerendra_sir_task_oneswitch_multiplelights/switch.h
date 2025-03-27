@@ -8,7 +8,6 @@ public:
     Switch ();
     ~Switch();
     Switch(string brand,float price,wire *wire1,wire *wire2,wire *wire3);
-
     void switchon();
 
 private:

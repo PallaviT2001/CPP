@@ -6,13 +6,19 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(Vehicle_RentalManagementtask main.cpp
-    rentalvehicledetails.h rentalvehicledetails.cpp
-    rentalcar.h rentalcar.cpp
-    rentalbike.h rentalbike.cpp
-    fileoperation.h fileoperation.cpp
-    vehiclemanager.h vehiclemanager.cpp
-    customer.h customer.cpp
-
+    admins.h admins.cpp
+    RentalDetails.h RentalDetails.cpp
+    RentalFileOperation.h RentalFileOperation.cpp
+    loginmanagementsystem.h loginmanagementsystem.cpp
+    RentalBikeDetails.h RentalBikeDetails.cpp
+    RentalCarDetails.h RentalCarDetails.cpp
+    rentalvehicaldetails.h rentalvehicaldetails.cpp
+    users.h users.cpp
+    RentalVehicalManagement.h RentalVehicalManagement.cpp
+    paymentmode.h paymentmode.cpp
+    cashpayment.h cashpayment.cpp
+    onlinepayment.h onlinepayment.cpp
+    logindetails.h logindetails.cpp
 )
 
 include(GNUInstallDirs)

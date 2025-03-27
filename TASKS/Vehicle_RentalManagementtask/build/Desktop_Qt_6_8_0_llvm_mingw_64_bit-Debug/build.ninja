@@ -55,38 +55,80 @@ build CMakeFiles/Vehicle_RentalManagementtask.dir/main.cpp.obj: CXX_COMPILER__Ve
   OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
 
-build CMakeFiles/Vehicle_RentalManagementtask.dir/rentalvehicledetails.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/rentalvehicledetails.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
-  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\rentalvehicledetails.cpp.obj.d
+build CMakeFiles/Vehicle_RentalManagementtask.dir/admins.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/admins.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\admins.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
 
-build CMakeFiles/Vehicle_RentalManagementtask.dir/rentalcar.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/rentalcar.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
-  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\rentalcar.cpp.obj.d
+build CMakeFiles/Vehicle_RentalManagementtask.dir/RentalDetails.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/RentalDetails.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\RentalDetails.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
 
-build CMakeFiles/Vehicle_RentalManagementtask.dir/rentalbike.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/rentalbike.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
-  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\rentalbike.cpp.obj.d
+build CMakeFiles/Vehicle_RentalManagementtask.dir/RentalFileOperation.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/RentalFileOperation.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\RentalFileOperation.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
 
-build CMakeFiles/Vehicle_RentalManagementtask.dir/fileoperation.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/fileoperation.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
-  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\fileoperation.cpp.obj.d
+build CMakeFiles/Vehicle_RentalManagementtask.dir/loginmanagementsystem.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/loginmanagementsystem.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\loginmanagementsystem.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
 
-build CMakeFiles/Vehicle_RentalManagementtask.dir/vehiclemanager.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/vehiclemanager.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
-  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\vehiclemanager.cpp.obj.d
+build CMakeFiles/Vehicle_RentalManagementtask.dir/RentalBikeDetails.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/RentalBikeDetails.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\RentalBikeDetails.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
 
-build CMakeFiles/Vehicle_RentalManagementtask.dir/customer.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/customer.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
-  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\customer.cpp.obj.d
+build CMakeFiles/Vehicle_RentalManagementtask.dir/RentalCarDetails.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/RentalCarDetails.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\RentalCarDetails.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+
+build CMakeFiles/Vehicle_RentalManagementtask.dir/rentalvehicaldetails.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/rentalvehicaldetails.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\rentalvehicaldetails.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+
+build CMakeFiles/Vehicle_RentalManagementtask.dir/users.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/users.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\users.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+
+build CMakeFiles/Vehicle_RentalManagementtask.dir/RentalVehicalManagement.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/RentalVehicalManagement.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\RentalVehicalManagement.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+
+build CMakeFiles/Vehicle_RentalManagementtask.dir/paymentmode.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/paymentmode.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\paymentmode.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+
+build CMakeFiles/Vehicle_RentalManagementtask.dir/cashpayment.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/cashpayment.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\cashpayment.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+
+build CMakeFiles/Vehicle_RentalManagementtask.dir/onlinepayment.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/onlinepayment.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\onlinepayment.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
+
+build CMakeFiles/Vehicle_RentalManagementtask.dir/logindetails.cpp.obj: CXX_COMPILER__Vehicle_RentalManagementtask_unscanned_Debug D$:/QT$ PROGRAMS/C++/TASKS/Vehicle_RentalManagementtask/logindetails.cpp || cmake_object_order_depends_target_Vehicle_RentalManagementtask
+  DEP_FILE = CMakeFiles\Vehicle_RentalManagementtask.dir\logindetails.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fansi-escape-codes -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
   OBJECT_FILE_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
@@ -99,7 +141,7 @@ build CMakeFiles/Vehicle_RentalManagementtask.dir/customer.cpp.obj: CXX_COMPILER
 #############################################
 # Link the executable Vehicle_RentalManagementtask.exe
 
-build Vehicle_RentalManagementtask.exe: CXX_EXECUTABLE_LINKER__Vehicle_RentalManagementtask_Debug CMakeFiles/Vehicle_RentalManagementtask.dir/main.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/rentalvehicledetails.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/rentalcar.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/rentalbike.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/fileoperation.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/vehiclemanager.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/customer.cpp.obj
+build Vehicle_RentalManagementtask.exe: CXX_EXECUTABLE_LINKER__Vehicle_RentalManagementtask_Debug CMakeFiles/Vehicle_RentalManagementtask.dir/main.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/admins.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/RentalDetails.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/RentalFileOperation.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/loginmanagementsystem.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/RentalBikeDetails.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/RentalCarDetails.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/rentalvehicaldetails.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/users.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/RentalVehicalManagement.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/paymentmode.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/cashpayment.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/onlinepayment.cpp.obj CMakeFiles/Vehicle_RentalManagementtask.dir/logindetails.cpp.obj
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Vehicle_RentalManagementtask.dir
