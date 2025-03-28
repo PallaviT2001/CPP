@@ -13,7 +13,6 @@ public:
 
     RentalDetails();
     ~RentalDetails();
-    //RentalDetails(RentalDetails &rentdetails);
 
      RentalDetails(string name, string mobile, int age, int bookingid, string vehicalType, string paymentType, RentalVehicalDetails *rentedVehical, PaymentMode *payment);
 

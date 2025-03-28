@@ -9,7 +9,6 @@ class RentalCarDetails:public RentalVehicalDetails
 public:
     RentalCarDetails();
      ~RentalCarDetails();
-     //RentalCarDetails(RentalCarDetails &rentalcar);
     RentalCarDetails(int id,string brand,string model,string vehicalNumber,float cost,string status,int duration);
 
 

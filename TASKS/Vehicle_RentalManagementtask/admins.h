@@ -7,7 +7,6 @@ class Admins
 public:
     Admins();
     ~Admins();
-    //Admins(Admins &admin);
     Admins(std::string Id, std::string password, std::string name);
 
     std::string getId();

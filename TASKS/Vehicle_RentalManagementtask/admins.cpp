@@ -12,11 +12,6 @@ Admins::~Admins()
     std::cout<<"Admin Destructor Called"<<std::endl;
 }
 
-/*Admins::Admins(Admins &admin)
-{
-    cout<<"Admin class copy constructor called"<<endl;
-}*/
-
 Admins::Admins(std::string Id, std::string password, std::string name)
 {
     std::cout<<"Admin Parameterized Constructor Called"<<std::endl;

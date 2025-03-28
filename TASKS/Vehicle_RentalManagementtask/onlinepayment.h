@@ -9,7 +9,6 @@ class OnlinePayment:public PaymentMode
 public:
     OnlinePayment();
     ~OnlinePayment();
-    //OnlinePayment(OnlinePayment &online);
     OnlinePayment(string UpiId, float amount, float balance,string paymentStatus, int transactionId);
 
     string getUPIid();

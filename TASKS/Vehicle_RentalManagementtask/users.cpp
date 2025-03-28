@@ -11,11 +11,6 @@ Users::~Users()
     std::cout<<"Users Destructor Called"<<std::endl;
 }
 
-/*Users::Users(Users &user)
-{
-    cout<<"Users copy constructor called"<<endl;
-}*/
-
 Users::Users(std::string name, std::string password, std::string contactNumber, std::string email)
 {
     std::cout<<"Users Parameter Constructor Called"<<std::endl;

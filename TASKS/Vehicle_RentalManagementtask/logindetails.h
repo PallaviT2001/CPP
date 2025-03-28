@@ -8,7 +8,7 @@ class LoginDetails
 public:
     LoginDetails();
     ~LoginDetails();
-    //LoginDetails(LoginDetails &login);
+
     virtual int getLoginId() = 0;
     virtual string getLoginName() = 0;
     virtual int getLoginPassword() = 0;

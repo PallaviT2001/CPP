@@ -37,11 +37,6 @@ LoginManagementSystem::~LoginManagementSystem()
     delete vehicle;
 }
 
-/*LoginManagementSystem::LoginManagementSystem(LoginManagementSystem &loginmanagement)
-{
-    cout<<"Login management system copy constructor called"<<endl;
-}*/
-
 void LoginManagementSystem::applicationManager()
 {
     std::cout<<"Rental Application Function Called"<<std::endl;
@@ -137,7 +132,7 @@ void LoginManagementSystem::adminLogin()
     {
         if(admin->getId() == Id && admin->getPassword() == password)
         {
-            vehicle->menu();
+            vehicle->functionalities();
             std::cout<<"Admin Login SuccessFull"<<std::endl;
         }
         else

@@ -9,7 +9,6 @@ class CashPayment:public PaymentMode
 public:
     CashPayment();
     ~CashPayment();
-    //CashPayment(CashPayment &cash);
     CashPayment(string UpiId, float amount, float balance,string paymentStatus, int transactionId);
 
     string getUPIid();

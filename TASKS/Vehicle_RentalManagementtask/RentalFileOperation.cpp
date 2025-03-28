@@ -10,11 +10,6 @@ RentalFileOperation::~RentalFileOperation()
     cout<<"FileOperations Destructor Called"<<endl;
 }
 
-/*RentalFileOperation::RentalFileOperation(RentalFileOperation &rentalfile)
-{
-    cout<<"fileoperation copy constructor called"<<endl;
-}*/
-
 list<RentalBikeDetails*> RentalFileOperation::readBikeData()
 {
     list<RentalBikeDetails*> bikeData;

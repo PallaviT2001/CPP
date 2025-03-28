@@ -25,11 +25,6 @@ RentalCarDetails::~RentalCarDetails()
     cout<<"RentalCar Destructor Called"<<endl;
 }
 
-/*RentalCarDetails::RentalCarDetails(RentalCarDetails &rentalcar)
-{
-    cout<<"Rental car copy constructor called"<<endl;
-}*/
-
 string RentalCarDetails::getBrand()
 {
     return m_brand;

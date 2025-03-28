@@ -7,7 +7,6 @@ class Users
 public:
     Users();
     ~Users();
-    //Users(Users &user);
     Users(std::string name, std::string password, std::string contactNumber, std::string email);
 
     std::string getName();
