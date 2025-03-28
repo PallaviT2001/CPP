@@ -10,10 +10,6 @@ CashPayment::~CashPayment()
     cout<<"Cash Payment destructor called"<<endl;
 }
 
-/*CashPayment::CashPayment(CashPayment &cash)
-{
-    cout<<"cash payment copy constructor called"<<endl;
-}*/
 
 CashPayment::CashPayment(string UpiId,  float amount, float balance, string paymentStatus, int transactionId)
 {

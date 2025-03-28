@@ -14,7 +14,6 @@ class RentalFileOperation
 public:
     RentalFileOperation();
     ~RentalFileOperation();
-    //RentalFileOperation(RentalFileOperation &rentalfile);
 
     void writeBikeData(list<RentalBikeDetails*> &bike);
     list<RentalBikeDetails*> readBikeData();

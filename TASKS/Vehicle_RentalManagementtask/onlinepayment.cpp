@@ -10,11 +10,6 @@ OnlinePayment::~OnlinePayment()
     cout<<"Online Destructor Called"<<endl;
 }
 
-/*OnlinePayment::OnlinePayment(OnlinePayment &online)
-{
-    cout<<"online payment copy constructor called"<<endl;
-}*/
-
 OnlinePayment::OnlinePayment(string UpiId,  float amount, float balance, string paymentStatus, int transactionId)
 {
     cout<<"Online Parameterized Constructor Called"<<endl;

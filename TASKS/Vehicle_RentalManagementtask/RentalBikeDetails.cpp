@@ -22,11 +22,6 @@ RentalBikeDetails::~RentalBikeDetails()
     cout<<"RentalBike Destructor Called"<<endl;
 }
 
-/*RentalBikeDetails::RentalBikeDetails(RentalBikeDetails &rent)
-{
-    cout<<"Rentalbike copy constructor called"<<endl;
-}*/
-
 string RentalBikeDetails::getBrand()
 {
     return m_brand;

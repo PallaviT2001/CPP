@@ -8,9 +8,6 @@ class PaymentMode
 public:
     PaymentMode();
     ~PaymentMode();
-    //PaymentMode(PaymentMode &payment);
-
-
 
     virtual float getAmount() = 0;
     virtual float getBalance() = 0 ;

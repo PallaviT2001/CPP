@@ -23,11 +23,6 @@ RentalDetails::~RentalDetails()
     cout<<"RentalDetails Destructor called"<<endl;
 }
 
-/*RentalDetails::RentalDetails(RentalDetails &rentdetails)
-{
-    cout<<"RentalDetails copy constructor called"<<endl;
-}*/
-
 
 string RentalDetails::getName()
 {

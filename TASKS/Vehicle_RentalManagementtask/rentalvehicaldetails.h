@@ -9,7 +9,6 @@ class RentalVehicalDetails
 public:
     RentalVehicalDetails();
     ~RentalVehicalDetails();
-    //RentalVehicalDetails(RentalVehicalDetails &rentalvehicle);
 
     virtual int getId() = 0;
     virtual string getBrand() = 0;

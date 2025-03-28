@@ -10,8 +10,3 @@ RentalVehicalDetails::~RentalVehicalDetails()
     cout<<"RentalVehicaldetails Destructor called"<<endl;
 
 }
-
-/*RentalVehicalDetails::RentalVehicalDetails(RentalVehicalDetails &rentalvehicle)
-{
-    cout<<"Rentalvehicaldetails copy constructor called"<<endl;
-}*/

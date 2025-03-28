@@ -10,7 +10,7 @@ class LoginManagementSystem
 public:
     LoginManagementSystem();
     ~LoginManagementSystem();
-    //LoginManagementSystem(LoginManagementSystem &loginmanagement);
+
 
     void adminMenu();
     void userMenu();
