@@ -8,7 +8,7 @@ class RentalCarDetails:public RentalVehicalDetails
 {
 public:
     RentalCarDetails();
-     ~RentalCarDetails();
+    ~RentalCarDetails();
     RentalCarDetails(int id,string brand,string model,string vehicalNumber,float cost,string status,int duration);
 
 

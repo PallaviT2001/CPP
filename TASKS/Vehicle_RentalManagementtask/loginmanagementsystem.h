@@ -11,7 +11,6 @@ public:
     LoginManagementSystem();
     ~LoginManagementSystem();
 
-
     void adminMenu();
     void userMenu();
 
@@ -25,38 +24,6 @@ public:
     void addUsers();
 
     void applicationManager();
-
-    void addBike();
-    void addCar();
-
-    void displayListOfBikes();
-    void displayListOfCars();
-
-    void updateBikePrice();
-    void updateCarPrice();
-
-    void Bookbike();
-    void Bookcar();
-
-    void returnbike();
-    void returncar();
-
-    void functionalities();
-
-    void deletebike();
-    void deletecar();
-
-    void displaycustomerdetailsbike();
-    void displaycustomerdetailscar();
-
-    void searchbike();
-    void searchcar();
-
-    void sortbikeStatus();
-    void sortcarbyStatus();
-
-    void sortbikebyPrice();
-    void sortcarbyPrice();
 
 private:
     RentalFileOperation* m_fileoperation;

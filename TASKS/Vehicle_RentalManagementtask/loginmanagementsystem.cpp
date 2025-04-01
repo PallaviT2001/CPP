@@ -14,12 +14,15 @@ LoginManagementSystem::LoginManagementSystem()
     {
         std::cout<<i->getEmailId()<<" "<<i->getPassword()<<std::endl;;
     }
+    for(auto& i : m_adminList)
+    {
+        std::cout<<i->getId()<<" "<<i->getPassword()<<std::endl;;
+    }
 }
 
 LoginManagementSystem::~LoginManagementSystem()
 {
     std::cout<<"LoginManagementSystem Destructor Called"<<std::endl;
-
     m_fileoperation->writeAdminData(m_adminList);
     m_fileoperation->writeUserData(m_userList);
 
@@ -132,8 +135,9 @@ void LoginManagementSystem::adminLogin()
     {
         if(admin->getId() == Id && admin->getPassword() == password)
         {
-            vehicle->functionalities();
             std::cout<<"Admin Login SuccessFull"<<std::endl;
+            adminMenu();
+            return;
         }
         else
         {
@@ -142,6 +146,13 @@ void LoginManagementSystem::adminLogin()
         }
     }
 }
+
+void LoginManagementSystem::adminMenu()
+{
+    cout<<"adminmenu function called"<<endl;
+    vehicle->functionalities();
+}
+
 void LoginManagementSystem::userLoginMenu()
 {
     std::cout<<"User Login Menu Function Called"<<std::endl;
@@ -253,12 +264,3 @@ void LoginManagementSystem::userMenu()
         }
     }
 }
-
-
-
-
-
-
-
-
-

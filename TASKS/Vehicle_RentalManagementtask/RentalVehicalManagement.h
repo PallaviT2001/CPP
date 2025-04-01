@@ -53,7 +53,6 @@ public:
      void rentalHistory();
 
     list<RentalDetails*> getRentalList();
-    //void saveData();
 
 private:
     RentalFileOperation *m_fileoperations;
@@ -61,12 +60,4 @@ private:
     list<RentalCarDetails*>m_carList;
     list<RentalDetails*>m_rentalList;
 };
-
-//enum choice{Book =1,Exit };
-//enum option{AddVehical=1,BookVehical,ReturnVehical,DisplayVehical,UpdateVehicalRent,DisplayHistory,DeleteVehical,SearchVehical,SortVehical,EXIT};
-//enum Choose{BIKE =1,CAR,ExitVehical};
-//enum returnVehical{Return=1,exiT};
-//enum sort{VehicalStatus =1,VehicalRent,VehicalBrand};
-//enum paymentmode{ONLINE =1,CASH ,ExitPayment};
-
 #endif

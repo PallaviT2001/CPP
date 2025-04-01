@@ -22,7 +22,6 @@ void Light::operator=(Light light)
 
 void Light::lighton()
 {
-    //cout<<"light on"<<m_brand<<" "<<m_color<<endl;
     cout<<"light on"<<endl;
 }
 

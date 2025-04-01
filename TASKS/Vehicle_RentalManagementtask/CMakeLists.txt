@@ -18,7 +18,7 @@ add_executable(Vehicle_RentalManagementtask main.cpp
     paymentmode.h paymentmode.cpp
     cashpayment.h cashpayment.cpp
     onlinepayment.h onlinepayment.cpp
-    logindetails.h logindetails.cpp
+
 )
 
 include(GNUInstallDirs)

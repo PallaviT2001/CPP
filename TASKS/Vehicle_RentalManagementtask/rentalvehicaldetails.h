@@ -5,7 +5,6 @@ using namespace std;
 
 class RentalVehicalDetails
 {
-
 public:
     RentalVehicalDetails();
     ~RentalVehicalDetails();
