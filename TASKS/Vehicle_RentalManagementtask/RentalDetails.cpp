@@ -5,6 +5,11 @@ RentalDetails::RentalDetails()
     cout<<"RentalDetails constructor called"<<endl;
 }
 
+RentalDetails::~RentalDetails()
+{
+    cout<<"RentalDetails Destructor called"<<endl;
+}
+
 RentalDetails::RentalDetails(string name, string mobile, int age, int bookingid, string vehicalType, string paymentType, RentalVehicalDetails *rentedVehical, PaymentMode *payment)
 {
     cout<<"Rental Details Parameterized Constructor Called"<<endl;
@@ -17,12 +22,6 @@ RentalDetails::RentalDetails(string name, string mobile, int age, int bookingid,
     m_rentedVehical = rentedVehical;
     m_payment = payment;
 }
-
-RentalDetails::~RentalDetails()
-{
-    cout<<"RentalDetails Destructor called"<<endl;
-}
-
 
 string RentalDetails::getName()
 {

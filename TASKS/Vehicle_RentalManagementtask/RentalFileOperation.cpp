@@ -14,7 +14,7 @@ list<RentalBikeDetails*> RentalFileOperation::readBikeData()
 {
     list<RentalBikeDetails*> bikeData;
 
-    ifstream file("BikeData.csv");
+    ifstream file("BikesList.csv");
     if (!file)
     {
         cout << "unable to open Bike Data file for reading" << endl;
@@ -38,7 +38,7 @@ list<RentalCarDetails *> RentalFileOperation::readCarData()
 {
     list<RentalCarDetails*> carData;
 
-    ifstream file("CarData.csv");
+    ifstream file("CarsList.csv");
     if (!file)
     {
         cout << "unable to open file  Car Data file for reading" << endl;
@@ -62,7 +62,7 @@ list<RentalDetails *> RentalFileOperation::readRentalData()
 
     list<RentalDetails*> rentData;
 
-    ifstream file("RentalData.csv");
+    ifstream file("RentalList.csv");
     if (!file)
     {
         cout << "unable to open Rental Data file for reading" << endl;
@@ -106,7 +106,7 @@ list<RentalDetails *> RentalFileOperation::readRentalData()
 
 void RentalFileOperation::writeBikeData(list<RentalBikeDetails *> &bike)
 {
-    ofstream file("BikeData.csv");
+    ofstream file("BikesList.csv");
 
     if (!file)
     {
@@ -124,7 +124,7 @@ void RentalFileOperation::writeBikeData(list<RentalBikeDetails *> &bike)
 
 void RentalFileOperation::writeCarData(list<RentalCarDetails *> &car)
 {
-    ofstream file("CarData.csv");
+    ofstream file("CarsList.csv");
 
     if (!file)
     {
@@ -142,7 +142,7 @@ void RentalFileOperation::writeCarData(list<RentalCarDetails *> &car)
 
 void RentalFileOperation::writeRentalData(list<RentalDetails*> &rent)
 {
-    ofstream file("RentalData.csv");
+    ofstream file("RentalList.csv");
 
     if(!file)
     {
@@ -229,53 +229,6 @@ std::list<Users*> RentalFileOperation::readUserData()
     csvUserFile.close();
     return userList;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

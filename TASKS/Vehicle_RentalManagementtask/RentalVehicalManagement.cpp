@@ -12,14 +12,14 @@ RentalVehicalManagement::RentalVehicalManagement()
     m_bikeList = m_fileoperations->readBikeData();
     m_carList = m_fileoperations->readCarData();
     m_rentalList = m_fileoperations->readRentalData();
-
-
 }
 
 RentalVehicalManagement::~RentalVehicalManagement()
 {
-    cout<<"vehical Management Destructor Called"<<endl;
+    cout<<"vehicalManagement Destructor Called"<<endl;
+
     delete m_fileoperations;
+
     for(auto bikeList :m_bikeList)
     {
         delete bikeList;
@@ -32,9 +32,7 @@ RentalVehicalManagement::~RentalVehicalManagement()
     {
         delete rentalList;
     }
-
 }
-
 
 void RentalVehicalManagement::functionalities()
 {
@@ -54,7 +52,7 @@ void RentalVehicalManagement::functionalities()
         cout<<"7. Delete Vehicles"<<endl;
         cout<<"8. Search Vehicles"<<endl;
         cout<<"9. Sort Vehicles"<<endl;
-        cout<<"10.Save the Data to file and exit"<<endl;
+        cout<<"10.Save the Data to file and exit\n"<<endl;
 
         cout<<"Enter Your Choice ";
         int option;
@@ -106,7 +104,6 @@ void RentalVehicalManagement::functionalities()
                 break;
             case 3:
                 break;
-
             default:
                 cout<<"Invalid Choice"<<endl;
                 break;
@@ -332,11 +329,11 @@ void RentalVehicalManagement::bookCar()
 
             cout<<" Car Number :"<<carList->getVehicalNumber()<<endl;
 
-            cout<<" Car Rent :"<<carList->getCost()<<endl;
+            cout<<" Car Rent Amount :"<<carList->getCost()<<endl;
 
             cout<<" Car Duration(in days) :"<<carList->getDuration()<<endl;
 
-            cout<<endl<<"If u are okay with the deatils means lets do the further process, Choose option"<<endl;
+            cout<<endl<<"If u are okay with the details means lets do the further process, Choose option"<<endl;
 
             cout<<"1.Book the Car"<<endl;
 
@@ -348,6 +345,7 @@ void RentalVehicalManagement::bookCar()
             case 1:
             {
                 string name,mobile,vehicalType,paymentStatus;
+
                 int age,bookingid;
 
                 cout<<"Enter Name of the customer : ";
@@ -393,16 +391,14 @@ void RentalVehicalManagement::bookCar()
                 bookingid = count;
 
                 cout<<endl<<"Booking Id : "<<count<<endl;
-
                 vehicalType = "Car";
-
                 cout << "Vehical Type :"<<vehicalType<<endl;
 
                 cout<<"Below I have mentioned the available payment methods,Select the payment method"<<endl;
                 cout<<"1. Online Payment"<<endl;
                 cout<<"2. Cash Payment"<<endl;
                 cout<<"3. Exit from paymnet"<<endl;
-                //cout<<"3. Exit from program"<<endl;
+                cout<<"4. Exit from program"<<endl;
                 int choice;
                 cin>>choice;
 
@@ -467,7 +463,7 @@ void RentalVehicalManagement::bookCar()
                 {
                     string paymentType = "Cash";
                     cout<<endl<<"Payment Type :" <<paymentType<<endl;
-                    cout<<" Cash Recived from the customer "<<endl;
+                    cout<<"Cash Recived from the customer "<<endl;
 
                     string upiId = "NULL";
 
@@ -505,7 +501,6 @@ void RentalVehicalManagement::bookCar()
                     RentalCarDetails *car = new RentalCarDetails(id, brand, model, vehicalNumber,cost, status, duration);
                     CashPayment *cash = new CashPayment(upiId,amount,balance,paymentStatus,transactionId);
                     m_rentalList.push_back(new RentalDetails(name,mobile,age,bookingid,vehicalType,paymentType,car,cash));
-
                     break;
                 }
                 case 3:
@@ -555,9 +550,9 @@ void RentalVehicalManagement::returnBike()
             cout<<"Bike Rent :"<<bikeList->getCost()<<endl;
             cout<<"Bike Duration :"<<bikeList->getDuration()<<endl;
 
-            cout<<endl<<"Do Want to return Bike select the choice ?"<<endl;
+            cout<<endl<<"Select the choice mentioned below"<<endl;
 
-            cout<<"Return bike"<<endl;
+            cout<<"1.Return bike"<<endl;
             cout<<"2.Exit"<<endl;
             int choice;
             cout<<"Enter the choice"<<endl;
@@ -671,9 +666,10 @@ void RentalVehicalManagement::returnCar()
             cout<<"Car Rent :"<<carList->getCost()<<endl;
             cout<<"Car Duration :"<<carList->getDuration()<<endl;
 
-            cout<<endl<<"Want to return it ?"<<endl;
-            cout<<"Enter"<<endl<< "1.return the Car"<<endl;
+            cout<<endl<<"Select the choice mentioned below"<<endl;
+            cout<<"1. Return the car"<<endl;
             cout<<"2. Exit"<<endl;
+
 
             int choice;
             cin>>choice;
@@ -702,14 +698,21 @@ void RentalVehicalManagement::returnCar()
                                     cout<<"you are Paying "<<amount <<" Rs"<<endl;
 
                                     cout<<endl<<"Enter UPI id : ";
+
                                     string upiId;
+
                                     cin>>upiId;
+
                                     float rent = carList->getCost();
 
                                     int balance = 0;
+
                                     rentalList->setBalance(balance);
+
                                     rentalList->setAmount(rent);
+
                                     rentalList->setStatus("Returned");
+
                                     cout<<"Amount Paid"<<endl;
                                 }
                                 break;
@@ -720,7 +723,7 @@ void RentalVehicalManagement::returnCar()
                                 {
                                     float rent = carList->getCost();
                                     float amount = rentalList->getBalance();
-                                    cout<<"you are Paying "<<amount <<" Rs"<<endl;
+                                    cout<<"you are Paying "<<amount <<" Rupees"<<endl;
                                     int balance = 0;
                                     rentalList->setBalance(balance);
                                     rentalList->setAmount(rent);
@@ -1063,7 +1066,7 @@ void RentalVehicalManagement::searchCar()
 void RentalVehicalManagement::sortBike()
 {
     cout<<endl<<"Select the sorting type"<<endl;
-    cout<<endl<<"1.Sort Bike by Status"<<endl<<"2.Sort Bike by Price"<<endl<<"3.Sort Car by Brand"<<endl;
+    cout<<endl<<"1.Sort Bike by Status"<<endl<<"2.Sort Bike by Price"<<endl<<"3.Sort Bike by Brand"<<endl;
     cout<<endl<<"Enter the choice: ";
     int choice;
     cin>>choice;
@@ -1197,8 +1200,8 @@ void RentalVehicalManagement::bookBike()
             cout<<" Bike Rent :"<<bikeList->getCost()<<endl;
             cout<<" Bike Duration :"<<bikeList->getDuration()<<" Day"<<endl;
 
-            cout<<endl<<"Want to book it ?"<<endl;
-            cout<<"Enter"<<endl<< "1.book the Bike"<<endl;
+            cout<<endl<<"Select the choice mentioned below\n"<<endl;
+            cout<<"1. Book the Bike"<<endl;
             cout<<"2. Exit"<<endl;
             int choice;
             cin>>choice;
