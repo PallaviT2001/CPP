@@ -6,6 +6,11 @@ RentalCarDetails::RentalCarDetails()
     cout<<"RentalCar Constructor Called"<<endl;
 }
 
+RentalCarDetails::~RentalCarDetails()
+{
+    cout<<"RentalCar Destructor Called"<<endl;
+}
+
 RentalCarDetails::RentalCarDetails(int id, string brand, string model, string vehicalNumber, float cost, string status, int duration)
 {
     cout<<"Car Parameterized Constructor Called"<<endl;
@@ -17,12 +22,6 @@ RentalCarDetails::RentalCarDetails(int id, string brand, string model, string ve
     m_cost = cost;
     m_status = status;
     m_duration = duration;
-}
-
-
-RentalCarDetails::~RentalCarDetails()
-{
-    cout<<"RentalCar Destructor Called"<<endl;
 }
 
 string RentalCarDetails::getBrand()
