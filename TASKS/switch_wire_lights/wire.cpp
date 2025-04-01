@@ -37,8 +37,3 @@ void Wire::wireon()
         i.lighton();
     }
 }
-
-// void Wire::addlight(const Light &light)
-// {
-//     m_light.push_back(light);
-// }

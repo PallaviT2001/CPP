@@ -13,7 +13,6 @@ public:
 
     Switch(string brand,string color);
     void setwire(Wire *wire);
-
     void switchon();
 
 private:

@@ -36,8 +36,7 @@ void Switch::setwire(Wire *wire)
 void Switch::switchon()
 {
     cout<<"switch on"<<endl;
-
-        m_wire->wireon();
+    m_wire->wireon();
 
 }
 

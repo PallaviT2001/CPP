@@ -16,8 +16,6 @@ public:
     void operator=(Wire &wireobj);
     Wire(string brand,string color,vector<Light>light);
     void wireon();
-    //void addlight(const Light &light);
-
 private:
     string m_brand;
     string m_color;
