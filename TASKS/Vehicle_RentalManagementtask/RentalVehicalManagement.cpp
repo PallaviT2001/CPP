@@ -7,7 +7,8 @@
 
 RentalVehicalManagement::RentalVehicalManagement()
 {
-    cout<<"vehical Management Constructor Called"<<endl;
+    cout<<"Rental vehicalManagement Constructor Called"<<endl;
+
     m_fileoperations = new RentalFileOperation;
     m_bikeList = m_fileoperations->readBikeData();
     m_carList = m_fileoperations->readCarData();
@@ -16,7 +17,7 @@ RentalVehicalManagement::RentalVehicalManagement()
 
 RentalVehicalManagement::~RentalVehicalManagement()
 {
-    cout<<"vehicalManagement Destructor Called"<<endl;
+    cout<<"Rental vehicalManagement Destructor Called"<<endl;
 
     delete m_fileoperations;
 

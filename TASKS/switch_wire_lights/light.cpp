@@ -34,5 +34,6 @@ Light::Light(string brand, string color)
 
 void Light::setwire(Wire *wire)
 {
+    cout<<"set wire to light"<<endl;
     m_wire = wire;
 }

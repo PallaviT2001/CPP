@@ -11,7 +11,6 @@ public:
     ~RentalCarDetails();
     RentalCarDetails(int id,string brand,string model,string vehicalNumber,float cost,string status,int duration);
 
-
     string getBrand();
     string getModel();
     string getVehicalNumber();

@@ -121,7 +121,7 @@ void LoginManagementSystem::addAdmins()
     m_adminList.push_back(new Admins(Id, password, adminName));
 }
 
-void LoginManagementSystem::adminLogin()
+/*void LoginManagementSystem::adminLogin()
 {
     std::cout<<"Admin Login Function Called"<<std::endl;
 
@@ -145,6 +145,28 @@ void LoginManagementSystem::adminLogin()
             return;
         }
     }
+}*/
+
+
+void LoginManagementSystem::adminLogin() {
+
+    cout<<"Adminlogin function called"<<endl;
+    std::string Id, password;
+    std::cout << "Enter admin ID: ";
+    std::cin >> Id;
+    std::cout << "Enter admin Password: ";
+    std::cin >> password;
+
+    for (auto &admin : m_adminList)
+    {
+        if (admin->getId() == Id && admin->getPassword() == password)
+        {
+            std::cout <<"Admin Login Successful" << std::endl;
+            adminMenu();
+            return;
+        }
+    }
+    std::cout << "Invalid credentials" << std::endl;
 }
 
 void LoginManagementSystem::adminMenu()
@@ -216,7 +238,7 @@ void LoginManagementSystem::userLogin() {
     {
         if (user->getEmailId() == Id && user->getPassword() == password)
         {
-            std::cout << "User Login Successful" << std::endl;
+            std::cout <<"User Login Successful" << std::endl;
             userMenu();
             return;
         }
@@ -226,7 +248,7 @@ void LoginManagementSystem::userLogin() {
 
 void LoginManagementSystem::userMenu()
 {
-    std::cout<<"User Menu Function Called"<<std::endl;
+    std::cout<<"UserMenu Function Called"<<std::endl;
 
     int choice;
     while(true)
