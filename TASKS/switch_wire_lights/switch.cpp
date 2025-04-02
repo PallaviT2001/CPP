@@ -30,6 +30,7 @@ Switch::Switch(string brand, string color)
 
 void Switch::setwire(Wire *wire)
 {
+    cout<<"set wire"<<endl;
     m_wire = wire;
 }
 

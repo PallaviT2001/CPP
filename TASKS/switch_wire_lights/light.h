@@ -12,8 +12,9 @@ public:
     ~Light();
     Light(const Light &light);
     void operator=(Light light);
-    void lighton();
     Light(string brand,string color);
+
+    void lighton();
     void setwire(Wire *wire);
 
 private:

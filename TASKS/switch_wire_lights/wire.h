@@ -6,7 +6,6 @@ using namespace std;
 #include "light.h"
 
 class Light;
-
 class Wire
 {
 public:
@@ -14,6 +13,7 @@ public:
     ~Wire();
     Wire(Wire &wire);
     void operator=(Wire &wireobj);
+
     Wire(string brand,string color,vector<Light>light);
     void wireon();
 private:

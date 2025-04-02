@@ -5,6 +5,11 @@ RentalBikeDetails::RentalBikeDetails()
     cout<<"RentalBike Constructor called"<<endl;
 }
 
+RentalBikeDetails::~RentalBikeDetails()
+{
+    cout<<"RentalBike Destructor Called"<<endl;
+}
+
 RentalBikeDetails::RentalBikeDetails(int id, string brand, string model,string vehicalNumber, float cost, string status, int duration)
 {
     cout<<"Bike Parameterized Constructor Called"<<endl;
@@ -15,11 +20,6 @@ RentalBikeDetails::RentalBikeDetails(int id, string brand, string model,string v
     m_cost = cost;
     m_status = status;
     m_duration = duration;
-}
-
-RentalBikeDetails::~RentalBikeDetails()
-{
-    cout<<"RentalBike Destructor Called"<<endl;
 }
 
 string RentalBikeDetails::getBrand()

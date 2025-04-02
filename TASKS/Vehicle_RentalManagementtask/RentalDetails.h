@@ -9,6 +9,15 @@ using namespace std;
 
 class RentalDetails
 {
+private:
+    string m_name;
+    string m_mobile;
+    int m_age;
+    int m_bookingId;
+    string m_vehicalType;
+    string m_paymentType;
+    RentalVehicalDetails *m_rentedVehical;
+    PaymentMode *m_payment;
 public:
 
     RentalDetails();
@@ -41,15 +50,6 @@ public:
     void setStatus(string status);
     void setBalance(float balance);
     void setAmount(float amount);
-private:
-    string m_name;
-    string m_mobile;
-    int m_age;
-    int m_bookingId;
-    string m_vehicalType;
-    string m_paymentType;
-    RentalVehicalDetails *m_rentedVehical;
-    PaymentMode *m_payment;
 };
 
 

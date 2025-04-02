@@ -5,6 +5,14 @@ using namespace std;
 
 class PaymentMode
 {
+
+protected:
+    string m_UPIid;
+    float m_amount;
+    float m_balance;
+    string m_paymentStatus;
+    int m_transactionId;
+
 public:
     PaymentMode();
     ~PaymentMode();
@@ -16,14 +24,6 @@ public:
     virtual void setAmount(float amount) = 0 ;
     virtual string getUPIid() =0 ;
     virtual  int getTransactionId() = 0;
-
-protected:
-
-    string m_UPIid;
-    float m_amount;
-    float m_balance;
-    string m_paymentStatus;
-    int m_transactionId;
 };
 
 #endif // PAYMENTMODE_H

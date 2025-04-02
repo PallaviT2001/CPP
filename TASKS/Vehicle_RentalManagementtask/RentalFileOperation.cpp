@@ -129,7 +129,7 @@ void RentalFileOperation::writeCarData(list<RentalCarDetails *> &car)
 
     if (!file)
     {
-        cout << "unable to open CSV file for writing Car Data" << endl;
+        cout << "Not able to open CSV file for writing Car Data" << endl;
         return;
     }
     for(auto carList :car)
@@ -156,7 +156,7 @@ void RentalFileOperation::writeRentalData(list<RentalDetails*> &rent)
     }
 
     file.close();
-    cout << "Rental Data written to CSV file" << endl;
+    cout << "Rental Data written to CSV file successfully\n" << endl;
 }
 
 void RentalFileOperation::writeAdminData(std::list<Admins*> adminList)
