@@ -73,7 +73,6 @@ void RentalVehicalManagement::bookCar()
             cout<<endl<<"If u are okay with the details means lets do the further process, Choose option"<<endl;
 
             cout<<"1.Book the Car"<<endl;
-
             cout<<"2.Exit function"<<endl;
             int choice;
             cin>>choice;
@@ -168,11 +167,14 @@ void RentalVehicalManagement::bookCar()
 
                     int transactionId;
                     int transactioncount = 1;
+
                     for(auto rentalList = m_rentalList.begin();rentalList != m_rentalList.end();rentalList++)
                     {
                         transactioncount++;
                     }
+
                     transactionId = transactioncount + 10000;
+
                     cout<<"transaction Id : "<<transactionId <<endl;
 
                     cout<<"Payment Status : "<<paymentStatus<<endl;
@@ -191,15 +193,14 @@ void RentalVehicalManagement::bookCar()
                     RentalCarDetails *car = new RentalCarDetails(id, brand, model, vehicalNumber,cost, status, duration);
                     OnlinePayment *online = new OnlinePayment(upiId,amount,balance,paymentStatus,transactionId);
                     m_rentalList.push_back(new RentalDetails(name,mobile,age,bookingid,vehicalType,paymentType,car,online));
-
-
-
                     break;
                 }
                 case 2:
                 {
                     string paymentType = "Cash";
+
                     cout<<endl<<"Payment Type :" <<paymentType<<endl;
+
                     cout<<"Cash Recived from the customer "<<endl;
 
                     string upiId = "NULL";
@@ -207,10 +208,13 @@ void RentalVehicalManagement::bookCar()
                     float rent = carList->getCost();
 
                     float balance = rent;
+
                     cout<<endl<<"Rent of the Bike is : "<<rent<<endl;
+
                     cout<<"Enter Amount:"<<endl;
                     int amount;
                     cin>>amount;
+
                     if(amount <=0)
                     {
                         paymentStatus = "Payment Failed";
@@ -742,7 +746,6 @@ void RentalVehicalManagement::deleteCar()
 
 void RentalVehicalManagement::searchBike()
 {
-
     int id;
     cout<<"Enter Bike Id to Search : ";
     cin>>id;
