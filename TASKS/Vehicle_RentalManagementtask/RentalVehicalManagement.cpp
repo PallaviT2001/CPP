@@ -35,6 +35,634 @@ RentalVehicalManagement::~RentalVehicalManagement()
     }
 }
 
+void RentalVehicalManagement::addBike()
+{
+    int id,duration;
+    string  brand,model,bikeNumber,status;
+    float cost;
+    int bikeCount = 1;
+    for(auto bikeList :m_bikeList)
+    {
+        bikeCount++;
+    }
+    id = bikeCount;
+
+    cout<<"Bike Id: "<<id<<endl;
+
+    cout<<"Enter Bike Brand : ";
+    cin>>brand;
+
+    cout<<"Enter Bike Model :";
+    cin>>model;
+
+    cout<<"Enter Bike Number :";
+    cin>>bikeNumber;
+
+    cout<<"Enter Bike cost :";
+    cin>>cost;
+
+    cout<<"Enter Bike status :";
+    cin>>status;
+
+    cout<<"Enter Bike Duration :";
+    cin>>duration;
+
+    m_bikeList.push_back(new RentalBikeDetails(id, brand, model, bikeNumber,cost, status, duration));
+}
+
+void RentalVehicalManagement::addCar()
+{
+    int id,duration;
+    string  brand,model,carNumber,status;
+    float cost;
+
+    int carCount = 1;
+
+    for(auto carList : m_carList)
+    {
+        carCount++;
+    }
+
+    id = carCount;
+
+    cout<<"Car Id: "<<id<<endl;
+
+    cout<<"Enter Car Brand :";
+    cin>>brand;
+
+    cout<<"Enter Car Model :";
+    cin>>model;
+
+    cout<<"Enter Car Number :";
+    cin>>carNumber;
+
+    cout<<"Enter Car cost :";
+    cin>>cost;
+
+    cout<<"Enter Car status :";
+    cin>>status;
+
+    cout<<"Enter Car Duration :";
+    cin>>duration;
+
+    m_carList.push_back(new RentalCarDetails(id,brand,model,carNumber,cost,status,duration));
+}
+
+
+void RentalVehicalManagement::displayBike()
+{
+    cout<<endl<<"Available Bike Details"<<endl <<endl;
+
+    cout<< endl<<setw(15)<<"BIKE ID "<<setw(15)<<"BIKE BRAND "<<setw(15)<<"BIKE MODEL"<<setw(15)
+         <<"BIKENUMBER"<<setw(15)<<"BIKE COST"<<setw(15)<<"BIKE STATUS"<<setw(25)<<"BIKE DURATION"<<endl;
+
+    for(auto bikeList : m_bikeList)
+    {
+        if(bikeList->getStatus() != "Deleted")
+        {
+            cout<<setw(15)<<bikeList->getId()<<setw(15)<<bikeList->getBrand()<<setw(15)
+            <<bikeList->getModel()<<setw(15)<<bikeList->getVehicalNumber()<<setw(15)
+            <<bikeList->getCost()<<setw(15)<<bikeList->getStatus()<<setw(15)<<bikeList->getDuration()<<" Day"<<endl;
+        }
+    }
+}
+
+void RentalVehicalManagement::displayCar()
+{
+    cout<<endl<<"Available Car Details"<<endl <<endl;
+
+    cout<< endl<<setw(15)<<"CAR ID"<<setw(15)<<"CAR BRAND"<<setw(15)<<"CAR BRAND"<<setw(15)
+         <<"CAR NUMBER"<<setw(15)<<"CAR COST"<<setw(15)<<"CAR STATUS"<<setw(25)<<"CAR DURATION"<<endl<<endl;
+
+    for(auto carList : m_carList)
+    {
+        if(carList->getStatus() != "Deleted")
+        {
+            cout<<setw(15)<<carList->getId()<<setw(15)<<carList->getBrand()<<setw(15)
+            <<carList->getModel()<<setw(15)<<carList->getVehicalNumber()<<setw(15)<<carList->getCost()
+            <<setw(15)<<carList->getStatus()<<setw(15)<<carList->getDuration()<< " Day"<<endl;
+        }
+    }
+}
+
+void RentalVehicalManagement::updateBikeRent()
+{
+    this->displayBike();
+    int id;
+    cout<<"Enter the Bike Id to Update Rent : ";
+    cin>>id;
+    int bikeFound =0;
+    for(auto bikeList :m_bikeList)
+    {
+        if(bikeList->getId() == id)
+        {
+            bikeFound =1;
+            float cost;
+            cout<<"Enter New Bike Rent :";
+            cin>>cost;
+            bikeList->setCost(cost);
+        }
+    }
+    if(bikeFound ==0 )
+    {
+        cout<<endl<<"Entered Bike ID "<< id <<" not found"<<endl;
+    }
+}
+
+
+void RentalVehicalManagement::updateCarRent()
+{
+
+    this->displayCar();
+    int id;
+    cout<<"Enter  Car Id to Update Rent : ";
+    cin>>id;
+    int carFound = 0;
+    for(auto carList :m_carList)
+    {
+        if(carList->getId() == id)
+        {
+            carFound =1;
+            float cost;
+            cout<<"Enter New Car Rent :";
+            cin>>cost;
+            carList->setCost(cost);
+        }
+    }
+    if(carFound ==0)
+    {
+        cout<<endl<<"Entered Car ID "<< id <<" not found"<<endl;
+
+    }
+}
+
+void RentalVehicalManagement::deleteBike()
+{
+    this->displayBike();
+    int id;
+    cout<<"Enter Bike Id to Delete : ";
+    cin>>id;
+    int bikeFound = 0;
+
+    for(auto bikeList : m_bikeList)
+    {
+        if(bikeList->getId() == id)
+        {
+            bikeFound =1;
+            bikeList->setStatus("Deleted");
+            cout<<"Bike deleted successfully "<<"Bike id:"<<id<<endl;
+        }
+    }
+    if(bikeFound == 0)
+    {
+        cout<<endl<<"Entered Bike ID "<< id <<" not found"<<endl;
+    }
+}
+
+void RentalVehicalManagement::deleteCar()
+{
+    this->displayCar();
+    int id;
+    cout<<"Enter Car Id to Delete : ";
+    cin>>id;
+    int carFound = 0;
+
+    for(auto carList : m_carList)
+    {
+        if(carList->getId() == id)
+        {
+            carFound =1;
+            carList->setStatus("Deleted");
+            cout<<"Entered Car ID: "<<id <<" Deleted"<<endl;
+        }
+    }
+    if(carFound == 0)
+    {
+        cout<<endl<<"Entered car ID "<< id <<" not found"<<endl;
+    }
+}
+
+
+void RentalVehicalManagement::searchBike()
+{
+    int id;
+    cout<<"Enter Bike Id to Search : ";
+    cin>>id;
+    int bikeFound = 0;
+
+    for(auto bikeList : m_bikeList)
+    {
+        if(bikeList->getId() == id)
+        {
+            bikeFound =1;
+            cout<<endl<<"Entered Bike ID: "<<id <<" Found"<<endl;
+            cout<<endl<<"Bike Details"<<endl;
+            cout<<endl<<"Bike Id :"<<bikeList->getId()<<endl;
+            cout<<"Bike Brand :"<<bikeList->getBrand()<<endl;
+            cout<<"Bike Model :"<<bikeList->getModel()<<endl;
+            cout<<"Bike Number :"<<bikeList->getVehicalNumber()<<endl;
+            cout<<"Bike Rent :"<<bikeList->getCost()<<endl;
+            cout<<"Bike Status :"<<bikeList->getStatus()<<endl;
+            cout<<"Bike Duration :"<<bikeList->getDuration()<<" Day"<<endl;
+        }
+    }
+    if(bikeFound == 0)
+    {
+        cout<<endl<<"Entered Bike ID "<< id <<" not found"<<endl;
+    }
+}
+
+void RentalVehicalManagement::searchCar()
+{
+    int id;
+    cout<<"Enter Car Id to Delete : ";
+    cin>>id;
+    int carFound = 0;
+
+    for(auto carList : m_carList)
+    {
+        if(carList->getId() == id)
+        {
+            carFound =1;
+            cout<<endl<<"Entered Car ID: "<<id <<" Found"<<endl;
+
+            cout<<endl<<"Car Details"<<endl;
+            cout<<endl<<"Car Id :"<<carList->getId()<<endl;
+            cout<<"Car Brand :"<<carList->getBrand()<<endl;
+            cout<<"Car Model :"<<carList->getModel()<<endl;
+            cout<<"Car Number :"<<carList->getVehicalNumber()<<endl;
+            cout<<"Car Rent :"<<carList->getCost()<<endl;
+            cout<<"Car Status :"<<carList->getStatus()<<endl;
+            cout<<"Car Duration :"<<carList->getDuration()<<"Day"<<endl;;
+        }
+    }
+    if(carFound == 0)
+    {
+        cout<<endl<<"Entered car ID "<< id <<" not found"<<endl;
+    }
+}
+
+
+void RentalVehicalManagement::sortBike()
+{
+    cout<<endl<<"Select the sorting type"<<endl;
+    cout<<endl<<"1.Sort Bike by Status"<<endl<<"2.Sort Bike by Price"<<endl<<"3.Sort Bike by Brand"<<endl;
+    cout<<endl<<"Enter the choice: ";
+    int choice;
+    cin>>choice;
+    switch(choice)
+    {
+    case 1:
+    {
+        this->sortBikeByStatus();
+        break;
+    }
+    case 2:
+    {
+        this->sortBikeByPrice();
+
+        break;
+    }
+    case 3:
+    {
+        this->sortBikeByBrand();
+        break;
+    }
+    }
+    this->displayBike();
+
+}
+
+void RentalVehicalManagement::sortBikeByStatus()
+{
+    m_bikeList.sort([] (RentalBikeDetails *a, RentalBikeDetails *b) {
+        return a->getStatus() < b->getStatus() ;
+    });
+
+}
+
+void RentalVehicalManagement::sortBikeByPrice()
+{
+    m_bikeList.sort([] (RentalBikeDetails *a, RentalBikeDetails *b) {
+        return a->getCost() < b->getCost();
+    });
+}
+
+void RentalVehicalManagement::sortBikeByBrand()
+{
+    m_bikeList.sort([] (RentalBikeDetails *a, RentalBikeDetails *b) {
+        return a->getBrand() < b->getBrand();
+    });
+}
+
+
+void RentalVehicalManagement::sortCar()
+{
+    cout<<endl<<"Select the sorting type"<<endl;
+    cout<<endl<<"1.Sort Car by Status"<<endl<<"2.Sort Car by Price"<<endl<<"3.Sort Car by Brand"<<endl;
+    cout<<endl<<"Enter the choice : ";
+    int choice;
+    cin>>choice;
+    switch(choice)
+    {
+    case 1:
+    {
+        this->sortCarByStatus();
+        break;
+    }
+    case 2:
+    {
+        this->sortCarByPrice();
+        break;
+    }
+    case 3:
+    {
+        this->sortCarByBrand();
+        break;
+    }
+    }
+    this->displayCar();
+
+}
+
+void RentalVehicalManagement::sortCarByStatus()
+{
+    m_carList.sort([] (RentalCarDetails *a, RentalCarDetails *b) {
+        return a->getStatus() < b->getStatus();
+    });
+
+}
+
+void RentalVehicalManagement::sortCarByPrice()
+{
+    m_carList.sort([] (RentalCarDetails *a, RentalCarDetails *b) {
+        return a->getCost() < b->getCost();
+    });
+
+}
+
+void RentalVehicalManagement::sortCarByBrand()
+{
+    m_carList.sort([] (RentalCarDetails *a, RentalCarDetails *b) {
+        return a->getBrand() < b->getBrand();
+    });
+}
+
+list<RentalDetails *> RentalVehicalManagement::getRentalList()
+{
+    return m_rentalList;
+}
+
+void RentalVehicalManagement::rentalHistory()
+{
+    cout<<endl<<"Rental History of the Previous Customers"<<endl <<endl;
+
+    for(auto rentalList : m_rentalList)
+    {
+        cout<<"Customer Name: "<<rentalList->getName()<<endl;
+        cout<<"Customer contact number: "<<rentalList->getMobile()<<endl;
+        cout<<"Customer age: "<<rentalList->getAge()<<endl;
+        cout<<"Customer Booking id: "<<rentalList->getBookingId()<<endl;
+        cout<<"Vehical type: "<<rentalList->getVehicalType()<<endl;
+        cout<<"payment type: "<<rentalList->getPaymentType()<<endl;
+        cout<<"vehicle id: "<<rentalList->getId()<<endl;
+        cout<<"vehicle brand: "<<rentalList->getBrand()<<endl;
+        cout<<"vehicle model: "<<rentalList->getModel()<<endl;
+        cout<<"vehicle number: "<<rentalList->getVehicalNumber()<<endl;
+        cout<<"vehicle cost: "<<rentalList->getCost()<<endl;
+        cout<<"vehicle status: "<<rentalList->getStatus()<<endl;
+        cout<<"vehicle duration(in days): "<<rentalList->getDuration()<<endl;
+        cout<<"upi id: "<<rentalList->getUPIid()<<endl;
+        cout<<"paid amount: "<<rentalList->getAmount()<<endl;
+        cout<<"Balance amount: "<<rentalList->getBalance()<<endl;
+        cout<<"Payment status: "<<rentalList->getPaymentStatus()<<endl;
+        cout<<"Transaction id: "<<rentalList->getTransactionId()<<endl;
+        cout<<endl;
+    }
+}
+
+
+void RentalVehicalManagement::bookBike()
+{
+    cout<<endl<<"BookBike function called"<<endl;
+    cout<<endl<<"Enter Bike Id:"<<endl;
+    int bikeId;
+    cin>>bikeId;
+    int flag=0;
+    for(auto bikeList : m_bikeList)
+    {
+        if(bikeList->getId() == bikeId && bikeList->getStatus() == "Booked")
+        {
+            flag =1;
+            cout<<"Entered Bike ID : "<<bikeId<<" is already booked"<<endl;
+        }
+        if(bikeList->getId() == bikeId && bikeList->getStatus() == "Available")
+        {
+            flag =1;
+            cout<<"Entered Bike Id: "<<bikeId<<" is Available for rent"<<endl;
+            cout<<endl<<"Bike Details"<<endl;
+            cout<<endl<<" Bike Brand :"<<bikeList->getBrand()<<endl;
+            cout<<" Bike Model :"<<bikeList->getModel()<<endl;
+            cout<<" Bike Number :"<<bikeList->getVehicalNumber()<<endl;
+            cout<<" Bike Rent :"<<bikeList->getCost()<<endl;
+            cout<<" Bike Duration :"<<bikeList->getDuration()<<" Day"<<endl;
+
+            cout<<endl<<"Select the choice mentioned below\n"<<endl;
+            cout<<"1. Book the Bike"<<endl;
+            cout<<"2. Exit"<<endl;
+            int choice;
+            cin>>choice;
+            switch(choice)
+            {
+            case 1:
+            {
+                string name,mobile,vehicalType,paymentStatus;
+                int age,bookingid;
+                cout<<"Enter Name : ";
+                cin>>name;
+
+
+                while(true)
+                {
+                    cout<<"Enter Mobile Number: ";
+                    cin>>mobile;
+                    if(mobile.length()==10)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        cout<<"Invalid number,try again"<<endl;
+                    }
+                }
+
+                while(true)
+                {
+                    cout<<"Enter Age : ";
+                    cin>>age;
+                    if(age >=18 && age < 90)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        cout<<"Invalid Age,age must be positive and in between 17-90,try again"<<endl;
+                    }
+                }
+
+                int count =1;
+                for(auto rentalList = m_rentalList.begin();rentalList != m_rentalList.end();rentalList++)
+                {
+                    count++;
+                }
+
+                bookingid = count;
+                cout<<endl<<"Booking Id : "<<count<<endl;
+                vehicalType = "Bike";
+                cout<<"vehical Type :"<<vehicalType<<endl;
+
+
+                cout<<endl<<"Available Payment Modes"<<endl;
+                cout<<endl<<"1.online"<<endl<<"2.Cash"<<endl;
+                cout<<"3.Exit"<<endl;
+
+                cout<<endl<<"Select PaymentMode : " ;
+                int choice;
+                cin>>choice;
+                switch(choice)
+                {
+                case 1:
+                {
+                    string paymentType = "Online";
+
+                    cout<<endl<<"Payment Type :" <<paymentType<<endl;
+
+                    cout<<endl<<"Enter UPI id : ";
+                    string upiId;
+                    cin>>upiId;
+
+                    float rent = bikeList->getCost();
+                    float balance = rent;
+
+                    cout<<endl<<"Rent of the Bike: "<<rent<<endl;
+
+                    cout<<"Enter Amount:"<<endl;
+                    int amount;
+                    cin>>amount;
+                    if(amount <= 0)
+                    {
+                        paymentStatus = "payment failed";
+                    }
+                    if(amount > 0)
+                    {
+                        paymentStatus = "Payment SucessFull";
+                        balance = rent - amount;
+
+                    }
+
+                    int transactionId;
+
+                    int transactioncount = 1;
+
+                    for(auto rentalList = m_rentalList.begin();rentalList != m_rentalList.end();rentalList++)
+                    {
+                        transactioncount++;
+                    }
+
+                    transactionId = transactioncount + 10000;
+
+                    cout<<"transaction Id : "<<transactionId <<endl;
+
+                    cout<<"Bike booked successfully transaction id mentioned below"<<endl;
+                    cout<<"Transaction id "<<transactionId<<endl;
+                    cout<<"Bike model "<< bikeList->getModel()<<endl;
+
+                    bikeList->setStatus("Booked");
+                    int id = bikeList->getId();
+                    string brand = bikeList->getBrand();
+                    string model = bikeList->getModel();
+                    string vehicalNumber = bikeList->getVehicalNumber();
+                    float cost = bikeList->getCost();
+                    string status = bikeList->getStatus();
+                    int duration  =bikeList->getDuration();
+
+
+                    RentalBikeDetails *bike = new RentalBikeDetails(id, brand, model, vehicalNumber,cost, status, duration);
+                    OnlinePayment *online = new OnlinePayment(upiId,amount,balance,paymentStatus,transactionId);
+                    m_rentalList.push_back(new RentalDetails(name,mobile,age,bookingid,vehicalType,paymentType,bike,online));
+                    break;
+                }
+
+                case 2:
+                {
+                    string paymentType = "Cash";
+
+                    cout<<endl<<"Payment type :" <<paymentType<<endl;
+
+                    cout<<" Cash Recived"<<endl;
+
+                    string upiId = "NULL";
+
+                    float rent = bikeList->getCost();
+
+                    float balance = rent;
+
+                    cout<<endl<<"Rent of the Bike is: "<<rent<<endl;
+
+                    cout<<"Enter Amount:"<<endl;
+                    int amount;
+                    cin>>amount;
+
+                    if(amount <=0)
+                    {
+                        paymentStatus = "Payment failed";
+                    }
+
+                    if(amount > 0)
+                    {
+                        balance = rent - amount;
+                        paymentStatus = "Payment Sucessfull";
+                    }
+
+                    int transactionId = 0;
+
+                    cout<<"Payment Status : "<<paymentStatus<<endl;
+
+                    cout<<endl<<"Bike Booked: " <<bikeList->getModel()<<"payment done by Cash"<<endl;
+
+                    bikeList->setStatus("Booked");
+
+                    int id = bikeList->getId();
+                    string brand = bikeList->getBrand();
+                    string model = bikeList->getModel();
+                    string vehicalNumber = bikeList->getVehicalNumber();
+                    float cost = bikeList->getCost();
+                    string status = bikeList->getStatus();
+                    int duration  =bikeList->getDuration();
+
+                    RentalBikeDetails *bike = new RentalBikeDetails(id, brand, model, vehicalNumber,cost, status, duration);
+                    CashPayment *cash = new CashPayment(upiId,amount,balance,paymentStatus,transactionId);
+                    m_rentalList.push_back(new RentalDetails(name,mobile,age,bookingid,vehicalType,paymentType,bike,cash));
+                    break;
+                }
+                }
+                break;
+            }
+            case 2:
+            {
+                cout<<"exiting"<<endl;
+                return;
+            }
+            default:
+                cout<<"Invalid Option"<<endl;
+            }
+        }
+    }
+    if(flag==0 )
+    {
+        cout<<"Entered Bike ID :"<<bikeId<<" is not available"<<endl;
+    }
+}
 
 void RentalVehicalManagement::bookCar()
 {
@@ -507,636 +1135,6 @@ void RentalVehicalManagement::returnCar()
     }
 }
 
-void RentalVehicalManagement::displayBike()
-{
-    cout<<endl<<"Available Bike Details"<<endl <<endl;
-
-    cout<< endl<<setw(15)<<"BIKE ID "<<setw(15)<<"BIKE BRAND "<<setw(15)<<"BIKE MODEL"<<setw(15)
-         <<"BIKENUMBER"<<setw(15)<<"BIKE COST"<<setw(15)<<"BIKE STATUS"<<setw(25)<<"BIKE DURATION"<<endl;
-
-    for(auto bikeList : m_bikeList)
-    {
-        if(bikeList->getStatus() != "Deleted")
-        {
-            cout<<setw(15)<<bikeList->getId()<<setw(15)<<bikeList->getBrand()<<setw(15)
-            <<bikeList->getModel()<<setw(15)<<bikeList->getVehicalNumber()<<setw(15)
-            <<bikeList->getCost()<<setw(15)<<bikeList->getStatus()<<setw(15)<<bikeList->getDuration()<<" Day"<<endl;
-        }
-    }
-}
-
-void RentalVehicalManagement::displayCar()
-{
-    cout<<endl<<"Available Car Details"<<endl <<endl;
-
-    cout<< endl<<setw(15)<<"CAR ID"<<setw(15)<<"CAR BRAND"<<setw(15)<<"CAR BRAND"<<setw(15)
-         <<"CAR NUMBER"<<setw(15)<<"CAR COST"<<setw(15)<<"CAR STATUS"<<setw(25)<<"CAR DURATION"<<endl<<endl;
-
-    for(auto carList : m_carList)
-    {
-        if(carList->getStatus() != "Deleted")
-        {
-            cout<<setw(15)<<carList->getId()<<setw(15)<<carList->getBrand()<<setw(15)
-            <<carList->getModel()<<setw(15)<<carList->getVehicalNumber()<<setw(15)<<carList->getCost()
-            <<setw(15)<<carList->getStatus()<<setw(15)<<carList->getDuration()<< " Day"<<endl;
-        }
-    }
-}
-
-
-void RentalVehicalManagement::rentalHistory()
-{
-    cout<<endl<<"Rental History of the Previous Customers"<<endl <<endl;
-
-    for(auto rentalList : m_rentalList)
-    {
-        cout<<"Customer Name: "<<rentalList->getName()<<endl;
-        cout<<"Customer contact number: "<<rentalList->getMobile()<<endl;
-        cout<<"Customer age: "<<rentalList->getAge()<<endl;
-        cout<<"Customer Booking id: "<<rentalList->getBookingId()<<endl;
-        cout<<"Vehical type: "<<rentalList->getVehicalType()<<endl;
-        cout<<"payment type: "<<rentalList->getPaymentType()<<endl;
-        cout<<"vehicle id: "<<rentalList->getId()<<endl;
-        cout<<"vehicle brand: "<<rentalList->getBrand()<<endl;
-        cout<<"vehicle model: "<<rentalList->getModel()<<endl;
-        cout<<"vehicle number: "<<rentalList->getVehicalNumber()<<endl;
-        cout<<"vehicle cost: "<<rentalList->getCost()<<endl;
-        cout<<"vehicle status: "<<rentalList->getStatus()<<endl;
-        cout<<"vehicle duration(in days): "<<rentalList->getDuration()<<endl;
-        cout<<"upi id: "<<rentalList->getUPIid()<<endl;
-        cout<<"paid amount: "<<rentalList->getAmount()<<endl;
-        cout<<"Balance amount: "<<rentalList->getBalance()<<endl;
-        cout<<"Payment status: "<<rentalList->getPaymentStatus()<<endl;
-        cout<<"Transaction id: "<<rentalList->getTransactionId()<<endl;
-        cout<<endl;
-    }
-}
-
-void RentalVehicalManagement::addBike()
-{
-    int id,duration;
-    string  brand,model,bikeNumber,status;
-    float cost;
-    int bikeCount = 1;
-    for(auto bikeList :m_bikeList)
-    {
-        bikeCount++;
-    }
-    id = bikeCount;
-
-    cout<<"Bike Id: "<<id<<endl;
-
-    cout<<"Enter Bike Brand : ";
-    cin>>brand;
-
-    cout<<"Enter Bike Model :";
-    cin>>model;
-
-    cout<<"Enter Bike Number :";
-    cin>>bikeNumber;
-
-    cout<<"Enter Bike cost :";
-    cin>>cost;
-
-    cout<<"Enter Bike status :";
-    cin>>status;
-
-    cout<<"Enter Bike Duration :";
-    cin>>duration;
-
-    m_bikeList.push_back(new RentalBikeDetails(id, brand, model, bikeNumber,cost, status, duration));
-}
-
-void RentalVehicalManagement::addCar()
-{
-    int id,duration;
-    string  brand,model,carNumber,status;
-    float cost;
-
-    int carCount = 1;
-
-    for(auto carList : m_carList)
-    {
-        carCount++;
-    }
-
-    id = carCount;
-
-    cout<<"Car Id: "<<id<<endl;
-
-    cout<<"Enter Car Brand :";
-    cin>>brand;
-
-    cout<<"Enter Car Model :";
-    cin>>model;
-
-    cout<<"Enter Car Number :";
-    cin>>carNumber;
-
-    cout<<"Enter Car cost :";
-    cin>>cost;
-
-    cout<<"Enter Car status :";
-    cin>>status;
-
-    cout<<"Enter Car Duration :";
-    cin>>duration;
-
-    m_carList.push_back(new RentalCarDetails(id,brand,model,carNumber,cost,status,duration));
-}
-
-void RentalVehicalManagement::updateBikeRent()
-{
-    this->displayBike();
-    int id;
-    cout<<"Enter the Bike Id to Update Rent : ";
-    cin>>id;
-    int bikeFound =0;
-    for(auto bikeList :m_bikeList)
-    {
-        if(bikeList->getId() == id)
-        {
-            bikeFound =1;
-            float cost;
-            cout<<"Enter New Bike Rent :";
-            cin>>cost;
-            bikeList->setCost(cost);
-        }
-    }
-    if(bikeFound ==0 )
-    {
-        cout<<endl<<"Entered Bike ID "<< id <<" not found"<<endl;
-    }
-}
-
-
-void RentalVehicalManagement::updateCarRent()
-{
-
-    this->displayCar();
-    int id;
-    cout<<"Enter  Car Id to Update Rent : ";
-    cin>>id;
-    int carFound = 0;
-    for(auto carList :m_carList)
-    {
-        if(carList->getId() == id)
-        {
-            carFound =1;
-            float cost;
-            cout<<"Enter New Car Rent :";
-            cin>>cost;
-            carList->setCost(cost);
-        }
-    }
-    if(carFound ==0)
-    {
-        cout<<endl<<"Entered Car ID "<< id <<" not found"<<endl;
-
-    }
-}
-
-
-
-void RentalVehicalManagement::deleteBike()
-{
-    this->displayBike();
-    int id;
-    cout<<"Enter Bike Id to Delete : ";
-    cin>>id;
-    int bikeFound = 0;
-
-    for(auto bikeList : m_bikeList)
-    {
-        if(bikeList->getId() == id)
-        {
-            bikeFound =1;
-            bikeList->setStatus("Deleted");
-            cout<<"Bike deleted successfully "<<"Bike id:"<<id<<endl;
-        }
-    }
-    if(bikeFound == 0)
-    {
-        cout<<endl<<"Entered Bike ID "<< id <<" not found"<<endl;
-    }
-}
-
-void RentalVehicalManagement::deleteCar()
-{
-    this->displayCar();
-    int id;
-    cout<<"Enter Car Id to Delete : ";
-    cin>>id;
-    int carFound = 0;
-
-    for(auto carList : m_carList)
-    {
-        if(carList->getId() == id)
-        {
-            carFound =1;
-            carList->setStatus("Deleted");
-            cout<<"Entered Car ID: "<<id <<" Deleted"<<endl;
-        }
-    }
-    if(carFound == 0)
-    {
-        cout<<endl<<"Entered car ID "<< id <<" not found"<<endl;
-    }
-}
-
-void RentalVehicalManagement::searchBike()
-{
-    int id;
-    cout<<"Enter Bike Id to Search : ";
-    cin>>id;
-    int bikeFound = 0;
-
-    for(auto bikeList : m_bikeList)
-    {
-        if(bikeList->getId() == id)
-        {
-            bikeFound =1;
-            cout<<endl<<"Entered Bike ID: "<<id <<" Found"<<endl;
-            cout<<endl<<"Bike Details"<<endl;
-            cout<<endl<<"Bike Id :"<<bikeList->getId()<<endl;
-            cout<<"Bike Brand :"<<bikeList->getBrand()<<endl;
-            cout<<"Bike Model :"<<bikeList->getModel()<<endl;
-            cout<<"Bike Number :"<<bikeList->getVehicalNumber()<<endl;
-            cout<<"Bike Rent :"<<bikeList->getCost()<<endl;
-            cout<<"Bike Status :"<<bikeList->getStatus()<<endl;
-            cout<<"Bike Duration :"<<bikeList->getDuration()<<" Day"<<endl;
-        }
-    }
-    if(bikeFound == 0)
-    {
-        cout<<endl<<"Entered Bike ID "<< id <<" not found"<<endl;
-    }
-}
-
-void RentalVehicalManagement::searchCar()
-{
-    int id;
-    cout<<"Enter Car Id to Delete : ";
-    cin>>id;
-    int carFound = 0;
-
-    for(auto carList : m_carList)
-    {
-        if(carList->getId() == id)
-        {
-            carFound =1;
-            cout<<endl<<"Entered Car ID: "<<id <<" Found"<<endl;
-
-            cout<<endl<<"Car Details"<<endl;
-            cout<<endl<<"Car Id :"<<carList->getId()<<endl;
-            cout<<"Car Brand :"<<carList->getBrand()<<endl;
-            cout<<"Car Model :"<<carList->getModel()<<endl;
-            cout<<"Car Number :"<<carList->getVehicalNumber()<<endl;
-            cout<<"Car Rent :"<<carList->getCost()<<endl;
-            cout<<"Car Status :"<<carList->getStatus()<<endl;
-            cout<<"Car Duration :"<<carList->getDuration()<<"Day"<<endl;;
-        }
-    }
-    if(carFound == 0)
-    {
-        cout<<endl<<"Entered car ID "<< id <<" not found"<<endl;
-    }
-}
-
-void RentalVehicalManagement::sortBike()
-{
-    cout<<endl<<"Select the sorting type"<<endl;
-    cout<<endl<<"1.Sort Bike by Status"<<endl<<"2.Sort Bike by Price"<<endl<<"3.Sort Bike by Brand"<<endl;
-    cout<<endl<<"Enter the choice: ";
-    int choice;
-    cin>>choice;
-    switch(choice)
-    {
-    case 1:
-    {
-        this->sortBikeByStatus();
-        break;
-    }
-    case 2:
-    {
-        this->sortBikeByPrice();
-
-        break;
-    }
-    case 3:
-    {
-        this->sortBikeByBrand();
-        break;
-    }
-    }
-    this->displayBike();
-
-}
-
-void RentalVehicalManagement::sortBikeByStatus()
-{
-    m_bikeList.sort([] (RentalBikeDetails *a, RentalBikeDetails *b) {
-        return a->getStatus() < b->getStatus() ;
-    });
-
-}
-
-void RentalVehicalManagement::sortBikeByPrice()
-{
-    m_bikeList.sort([] (RentalBikeDetails *a, RentalBikeDetails *b) {
-        return a->getCost() < b->getCost();
-    });
-}
-
-void RentalVehicalManagement::sortBikeByBrand()
-{
-    m_bikeList.sort([] (RentalBikeDetails *a, RentalBikeDetails *b) {
-        return a->getBrand() < b->getBrand();
-    });
-}
-
-void RentalVehicalManagement::sortCar()
-{
-    cout<<endl<<"Select the sorting type"<<endl;
-    cout<<endl<<"1.Sort Car by Status"<<endl<<"2.Sort Car by Price"<<endl<<"3.Sort Car by Brand"<<endl;
-    cout<<endl<<"Enter the choice : ";
-    int choice;
-    cin>>choice;
-    switch(choice)
-    {
-    case 1:
-    {
-        this->sortCarByStatus();
-        break;
-    }
-    case 2:
-    {
-        this->sortCarByPrice();
-        break;
-    }
-    case 3:
-    {
-        this->sortCarByBrand();
-        break;
-    }
-    }
-    this->displayCar();
-
-}
-
-void RentalVehicalManagement::sortCarByStatus()
-{
-    m_carList.sort([] (RentalCarDetails *a, RentalCarDetails *b) {
-        return a->getStatus() < b->getStatus();
-    });
-
-}
-
-void RentalVehicalManagement::sortCarByPrice()
-{
-    m_carList.sort([] (RentalCarDetails *a, RentalCarDetails *b) {
-        return a->getCost() < b->getCost();
-    });
-
-}
-
-void RentalVehicalManagement::sortCarByBrand()
-{
-    m_carList.sort([] (RentalCarDetails *a, RentalCarDetails *b) {
-        return a->getBrand() < b->getBrand();
-    });
-}
-
-list<RentalDetails *> RentalVehicalManagement::getRentalList()
-{
-    return m_rentalList;
-}
-
-
-void RentalVehicalManagement::bookBike()
-{
-    cout<<endl<<"BookBike function called"<<endl;
-    cout<<endl<<"Enter Bike Id:"<<endl;
-    int bikeId;
-    cin>>bikeId;
-    int flag=0;
-    for(auto bikeList : m_bikeList)
-    {
-        if(bikeList->getId() == bikeId && bikeList->getStatus() == "Booked")
-        {
-            flag =1;
-            cout<<"Entered Bike ID : "<<bikeId<<" is already booked"<<endl;
-        }
-        if(bikeList->getId() == bikeId && bikeList->getStatus() == "Available")
-        {
-            flag =1;
-            cout<<"Entered Bike Id: "<<bikeId<<" is Available for rent"<<endl;
-            cout<<endl<<"Bike Details"<<endl;
-            cout<<endl<<" Bike Brand :"<<bikeList->getBrand()<<endl;
-            cout<<" Bike Model :"<<bikeList->getModel()<<endl;
-            cout<<" Bike Number :"<<bikeList->getVehicalNumber()<<endl;
-            cout<<" Bike Rent :"<<bikeList->getCost()<<endl;
-            cout<<" Bike Duration :"<<bikeList->getDuration()<<" Day"<<endl;
-
-            cout<<endl<<"Select the choice mentioned below\n"<<endl;
-            cout<<"1. Book the Bike"<<endl;
-            cout<<"2. Exit"<<endl;
-            int choice;
-            cin>>choice;
-            switch(choice)
-            {
-            case 1:
-            {
-                string name,mobile,vehicalType,paymentStatus;
-                int age,bookingid;
-                cout<<"Enter Name : ";
-                cin>>name;
-
-
-                while(true)
-                {
-                    cout<<"Enter Mobile Number: ";
-                    cin>>mobile;
-                    if(mobile.length()==10)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        cout<<"Invalid number,try again"<<endl;
-                    }
-                }
-
-                while(true)
-                {
-                    cout<<"Enter Age : ";
-                    cin>>age;
-                    if(age >=18 && age < 90)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        cout<<"Invalid Age,age must be positive and in between 17-90,try again"<<endl;
-                    }
-                }
-
-                int count =1;
-                for(auto rentalList = m_rentalList.begin();rentalList != m_rentalList.end();rentalList++)
-                {
-                    count++;
-                }
-
-                bookingid = count;
-                cout<<endl<<"Booking Id : "<<count<<endl;
-                vehicalType = "Bike";
-                cout<<"vehical Type :"<<vehicalType<<endl;
-
-
-                cout<<endl<<"Available Payment Modes"<<endl;
-                cout<<endl<<"1.online"<<endl<<"2.Cash"<<endl;
-                cout<<"3.Exit"<<endl;
-
-                cout<<endl<<"Select PaymentMode : " ;
-                int choice;
-                cin>>choice;
-                switch(choice)
-                {
-                case 1:
-                {
-                    string paymentType = "Online";
-
-                    cout<<endl<<"Payment Type :" <<paymentType<<endl;
-
-                    cout<<endl<<"Enter UPI id : ";
-                    string upiId;
-                    cin>>upiId;
-
-                    float rent = bikeList->getCost();
-                    float balance = rent;
-
-                    cout<<endl<<"Rent of the Bike: "<<rent<<endl;
-
-                    cout<<"Enter Amount:"<<endl;
-                    int amount;
-                    cin>>amount;
-                    if(amount <= 0)
-                    {
-                        paymentStatus = "payment failed";
-                    }
-                    if(amount > 0)
-                    {
-                        paymentStatus = "Payment SucessFull";
-                        balance = rent - amount;
-
-                    }
-
-                    int transactionId;
-
-                    int transactioncount = 1;
-
-                    for(auto rentalList = m_rentalList.begin();rentalList != m_rentalList.end();rentalList++)
-                    {
-                        transactioncount++;
-                    }
-
-                    transactionId = transactioncount + 10000;
-
-                    cout<<"transaction Id : "<<transactionId <<endl;
-
-                    cout<<"Bike booked successfully transaction id mentioned below"<<endl;
-                    cout<<"Transaction id "<<transactionId<<endl;
-                    cout<<"Bike model "<< bikeList->getModel()<<endl;
-
-                    bikeList->setStatus("Booked");
-                    int id = bikeList->getId();
-                    string brand = bikeList->getBrand();
-                    string model = bikeList->getModel();
-                    string vehicalNumber = bikeList->getVehicalNumber();
-                    float cost = bikeList->getCost();
-                    string status = bikeList->getStatus();
-                    int duration  =bikeList->getDuration();
-
-
-                    RentalBikeDetails *bike = new RentalBikeDetails(id, brand, model, vehicalNumber,cost, status, duration);
-                    OnlinePayment *online = new OnlinePayment(upiId,amount,balance,paymentStatus,transactionId);
-                    m_rentalList.push_back(new RentalDetails(name,mobile,age,bookingid,vehicalType,paymentType,bike,online));
-                    break;
-                }
-
-                case 2:
-                {
-                    string paymentType = "Cash";
-
-                    cout<<endl<<"Payment type :" <<paymentType<<endl;
-
-                    cout<<" Cash Recived"<<endl;
-
-                    string upiId = "NULL";
-
-                    float rent = bikeList->getCost();
-
-                    float balance = rent;
-
-                    cout<<endl<<"Rent of the Bike is: "<<rent<<endl;
-
-                    cout<<"Enter Amount:"<<endl;
-                    int amount;
-                    cin>>amount;
-
-                    if(amount <=0)
-                    {
-                        paymentStatus = "Payment failed";
-                    }
-
-                    if(amount > 0)
-                    {
-                        balance = rent - amount;
-                        paymentStatus = "Payment Sucessfull";
-                    }
-
-                    int transactionId = 0;
-
-                    cout<<"Payment Status : "<<paymentStatus<<endl;
-
-                    cout<<endl<<"Bike Booked: " <<bikeList->getModel()<<"payment done by Cash"<<endl;
-
-                    bikeList->setStatus("Booked");
-
-                    int id = bikeList->getId();
-                    string brand = bikeList->getBrand();
-                    string model = bikeList->getModel();
-                    string vehicalNumber = bikeList->getVehicalNumber();
-                    float cost = bikeList->getCost();
-                    string status = bikeList->getStatus();
-                    int duration  =bikeList->getDuration();
-
-                    RentalBikeDetails *bike = new RentalBikeDetails(id, brand, model, vehicalNumber,cost, status, duration);
-                    CashPayment *cash = new CashPayment(upiId,amount,balance,paymentStatus,transactionId);
-                    m_rentalList.push_back(new RentalDetails(name,mobile,age,bookingid,vehicalType,paymentType,bike,cash));
-                    break;
-                }
-                }
-                break;
-            }
-            case 2:
-            {
-                cout<<"exiting"<<endl;
-                return;
-            }
-            default:
-                cout<<"Invalid Option"<<endl;
-            }
-        }
-    }
-    if(flag==0 )
-    {
-        cout<<"Entered Bike ID :"<<bikeId<<" is not available"<<endl;
-    }
-}
-
-
-
 void RentalVehicalManagement::functionalities()
 {
 
@@ -1400,4 +1398,7 @@ void RentalVehicalManagement::functionalities()
         }
     }
 }
+
+
+
 
