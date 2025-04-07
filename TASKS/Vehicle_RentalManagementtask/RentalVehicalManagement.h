@@ -10,7 +10,6 @@
 #include "paymentmode.h"
 class RentalVehicalManagement
 {
-
 public:
     RentalVehicalManagement();
     ~RentalVehicalManagement();
@@ -50,7 +49,7 @@ public:
     void sortBikeByStatus();
     void sortCarByStatus();
 
-     void rentalHistory();
+    void rentalHistory();
 
     list<RentalDetails*> getRentalList();
 
