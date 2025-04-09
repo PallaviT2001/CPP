@@ -14,6 +14,7 @@ protected:
 public:
     DBC(QWidget *parent =nullptr);
     ~DBC();
+    void func();
 };
 
 #endif

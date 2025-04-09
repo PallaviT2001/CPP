@@ -12,10 +12,10 @@ MyButton::~MyButton()
     cout<<"mybutton destructor called"<<endl;
 }
 
-bool MyButton::event (QEvent *e)
+bool MyButton::event(QEvent *e)
 {
     cout<< "MyButton event function called"<<endl;
-    return true;
+   return true;
 }
 
 void MyButton:: paintEvent(QPaintEvent *event)
