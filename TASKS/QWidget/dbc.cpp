@@ -16,3 +16,8 @@ void DBC::paintEvent(QPaintEvent *event)
     qDebug()<<"DBC class paint function called";
 }
 
+void DBC::func()
+{
+    qDebug()<<"Hlo Pallavi";
+}
+

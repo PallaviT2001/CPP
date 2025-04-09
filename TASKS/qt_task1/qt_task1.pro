@@ -12,18 +12,22 @@ SOURCES += \
     main.cpp \
     mybutton.cpp \
     mycheckbox.cpp \
+    mymenubar.cpp \
     myradiobutton.cpp \
     myscrollbar.cpp \
     myspinbox.cpp \
+    mystatusbar.cpp \
     mytoolbutton.cpp \
     widget.cpp
 
 HEADERS += \
     mybutton.h \
     mycheckbox.h \
+    mymenubar.h \
     myradiobutton.h \
     myscrollbar.h \
     myspinbox.h \
+    mystatusbar.h \
     mytoolbutton.h \
     widget.h
 
