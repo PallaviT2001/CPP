@@ -64,6 +64,30 @@ int main(int argc, char *argv[])
     statusbar.event(e);
     statusbar.paintEvent(event);*/
 
+    /*MyButton button;
+    button.show();
+
+    Mycheckbox checkbox;
+    checkbox.show();
+
+    MyRadioButton radiobutton;
+    radiobutton.show();
+
+    MyToolButton toolbutton;
+    toolbutton.show();
+
+    MySpinBox spinbox;
+    spinbox.show();
+
+    MyScrollBar scrollbar;
+    scrollbar.show();
+
+    MyMenuBar menubar;
+    menubar.show();
+
+    MyStatusBar statusbar;
+    statusbar.show();*/
+
     QPushButton button1;
     button1.show();
 
@@ -87,6 +111,5 @@ int main(int argc, char *argv[])
 
     QToolButton toolbutton1;
     toolbutton1.show();
-
     return a.exec();
 }

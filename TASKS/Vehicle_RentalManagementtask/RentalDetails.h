@@ -23,7 +23,7 @@ public:
     RentalDetails();
     ~RentalDetails();
 
-     RentalDetails(string name, string mobile, int age, int bookingid, string vehicalType, string paymentType, RentalVehicalDetails *rentedVehical, PaymentMode *payment);
+    RentalDetails(string name, string mobile, int age, int bookingid, string vehicalType, string paymentType, RentalVehicalDetails *rentedVehical, PaymentMode *payment);
 
     string getName();
     string getMobile();

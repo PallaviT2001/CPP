@@ -12,5 +12,4 @@ public:
     bool event (QEvent *e)override;
     void paintEvent(QPaintEvent *event)override;
 };
-
 #endif // MYCHECKBOX_H
