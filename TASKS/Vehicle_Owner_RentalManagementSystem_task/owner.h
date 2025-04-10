@@ -5,12 +5,12 @@
 
 class Owner
 {
+private:
+    Cars *m_car;
 public:
     Owner();
     ~Owner();
     void assignDriver(Drivers *d);
-private:
-    Cars* m_car;
 };
 
-#endif // OWNER_H
+#endif
