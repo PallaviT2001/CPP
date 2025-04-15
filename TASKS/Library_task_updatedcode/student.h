@@ -1,19 +1,19 @@
 #ifndef STUDENT_H
 #define STUDENT_H
-#include "librarian.h"
-#include <iostream>
-using namespace std;
+#include <vector>
+#include "Book.h"
 
 class Student
 {
 private:
-    string name;
+    string m_studentname;
+    int m_studentid;
 public:
+    vector<Book*> borrowedBooks;
     Student();
     ~Student();
-    Student(const string &name);
-    string getName()const;
-    void requestBook(const string& bookTitle, class Librarian& library);
+    Student(string studentname, int studentid);
+    void borrowBook(Book* book);
 };
 
 #endif

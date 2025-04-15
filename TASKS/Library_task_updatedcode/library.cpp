@@ -1,6 +1,5 @@
-#include "library.h"
+#include "Library.h"
 #include <iostream>
-using namespace std;
 
 Library::Library()
 {
@@ -9,5 +8,11 @@ Library::Library()
 
 Library::~Library()
 {
-    cout<<"Library constructor called"<<endl;
+    cout<<"Library destructor called"<<endl;
 }
+
+void Library::addBookToLibrary(Librarian& librarian, Book* book)
+{
+    librarian.addBook(book);
+}
+
