@@ -6,11 +6,14 @@ using namespace std;
 class Book
 {
 private:
-    string title;
+    string m_title;
+    string m_author;
 public:
     Book();
     ~Book();
-    Book(const string &title);
+    Book(string title,string author);
+    bool isBorrowed;
+    void display();
     string gettitle();
 };
 

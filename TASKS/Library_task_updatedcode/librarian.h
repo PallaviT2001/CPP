@@ -1,24 +1,21 @@
 #ifndef LIBRARIAN_H
 #define LIBRARIAN_H
-#include <vector>
-#include <iostream>
-using namespace std;
-#include "book.h"
-#include "library.h"
+#include "Book.h"
+#include <list>
 
-class Librarian:public Library
+class Librarian
 {
+private:
+    string m_name;
+    list<Book*> books;
 public:
     Librarian();
     ~Librarian();
-    void addBook(const std::string& title);
-    bool hasBook(string &title);
-    bool issueBook(const std::string& title);
-    void showAvailableBooks();
+    Librarian(string name);
+    void addBook(Book* book);
+    void displayBooks();
 };
+
 #endif
-
-
-
 
 

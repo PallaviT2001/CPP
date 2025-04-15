@@ -1,24 +1,31 @@
-#include "librarian.h"
-#include "student.h"
 #include <iostream>
+#include "Library.h"
+#include "Librarian.h"
+#include "Student.h"
+#include "Book.h"
 
 int main()
 {
-    Librarian lib;
+    Library lib;
+    Librarian librarian("Pallavi");
 
-    lib.addBook("C Programming");
-    lib.addBook("C++ Fundamentals");
-    lib.addBook("Database Systems");
+    Book* b1 = new Book("C++","Dennis Rechie");
+    Book* b2 = new Book("Java","Java author");
+    Book* b3 = new Book("Python","pythonauthor");
 
-    lib.showAvailableBooks();
+    lib.addBookToLibrary(librarian, b1);
+    lib.addBookToLibrary(librarian, b2);
+    lib.addBookToLibrary(librarian, b3);
 
-    Student student1("Pallavi");
-    Student student2("Darshini");
+    Student s1("Darshini", 101);
 
-    student1.requestBook("C++ Fundamentals", lib);
-    student2.requestBook("Python Programming", lib);
+    librarian.displayBooks();
 
-    lib.showAvailableBooks();
+    s1.borrowBook(b1);
+    librarian.displayBooks();
 
+    delete b1;
+    delete b2;
+    delete b3;
     return 0;
 }

@@ -1,61 +1,36 @@
-#include "librarian.h"
+#include "Librarian.h"
 
 Librarian::Librarian()
 {
-    cout<<"library constructor called"<<endl;
+    cout<<"Librarian constructor called"<<endl;
 }
 
 Librarian::~Librarian()
 {
-    cout<<"library destructor called"<<endl;
+    cout<<"Librarian destructor called"<<endl;
 }
 
-void Librarian::addBook(const string& title)
+Librarian::Librarian(string name):m_name(name)
 {
-    books.push_back(Book(title));
+    cout<<"Librarian parameterized constructor called"<<endl;
 }
 
-bool Librarian::hasBook(string& title)
+void Librarian::addBook(Book *book)
 {
+    books.push_back(book);
+    cout<<"Book added to library successfully: "<<book->gettitle()<<endl;
+}
+
+void Librarian::displayBooks()
+{
+    cout<<endl;
+    cout<<"Available books in library"<<endl;
+    cout<<endl;
     for (auto& book : books)
     {
-        if (book.gettitle()== title)
-        {
-            return true;
-        }
+        book->display();
     }
-    return false;
-}
-
-bool Librarian::issueBook(const string& title)
-{
-    for (auto i= books.begin(); i!= books.end(); i++)
-    {
-        if (i->gettitle()== title)
-        {
-            books.erase(i);
-            return true;
-        }
-    }
-    return false;
-}
-
-void Librarian::showAvailableBooks()
-{
     cout<<endl;
-    cout<<"Books currently available in the library"<<endl;
-    cout<<endl;
-
-    for (auto &book : books)
-    {
-        cout<<"- " <<book.gettitle()<<endl;
-        cout<<endl;
-    }
-    if (books.empty())
-    {
-        cout<<"books not available"<<endl;
-        return;
-    }
 }
 
 

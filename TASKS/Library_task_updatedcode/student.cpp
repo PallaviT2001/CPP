@@ -1,4 +1,6 @@
-#include "student.h"
+#include "Student.h"
+#include <iostream>
+using namespace std;
 
 Student::Student()
 {
@@ -10,30 +12,52 @@ Student::~Student()
     cout<<"student destructor called"<<endl;
 }
 
-Student::Student(const string& name) : name(name)
+Student::Student(string studentname, int studentid)
 {
-    cout<<"Student parameterized constructor constructor called"<<endl;
+    m_studentname=studentname;
+    m_studentid=studentid;
 }
 
-string Student::getName()const
+void Student::borrowBook(Book* book)
 {
-    return name;
-}
-
-void Student::requestBook(const string& bookTitle, Librarian& library)
-{
-    cout<<endl;
-    cout<<name <<" is requesting the book "<< bookTitle <<endl;
-    cout<<endl;
-
-    if (library.issueBook(bookTitle))
+    if (!book->isBorrowed)
     {
-        cout<<"Book name: "<<bookTitle<<endl;
-        cout<<"Student name: "<<name<<endl;
-        cout<<"Book issued successfully "<<endl;
+        borrowedBooks.push_back(book);
+        book->isBorrowed = true;
+        cout<<m_studentname<<" is requesting "<<book->gettitle()<<" Book to librarian"<<endl;
+        cout<<"Book borrowed successfully"<<endl;
     }
     else
     {
-        cout<<"Book is not available in the library "<<endl;
+        cout<<"Book not found in the library"<<endl;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
