@@ -4,17 +4,17 @@
 #include "calender.h"
 using namespace std;
 
-Calendar::Calendar()
+Calender::Calender()
 {
     cout<<"calendar constructor called"<<endl;
 }
 
-Calendar::~Calendar()
+Calender::~Calender()
 {
     cout<<"calendar destructor called"<<endl;
 }
 
-int Calendar::getStartDayOfApril(int year) const
+int Calender::getStartDayOfApril(int year) const
 {
     tm firstDay = {};
     firstDay.tm_mday = 1;
@@ -25,7 +25,7 @@ int Calendar::getStartDayOfApril(int year) const
     return firstDay.tm_wday;
 }
 
-void Calendar::displayAprilCalendar()const
+void Calender::displayAprilCalendar()const
 {
     time_t now = time(nullptr);
     tm* localTime = localtime(&now);
@@ -35,6 +35,7 @@ void Calendar::displayAprilCalendar()const
     int totalDays = 30;
 
     cout << "\nCalendar for April " << year << "\n";
+    cout<<endl;
     cout << "Sun Mon Tue Wed Thu Fri Sat\n";
 
     for (int i = 0; i < startDay; ++i)
@@ -52,7 +53,7 @@ void Calendar::displayAprilCalendar()const
     cout << "\n";
 }
 
-void Calendar::displayCurrentDate() const
+void Calender::displayCurrentDate() const
 {
     time_t now = time(nullptr);
     tm* localTime = localtime(&now);
@@ -61,10 +62,7 @@ void Calendar::displayCurrentDate() const
     int month = localTime->tm_mon + 1;
     int year = localTime->tm_year + 1900;
 
-    /*cout << "\nCurrent Date: "
-         << setfill('0') << setw(2) << day << "-"
-         << setfill('0') << setw(2) << month << "-"
-         << year << "\n";*/
 
-    cout<<" current date: "<<setw(2)<<day<<"-"<<setw(2)<<month<<"-"<<year<<endl;
+    cout<<"current date: "<<setw(2)<<day<<"-"<<setw(2)<<month<<"-"<<year<<endl;
+    cout<<endl;
 }

@@ -1,17 +1,15 @@
-#ifndef CALENDAR_H
-#define CALENDAR_H
+#ifndef CALENDER_H
+#define CALENDER_H
 
-class Calendar
+class Calender
 {
 public:
-    Calendar();
-    ~Calendar();
+    Calender();
+    ~Calender();
     void displayAprilCalendar()const;
     void displayCurrentDate() const;
-
 private:
     int getStartDayOfApril(int year) const;
 };
 
 #endif
-

@@ -6,8 +6,10 @@ CONFIG -= qt
 SOURCES += \
         calender.cpp \
         main.cpp \
-        theatres.cpp
+        theatre.cpp \
+        theatremanager.cpp
 
 HEADERS += \
     calender.h \
-    theatres.h
+    theatre.h \
+    theatremanager.h
