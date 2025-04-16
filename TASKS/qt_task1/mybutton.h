@@ -13,4 +13,5 @@ public:
     void paintEvent(QPaintEvent *event)override;
 };
 
-#endif // MYBUTTON_H
+#endif
+
