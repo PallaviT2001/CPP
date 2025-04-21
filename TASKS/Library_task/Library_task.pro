@@ -4,12 +4,16 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        books.cpp \
-        librarymanagement.cpp \
+        book.cpp \
+        librarian.cpp \
+        library.cpp \
         main.cpp \
-        student.cpp
+        student.cpp \
+        studentrecord.cpp
 
 HEADERS += \
-    books.h \
-    librarymanagement.h \
-    student.h
+    book.h \
+    librarian.h \
+    library.h \
+    student.h \
+    studentrecord.h

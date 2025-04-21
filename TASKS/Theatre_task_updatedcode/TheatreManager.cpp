@@ -1,76 +1,66 @@
 #include "TheatreManager.h"
+#include <iostream>
 #include <algorithm>
 using namespace std;
 
 TheatreManager::TheatreManager()
 {
-    cout << "TheatreManager constructor created\n";
-    for (int i = 0; i < 10; ++i)
-        theatreMap[i] = new Theatre(i);
+    cout << "TheatreManager constructor called" << endl;
+    for (int i = 1; i <= 10; ++i)
+        m_theaters[i] = new Theatre(i);
 }
 
 TheatreManager::~TheatreManager()
 {
-    for (auto& pair : theatreMap)
+    cout << "TheatreManager destructor called" << endl;
+    for (auto& pair : m_theaters)
     {
         delete pair.second;
+        pair.second = nullptr;
     }
-    theatreMap.clear();
-    cout << "TheatreManager destructor called" << endl;
+    m_theaters.clear();
 }
 
-
-
-void TheatreManager::bookTheatre(int id, const Date& date)
+bool TheatreManager::bookTheater(int id, const Date& date)
 {
-    string dateKey = date.getDateStr();
-    if (id < 0 || id >= theatreMap.size())
+    std::string dateStr = date.toString();
+    auto& bookings = m_dateBookings[dateStr];
+    if (std::find(bookings.begin(), bookings.end(), id) != bookings.end())
     {
-        cout << "Invalid Theatre ID"<<endl;
-        return;
-    }
-    auto &booked = bookingsMap[dateKey];
-
-    if (find(booked.begin(), booked.end(), id) != booked.end())
-    {
-        cout << "Theatre " << id << " already booked for " << dateKey << endl;
-        return;
+        std::cout << "Theater already booked on " << dateStr << endl;
+        return false;
     }
 
-    booked.push_back(id);
-    cout << "Theatre " << id << " successfully booked for " << dateKey << ".\n";
+    bookings.push_back(id);
+    m_theaters[id]->bookDay(date.getDay());
+    std::cout << "Booked Theater ID " << id << " on " << dateStr << endl;
+    return true;
 }
 
-void TheatreManager::showAvailableTheatres(const Date& date) const
+void TheatreManager::showBookings(const Date& date) const
 {
-    string dateKey = date.getDateStr();
-
-    auto it = bookingsMap.find(dateKey);
-
-    vector<int> booked = (it != bookingsMap.end()) ? it->second : vector<int>{};
-
-    cout << "Available Theatres for " << dateKey << ":\n";
-    for (const auto& [id, theatre] : theatreMap)
+    auto it = m_dateBookings.find(date.toString());
+    if (it != m_dateBookings.end())
     {
-        if (find(booked.begin(), booked.end(), id) == booked.end())
-            cout << "Theatre " << id << endl;
+        std::cout << "Bookings on " << date.toString() << ":\n";
+        for (int id : it->second) std::cout << "  Theater ID: " << id << endl;
     }
+    else std::cout << "No bookings on " << date.toString() << ".\n";
 }
 
-void TheatreManager::showBookedTheatres(const Date& date) const
+void TheatreManager::printAvailableTheaters(const Date& date) const
 {
-    string dateKey = date.getDateStr();
-    auto it = bookingsMap.find(dateKey);
-
-    cout << "Booked Theatres for " << dateKey << ":\n";
-    if (it == bookingsMap.end() || it->second.empty())
+    std::cout << "Available Theaters on " << date.toString() << ":\n";
+    for (const auto& pair : m_theaters)
     {
-        cout << "No theatres booked.\n";
-        return;
-    }
-
-    for (int id : it->second)
-    {
-        cout << "Theatre " << id << endl;
+        if (!pair.second->isBooked(date.getDay()))
+            std::cout << "  Theater ID: " << pair.first << " is available\n";
     }
 }
+
+std::map<int, Theatre*>& TheatreManager::getTheaters()
+{
+    return m_theaters;
+}
+
+

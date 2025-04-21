@@ -1,63 +1,52 @@
 #include "Student.h"
 #include <iostream>
-using namespace std;
 
-Student::Student()
+Student::Student(string studentName, string studentDepartment, int studentID)
 {
-    cout<<"student constructor called"<<endl;
+    cout<<"Student Constructor called"<<endl;
+    m_studentName = studentName;
+    m_studentDepartment = studentDepartment;
+    m_studentID = studentID;
 }
 
 Student::~Student()
 {
-    cout<<"student destructor called"<<endl;
-}
-
-Student::Student(string studentname, int studentid)
-{
-    m_studentname=studentname;
-    m_studentid=studentid;
+    cout<<"Student Destructor called"<<endl;
 }
 
 void Student::borrowBook(Book* book)
 {
-    if (!book->isBorrowed)
+    cout<<book->getName()<<" book is borrowed by "<<this->getName()<<endl;
+    m_borrowedBooks.push_back(book);
+}
+
+void Student::displayBorrowedBooks()
+{
+    for(auto book:m_borrowedBooks)
     {
-        borrowedBooks.push_back(book);
-        book->isBorrowed = true;
-        cout<<m_studentname<<" is requesting "<<book->gettitle()<<" Book to librarian"<<endl;
-        cout<<"Book borrowed successfully"<<endl;
-    }
-    else
-    {
-        cout<<"Book not found in the library"<<endl;
+        book->display();
     }
 }
 
+string Student::getName()
+{
+    return m_studentName;
+}
 
+string Student::getdepartment()
+{
+    return m_studentDepartment;
+}
 
+int Student::getID()
+{
+    return m_studentID;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+string Student::getRequestedBook()
+{
+    string bookName;
+    cout<<"Enter book name"<<endl;
+    cin>>bookName;
+    return bookName;
+}

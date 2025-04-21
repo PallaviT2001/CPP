@@ -1,11 +1,10 @@
-#include "Librarian.h"
+#include "librarian.h"
 #include <iostream>
 
-Librarian::Librarian(string name, int ID)
+Librarian::Librarian(string name)
 {
     cout<<"Librarian Constructor called"<<endl;
     m_name = name;
-    m_ID = ID;
 }
 
 Librarian::~Librarian()
@@ -19,12 +18,12 @@ void Librarian::issueBook(Student& student, Book* book)
     student.borrowBook(book);
 }
 
-void Librarian::addStudentDetails(Student &student, list<StudentRecord*>& studentRecord)
+void Librarian::studenthistory(Student &student, list<StudentRecord*>& studentRecord)
 {
     studentRecord.push_back(new StudentRecord(student));
 }
 
-Book* Librarian::searchBookByName(list<Book*>& bookList, string bookName)
+Book* Librarian::searchBook(list<Book*>& bookList, string bookName)
 {
     for(auto Book:bookList)
     {

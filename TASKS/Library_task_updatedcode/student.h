@@ -1,19 +1,27 @@
 #ifndef STUDENT_H
 #define STUDENT_H
-#include <vector>
 #include "Book.h"
+#include <list>
+class Library;
 
 class Student
 {
-private:
-    string m_studentname;
-    int m_studentid;
 public:
-    vector<Book*> borrowedBooks;
-    Student();
+    Student(string studentName,string studentDepartment,int studentID);
     ~Student();
-    Student(string studentname, int studentid);
     void borrowBook(Book* book);
+    void displayBorrowedBooks();
+    string getName();
+    string getdepartment();
+    int getID();
+    string getRequestedBook();
+
+private:
+    string m_studentName;
+    string m_studentDepartment;
+    int m_studentID;
+    list<Book*> m_borrowedBooks;
+
 };
 
 #endif

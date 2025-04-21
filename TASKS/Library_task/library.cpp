@@ -23,13 +23,13 @@ void Library:: studentBookBorrowfunction(Student& student)
 {
     string bookName =  student.getRequestedBook();
 
-    Book* book = m_librarian->searchBookByName(m_bookList, bookName);
+    Book* book = m_librarian->searchBook(m_bookList, bookName);
     if(book != NULL)
     {
         if(book->getStatus() == "Available")
         {
             m_librarian->issueBook(student, book);
-            m_librarian->addStudentDetails(student, m_studentRecord);
+            m_librarian->studenthistory(student, m_studentRecord);
             book->setStatus("Issued");
         }
     }
@@ -39,9 +39,9 @@ void Library:: studentBookBorrowfunction(Student& student)
     }
 }
 
-void Library::addBook(string bookName, string authourName, int bookID, string bookStatus)
+void Library::addBook(string bookName,string bookStatus)
 {
-    m_bookList.push_back(new Book(bookName, authourName, bookID, bookStatus));
+    m_bookList.push_back(new Book(bookName,bookStatus));
 }
 
 void Library::displayBooks()

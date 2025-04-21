@@ -6,20 +6,16 @@ using namespace std;
 class Book
 {
 public:
-    Book(string bookName, string authourName, int bookID,string bookStatus);
+    Book(string bookName,string bookStatus);
     ~Book();
-    void display();
-    int getID();
     string getName();
     string getStatus();
     void setStatus(string bookStatus);
+    void display();
 
 private:
     string m_bookName;
-    int  m_bookID;
-    string m_authorName;
     string m_bookStatus;
-
 };
 
-#endif // BOOK_H
+#endif

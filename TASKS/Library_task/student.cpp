@@ -1,31 +1,46 @@
 #include "student.h"
 #include <iostream>
-using namespace std;
 
-Student::Student()
+Student::Student(string studentName,int studentID)
 {
-    cout<<"student constructor called"<<endl;
+    cout<<"Student Constructor called"<<endl;
+    m_studentName = studentName;
+    m_studentID = studentID;
 }
 
 Student::~Student()
 {
-    cout<<"student destructor called"<<endl;
+    cout<<"Student Destructor called"<<endl;
 }
 
-Student::Student(int studentid,string studentname)
+void Student::borrowBook(Book* book)
 {
-    this->studentid=studentid;
-    this->studentname=studentname;
+    cout<<book->getName()<<" book is borrowed by "<<this->getName()<<endl;
+    m_borrowedBooks.push_back(book);
 }
 
-int Student::getstudentid()
+void Student::displayBorrowedBooks()
 {
-    return studentid;
+    for(auto book:m_borrowedBooks)
+    {
+        book->display();
+    }
 }
 
-string Student::getstudentname()
+string Student::getName()
 {
-    return studentname;
+    return m_studentName;
 }
 
+int Student::getID()
+{
+    return m_studentID;
+}
 
+string Student::getRequestedBook()
+{
+    string bookName;
+    cout<<"Enter book name"<<endl;
+    cin>>bookName;
+    return bookName;
+}

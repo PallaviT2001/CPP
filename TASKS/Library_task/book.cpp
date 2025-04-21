@@ -1,12 +1,10 @@
-#include "Book.h"
+#include "book.h"
 #include <iostream>
 
-Book::Book(string bookName, string authourName, int bookID, string bookStatus)
+Book::Book(string bookName, string bookStatus)
 {
     cout<<"Book Constructor called"<<endl;
     m_bookName = bookName;
-    m_authorName = authourName;
-    m_bookID = bookID;
     m_bookStatus = bookStatus;
 }
 
@@ -17,12 +15,7 @@ Book::~Book()
 
 void Book::display()
 {
-    cout<<m_bookName<<" "<<m_authorName<<" "<<m_bookID<<" "<<m_bookStatus<<endl;
-}
-
-int Book::getID()
-{
-    return m_bookID;
+    cout<<m_bookName<<" "<<m_bookStatus<<endl;
 }
 
 string Book::getName()
