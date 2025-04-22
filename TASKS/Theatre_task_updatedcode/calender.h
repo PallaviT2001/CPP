@@ -1,8 +1,7 @@
 #ifndef CALENDER_H
 #define CALENDER_H
 
-class Calender
-{
+class Calender{
 public:
     Calender();
     ~Calender();

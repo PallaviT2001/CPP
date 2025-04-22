@@ -8,8 +8,8 @@ int main()
 
     Library library(&librarian);
 
-    library.addBook("Java","Available");
-    library.addBook("Python","Available");
+    library.addBooktolist("Java","Available");
+    library.addBooktolist("Python","Available");
 
     Student student("Pallavi",01);
 

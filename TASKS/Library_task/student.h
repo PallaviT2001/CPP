@@ -7,19 +7,20 @@ class Library;
 class Student
 {
 public:
-    Student(string studentName,int  m_studentID);
+    Student(string m_studentName,int m_studentID);
     ~Student();
-    void borrowBook(Book* book);
-    void displayBorrowedBooks();
+
     string getName();
     int getID();
-    string getRequestedBook();
+
+    void borrowBookfunction(Book* book);
+    void displayBorrowedBooks();
+    string StudentRequestedBook();
 
 private:
     string m_studentName;
     int m_studentID;
     list<Book*> m_borrowedBooks;
-
 };
 
 #endif

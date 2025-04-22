@@ -3,7 +3,7 @@
 
 StudentRecord::StudentRecord(Student &student)
 {
-    cout<<"StudentRecord Constructor called"<<endl;
+    cout<<"StudentRecord default Constructor called"<<endl;
     m_studentList.push_back(new Student(student.getName(),student.getID()));
 }
 
@@ -12,7 +12,7 @@ StudentRecord::~StudentRecord()
     cout<<"StudentRecord Destructor called"<<endl;
 }
 
-void StudentRecord::display()
+void StudentRecord::displaystudents()
 {
     for(auto student: m_studentList)
     {
