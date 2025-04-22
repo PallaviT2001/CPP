@@ -62,7 +62,11 @@ void Calender::displayCurrentDate() const
     int month = localTime->tm_mon + 1;
     int year = localTime->tm_year + 1900;
 
-
-    cout<<"current date: "<<setw(2)<<day<<"-"<<setw(2)<<month<<"-"<<year<<endl;
-    cout<<endl;
+    cout <<"Current date: "<< std::setw(2) << std::setfill('0') << day << "-"
+        << std::setw(2) << std::setfill('0') <<month << "-"
+         << year<<endl<<endl;
+    //cout<<"current date: "<<setw(2)<<day<<"-"<<setw(2)<<month<<"-"<<year<<endl;
 }
+
+
+

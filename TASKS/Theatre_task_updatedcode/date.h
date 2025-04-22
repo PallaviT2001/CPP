@@ -1,19 +1,25 @@
 #ifndef DATE_H
 #define DATE_H
 #include <string>
-using namespace std;
+#include <iostream>
 
 class Date
 {
 private:
-    string dateStr;
+    int m_day;
+    int m_month;
+    int m_year;
 public:
-    Date();
     ~Date();
-    Date(string d);
-    string getDateStr() const;
-
-    bool operator==(const Date& other) const;
-    bool operator<(const Date& other) const;
+    Date(int day = 1, int month = 4, int year = 2025);
+    static Date fromString(const std::string& dateStr);
+    std::string toString() const;
+    int getDay() const;
+    int getMonth() const;
+    int getYear() const;
+    friend std::ostream& operator<<(std::ostream& os, const Date& dt);
+    //bool operator==(const Date& other) const;
 };
+
 #endif
+

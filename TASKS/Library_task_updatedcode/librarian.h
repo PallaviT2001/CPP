@@ -1,21 +1,22 @@
 #ifndef LIBRARIAN_H
 #define LIBRARIAN_H
 #include "Book.h"
-#include <list>
+#include "StudentRecord.h"
+#include<string>
+using namespace std;
 
 class Librarian
 {
+public:
+    Librarian(string name, int ID);
+    ~Librarian();
+    Book* searchBookByName(list<Book*> &bookList, string bookName);
+    void issueBook(Student &student, Book* book);
+    void addStudentDetails(Student &student, list<StudentRecord *>& studentRecord);
+
 private:
     string m_name;
-    list<Book*> books;
-public:
-    Librarian();
-    ~Librarian();
-    Librarian(string name);
-    void addBook(Book* book);
-    void displayBooks();
+    int m_ID;
 };
 
-#endif
-
-
+#endif // LIBRARIAN_H

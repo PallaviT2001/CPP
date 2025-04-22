@@ -1,31 +1,18 @@
-#include <iostream>
 #include "Library.h"
-#include "Librarian.h"
 #include "Student.h"
-#include "Book.h"
+using namespace std;
 
 int main()
 {
-    Library lib;
-    Librarian librarian("Pallavi");
+    Librarian librarian("Vidya",1);
 
-    Book* b1 = new Book("C++","Dennis Rechie");
-    Book* b2 = new Book("Java","Java author");
-    Book* b3 = new Book("Python","pythonauthor");
+    Library library(&librarian);
 
-    lib.addBookToLibrary(librarian, b1);
-    lib.addBookToLibrary(librarian, b2);
-    lib.addBookToLibrary(librarian, b3);
+    library.addBook("Java", "Javaauthor", 01,"Available");
+    library.addBook("Python", "Pythonauthor", 02, "Available");
 
-    Student s1("Darshini", 101);
+    Student student("Pallavi", "Computer science", 1);
 
-    librarian.displayBooks();
-
-    s1.borrowBook(b1);
-    librarian.displayBooks();
-
-    delete b1;
-    delete b2;
-    delete b3;
+    library.studentBookBorrowfunction(student);
     return 0;
 }

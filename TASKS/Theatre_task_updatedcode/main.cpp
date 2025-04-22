@@ -1,62 +1,55 @@
-#include <iostream>
 #include "TheatreManager.h"
-#include "date.h"
-using namespace std;
+#include <iostream>
+#include <string>
 
 int main()
 {
+    Calender calender;
+    calender.displayAprilCalendar();
+    calender.displayCurrentDate();
+
     TheatreManager manager;
     int choice;
 
-    while (true)
-    {
-        cout<<endl;
-        cout << "1. Book Theatre"<<endl;
-        cout << "2. Show Available Theatres"<<endl;
-        cout << "3. Show Booked Theatres"<<endl;
-        cout << "4. Exit"<<endl;
+    do {
+        std::cout << "\nTheater Management System\n";
+        std::cout << "1. Book a Theater\n";
+        std::cout << "2. View Bookings on Date\n";
+        std::cout << "3. Show Available Theaters\n";
+        std::cout << "4. Exit\n";
+        std::cout << "Enter choice: ";
+        std::cin >> choice;
 
-        cout << "Enter your choice:"<<endl;
-        cin >> choice;
-
+        std::string dateInput;
         if (choice == 1)
         {
+            std::cout << "Enter date (DD-MM-YYYY): ";
+            std::cin >> dateInput;
             int id;
-            string dateStr;
-            cout << "Enter Theatre ID (0 to 9): ";
-            cin >> id;
-            cout << "Enter date in format DD-MM-YYYY: ";
-            cin >> dateStr;
-            Date date(dateStr);
-            manager.bookTheatre(id, date);
+            std::cout << "Enter Theater ID (1-10): ";
+            std::cin >> id;
+            Date date = Date::fromString(dateInput);
+            manager.bookTheater(id, date);
         }
-
         else if (choice == 2)
         {
-            string dateStr;
-            cout << "Enter date in format DD-MM-YYYY: ";
-            cin >> dateStr;
-            Date date(dateStr);
-            manager.showAvailableTheatres(date);
+            std::cout << "Enter date (DD-MM-YYYY): ";
+            std::cin >> dateInput;
+            manager.showBookings(Date::fromString(dateInput));
         }
-
         else if (choice == 3)
         {
-            string dateStr;
-            cout << "Enter date in format DD-MM-YYYY: ";
-            cin >> dateStr;
-            Date date(dateStr);
-            manager.showBookedTheatres(date);
+            std::cout << "Enter date (DD-MM-YYYY): ";
+            std::cin >> dateInput;
+            manager.printAvailableTheaters(Date::fromString(dateInput));
+        }
+        else if (choice != 4)
+        {
+            std::cout << "Invalid choice. Try again.\n";
         }
 
-        else if (choice == 4)
-        {
-            cout << "Exiting\n";
-            break;
-        }
-        else {
-            cout << "Invalid choice. Try again.\n";
-        }
-    }
+    } while (choice != 4);
+
     return 0;
 }
+

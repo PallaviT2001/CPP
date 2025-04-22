@@ -1,8 +1,8 @@
 #ifndef LIBRARY_H
 #define LIBRARY_H
 #include<list>
-#include "Book.h"
-#include "Librarian.h"
+#include "book.h"
+#include "librarian.h"
 using namespace std;
 
 class Library
@@ -11,7 +11,7 @@ public:
     Library(Librarian* librarian);
     ~Library();
     void studentBookBorrowfunction(Student& student);
-    void addBook(string bookName, string authourName, int bookID, string bookStatus);
+    void addBook(string bookName,string bookStatus);
     void displayBooks();
     void displayStudentRecord();
 private:

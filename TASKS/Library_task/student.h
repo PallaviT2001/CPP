@@ -1,20 +1,25 @@
 #ifndef STUDENT_H
 #define STUDENT_H
-#include <iostream>
-using namespace std;
+#include "book.h"
+#include <list>
+class Library;
 
 class Student
 {
-private:
-    int studentid;
-    string studentname;
 public:
-    Student();
+    Student(string studentName,int  m_studentID);
     ~Student();
-    Student(int studentid,string studentname);
+    void borrowBook(Book* book);
+    void displayBorrowedBooks();
+    string getName();
+    int getID();
+    string getRequestedBook();
 
-    int getstudentid();
-    string getstudentname();
+private:
+    string m_studentName;
+    int m_studentID;
+    list<Book*> m_borrowedBooks;
+
 };
 
-#endif // STUDENT_H
+#endif

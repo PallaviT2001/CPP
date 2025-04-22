@@ -8,10 +8,12 @@ SOURCES += \
         librarian.cpp \
         library.cpp \
         main.cpp \
-        student.cpp
+        student.cpp \
+        studentrecord.cpp
 
 HEADERS += \
     book.h \
     librarian.h \
     library.h \
-    student.h
+    student.h \
+    studentrecord.h

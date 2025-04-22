@@ -1,28 +1,38 @@
 #include "theatre.h"
+#include <algorithm>
 #include <iostream>
 using namespace std;
 
-Theatre::Theatre()
+Theatre::Theatre(int id) : m_id(id)
 {
-    cout <<"Theatre constructor called\n";
+    cout << "Theatre parameterized constructor called for ID " << id << endl;
 }
 
 Theatre::~Theatre()
 {
-    cout<<"Theatre destructor called"<<endl;
-}
-
-Theatre::Theatre(int id) : id(id)
-{
-    cout<<"Theatre parameterized constructor called"<<endl;
+    cout << "Theatre destructor called for ID " << m_id << endl;
 }
 
 int Theatre::getId() const
 {
-    return id;
+    return m_id;
 }
 
-bool Theatre::operator==(const Theatre& other) const
+void Theatre::bookDay(int day)
 {
-    return id == other.id;
+    if (!isBooked(day)) bookedDays.push_back(day);
 }
+
+bool Theatre::isBooked(int day) const
+{
+    return std::find(bookedDays.begin(), bookedDays.end(), day) != bookedDays.end();
+}
+
+std::ostream& operator<<(std::ostream& os, const Theatre& t)
+{
+    os << "Theater ID: " << t.m_id << "\nBooked Days: ";
+    if (t.bookedDays.empty()) os << "None";
+    else for (int d : t.bookedDays) os << d << " ";
+    return os;
+}
+

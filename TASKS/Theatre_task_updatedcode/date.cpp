@@ -1,33 +1,61 @@
 #include "date.h"
+#include <iomanip>
+#include <sstream>
 #include <iostream>
 using namespace std;
 
-Date::Date() : dateStr("01-04-2025")
+Date::Date(int day, int month, int year) : m_day(day), m_month(month), m_year(year)
 {
-    cout<<"Date constructor called"<<endl;
+    cout << "Date default constructor called" << endl;
 }
 
 Date::~Date()
 {
-    cout<<"Date destructor called"<<endl;
+    cout << "Date destructor called" << endl;
 }
 
-Date::Date(string d) : dateStr(d)
+Date Date::fromString(const std::string& dateStr)
 {
-    cout<<"Date parameterized constructor called"<<endl;
+    int d, m, y;
+    char sep1, sep2;
+    std::istringstream iss(dateStr);
+    iss >> d >> sep1 >> m >> sep2 >> y;
+    return (sep1 == '-' && sep2 == '-') ? Date(d, m, y) : Date();
 }
 
-string Date::getDateStr() const
+std::string Date::toString() const
 {
-    return dateStr;
+    std::ostringstream oss;
+    oss << std::setw(2) << std::setfill('0') << m_day << "-"
+        << std::setw(2) << std::setfill('0') << m_month << "-"
+        << m_year;
+
+    return oss.str();
 }
 
-bool Date::operator==(const Date& other) const
+int Date::getDay() const
 {
-    return dateStr == other.dateStr;
+    return m_day;
 }
 
-bool Date::operator<(const Date& other) const
+int Date::getMonth() const
 {
-    return dateStr < other.dateStr;
+    return m_month;
 }
+
+int Date::getYear() const
+{
+    return m_year;
+}
+
+std::ostream& operator<<(std::ostream& os, const Date& dt)
+{
+    os << dt.toString();
+    return os;
+}
+
+/*bool Date::operator==(const Date& other) const
+{
+    return m_day == other.m_day && m_month == other.m_month && m_year == other.m_year;
+}*/
+
