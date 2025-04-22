@@ -4,9 +4,12 @@
 
 int main()
 {
-    Calender calender;
-    calender.displayAprilCalendar();
-    calender.displayCurrentDate();
+    //Calender calender;
+    //calender.displayAprilCalendar();
+    //calender.displayCurrentDate();
+
+    Calendar calendar;
+    calendar.run();
 
     TheatreManager manager;
     int choice;
@@ -23,6 +26,7 @@ int main()
         std::string dateInput;
         if (choice == 1)
         {
+            calendar.displayCurrentDate();
             std::cout << "Enter date (DD-MM-YYYY): ";
             std::cin >> dateInput;
             int id;
@@ -52,4 +56,3 @@ int main()
 
     return 0;
 }
-

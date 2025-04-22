@@ -63,4 +63,3 @@ std::map<int, Theatre*>& TheatreManager::getTheaters()
     return m_theaters;
 }
 
-
