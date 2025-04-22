@@ -9,7 +9,7 @@ class StudentRecord
 public:
     StudentRecord(Student &student);
     ~StudentRecord();
-    void display();
+    void displaystudents();
 
 private:
     list<Student*> m_studentList;

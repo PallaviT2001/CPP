@@ -7,16 +7,14 @@ using namespace std;
 
 class Librarian
 {
+private:
+    string m_name;
 public:
     Librarian(string name);
     ~Librarian();
-
     Book* searchBook(list<Book*> &bookList, string bookName);
-    void issueBook(Student &student, Book* book);
+    void issueBooktostudent(Student &student, Book* book);
     void studenthistory(Student &student, list<StudentRecord *>& studentRecord);
-
-private:
-    string m_name;
 };
 
-#endif // LIBRARIAN_H
+#endif

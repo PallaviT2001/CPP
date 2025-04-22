@@ -3,7 +3,7 @@
 
 Book::Book(string bookName, string bookStatus)
 {
-    cout<<"Book Constructor called"<<endl;
+    cout<<"Book default Constructor called"<<endl;
     m_bookName = bookName;
     m_bookStatus = bookStatus;
 }
@@ -11,11 +11,6 @@ Book::Book(string bookName, string bookStatus)
 Book::~Book()
 {
     cout<<"Book Destructor called"<<endl;
-}
-
-void Book::display()
-{
-    cout<<m_bookName<<" "<<m_bookStatus<<endl;
 }
 
 string Book::getName()
@@ -31,4 +26,9 @@ string Book::getStatus()
 void Book::setStatus(string bookStatus)
 {
     m_bookStatus = bookStatus;
+}
+
+void Book::displaybooks()
+{
+    cout<<m_bookName<<" "<<m_bookStatus<<endl;
 }

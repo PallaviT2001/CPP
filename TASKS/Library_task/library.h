@@ -7,17 +7,18 @@ using namespace std;
 
 class Library
 {
-public:
-    Library(Librarian* librarian);
-    ~Library();
-    void studentBookBorrowfunction(Student& student);
-    void addBook(string bookName,string bookStatus);
-    void displayBooks();
-    void displayStudentRecord();
 private:
     Librarian* m_librarian;
     list<Book*> m_bookList;
     list<StudentRecord*> m_studentRecord;
+public:
+    Library(Librarian* librarian);
+    ~Library();
+    void studentBookBorrowfunction(Student& student);
+    void displayStudentHistory();
+    void addBooktolist(string bookName,string bookStatus);
+    void displayBooks();
+
 };
 
 #endif

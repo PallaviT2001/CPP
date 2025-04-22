@@ -3,7 +3,7 @@
 
 Librarian::Librarian(string name)
 {
-    cout<<"Librarian Constructor called"<<endl;
+    cout<<"Librarian default Constructor called"<<endl;
     m_name = name;
 }
 
@@ -12,10 +12,11 @@ Librarian::~Librarian()
     cout<<"Librarian Destructor called"<<endl;
 }
 
-void Librarian::issueBook(Student& student, Book* book)
+void Librarian::issueBooktostudent(Student& student, Book* book)
 {
-    cout<<book->getName()<<" book is issued to "<<student.getName()<<endl;
-    student.borrowBook(book);
+
+    cout<<"Book is issued to "<<student.getName()<<" successfully ,Book name: "<<book->getName()<<endl;
+    student.borrowBookfunction(book);
 }
 
 void Librarian::studenthistory(Student &student, list<StudentRecord*>& studentRecord)

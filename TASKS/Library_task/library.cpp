@@ -3,7 +3,7 @@
 
 Library::Library(Librarian *librarian)
 {
-    cout<<"librarian constructor called"<<endl;
+    cout<<"library default constructor called"<<endl;
 }
 
 Library::~Library()
@@ -21,14 +21,14 @@ Library::~Library()
 
 void Library:: studentBookBorrowfunction(Student& student)
 {
-    string bookName =  student.getRequestedBook();
+    string bookName =  student.StudentRequestedBook();
 
     Book* book = m_librarian->searchBook(m_bookList, bookName);
     if(book != NULL)
     {
         if(book->getStatus() == "Available")
         {
-            m_librarian->issueBook(student, book);
+            m_librarian->issueBooktostudent(student, book);
             m_librarian->studenthistory(student, m_studentRecord);
             book->setStatus("Issued");
         }
@@ -39,7 +39,7 @@ void Library:: studentBookBorrowfunction(Student& student)
     }
 }
 
-void Library::addBook(string bookName,string bookStatus)
+void Library::addBooktolist(string bookName,string bookStatus)
 {
     m_bookList.push_back(new Book(bookName,bookStatus));
 }
@@ -48,15 +48,15 @@ void Library::displayBooks()
 {
     for(auto Book: m_bookList)
     {
-        Book->display();
+        Book->displaybooks();
     }
 }
 
-void Library::displayStudentRecord()
+void Library::displayStudentHistory()
 {
     for(auto StudentRecord: m_studentRecord)
     {
-        StudentRecord->display();
+        StudentRecord->displaystudents();
     }
 }
 
