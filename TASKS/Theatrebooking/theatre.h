@@ -1,10 +1,10 @@
 #ifndef THEATRE_H
 #define THEATRE_H
+
 #include <vector>
 #include <iostream>
 
-class Theatre
-{
+class Theatre {
 private:
     int m_id;
     std::vector<int> bookedDays;
@@ -18,4 +18,3 @@ public:
 };
 
 #endif
-

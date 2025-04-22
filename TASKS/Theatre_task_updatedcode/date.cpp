@@ -54,8 +54,3 @@ std::ostream& operator<<(std::ostream& os, const Date& dt)
     return os;
 }
 
-/*bool Date::operator==(const Date& other) const
-{
-    return m_day == other.m_day && m_month == other.m_month && m_year == other.m_year;
-}*/
-
