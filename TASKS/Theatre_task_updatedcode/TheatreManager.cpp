@@ -5,7 +5,7 @@ using namespace std;
 
 TheatreManager::TheatreManager()
 {
-    cout << "TheatreManager constructor called" << endl;
+    cout << "TheatreManager default constructor called" << endl;
     for (int i = 1; i <= 10; ++i)
         m_theaters[i] = new Theatre(i);
 }
