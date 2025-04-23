@@ -1,4 +1,4 @@
-#include "calendar.h"
+#include "calender.h"
 #include <iostream>
 #include <iomanip>
 #include <ctime>
@@ -103,7 +103,3 @@ void Calendar::displayCurrentDate() const
          << std::setw(2) << std::setfill('0') <<month << "-"
          << year<<endl<<endl;
 }
-
-
-
-

@@ -3,23 +3,27 @@
 #include <iomanip>
 #include <ctime>
 #include <conio.h>
-
 using namespace std;
 
-Calendar::Calendar() {
+Calendar::Calendar()
+{
     cout << "Calendar constructor called" << endl;
 }
 
-Calendar::~Calendar() {
+Calendar::~Calendar()
+{
     cout << "Calendar destructor called" << endl;
 }
 
-bool Calendar::isLeapYear(int year) const {
+bool Calendar::isLeapYear(int year) const
+{
     return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }
 
-int Calendar::getDaysInMonth(int month, int year) const {
-    switch (month) {
+int Calendar::getDaysInMonth(int month, int year) const
+{
+    switch (month)
+    {
     case 2: return isLeapYear(year) ? 29 : 28;
     case 4: case 6: case 9: case 11: return 30;
     default: return 31;
@@ -35,8 +39,10 @@ int Calendar::getStartDay(int month, int year) const {
     return firstDay.tm_wday;
 }
 
-void Calendar::displayCalendar(int month, int year) const {
-    static const char* monthNames[] = {
+void Calendar::displayCalendar(int month, int year) const
+{
+    static const char* monthNames[] =
+    {
         "", "January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
     };

@@ -4,18 +4,18 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        calendar.cpp \
+        Theatremanager.cpp \
+        calender.cpp \
         date.cpp \
         main.cpp \
         month.cpp \
         theatre.cpp \
-        theatremanager.cpp \
         year.cpp
 
 HEADERS += \
-    calendar.h \
+    Theatremanager.h \
+    calender.h \
     date.h \
     month.h \
     theatre.h \
-    theatremanager.h \
     year.h
