@@ -18,15 +18,13 @@ public:
     static bool isValidFormat(const std::string& dateStr);
     static bool isValidDate(int day, int month, int year);
     static Date getCurrentDate();
-
     std::string toString() const;
 
     int getDay() const;
     int getMonth() const;
     int getYear() const;
 
-    bool operator<(const Date& other) const; // <-- ADD THIS
-
+    bool operator<(const Date& other) const;
     friend std::ostream& operator<<(std::ostream& os, const Date& dt);
 };
 

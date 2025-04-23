@@ -4,7 +4,7 @@ using namespace std;
 
 Year::Year(int year) : m_year(year), april(4, year)
 {
-    cout << "Year parameterized constructor called" << endl;
+    cout << "Year default constructor called" << endl;
 }
 
 Year::~Year()
@@ -16,5 +16,3 @@ Month &Year::getApril()
 {
     return april;
 }
-
-
