@@ -1,11 +1,11 @@
-#include "Theatremanager.h"
+#include "TheatreManager.h"
 #include <iostream>
 #include <algorithm>
 using namespace std;
 
 TheatreManager::TheatreManager()
 {
-    cout << "TheatreManager constructor called" << endl;
+    cout << "TheatreManager default constructor called" << endl;
     for (int i = 1; i <= 10; ++i)
         m_theaters[i] = new Theatre(i);
 }
@@ -25,6 +25,7 @@ bool TheatreManager::bookTheater(int id, const Date& date)
 {
     std::string dateStr = date.toString();
     auto& bookings = m_dateBookings[dateStr];
+
     if (std::find(bookings.begin(), bookings.end(), id) != bookings.end())
     {
         std::cout << "Theater already booked on " << dateStr << endl;
@@ -62,3 +63,4 @@ std::map<int, Theatre*>& TheatreManager::getTheaters()
 {
     return m_theaters;
 }
+

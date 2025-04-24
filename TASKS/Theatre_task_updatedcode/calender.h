@@ -1,21 +1,18 @@
 #ifndef CALENDAR_H
 #define CALENDAR_H
+#include "date.h"
+#include "TheatreManager.h"
+#include <string>
 
-class Calendar
-{
+class Calendar {
+    int currentMonth;
+    int currentYear;
+    TheatreManager* manager;
 public:
-    Calendar();
-    ~Calendar();
-    void run();
-    void displayCurrentDate() const;
-private:
-    void displayCalendar(int month, int year) const;
-    int getStartDay(int month, int year) const;
-    int getDaysInMonth(int month, int year) const;
-    bool isLeapYear(int year) const;
+    Calendar(TheatreManager* mgr);
+    void showCalendar() const;
+    void nextMonth();
+    void prevMonth();
 };
 
 #endif
-
-
-

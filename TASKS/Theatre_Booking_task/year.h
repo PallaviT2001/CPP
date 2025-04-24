@@ -8,9 +8,10 @@ private:
     int m_year;
     Month april;
 public:
-    ~Year();
     Year(int year = 2025);
-    Month& getApril();
+    ~Year();
+    Month &getApril();
 };
-
 #endif
+
+

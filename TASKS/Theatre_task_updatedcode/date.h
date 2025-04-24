@@ -1,31 +1,21 @@
 #ifndef DATE_H
 #define DATE_H
+
 #include <string>
-#include <iostream>
-class Date{
 
-private:
-    int m_day;
-    int m_month;
-    int m_year;
-
+class Date {
+    int day, month, year;
 public:
-    Date(int day, int month, int year);
-    Date(const std::string& dateStr);
-    ~Date();
-
-    static Date fromString(const std::string& dateStr);
-    static bool isValidFormat(const std::string& dateStr);
-    static bool isValidDate(int day, int month, int year);
-    static Date getCurrentDate();
+    Date();
+    Date(int d, int m, int y);
+    bool isValid() const;
+    bool isPast() const;
     std::string toString() const;
-
-    int getDay() const;
-    int getMonth() const;
-    int getYear() const;
-
+    static bool isLeap(int year);
+    static int daysInMonth(int month, int year);
+    static Date today();
     bool operator<(const Date& other) const;
-    friend std::ostream& operator<<(std::ostream& os, const Date& dt);
+    bool operator==(const Date& other) const;
 };
 
 #endif
