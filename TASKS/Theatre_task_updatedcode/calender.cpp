@@ -65,7 +65,7 @@ void Calendar::displayCalendar(int month, int year) const
         if ((day + startDay) % 7 == 0) cout << "\n";
     }
 
-    cout << "\n\n<- Previous Month     -> Next Month     ESC to Exit\n";
+    cout << "\n\n<- Previous Month     -> Next Month     ESC and Continue\n";
 }
 
 void Calendar::displayCurrentDate() const
@@ -90,7 +90,7 @@ void Calendar::run()
     int year = localTime->tm_year + 1900;
     char ch;
     do {
-        //system("cls");
+        system("cls");
         displayCalendar(month, year);
 
         ch = _getch();

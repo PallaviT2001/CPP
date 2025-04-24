@@ -25,6 +25,7 @@ bool TheatreManager::bookTheater(int id, const Date& date)
 {
     std::string dateStr = date.toString();
     auto& bookings = m_dateBookings[dateStr];
+
     if (std::find(bookings.begin(), bookings.end(), id) != bookings.end())
     {
         std::cout << "Theater already booked on " << dateStr << endl;
