@@ -8,6 +8,7 @@ int main()
 {
     Calendar calendar;
     calendar.run();
+    calendar.displayCurrentDate();
 
     TheatreManager manager;
     int choice;
@@ -24,7 +25,6 @@ int main()
         std::string dateInput;
         if (choice == 1)
         {
-            calendar.displayCurrentDate();
             std::cout << "Enter date (DD-MM-YYYY): ";
             std::cin >> dateInput;
 
@@ -44,7 +44,6 @@ int main()
             Date currentDate = Date::getCurrentDate();
             if (date < currentDate)
             {
-
                 cout<<"You cannot able to Booking Theatres for past Dates, Choose Today or a future date"<<endl;
                 continue;
             }
