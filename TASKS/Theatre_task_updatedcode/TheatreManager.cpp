@@ -1,21 +1,26 @@
 #include "TheatreManager.h"
+#include <iostream>
 
-void TheatreManager::bookTheatre(const std::string& dateStr, const std::string& theatreId) {
-    bookings[dateStr].push_back(theatreId);
+void TheaterManager::bookTheater(const std::string& date, const std::string& theaterId) {
+    bookedTheaters[date].push_back(theaterId);
 }
 
-std::vector<std::string> TheatreManager::getBookedTheatres(const std::string& dateStr) const {
-    auto it = bookings.find(dateStr);
-    if (it != bookings.end()) return it->second;
-    return {};
-}
-
-bool TheatreManager::isAvailable(const std::string& dateStr, const std::string& theatreId) const {
-    auto it = bookings.find(dateStr);
-    if (it != bookings.end()) {
-        for (const auto& id : it->second) {
-            if (id == theatreId) return false;
+bool TheaterManager::isAvailable(const std::string& date, const std::string& theaterId) {
+    auto it = bookedTheaters.find(date);
+    if (it != bookedTheaters.end()) {
+        for (const auto& booked : it->second) {
+            if (booked == theaterId) {
+                return false;
+            }
         }
     }
     return true;
+}
+
+std::vector<std::string> TheaterManager::getBookedTheatres(const std::string& date) const {
+    auto it = bookedTheaters.find(date);
+    if (it != bookedTheaters.end()) {
+        return it->second;
+    }
+    return {};
 }

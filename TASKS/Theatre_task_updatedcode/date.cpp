@@ -1,7 +1,8 @@
-#include "date.h"
+#include "Date.h"
 #include <ctime>
 #include <sstream>
-
+#include <iostream>
+using namespace std;
 Date::Date() : day(1), month(1), year(2000) {}
 
 Date::Date(int d, int m, int y) : day(d), month(m), year(y) {}
@@ -9,7 +10,6 @@ Date::Date(int d, int m, int y) : day(d), month(m), year(y) {}
 bool Date::isLeap(int y) {
     return (y % 4 == 0 && y % 100 != 0) || (y % 400 == 0);
 }
-
 int Date::daysInMonth(int m, int y) {
     static int days[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
     if (m == 2 && isLeap(y)) return 29;

@@ -1,17 +1,17 @@
-#ifndef THEATREMANAGER_H
-#define THEATREMANAGER_H
-#include "date.h"
-#include <map>
+#ifndef THEATERMANAGER_H
+#define THEATERMANAGER_H
 #include <vector>
 #include <string>
+#include <unordered_map>
 
-class TheatreManager
-{
-    std::map<std::string, std::vector<std::string>> bookings;
+class TheaterManager {
 public:
-    void bookTheatre(const std::string& dateStr, const std::string& theatreId);
-    std::vector<std::string> getBookedTheatres(const std::string& dateStr) const;
-    bool isAvailable(const std::string& dateStr, const std::string& theatreId) const;
+    void bookTheater(const std::string& date, const std::string& theaterId);
+    bool isAvailable(const std::string& date, const std::string& theaterId);
+    std::vector<std::string> getBookedTheatres(const std::string& date) const;
+
+private:
+    std::unordered_map<std::string, std::vector<std::string>> bookedTheaters;
 };
 
-#endif
+#endif // THEATERMANAGER_H
