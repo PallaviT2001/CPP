@@ -3,6 +3,19 @@
 #include <iomanip>
 #include <ctime>
 #include <sstream>
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+Calendar::Calendar()
+{
+    cout<<"Calendar constructor called"<<endl;
+}
+
+Calendar::~Calendar()
+{
+    cout<<"Calendar destructor called"<<endl;
+}
 
 Calendar::Calendar(TheatreManager* mgr) {
     Date today = Date::today();
@@ -51,7 +64,8 @@ void Calendar::showCalendar() const {
         ++printed;
     }
 
-    for (int d = 1; d <= days; ++d) {
+    for (int d = 1; d <= days; ++d)
+    {
         Date curr(d, currentMonth, currentYear);
         std::string dateStr = curr.toString();
         std::vector<std::string> booked = manager->getBookedTheatres(dateStr);
@@ -71,7 +85,3 @@ void Calendar::showCalendar() const {
         std::cout << "\n";
     }
 }
-
-
-
-

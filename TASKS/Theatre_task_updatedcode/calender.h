@@ -4,11 +4,14 @@
 #include "TheatreManager.h"
 #include <string>
 
-class Calendar {
+class Calendar
+{
     int currentMonth;
     int currentYear;
     TheatreManager* manager;
 public:
+    Calendar();
+    ~Calendar();
     Calendar(TheatreManager* mgr);
     void showCalendar() const;
     void nextMonth();
@@ -16,3 +19,4 @@ public:
 };
 
 #endif
+
