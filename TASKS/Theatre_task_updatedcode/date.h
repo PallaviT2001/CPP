@@ -3,7 +3,8 @@
 
 #include <string>
 
-class Date {
+class Date
+{
     int day, month, year;
 public:
     Date();
@@ -19,3 +20,4 @@ public:
 };
 
 #endif
+

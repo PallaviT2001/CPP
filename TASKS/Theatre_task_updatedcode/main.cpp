@@ -3,15 +3,18 @@
 #include <iostream>
 #include <regex>
 
-bool isValidDateFormat(const std::string& dateStr) {
+bool isValidDateFormat(const std::string& dateStr)
+{
     std::regex datePattern(R"(\d{2}-\d{2}-\d{4})");
     return std::regex_match(dateStr, datePattern);
 }
 
 int main() {
+
     TheatreManager manager;
     Calendar calendar(&manager);
     std::string input;
+    calendar.showCalendar();
 
     while (true) {
         std::cout << "\nMenu:\n1. View Calendar\n2. Book Theatre\n3. Check Bookings\n4. <- Previous Month\n5. -> Next Month\n6. Exit\nEnter choice: ";
@@ -51,16 +54,24 @@ int main() {
             std::cout << "Booked theatres on " << dateStr << ":\n";
             for (const auto& t : booked)
                 std::cout << "- " << t << "\n";
-        } else if (input == "4") {
+        } else if (input == "4")
+        {
             calendar.prevMonth();
-        } else if (input == "5") {
+        }
+        else if (input == "5")
+        {
             calendar.nextMonth();
-        } else if (input == "6") {
+        }
+        else if (input == "6")
+        {
             break;
-        } else {
+        }
+        else
+        {
             std::cout << "Invalid input.\n";
         }
     }
 
     return 0;
 }
+
