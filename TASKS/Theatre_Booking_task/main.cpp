@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "calender.h"
-#include "TheatreManager.h"
+#include "Theatremanager.h"
 #include "date.h"
 
 int main()

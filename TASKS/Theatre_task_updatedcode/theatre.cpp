@@ -1,4 +1,3 @@
-
 #include "theatre.h"
 #include <algorithm>
 #include <iostream>
