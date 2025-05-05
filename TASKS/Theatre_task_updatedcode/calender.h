@@ -4,7 +4,9 @@
 #include "TheatreManager.h"
 #include <string>
 
-class Calendar {
+class Calendar
+{
+private:
     int currentMonth;
     int currentYear;
     TheaterManager* manager;
@@ -18,4 +20,3 @@ public:
 };
 
 #endif
-
