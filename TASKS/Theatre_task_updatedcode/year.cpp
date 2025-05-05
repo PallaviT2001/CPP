@@ -1,6 +1,5 @@
 #include "year.h"
 #include <iostream>
-
 using namespace std;
 
 Year::Year(int year) : m_year(year), april(4, year)
