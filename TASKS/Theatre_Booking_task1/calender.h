@@ -1,7 +1,7 @@
 #ifndef CALENDAR_H
 #define CALENDAR_H
 #include "date.h"
-#include "TheatreManager.h"
+#include "theatremanager.h"
 #include <string>
 
 class Calendar
