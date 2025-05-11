@@ -5,6 +5,7 @@ using namespace std;
 ATM::ATM()
 {
     //cout<<"atm default constructor called"<<endl;
+    cout<<"HII"<<endl;
 }
 
 ATM::~ATM()
