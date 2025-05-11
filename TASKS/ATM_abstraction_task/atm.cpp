@@ -4,11 +4,11 @@ using namespace std;
 
 ATM::ATM()
 {
-    //cout<<"atm default constructor called"<<endl;
+    cout<<"atm default constructor called"<<endl;
 }
 
 ATM::~ATM()
 {
-    //cout<<"atm class destructor called"<<endl;
+    cout<<"atm class destructor called"<<endl;
 }
 
