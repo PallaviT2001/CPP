@@ -9,4 +9,5 @@ int main(int argc, char *argv[])
     w.setGeometry(100, 100, 400, 600);
     w.show();
     return a.exec();
+    //cout<<"Hii"<<endl;
 }
