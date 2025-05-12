@@ -1,6 +1,6 @@
 #include <iostream>
 #include <regex>
-#include "TheatreManager.h"
+#include "theatremanager.h"
 #include "calender.h"
 #include <iostream>
 using namespace std;

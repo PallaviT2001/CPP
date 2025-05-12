@@ -1,4 +1,4 @@
-#include "Date.h"
+#include "date.h"
 #include <ctime>
 #include <sstream>
 #include <iostream>
@@ -60,3 +60,4 @@ bool Date::operator==(const Date& other) const
 {
     return day == other.day && month == other.month && year == other.year;
 }
+
