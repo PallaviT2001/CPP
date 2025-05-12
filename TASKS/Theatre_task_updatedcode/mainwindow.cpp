@@ -13,10 +13,8 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    // Main window setup
     setWindowTitle("Theatre Booking System");
 
-    // Create UI elements
     calendar = new QCalendarWidget(this);
     prevMonthButton = new QPushButton("< Previous Month", this);
     nextMonthButton = new QPushButton("Next Month >", this);
@@ -27,12 +25,9 @@ MainWindow::MainWindow(QWidget *parent)
     statusTextEdit = new QTextEdit(this);
     monthLabel = new QLabel("April 2025", this);
 
-    // Add 10 theatre options
     for (int i = 1; i <= 10; ++i) {
         theatreComboBox->addItem(QString::number(i));
     }
-
-    // Layout for buttons and combo box
     QVBoxLayout *mainLayout = new QVBoxLayout;
     QHBoxLayout *topLayout = new QHBoxLayout;
 
@@ -50,12 +45,10 @@ MainWindow::MainWindow(QWidget *parent)
     mainLayout->addWidget(new QLabel("Status:"));
     mainLayout->addWidget(statusTextEdit);
 
-    // Set central widget
     QWidget *centralWidget = new QWidget(this);
     centralWidget->setLayout(mainLayout);
     setCentralWidget(centralWidget);
 
-    // Connect button actions to slots
     connect(prevMonthButton, &QPushButton::clicked, this, &MainWindow::onPreviousMonthClicked);
     connect(nextMonthButton, &QPushButton::clicked, this, &MainWindow::onNextMonthClicked);
     connect(bookTheatreButton, &QPushButton::clicked, this, &MainWindow::onBookTheatreClicked);
@@ -69,8 +62,6 @@ void MainWindow::onPreviousMonthClicked()
 {
     QDate currentMonth = calendar->selectedDate();
     calendar->setSelectedDate(currentMonth.addMonths(-1));
-
-    // Update month label
     monthLabel->setText(calendar->selectedDate().toString("MMMM yyyy"));
 }
 
@@ -78,8 +69,6 @@ void MainWindow::onNextMonthClicked()
 {
     QDate currentMonth = calendar->selectedDate();
     calendar->setSelectedDate(currentMonth.addMonths(1));
-
-    // Update month label
     monthLabel->setText(calendar->selectedDate().toString("MMMM yyyy"));
 }
 
@@ -88,8 +77,7 @@ void MainWindow::onBookTheatreClicked()
     QDate selectedDate = calendar->selectedDate();
     int theatreId = theatreComboBox->currentText().toInt();
 
-    // Dummy booking logic
-    bookedTheatres[selectedDate].append(theatreId);  // Booking the theatre for the selected date
+    bookedTheatres[selectedDate].append(theatreId);
 
     QString status = QString("Theatre %1 booked successfully for %2").arg(theatreId).arg(selectedDate.toString("dd-MM-yyyy"));
     updateStatus(status);
@@ -117,7 +105,7 @@ void MainWindow::onCheckBookingsClicked()
 
 void MainWindow::onExitClicked()
 {
-    QApplication::quit();  // Quit the application
+    QApplication::quit();
 }
 
 void MainWindow::updateStatus(const QString &status)

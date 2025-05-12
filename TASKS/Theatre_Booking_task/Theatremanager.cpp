@@ -1,4 +1,4 @@
-#include "TheatreManager.h"
+#include "Theatremanager.h"
 #include <iostream>
 #include <algorithm>
 using namespace std;

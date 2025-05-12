@@ -1,6 +1,5 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
 #include <QPushButton>
 #include <QComboBox>
@@ -13,18 +12,15 @@
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
 private slots:
     void onPreviousMonthClicked();
     void onNextMonthClicked();
     void onBookTheatreClicked();
     void onCheckBookingsClicked();
     void onExitClicked();
-
 private:
     void updateStatus(const QString &status);
 
@@ -37,8 +33,7 @@ private:
     QComboBox *theatreComboBox;
     QTextEdit *statusTextEdit;
     QLabel *monthLabel;
-
     QMap<QDate, QList<int>> bookedTheatres;  // Store bookings with dates
 };
 
-#endif // MAINWINDOW_H
+#endif

@@ -2,7 +2,9 @@
 #define DATE_H
 #include <string>
 
-class Date {
+class Date
+{
+private:
     int day, month, year;
 public:
     Date();
