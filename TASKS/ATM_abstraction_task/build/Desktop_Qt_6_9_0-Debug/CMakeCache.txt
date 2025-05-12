@@ -153,7 +153,11 @@ CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 CMAKE_LINKER:FILEPATH=/bin/ld
 
 //Program used to build from build.ninja files.
+<<<<<<< HEAD
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/ninja
+=======
+CMAKE_MAKE_PROGRAM:FILEPATH=/home/pallavi/Qt/Tools/Ninja/ninja
+>>>>>>> main
 
 //Flags used by the linker during the creation of modules during
 // all build types.
