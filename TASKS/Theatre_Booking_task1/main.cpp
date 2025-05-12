@@ -50,7 +50,7 @@ int main() {
             calendar.showCalendar();
             break;
         }
-        case 4:
+        /*case 4:
         {
             std::cout << "Enter date (DD-MM-YYYY): ";
             std::cin >> dateStr;
@@ -72,6 +72,47 @@ int main() {
             std::cin >> theatreId;
             if (!manager.isAvailable(dateStr, theatreId))
             {
+                std::cout << "Theatre already booked.\n";
+            } else {
+                manager.bookTheater(dateStr, theatreId);
+                std::cout << "Booking successful!\n";
+            }
+            break;
+        }*/
+        case 4:
+        {
+            std::cout << "Enter date (DD-MM-YYYY): ";
+            std::cin >> dateStr;
+            if (!isValidDateFormat(dateStr)) {
+                std::cout << "Invalid date format.\n";
+                continue;
+            }
+
+            int d = std::stoi(dateStr.substr(0, 2));
+            int m = std::stoi(dateStr.substr(3, 2));
+            int y = std::stoi(dateStr.substr(6, 4));
+            Date date(d, m, y);
+
+            if (!date.isValid() || date.isPast()) {
+                std::cout << "Invalid or past date.\n";
+                continue;
+            }
+
+            std::cout << "Enter theatre ID (1 to 10): ";
+            std::cin >> theatreId;
+
+            try {
+                int id = std::stoi(theatreId);
+                if (id < 1 || id > 10) {
+                    std::cout << "Theatre ID must be between 1 and 10.\n";
+                    continue;
+                }
+            } catch (...) {
+                std::cout << "Invalid theatre ID. It must be a number between 1 and 10.\n";
+                continue;
+            }
+
+            if (!manager.isAvailable(dateStr, theatreId)) {
                 std::cout << "Theatre already booked.\n";
             } else {
                 manager.bookTheater(dateStr, theatreId);

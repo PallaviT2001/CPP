@@ -24,4 +24,3 @@ std::vector<Date>& Month::getDates()
 {
     return m_dates;
 }
-

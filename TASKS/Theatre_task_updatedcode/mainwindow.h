@@ -2,15 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QCalendarWidget>
 #include <QPushButton>
-#include <QLabel>
-#include <QLineEdit>
 #include <QComboBox>
+#include <QTextEdit>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
-#include "date.h"
-#include "TheatreManager.h"
-#include "calender.h"
+#include <QLabel>
+#include <QDate>
 
 class MainWindow : public QMainWindow
 {
@@ -21,29 +20,21 @@ public:
     ~MainWindow();
 
 private slots:
-    void onPrevMonthClicked();
+    void onPreviousMonthClicked();
     void onNextMonthClicked();
-    void onShowCalendarClicked();
     void onBookTheatreClicked();
     void onCheckBookingsClicked();
+    void onExitClicked();
 
 private:
-    void setupUI();
-    void updateCalendarDisplay();
+    QCalendarWidget *calendar;
+    QPushButton *prevMonthButton, *nextMonthButton, *bookTheatreButton, *checkBookingsButton, *exitButton;
+    QComboBox *theatreComboBox;
+    QTextEdit *statusTextEdit;
+    QLabel *monthLabel;
 
-    QPushButton *prevMonthButton;
-    QPushButton *nextMonthButton;
-    QPushButton *showCalendarButton;
-    QPushButton *bookTheatreButton;
-    QPushButton *checkBookingsButton;
-    QLabel *calendarLabel;
-    QLabel *statusLabel;
-    QLineEdit *dateInput;
-    QLineEdit *theatreIdInput;
-
-    TheaterManager *manager;
-    Calendar *calendar;
+    void updateStatus(const QString &status);
+    void updateBookingsForCurrentDate();
 };
 
 #endif // MAINWINDOW_H
-
