@@ -1,4 +1,4 @@
-#include "TheatreManager.h"
+#include "theatremanager.h"
 #include <iostream>
 
 void TheaterManager::bookTheater(const std::string& date, const std::string& theaterId)
