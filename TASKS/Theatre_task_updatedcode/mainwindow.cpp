@@ -8,7 +8,7 @@
 #include <QLabel>
 #include <QDate>
 #include <QMessageBox>
-#include <QApplication>  // Ensure this is included
+#include <QApplication>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -27,10 +27,10 @@ MainWindow::MainWindow(QWidget *parent)
     statusTextEdit = new QTextEdit(this);
     monthLabel = new QLabel("April 2025", this);
 
-    // Add theatre options (dummy data)
-    theatreComboBox->addItem("1");
-    theatreComboBox->addItem("2");
-    theatreComboBox->addItem("3");
+    // Add 10 theatre options
+    for (int i = 1; i <= 10; ++i) {
+        theatreComboBox->addItem(QString::number(i));
+    }
 
     // Layout for buttons and combo box
     QVBoxLayout *mainLayout = new QVBoxLayout;
@@ -89,6 +89,8 @@ void MainWindow::onBookTheatreClicked()
     int theatreId = theatreComboBox->currentText().toInt();
 
     // Dummy booking logic
+    bookedTheatres[selectedDate].append(theatreId);  // Booking the theatre for the selected date
+
     QString status = QString("Theatre %1 booked successfully for %2").arg(theatreId).arg(selectedDate.toString("dd-MM-yyyy"));
     updateStatus(status);
 }
@@ -96,8 +98,21 @@ void MainWindow::onBookTheatreClicked()
 void MainWindow::onCheckBookingsClicked()
 {
     QDate selectedDate = calendar->selectedDate();
-    QString status = QString("Bookings for %1: Theatre 1, Theatre 3").arg(selectedDate.toString("dd-MM-yyyy"));
-    updateStatus(status);
+    if (bookedTheatres.contains(selectedDate)) {
+        QList<int> bookedList = bookedTheatres[selectedDate];
+        if (bookedList.isEmpty()) {
+            updateStatus("No theatres booked for this date.");
+        } else {
+            QStringList bookings;
+            for (int theatreId : bookedList) {
+                bookings.append(QString::number(theatreId));
+            }
+            QString status = QString("Theatres booked for %1: %2").arg(selectedDate.toString("dd-MM-yyyy")).arg(bookings.join(", "));
+            updateStatus(status);
+        }
+    } else {
+        updateStatus("No theatres booked for this date.");
+    }
 }
 
 void MainWindow::onExitClicked()
@@ -108,12 +123,4 @@ void MainWindow::onExitClicked()
 void MainWindow::updateStatus(const QString &status)
 {
     statusTextEdit->setText(status);
-}
-
-void MainWindow::updateBookingsForCurrentDate()
-{
-    // Dummy function to update bookings (you can add actual data fetching here)
-    QDate selectedDate = calendar->selectedDate();
-    QString status = QString("Bookings for %1: Theatre 1, Theatre 2").arg(selectedDate.toString("dd-MM-yyyy"));
-    updateStatus(status);
 }

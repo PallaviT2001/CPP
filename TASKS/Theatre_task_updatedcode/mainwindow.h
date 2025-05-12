@@ -2,21 +2,20 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QCalendarWidget>
 #include <QPushButton>
 #include <QComboBox>
 #include <QTextEdit>
-#include <QVBoxLayout>
-#include <QHBoxLayout>
+#include <QCalendarWidget>
 #include <QLabel>
 #include <QDate>
+#include <QMap>
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
@@ -27,14 +26,19 @@ private slots:
     void onExitClicked();
 
 private:
+    void updateStatus(const QString &status);
+
     QCalendarWidget *calendar;
-    QPushButton *prevMonthButton, *nextMonthButton, *bookTheatreButton, *checkBookingsButton, *exitButton;
+    QPushButton *prevMonthButton;
+    QPushButton *nextMonthButton;
+    QPushButton *bookTheatreButton;
+    QPushButton *checkBookingsButton;
+    QPushButton *exitButton;
     QComboBox *theatreComboBox;
     QTextEdit *statusTextEdit;
     QLabel *monthLabel;
 
-    void updateStatus(const QString &status);
-    void updateBookingsForCurrentDate();
+    QMap<QDate, QList<int>> bookedTheatres;  // Store bookings with dates
 };
 
 #endif // MAINWINDOW_H
