@@ -33,7 +33,7 @@ private:
     QComboBox *theatreComboBox;
     QTextEdit *statusTextEdit;
     QLabel *monthLabel;
-    QMap<QDate, QList<int>> bookedTheatres;  // Store bookings with dates
+    QMap<QDate, QList<int>> bookedTheatres;
 };
 
 #endif
