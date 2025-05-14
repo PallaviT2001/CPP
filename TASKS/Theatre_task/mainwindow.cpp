@@ -1,8 +1,7 @@
 #include "mainwindow.h"
 #include <QFont>
 
-MainWindow::MainWindow()
-    : currentDate(QDate::currentDate())
+MainWindow::MainWindow(): currentDate(QDate::currentDate())
 {
     setupUI();
     updateCalendar();
@@ -22,17 +21,17 @@ void MainWindow::setupUI()
     nextMonthButton->setGeometry(380, 10, 100, 30);
     connect(nextMonthButton, &QPushButton::clicked, this, &MainWindow::showNextMonth);
 
-    monthYearLabel = new QLabel(this);
-    monthYearLabel->setGeometry(150, 10, 200, 30);
-    monthYearLabel->setAlignment(Qt::AlignCenter);
-    monthYearLabel->setFont(QFont("Arial", 14, QFont::Bold));
+    monthYearButton = new QPushButton(this);
+    monthYearButton->setGeometry(150, 10, 200, 30);
+    monthYearButton->setEnabled(false);
+    monthYearButton->setStyleSheet("border: none; background: none; font: bold 14px Arial;");
 
-    QStringList weekDays = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+    const char* daysOfWeek[7] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     QFont headerFont;
     headerFont.setBold(true);
     for (int i = 0; i < 7; ++i)
     {
-        headerButtons[i] = new QPushButton(weekDays[i], this);
+        headerButtons[i] = new QPushButton(daysOfWeek[i], this);
         headerButtons[i]->setGeometry(20 + i * 60, 50, 60, 30);
         headerButtons[i]->setFont(headerFont);
         headerButtons[i]->setEnabled(false);
@@ -84,7 +83,8 @@ void MainWindow::updateCalendar()
             ++day;
         }
     }
-    monthYearLabel->setText(currentDate.toString("MMMM yyyy"));
+
+    monthYearButton->setText(currentDate.toString("MMMM yyyy"));
 }
 
 void MainWindow::clearCalendar()
@@ -111,5 +111,7 @@ void MainWindow::showNextMonth()
     currentDate = currentDate.addMonths(1);
     updateCalendar();
 }
+
+
 
 
