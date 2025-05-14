@@ -1,17 +1,16 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
 #include <QPushButton>
-#include <QGridLayout>
 #include <QDate>
+#include <QLabel>
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow();
     ~MainWindow();
 
 private slots:
@@ -19,12 +18,11 @@ private slots:
     void showNextMonth();
 
 private:
-    QWidget *centralWidget;
-    QGridLayout *gridLayout;
     QPushButton *dayButtons[6][7];
     QPushButton *headerButtons[7];
     QPushButton *prevMonthButton;
     QPushButton *nextMonthButton;
+    QLabel *monthYearLabel;
 
     QDate currentDate;
 
@@ -34,3 +32,4 @@ private:
 };
 
 #endif
+
