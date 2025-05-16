@@ -24,7 +24,7 @@ void MainWindow::setupUI()
     monthYearButton = new QPushButton(this);
     monthYearButton->setGeometry(150, 10, 200, 30);
     monthYearButton->setEnabled(false);
-    monthYearButton->setStyleSheet("border: none; background: none; font: bold 14px Arial;");
+    monthYearButton->setStyleSheet("border: none; background: none; font: bold 18px Arial;");
 
     const char* daysOfWeek[7] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     QFont headerFont;
