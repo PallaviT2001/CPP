@@ -7,6 +7,5 @@ int main(int argc, char *argv[])
 
     Slider window;
     window.show();
-
     return app.exec();
 }
