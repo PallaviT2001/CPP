@@ -1,16 +1,24 @@
 #ifndef BATTERYMANAGER_H
 #define BATTERYMANAGER_H
 
-class BatteryManager
+#include <QObject>
+
+class BatteryManager : public QObject
 {
-private:
-    int m_batterypercentage;
+    Q_OBJECT
 public:
     BatteryManager();
     ~BatteryManager();
-    int getbatterypercentage();
-    void setbatterypercentage(int percentage);
-    void batterycapacity();
+
+    int batteryCapacity();
+    void setBatteryCapacity(int batPercentage);
+    void batteryCapacityVariation();
+
+signals:
+    void batteryLow(QString);
+
+private:
+    int m_batteryCapacity;
 };
 
 #endif // BATTERYMANAGER_H

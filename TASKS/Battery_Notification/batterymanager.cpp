@@ -1,36 +1,44 @@
 #include "batterymanager.h"
-#include <iostream>
+#include <chrono>
+#include<iostream>
+#include <thread>
 using namespace std;
 
 BatteryManager::BatteryManager()
 {
-    cout<<"Battery manager constructor called"<<endl;
+
+    m_batteryCapacity = 100;
 }
 
 BatteryManager::~BatteryManager()
 {
-    cout<<"Battery manager destructor called"<<endl;
 }
 
-int BatteryManager::getbatterypercentage()
+int BatteryManager::batteryCapacity()
 {
-     return m_batterypercentage;
+    return m_batteryCapacity;
 }
 
-void BatteryManager::setbatterypercentage(int percentage)
+void BatteryManager::setBatteryCapacity(int batPercentage)
 {
-    m_batterypercentage=percentage;
+    m_batteryCapacity = batPercentage;
 }
 
-void BatteryManager::batterycapacity()
+void BatteryManager::batteryCapacityVariation()
 {
-    for(int i=0;i<20;i++)
+    for(int i = 0; i < 20; i++)
     {
-        m_batterypercentage=m_batterypercentage-5;
-        if(m_batterypercentage<=0)
+        m_batteryCapacity = m_batteryCapacity - 5;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        if(m_batteryCapacity <= 0)
         {
             break;
         }
+        if(m_batteryCapacity <= 20)
+        {
+            QString message = "BatteryLow :" + QString::number(m_batteryCapacity);
+            emit batteryLow(message);
+        }
+        cout<<"Battery Capacity:"<<m_batteryCapacity<<endl;
     }
 }
-

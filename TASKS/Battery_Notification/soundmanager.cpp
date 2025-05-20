@@ -1,18 +1,18 @@
 #include "soundmanager.h"
-#include <iostream>
+#include "qdebug.h"
+#include<iostream>
 using namespace std;
 
-Soundmanager::Soundmanager()
+SoundManager::SoundManager()
 {
-    cout<<"Sound manager constructor called"<<endl;
+
+}
+SoundManager::~SoundManager()
+{
+
 }
 
-Soundmanager::~Soundmanager()
+void SoundManager::announce(QString message)
 {
-    cout<<"Sound manager destructor called"<<endl;
-}
-
-void Soundmanager::announcement()
-{
-
+    qDebug()<<message;
 }
