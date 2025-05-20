@@ -1,12 +1,18 @@
 #ifndef SOUNDMANAGER_H
 #define SOUNDMANAGER_H
 
-class Soundmanager
+#include <QObject>
+#include <QString>
+
+class SoundManager : public QObject
 {
+    Q_OBJECT
 public:
-    Soundmanager();
-    ~Soundmanager();
-    void announcement();
+    SoundManager();
+    ~SoundManager();
+
+public slots:
+    void announce(QString message);
 };
 
 #endif // SOUNDMANAGER_H
