@@ -1,3 +1,0 @@
-Theatre: 3,INOX,Metro Mall
-Theatre: 3,INOX,Metro Mall
-Theatre: 3,INOX,Metro Mall

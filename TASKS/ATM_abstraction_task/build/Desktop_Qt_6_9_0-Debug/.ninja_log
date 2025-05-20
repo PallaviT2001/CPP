@@ -1,0 +1,7 @@
+# ninja log v6
+2	49	1747714411862813719	build.ninja	89e6352d91d557b7
+1	5	1747714411873813810	clean	f8c601895a329fa1
+2	634	1747714412909822309	CMakeFiles/ATM_abstraction_task.dir/atm.cpp.o	2903a1a1d26f9dbf
+1	644	1747714412908822301	CMakeFiles/ATM_abstraction_task.dir/main.cpp.o	f4f55e67edaf5328
+2	669	1747714412909822309	CMakeFiles/ATM_abstraction_task.dir/bankaccount.cpp.o	18886de57e47d24d
+669	789	1747714413576827777	ATM_abstraction_task	44ae19d8fb332883

@@ -2,169 +2,90 @@
 #include <iostream>
 #include <iomanip>
 #include <ctime>
-#include <conio.h>
-using namespace std;
+#include <sstream>
 
 Calendar::Calendar()
 {
-    cout << "Calendar constructor called" << endl;
+    std::cout << "Calendar constructor called" << std::endl;
 }
 
 Calendar::~Calendar()
 {
-    cout << "Calendar destructor called" << endl;
+    std::cout << "Calendar destructor called" << std::endl;
 }
 
-bool Calendar::isLeapYear(int year) const
+Calendar::Calendar(TheaterManager* mgr)
 {
-    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+    Date today = Date::today();
+    currentMonth = today.toString()[3] == '0' ? today.toString()[4] - '0' : std::stoi(today.toString().substr(3, 2));
+    currentYear = std::stoi(today.toString().substr(6));
+    manager = mgr;
 }
 
-int Calendar::getDaysInMonth(int month, int year) const
+void Calendar::nextMonth()
 {
-    switch (month)
+    if (++currentMonth > 12)
     {
-    case 2: return isLeapYear(year) ? 29 : 28;
-    case 4: case 6: case 9: case 11: return 30;
-    default: return 31;
+        currentMonth = 1;
+        ++currentYear;
     }
 }
 
-int Calendar::getStartDay(int month, int year) const
+void Calendar::prevMonth()
 {
-    tm firstDay = {};
-    firstDay.tm_mday = 1;
-    firstDay.tm_mon = month - 1;
-    firstDay.tm_year = year - 1900;
-    mktime(&firstDay);
-    return firstDay.tm_wday;
+    if (--currentMonth < 1)
+    {
+        currentMonth = 12;
+        --currentYear;
+    }
 }
 
-void Calendar::displayCalendar(int month, int year) const
+void Calendar::showCalendar() const
 {
-    static const char* monthNames[] =
-        {
-            "", "January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December"
-        };
+    std::string monthNames[] = { "", "January", "February", "March", "April", "May", "June",
+                                "July", "August", "September", "October", "November", "December" };
 
-    int startDay = getStartDay(month, year);
-    int totalDays = getDaysInMonth(month, year);
+    std::cout << "\n" << monthNames[currentMonth] << " " << currentYear << "\n";
+    std::cout << "  Sun     Mon   Tue   Wed   Thu   Fri   Sat\n";
 
-    cout << "\n  " << monthNames[month] << " " << year << "\n";
-    cout << "  Sun Mon Tue Wed Thu Fri Sat\n";
+    std::tm t = {};
+    t.tm_mday = 1;
+    t.tm_mon = currentMonth - 1;
+    t.tm_year = currentYear - 1900;
+    std::mktime(&t);
+    int startDay = t.tm_wday;
+
+    int days = Date::daysInMonth(currentMonth, currentYear);
+    int printed = 0;
 
     for (int i = 0; i < startDay; ++i)
     {
-        cout << "    ";
+        std::cout <<"      ";
+        ++printed;
     }
 
-    for (int day = 1; day <= totalDays; ++day)
+    for (int d = 1; d <= days; ++d)
     {
-        cout << setw(4) << day;
-        if ((day + startDay) % 7 == 0) cout << "\n";
-    }
+        Date curr(d, currentMonth, currentYear);
+        std::string dateStr = curr.toString();
+        std::vector<std::string> booked = manager->getBookedTheatres(dateStr);
+        int bookedCount = booked.size();
 
-    cout << "\n\n<- Previous Month     -> Next Month     ESC and Continue\n";
-}
-
-void Calendar::displayCurrentDate() const
-{
-    time_t now = time(nullptr);
-    tm* localTime = localtime(&now);
-
-    int day = localTime->tm_mday;
-    int month = localTime->tm_mon + 1;
-    int year = localTime->tm_year + 1900;
-
-    cout <<"Current date: "<< std::setw(2) << std::setfill('0') << day << "-"
-         << std::setw(2) << std::setfill('0') <<month << "-"
-         << year<<endl<<endl;
-}
-
-void Calendar::run()
-{
-    time_t now = time(nullptr);
-    tm* localTime = localtime(&now);
-    int month = localTime->tm_mon + 1;
-    int year = localTime->tm_year + 1900;
-    char ch;
-    do {
-        system("cls");
-        displayCalendar(month, year);
-
-        ch = _getch();
-        if (ch == 0 || ch == -32)
+        if (bookedCount > 0)
         {
-            ch = _getch();
-            if (ch == 75)
-            {
-                --month;
-                if (month < 1)
-                {
-                    month = 12;
-                    --year;
-                }
-            }
-            else if (ch == 77)
-            {
-                ++month;
-                if (month > 12)
-                {
-                    month = 1;
-                    ++year;
-                }
-            }
+            std::ostringstream oss;
+            oss << std::setw(2) << d << "/" << bookedCount;
+            std::cout << std::setw(6) << oss.str();
         }
-    } while (ch != 27);
-}
-
-/*void Calendar::run() {
-    time_t now = time(nullptr);
-    tm* localTime = localtime(&now);
-    int month = localTime->tm_mon + 1;
-    int year = localTime->tm_year + 1900;
-    int choice;
-
-    while (true) {
-        system("cls");
-        displayCalendar(month, year);
-
-        cout << "\nMenu:\n";
-        cout << "1. Previous Month\n";
-        cout << "2. Next Month\n";
-        cout << "3. Exit\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
-
-        if (cin.fail()) {
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Invalid input. Try again.\n";
-            continue;
+        else
+        {
+            std::ostringstream oss;
+            oss << std::setw(2) << d;
+            std::cout << std::setw(6) << oss.str();
         }
 
-        if (choice == 1) {
-            --month;
-            if (month < 1) {
-                month = 12;
-                --year;
-            }
-        } else if (choice == 2) {
-            ++month;
-            if (month > 12) {
-                month = 1;
-                ++year;
-            }
-        } else if (choice == 3) {
-            break;
-        } else {
-            cout << "Invalid choice. Please select 1, 2, or 3.\n";
-        }
+        ++printed;
+        if (printed % 7 == 0) std::cout << "\n";
     }
-}*/
-
-
-
-
-
+    std::cout << "\n";
+}
