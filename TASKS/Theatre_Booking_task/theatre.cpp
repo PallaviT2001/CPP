@@ -35,4 +35,3 @@ std::ostream& operator<<(std::ostream& os, const Theatre& t)
     else for (int d : t.bookedDays) os << d << " ";
     return os;
 }
-
