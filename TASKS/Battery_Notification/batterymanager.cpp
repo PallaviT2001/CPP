@@ -12,6 +12,7 @@ BatteryManager::BatteryManager()
 
 BatteryManager::~BatteryManager()
 {
+
 }
 
 int BatteryManager::batteryCapacity()
