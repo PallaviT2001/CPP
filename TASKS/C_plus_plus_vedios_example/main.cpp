@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-/*int main()
+int main()
 {
     float variable=5.5f;
     double var=5.5;
@@ -12,7 +12,7 @@ using namespace std;
     cout<<"boolean size: "<<sizeof(bool)<<endl;
     cout<<"double size: "<<sizeof(double)<<endl;
     return 0;
-}*/
+}
 
 /*int main()
 {
@@ -144,13 +144,13 @@ int main()
 
 }*/
 
-int main()
+/*int main()
 {
     int a=5;
     int &ref=a;
     ref=2;
     cout<<a<<endl;
-}
+}*/
 
 
 

@@ -13,7 +13,7 @@ void MainWindow::setupUI()
 {
     this->setFixedSize(500, 400);
 
-    prevMonthButton = new QPushButton("< Previous", this);
+    prevMonthButton = new QPushButton("< Previous",this);
     prevMonthButton->setGeometry(10, 10, 100, 30);
     connect(prevMonthButton, &QPushButton::clicked, this, &MainWindow::showPreviousMonth);
 

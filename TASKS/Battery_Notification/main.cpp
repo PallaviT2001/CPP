@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     SoundManager manager;
     BatteryManager battery;
     QObject::connect(&battery, &BatteryManager::batteryLow, &manager, &SoundManager::announce);
-    QObject::connect(&battery, &BatteryManager::batteryLow, &manager, &SoundManager::announce,Qt::SingleShotConnection);
+    //QObject::connect(&battery, &BatteryManager::batteryLow, &manager, &SoundManager::announce,Qt::SingleShotConnection);
 
     battery.batteryCapacityVariation();
 
