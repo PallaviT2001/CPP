@@ -21,4 +21,4 @@ private:
     int m_batteryCapacity;
 };
 
-#endif // BATTERYMANAGER_H
+#endif

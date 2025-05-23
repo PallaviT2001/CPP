@@ -1,6 +1,5 @@
 #ifndef OFFICE_H
 #define OFFICE_H
-
 #include <vector>
 #include <string>
 #include <iostream>

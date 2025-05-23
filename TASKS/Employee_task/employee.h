@@ -15,7 +15,6 @@ public:
 
     void addChild(Employee* child);
     void print();
-    void printChildren();
     string GetName();
 private:
     string name;

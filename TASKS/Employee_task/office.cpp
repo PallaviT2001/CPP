@@ -1,6 +1,7 @@
 #include "office.h"
 
-Office::Office() {
+Office::Office()
+{
     std::cout<<"office constructor called"<<std::endl;
 }
 
