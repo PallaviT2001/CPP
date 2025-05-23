@@ -31,20 +31,16 @@ std::string Employee::GetName()
 
 void Employee::addChild(Employee* child)
 {
+    cout<<"Employee add child function called"<<endl;
     children.push_back(child);
 }
 
 void Employee::print()
-{
-    std::cout << "employee print called" << std::endl;
-    printChildren();
-}
-
-void Employee::printChildren()
 {
     for (auto child : children)
     {
         child->print();
         std::cout<<child->name<<std::endl;
     }
+
 }

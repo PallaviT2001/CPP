@@ -20,6 +20,5 @@ int main()
     Employee e11("e11", &e1);
     Employee e12("e12", &e11);
     off.print();
-
     return 0;
 }

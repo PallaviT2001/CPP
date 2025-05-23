@@ -6,13 +6,12 @@ using namespace std;
 
 BatteryManager::BatteryManager()
 {
-
     m_batteryCapacity = 100;
 }
 
 BatteryManager::~BatteryManager()
 {
-
+    cout<<"Battery manager destructor called"<<endl;
 }
 
 int BatteryManager::batteryCapacity()
@@ -31,7 +30,7 @@ void BatteryManager::batteryCapacityVariation()
     {
         m_batteryCapacity = m_batteryCapacity - 5;
         std::this_thread::sleep_for(std::chrono::seconds(1));
-        if(m_batteryCapacity <= 0)
+        if(m_batteryCapacity <=0)
         {
             break;
         }

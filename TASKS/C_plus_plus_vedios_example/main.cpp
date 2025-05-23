@@ -1,4 +1,29 @@
 #include <iostream>
+using namespace  std;
+
+struct Entity
+{
+    int x,y;
+    void print()
+     {
+        cout<<x<<" "<<y<<endl;
+     }
+};
+
+int main()
+{
+    Entity e;
+    e.x=2;
+    e.y=3;
+    Entity e1={5,8};
+    //std::cin.get();
+    e.print();
+    e1.print();
+}
+
+
+
+/*#include <iostream>
 using namespace std;
 
 int main()
@@ -12,7 +37,7 @@ int main()
     cout<<"boolean size: "<<sizeof(bool)<<endl;
     cout<<"double size: "<<sizeof(double)<<endl;
     return 0;
-}
+}*/
 
 /*int main()
 {
