@@ -27,10 +27,6 @@ ApplicationWindow {
             console.log("Effective vertical scroll bar width:", scrollView.effectiveScrollBarWidth)
             console.log("Effective horizontal scroll bar height:", scrollView.effectiveScrollBarHeight)
         }
-
-
-
-
         onEffectiveScrollBarWidthChanged: console.log("Updated vertical width:", effectiveScrollBarWidth)
         onEffectiveScrollBarHeightChanged: console.log("Updated horizontal height:", effectiveScrollBarHeight)
     }
