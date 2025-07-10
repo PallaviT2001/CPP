@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-/*#include "temp.h"
+#include "temp.h"
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
     auto F=te3.num1<float>(50.2,56.0,30.0,25.0);
     cout<<"f value is "<<F<<endl;
     return 0;
-}*/
+}
 
 /*#include<iostream>
 using namespace std;
@@ -114,7 +114,7 @@ int main()
     return 0;
 }*/
 
-#include "laptoptemplate.h"
+/*#include "laptoptemplate.h"
 int main()
 {
     Laptoptemplate<int,int,int>lap1;
@@ -124,7 +124,7 @@ int main()
     Laptoptemplate<string,string,string>lap2;
     auto B=lap2.function("pallavi","pallavi1");
     cout<<"b value is "<<B<<endl;
-}
+}*/
 
 
 

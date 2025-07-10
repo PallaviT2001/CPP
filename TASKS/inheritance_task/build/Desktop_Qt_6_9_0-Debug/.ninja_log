@@ -1,0 +1,9 @@
+# ninja log v5
+3	10	0	clean	a31eedcededa8236
+1	6	0	clean	a31eedcededa8236
+2	843	1751956457542933592	CMakeFiles/inheritance_task.dir/a.cpp.o	96e3209ef24aba25
+1	982	1751956457682932537	CMakeFiles/inheritance_task.dir/main.cpp.o	8b23b795b3df2972
+3	1058	1751956457760931950	CMakeFiles/inheritance_task.dir/d.cpp.o	dc5ba04ca80dbc69
+3	1068	1751956457767931897	CMakeFiles/inheritance_task.dir/c.cpp.o	e3f5107a578762b
+2	1186	1751956457889930977	CMakeFiles/inheritance_task.dir/b.cpp.o	e83faabee17dafa7
+1186	1337	1751956458037929862	inheritance_task	f133885155628d77

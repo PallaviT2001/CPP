@@ -1,0 +1,10 @@
+# ninja log v5
+2	500	1751345152403883998	CMakeFiles/template_task.dir/tempclass.cpp.o	e62f000c4242472
+3	504	1751345152407884156	CMakeFiles/template_task.dir/tempcar.cpp.o	24c4c527cba44ef0
+4	504	1751345152409884236	CMakeFiles/template_task.dir/bottletemplate.cpp.o	a3e3e85cc5b8ffc8
+2	505	1751345152411884315	CMakeFiles/template_task.dir/main.cpp.o	347236a3bfc231e1
+3	506	1751345152412884354	CMakeFiles/template_task.dir/mobiletemplate.cpp.o	f2b6ced1f1988c7
+3	509	1751345152415884473	CMakeFiles/template_task.dir/cartemplate.cpp.o	b62e3e48c77faf40
+2	526	1751345152432885147	CMakeFiles/template_task.dir/temp.cpp.o	c28e9a09c98bf82b
+4	526	1751345152432885147	CMakeFiles/template_task.dir/laptoptemplate.cpp.o	e79582fa5f78a3d9
+526	589	1751345152494887603	template_task	8cd925cda1962a9f

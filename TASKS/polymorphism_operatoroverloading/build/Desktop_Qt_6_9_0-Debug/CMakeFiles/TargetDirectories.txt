@@ -1,0 +1,7 @@
+/home/pallavi/CPP/CPP/TASKS/polymorphism_operatoroverloading/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/polymorphism_operatoroverloading.dir
+/home/pallavi/CPP/CPP/TASKS/polymorphism_operatoroverloading/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/edit_cache.dir
+/home/pallavi/CPP/CPP/TASKS/polymorphism_operatoroverloading/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/rebuild_cache.dir
+/home/pallavi/CPP/CPP/TASKS/polymorphism_operatoroverloading/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/list_install_components.dir
+/home/pallavi/CPP/CPP/TASKS/polymorphism_operatoroverloading/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/install.dir
+/home/pallavi/CPP/CPP/TASKS/polymorphism_operatoroverloading/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/install/local.dir
+/home/pallavi/CPP/CPP/TASKS/polymorphism_operatoroverloading/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/install/strip.dir
