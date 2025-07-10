@@ -1,0 +1,61 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-1e913095380fcdb748f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "polymorphism_operatoroverloading",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "polymorphism_operatoroverloading::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-polymorphism_operatoroverloading-Debug-ce698257ad15e47aca70.json",
+					"name" : "polymorphism_operatoroverloading",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/pallavi/CPP/CPP/TASKS/polymorphism_operatoroverloading/build/Desktop_Qt_6_9_0-Debug",
+		"source" : "/home/pallavi/CPP/CPP/TASKS/polymorphism_operatoroverloading"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -1,0 +1,7 @@
+# ninja log v5
+6	603	1751362808285660368	CMakeFiles/Abstraction_task.dir/brake.cpp.o	13b50207bb3a5300
+5	604	1751362808286660383	CMakeFiles/Abstraction_task.dir/accelerator.cpp.o	dc23e5979310b414
+4	605	1751362808287660398	CMakeFiles/Abstraction_task.dir/engine.cpp.o	7dc93a77ae7f8c94
+4	739	1751362808421662470	CMakeFiles/Abstraction_task.dir/car.cpp.o	412ed341c6e53b43
+3	747	1751362808429662594	CMakeFiles/Abstraction_task.dir/main.cpp.o	b183f0abaa10b81e
+747	834	1751362808515663924	Abstraction_task	faa5b7129681f21d
