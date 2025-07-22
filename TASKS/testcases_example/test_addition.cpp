@@ -7,21 +7,28 @@ class TestAddition : public QObject {
 private slots:
     void testPositiveNumbers();
     void testNegativeNumbers();
+    void testpositivewithnegative();
     void testZero();
 };
 
-void TestAddition::testPositiveNumbers() {
+void TestAddition::testPositiveNumbers()
+{
     QCOMPARE(add(2, 3), 5);
 }
 
-void TestAddition::testNegativeNumbers() {
+void TestAddition::testNegativeNumbers()
+{
     QCOMPARE(add(-2, -3), -5);
-
 }
 
-void TestAddition::testZero() {
-    QCOMPARE(add(0, 0), 0);
+void TestAddition::testpositivewithnegative()
+{
+    QCOMPARE(add(2, -3), -1);
+}
 
+void TestAddition::testZero()
+{
+    QCOMPARE(add(0, 0), 0);
 }
 
 QTEST_MAIN(TestAddition)
