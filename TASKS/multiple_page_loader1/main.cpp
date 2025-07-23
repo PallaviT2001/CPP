@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/prev_next_task/main.qml"));
+    const QUrl url(QStringLiteral("qrc:/multiple_page_loader1/main.qml"));
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreated,

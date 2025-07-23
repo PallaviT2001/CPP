@@ -7,8 +7,10 @@ Window {
     visible: true
     title: qsTr("Page Navigation")
 
+
+
     property int pageIndex: 0
-    property var pages: ["Page1.qml", "Page2.qml", "Page3.qml", "Page4.qml", "Page5.qml"]
+    property var pages: ["page1.qml", "page2.qml", "page3.qml", "page4.qml", "page5.qml"]
 
     Loader {
         id: pageLoader
